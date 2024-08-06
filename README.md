@@ -22,3 +22,5 @@ Organisations often face numerous technical, organisational and operational chal
 6. Model serving
 7. Prediction services
 8. Model monitoring
+
+[Introduction to MLOps requirement](start.md)
