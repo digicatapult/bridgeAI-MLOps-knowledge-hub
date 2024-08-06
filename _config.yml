@@ -1,4 +1,6 @@
 theme: jekyll-theme-cayman
+description: Welcome to BridgeAI MLOps Knowledge Hub!
+google_analytics:
 sidebar:
   - getting-started
 sidebar:
