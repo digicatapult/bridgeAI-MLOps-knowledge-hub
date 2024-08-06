@@ -12,3 +12,13 @@ Organisations often face numerous technical, organisational and operational chal
 * A complementary ‘MLOps knowledge Hub’ that contains all relevant information on practical MLOps and how to successfully build an MLOps pipeline from scratch for commercial projects.
 * An in-person MLOps clinic that offers hands-on help to participants via workshops as well as interactive support from a bunch of MLOps providers in the market.
 
+### Table of Content
+
+1. Data storage and retrieval
+2. Data and feature engineering
+3. Model training and evaluation
+4. Model registry
+5. Model deployment
+6. Model serving
+7. Prediction services
+8. Model monitoring
