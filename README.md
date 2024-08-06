@@ -12,6 +12,10 @@ Organisations often face numerous technical, organisational and operational chal
 * A complementary ‘MLOps knowledge Hub’ that contains all relevant information on practical MLOps and how to successfully build an MLOps pipeline from scratch for commercial projects.
 * An in-person MLOps clinic that offers hands-on help to participants via workshops as well as interactive support from a bunch of MLOps providers in the market.
 
+### Why this knowledge hub?
+
+While other knowledge bases offer in depth insights on how individual MLOps component / tool works, DC’s MLOps knowledge hub aims at explaining the design and implementation of an end-to-end MLOps pipeline, the hardware and infrastructure involves, software tool choices, containerisation and container orchestration, the CI/CD pipelines, the development and production environments and how all of the above are put together to implement a practical / viable MLOps pipeline for an organisation. It also aims to cover the research our team had undergone and the decision design made with explanation on why they were made and on what grounds.
+
 ### Table of Content
 
 1. Data storage and retrieval
@@ -23,9 +27,9 @@ Organisations often face numerous technical, organisational and operational chal
 7. Prediction services
 8. Model monitoring
 
-# Topics Covered
+### Topics Covered
 1. Gathering Requirements
-2. Assessing the organisation's ML Readiness - [Maturity Assessment](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/Maturity%20Assessment.md)
+2. Assessing the organisation's ML Readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
 3. [Best Practices](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/Best%20Practices.md)
 4. Horizon Scan of available MLOps Tools
 5. ML Deployment
