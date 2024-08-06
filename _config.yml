@@ -1,1 +1,9 @@
 theme: jekyll-theme-cayman
+sidebar:
+  - getting-started
+sidebar:
+  - label: Section One
+    children:
+      - document-one
+      - document-two
+      - document-three
