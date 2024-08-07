@@ -16,27 +16,10 @@ Organisations often face numerous technical, organisational and operational chal
 
 While other knowledge bases offer in depth insights on how individual MLOps component / tool works, DC’s MLOps knowledge hub aims at explaining the design and implementation of an end-to-end MLOps pipeline, the hardware and infrastructure involves, software tool choices, containerisation and container orchestration, the CI/CD pipelines, the development and production environments and how all of the above are put together to implement a practical / viable MLOps pipeline for an organisation. It also aims to cover the research our team had undergone and the decision design made with explanation on why they were made and on what grounds.
 
-### Table of Content
-
-1. Data storage and retrieval
-2. Data and feature engineering
-3. Model training and evaluation
-4. Model registry
-5. Model deployment
-6. Model serving
-7. Prediction services
-8. Model monitoring
-
-### Topics Covered
-1. Gathering Requirements
-2. Assessing the organisation's ML Readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
-3. Best Practices
-4. Horizon Scan of available MLOps Tools
-5. ML Deployment
-6. Deployment Strategies
-7. MLOps
-8. MLOps Tools
-9. ML Monitoring and Observability
-10. MLOps Skills
-
-[START HERE](START.md)
+### Topics covered
+1. Moving from PoC to Production
+3. Assessing your organisation's MLOps readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
+4. [Your journey starts here!](START.md)
+6. Horizon Scan of available MLOps Tools and Platforms
+7. Skills and Roles
+8. MLOps - the actual process
