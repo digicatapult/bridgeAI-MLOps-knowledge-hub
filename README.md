@@ -30,13 +30,13 @@ While other knowledge bases offer in depth insights on how individual MLOps comp
 ### Topics Covered
 1. Gathering Requirements
 2. Assessing the organisation's ML Readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
-3. [Best Practices](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/Best%20Practices.md)
+3. Best Practices
 4. Horizon Scan of available MLOps Tools
 5. ML Deployment
-6. [Deployment Strategies](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/Strategies.md)
-7. [MLOps](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/MLOps.md) 
+6. Deployment Strategies
+7. MLOps
 8. MLOps Tools
-9. [ML Monitoring and Observability](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/Observability.md)
-10. [MLOps Skills](https://github.com/hema-dc/ML-Deployment/blob/main/Offerings/MLOps%20Skills.md)
+9. ML Monitoring and Observability
+10. MLOps Skills
 
-[Effective AI/ML Deployment](START.md)
+[START HERE](START.md)
