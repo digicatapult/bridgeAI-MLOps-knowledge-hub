@@ -20,6 +20,6 @@ While other knowledge bases offer in depth insights on how individual MLOps comp
 1. Moving from PoC to Production
 3. Assessing your organisation's MLOps readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
 4. [Your journey starts here!](START.md)
-6. Horizon Scan of available MLOps Tools and Platforms
+6. [Horizon Scan of available MLOps Tools and Platforms](HORIZON_SCAN.md)
 7. Skills and Roles
 8. MLOps - the actual process
