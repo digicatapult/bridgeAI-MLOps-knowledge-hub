@@ -3,13 +3,14 @@
 The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. Generally, the following components make up the average MLOps workflow:
 
 1. Data store and retrieval
-    * These can include databases for structured or unstructured data, data lakes, APIs and files (eg .csv, .parquet)
+    * These can include databases for structured or unstructured data, data lakes, APIs and files (eg `.csv`, `.parquet`)
 
 2. Data and feature engineering
     * This step involves the use of Directed Acyclic Graphs (DAGs) to group and automate tasks organised with dependencies and relationships dictating how they should run. These can come with timing intervals, timeouts, etc.
 
 3. Model training and registry 
-    * This step involves the use of relevant tools for model versioning, storage, testing, and eventually model deployment subject to approval. When different iterations of models are tested, the model, its data and its hyperparameters are stored for future reference. Model registries can also store information like metadata and the lineage of a given model.
+    * This step involves the use of relevant tools for model versioning, storage, testing, and eventually model deployment subject to approval. 
+    * When different iterations of models are tested, the model, its data and its hyperparameters are stored for future reference. Model registries can also store information like metadata and the lineage of a given model.
 
 4. Model deployment 
     * When the appropriate model is selected, it is then manually pushed to the model server to serve in production. Serving a model is the act of making it accessible to end users, typically via API.
@@ -28,8 +29,6 @@ It is important to note that the components and workflow differ; the components 
 
 # Model training and registry
 
-[blurb on how component adds to architecture, types of tools available]
-
-Tool | Description | Scalability | Cost Effectiveness | Flexibility | Accessibility | Integrated Features <6 lines>
+Tool | Description | Scalability | Cost Effectiveness | Flexibility | Accessibility | Integrated Features
 --- | --- | --- | --- |--- |--- |---
 MLflow | MLflow is a versatile, expandable, open-source platform for managing workflows and artifacts across the machine learning lifecycle | Supports distributed training and can scale with underlying infrastructure eg Kubernetes | Open-source allows for more control over expenses; depends on underlying infrastructure | Modular design with components for tracking experiments, packaging artifacts into reproducible runs and deploying models; scalable depending on underlying infrastructure | Platform-agnostic; supports multiple languages and frameworks | Stage transition tags; model lineage; model file versioning; model packaging 
