@@ -1,3 +1,10 @@
+---
+layout: default
+title: Architecture Overview/Horizon Scan
+nav_order: 2
+parent: Menu
+---
+
 [<Back](README.md)
 
 # Architecture Overview

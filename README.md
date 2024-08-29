@@ -1,3 +1,11 @@
+---
+layout: default
+title: Menu
+nav_order: 5
+has_children: true
+---
+
+
 # BridgeAI MLOps Knowledge Hub
 
 ### About this project
