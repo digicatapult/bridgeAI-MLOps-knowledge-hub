@@ -5,6 +5,8 @@ nav_order: 2
 parent: BridgeAI MLOps Knowledge Hub
 ---
 
+[<Back](index.md)
+
 # Effective ML Deployment
 
 ML Deployment - the process of deploying an AI/ML model from PoC to Production
