@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+theme: jekyll-theme-leap-day
 description: Your superstore for practical MLOps information! 
 main:
 - title: "Moving from PoC to Production"
