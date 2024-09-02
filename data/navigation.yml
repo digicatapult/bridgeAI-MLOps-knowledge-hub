@@ -1,3 +1,11 @@
 main:
+- title: "Moving from PoC to Production"
+  url: https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/PoC_to_production.html
+- title: "Horizon Scan"
+  url: https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/HORIZON_SCAN.html
+- title: "Skills and Roles"
+  url: https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/skills_roles.html
+- title: "MLOps - The actual process"
+  url: https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/actual_process.html
 - title: "Effective Deployment"
   url: https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html
