@@ -1,2 +1,13 @@
+---
+  defaults:
+    # _docs
+    - scope:
+        path: ""
+        type: main
+      values:
+        sidebar:
+          nav: "main"
+---        
+
 theme: jekyll-theme-minimal
 description: Your superstore for practical MLOps information! 
