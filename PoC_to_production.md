@@ -2,5 +2,5 @@
 layout: default
 title: Moving from PoC to Production
 nav_order: 3
-parent: Menu
+parent: BridgeAI MLOps Knowledge Hub
 ---

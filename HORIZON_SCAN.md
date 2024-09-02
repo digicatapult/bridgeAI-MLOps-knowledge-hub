@@ -2,10 +2,10 @@
 layout: default
 title: Architecture Overview/Horizon Scan
 nav_order: 2
-parent: Menu
+parent: BridgeAI MLOps Knowledge Hub
 ---
 
-[<Back](README.md)
+[<Back](index.md)
 
 # Architecture Overview
 
