@@ -20,7 +20,7 @@
 <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 {% if site.github.is_project_page %}
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-<span style="font-size:15px;cursor:pointer" onclick="openNav()" class="btn" class="closebtn" onclick="closeNav()">MENU</span>
+<span style="font-size:15px;cursor:pointer" onclick="openNav()" class="btn">MENU</span>
 {% endif %}
 {% if site.show_downloads %}
 <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -71,7 +71,7 @@
     }
     </style>
 <div id="mySidenav" class="sidenav">
-<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/PoC_to_production.html">Moving from PoC to Production</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Your Journey Starts Here!</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/HORIZON_SCAN.html">Horizon Scan of available MLOps Tools and Platforms</a>
