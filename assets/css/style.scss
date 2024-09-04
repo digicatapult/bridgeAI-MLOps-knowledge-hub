@@ -1,7 +1,7 @@
 ---
 ---
 
-{@import "{{ site.theme }}";
+@import "{{ site.theme }}";
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -50,4 +50,4 @@
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }}
+  }
