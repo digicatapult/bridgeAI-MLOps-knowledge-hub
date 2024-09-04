@@ -1,0 +1,32 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.5.1)
+    nokogiri (1.16.7-arm64-darwin)
+      racc (~> 1.4)
+    racc (1.8.1)
+    rack (2.2.9)
+    rspec (3.13.0)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.1)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.1)
+
+PLATFORMS
+  arm64-darwin-23
+
+DEPENDENCIES
+  nokogiri
+  rack (~> 2.2.4)
+  rspec
+
+BUNDLED WITH
+   2.3.26
