@@ -20,7 +20,7 @@
 <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 {% if site.github.is_project_page %}
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-<span style="font-size:15px;cursor:pointer" onclick="toggleNav()" class="btn">MENU</span>
+<span style="font-size:15px;cursor:pointer" onclick="openNav()" class="btn">MENU</span>
 {% endif %}
 {% if site.show_downloads %}
 <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -48,7 +48,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #494343;
+    color: #d0d0d0;
     display: block;
     transition: 0.3s;
     }
@@ -57,7 +57,7 @@
     color: #f1f1f1;
     }
     
-    .btn {
+    /* .btn {
     font-size: 15px;
     cursor: pointer;
     color: white;
@@ -65,15 +65,15 @@
     border: none;
     padding: 10px 20px;
     margin: 5px;
-    }
+    } */
 
-    /* .sidenav .closebtn {
+    .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    } */
+    }
     
     @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -81,7 +81,7 @@
     }
     </style>
 <div id="mySidenav" class="sidenav">
-<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/PoC_to_production.html">Moving from PoC to Production</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Your Journey Starts Here!</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/HORIZON_SCAN.html">Horizon Scan of available MLOps Tools and Platforms</a>
@@ -90,25 +90,25 @@
 </div>
 
 <script>
-// function openNav() {
-//   document.getElementById("mySidenav").style.width = "450px";
-// }
-
-// function closeNav() {
-//   document.getElementById("mySidenav").style.width = "0";
-// }
-
-function toggleNav() {
-    const sidebar = document.getElementById("mySidenav");
-    // Check the current width of the sidebar
-    if (sidebar.style.width === "250px") {
-        // Close the sidebar
-        sidebar.style.width = "0";
-    } else {
-        // Open the sidebar
-        sidebar.style.width = "450px";
-    }
+function openNav() {
+  document.getElementById("mySidenav").style.width = "450px";
 }
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+// function toggleNav() {
+//     const sidebar = document.getElementById("mySidenav");
+//     // Check the current width of the sidebar
+//     if (sidebar.style.width === "250px") {
+//         // Close the sidebar
+//         sidebar.style.width = "0";
+//     } else {
+//         // Open the sidebar
+//         sidebar.style.width = "450px";
+//     }
+// }
 </script>
 </header>
 
