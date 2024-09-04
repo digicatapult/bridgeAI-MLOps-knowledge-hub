@@ -20,7 +20,7 @@
 <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 {% if site.github.is_project_page %}
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="btn">MENU</span>
+<span style="font-size:15px;cursor:pointer" onclick="openNav()" onclick="closeNav()" class="btn">MENU</span>
 {% endif %}
 {% if site.show_downloads %}
 <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
