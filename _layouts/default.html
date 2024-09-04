@@ -99,17 +99,14 @@
 // }
 
 function toggleNav() {
-    const sidebar = document.getElementById("mySidebar");
-    const mainContent = document.getElementById("main");
+    const sidebar = document.getElementById("mySidenav");
     // Check the current width of the sidebar
     if (sidebar.style.width === "250px") {
         // Close the sidebar
         sidebar.style.width = "0";
-        mainContent.style.marginLeft = "0";
     } else {
         // Open the sidebar
-        sidebar.style.width = "250px";
-        mainContent.style.marginLeft = "250px";
+        sidebar.style.width = "450px";
     }
 }
 </script>
