@@ -20,6 +20,7 @@
 <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 {% if site.github.is_project_page %}
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="btn">MENU</span>
 {% endif %}
 {% if site.show_downloads %}
 <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -77,7 +78,7 @@
 <a href="../skills_roles.md">Skills and Roles</a>
 <a href="../actual_process.md">MLOps - The Actual process</a>
 </div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
