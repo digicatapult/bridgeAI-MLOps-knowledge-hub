@@ -1,6 +1,7 @@
 ---
 layout: default
 title: BridgeAI MLOps Knowledge Hub
+description: Your superstore for practical MLOps information! 
 ---
 
 # BridgeAI MLOps Knowledge Hub

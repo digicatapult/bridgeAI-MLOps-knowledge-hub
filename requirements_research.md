@@ -1,11 +1,6 @@
 ---
 layout: default
-title: Team Journey - Requirements and Research
-has_children: True
-order: 2
 ---
-
-[<Back](index.md)
 
 What were the requirements for our ML model and the MLOps pipeline?
 
