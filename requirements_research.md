@@ -1,5 +1,7 @@
 ---
 layout: default
+title: no
+description: no
 ---
 
 What were the requirements for our ML model and the MLOps pipeline?

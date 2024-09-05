@@ -1,5 +1,7 @@
 ---
 layout: default
+title: no
+description: no
 ---
 
 1. Relevant skills and roles
