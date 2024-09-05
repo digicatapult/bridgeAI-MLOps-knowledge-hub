@@ -62,9 +62,11 @@ Seldon core - has got no example code in MLFlow but the partner documentation is
 
 <!-- ### MLFlow - Deploying MLFlow model to Kubernetes -->
 
-<details>
-<summary>MLFlow - Deploying MLFlow model to Kubernetes</summary>
-<br>
+<!-- <details> -->
+<!-- <summary>MLFlow - Deploying MLFlow model to Kubernetes</summary> -->
+<!-- <br> -->
+
+### MLFlow - Deploying MLFlow model to Kubernetes
 The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
 
 An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.
@@ -98,7 +100,7 @@ Deploy to the kubernetes cluster using kubectl
 If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
 
 Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.
-</details>
+<!-- </details> -->
 
 
 <h3>MLFlow - Summary</h3>
