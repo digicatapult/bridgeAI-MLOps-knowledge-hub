@@ -101,7 +101,7 @@ Since the detailed steps in the above mentioned document are self explanatory, n
 </details>
 
 
-### MLFlow - Summary
+<h3>MLFlow - Summary</h3>
 Supports PyTorch and SKlearn models natively - MLFlow models - built-in model flavors
 
 Models are already in supported MLFLow models format when the training completes

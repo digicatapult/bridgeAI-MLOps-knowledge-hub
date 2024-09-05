@@ -4,11 +4,6 @@ title: BridgeAI MLOps Knowledge Hub
 description: Your superstore for practical MLOps information! 
 ---
 
-<header class="page-header" role="banner">
-<h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-</header>
-
 # BridgeAI MLOps Knowledge Hub
 
 ### About this project
