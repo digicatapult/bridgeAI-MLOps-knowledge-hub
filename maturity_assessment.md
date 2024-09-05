@@ -1,8 +1,6 @@
----
+<!-- ---
 layout: default
-title: no
-description: no
----
+--- -->
 
 
 <!-- ### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit) -->
