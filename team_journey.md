@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Team Journey - Requirements and Research
+has_children: True
+order: 2
 ---
 
 [<Back](index.md)
