@@ -96,6 +96,7 @@ Deploy to the kubernetes cluster using kubectl
 If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
 
 Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.
+</br>
 </details>
 
 
