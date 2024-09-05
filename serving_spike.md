@@ -32,21 +32,33 @@ Model Deployment: The process of integrating a packaged model into a serving pla
 The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.
 
 **Table of Contents**
-1. MLFlow For Model Serving\
+1. [MLFlow For Model Serving](serving_spike#MLFlow-For-Model-Serving)\
         MLFlow - Model Serving Runtime\
         MLFlow- Model Serving Platforms\
         MLFlow - Deploying MLFlow model to Kubernetes\
-        MLFlow - Summary\
+        MLFlow - Summary
 2. Model Serving using FastAPI\
         FastAPI - Model Serving Runtime\
         FastAPI - Model Serving Platforms\
         FastAPI - Deploying MLFlow model to Kubernetes\
-        FastAPI - Summary\
+        FastAPI - Summary
 3. BentoML for Model serving\
         BentoML - Model Serving Runtime\
         BentoML - Model Serving Platforms\
         BentoML - Deploying MLFlow model to Kubernetes\
-        BentoML - Summary\
+        BentoML - Summary
 Summary Table\
         Questions\
 References
+
+# 1. MLFlow For Model Serving
+MLFlow supports a variety of model deployment targets including Local Infra, AWS Sagemaker, Azure ML, Databricks, Kubernetes, etc. But we will be looking into the Kubernetes deployment here.
+
+**MLFlow - Model Serving Runtime**
+- MLFlow uses MLServer for creating a serving runtime - [MLServer — MLServer Documentation](https://mlserver.readthedocs.io/en/latest/) 
+
+- By default MLFlow uses Flask, but prefers MLServer for production - [Deploy MLflow Model as a Local Inference Server — MLflow 2.15.1 documentation](https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks) 
+
+- Supports almost all machine learning frameworks and no vendor lock is present here unlike TorchServe or Tensorflow serve
+
+- With simple steps, the url http://<host>:<port>/invocations endpoint URL can do predictions
