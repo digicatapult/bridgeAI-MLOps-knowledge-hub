@@ -5,7 +5,7 @@ title: Maturity Assessment
 
 [<Back](index.md)
 
-### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit){target=”_blank”}
+### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit{target='_blank})
 
 Who doesn't need this assessment?
   - Any early-stage startups that is just exploring ArtificiaI Intelligence/Machine (AI/ML) Learning at a PoC level and not planning to deploy.
