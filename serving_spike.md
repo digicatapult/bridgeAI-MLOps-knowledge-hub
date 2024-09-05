@@ -18,6 +18,7 @@ To stick to a standard definition, I am sticking to the terminology used here in
 >
 >**Model Deployment**: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.\
 The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.\
+
 **Table of Contents**
 1. [MLFlow For Model Serving](#1-mlflow-for-model-serving)\
         [MLFlow - Model Serving Runtime](#mlflow---model-serving-runtime)\
@@ -96,7 +97,6 @@ Deploy to the kubernetes cluster using kubectl
 If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
 
 Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.
-</br>
 </details>
 
 
