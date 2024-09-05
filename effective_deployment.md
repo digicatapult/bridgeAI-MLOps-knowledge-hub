@@ -1,6 +1,6 @@
-<!-- ---
+---
 layout: default
---- -->
+---
 
 # Effective ML Deployment
 

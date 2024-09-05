@@ -1,6 +1,6 @@
-<!-- ---
+---
 layout: default
---- -->
+---
 
 1. Relevant skills and roles
 2. Understanding of architecture components (horizon scan with links to other pages/repos on MLOps architecture)
