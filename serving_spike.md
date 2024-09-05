@@ -32,21 +32,21 @@ Model Deployment: The process of integrating a packaged model into a serving pla
 The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.
 
 **Table of Contents**
-1. MLFlow For Model Serving
-        MLFlow - Model Serving Runtime
-        MLFlow- Model Serving Platforms
-        MLFlow - Deploying MLFlow model to Kubernetes
-        MLFlow - Summary
-2. Model Serving using FastAPI
-        FastAPI - Model Serving Runtime
-        FastAPI - Model Serving Platforms
-        FastAPI - Deploying MLFlow model to Kubernetes
-        FastAPI - Summary
-3. BentoML for Model serving
-        BentoML - Model Serving Runtime
-        BentoML - Model Serving Platforms
-        BentoML - Deploying MLFlow model to Kubernetes
-        BentoML - Summary
-Summary Table
-        Questions
+1. MLFlow For Model Serving\
+        MLFlow - Model Serving Runtime\
+        MLFlow- Model Serving Platforms\
+        MLFlow - Deploying MLFlow model to Kubernetes\
+        MLFlow - Summary\
+2. Model Serving using FastAPI\
+        FastAPI - Model Serving Runtime\
+        FastAPI - Model Serving Platforms\
+        FastAPI - Deploying MLFlow model to Kubernetes\
+        FastAPI - Summary\
+3. BentoML for Model serving\
+        BentoML - Model Serving Runtime\
+        BentoML - Model Serving Platforms\
+        BentoML - Deploying MLFlow model to Kubernetes\
+        BentoML - Summary\
+Summary Table\
+        Questions\
 References
