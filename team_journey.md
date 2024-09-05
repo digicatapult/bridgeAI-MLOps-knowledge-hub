@@ -3,7 +3,7 @@ layout: default
 title: Team Journey - Requirements and Research
 ---
 
-[<Back](index.md)
+[<Back](README.md)
 
 What were the requirements for our ML model and the MLOps pipeline?
 

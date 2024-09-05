@@ -3,7 +3,7 @@ layout: default
 title: Effective Deployment (From PoC to Production)
 ---
 
-[<Back](index.md)
+[<Back](README.md)
 
 # Effective ML Deployment
 

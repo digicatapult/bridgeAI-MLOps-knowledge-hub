@@ -1,3 +1,8 @@
+---
+layout: default
+title: BridgeAI MLOps Knowledge Hub
+---
+
 # BridgeAI MLOps Knowledge Hub
 
 ### About this project

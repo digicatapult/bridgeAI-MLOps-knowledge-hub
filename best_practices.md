@@ -3,6 +3,6 @@ layout: default
 title: MLOps Best Practices
 ---
 
-[<Back](index.md)
+[<Back](README.md)
 
 # MLOps Best Practices
