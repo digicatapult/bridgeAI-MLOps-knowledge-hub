@@ -61,6 +61,7 @@ Partner documentation from KServe - MLFlow - KServe Documentation Website
 Seldon core - has got no example code in MLFlow but the partner documentation is also rich - MLflow Server — seldon-core  documentation
 
 <!-- ### MLFlow - Deploying MLFlow model to Kubernetes -->
+
 <details>
 <summary>MLFlow - Deploying MLFlow model to Kubernetes</summary>
 <br>
