@@ -21,7 +21,7 @@
 {% if site.github.is_project_page %}
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/" class="btn">Home</a>
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-<span style="font-size:15px;cursor:pointer" onclick="toggleNav()" class="btn">MENU</span>
+<!-- <span style="font-size:15px;cursor:pointer" onclick="toggleNav()" class="btn">MENU</span> -->
 {% endif %}
 {% if site.show_downloads %}
 <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -34,12 +34,12 @@
     
     .sidenav {
     height: 100%;
-    width: 0;
+    width: 50%;
     position: fixed;
     /* z-index: 1; */
     top: 0;
     left: 0;
-    background-color: #151;
+    background-color: rgba(17, 85, 17, 0.214);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -68,13 +68,13 @@
     margin: 5px;
     } */
 
-    .sidenav .closebtn {
+    /* .sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    }
+    } */
     
     @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -83,6 +83,7 @@
     </style>
 <div id="mySidenav" class="sidenav">
 <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+<a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
 <a href="https://apps.digicatapult.org.uk/ai-adoption-toolkit">Maturity Assessment</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_journey.html">Team Journey - Requirements and Research</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
@@ -90,7 +91,7 @@
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
 </div>
 
-<script>
+<!-- <script>
 // function openNav() {
 //   document.getElementById("mySidenav").style.width = "450px";
 // }
@@ -110,7 +111,7 @@ function toggleNav() {
         sidebar.style.width = "450px";
     }
 }
-</script>
+</script> -->
 </header>
 
 <main id="content" class="main-content" role="main">
