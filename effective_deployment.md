@@ -1,8 +1,6 @@
 ---
 layout: default
-title: Effective Deployment
-nav_order: 2
-parent: BridgeAI MLOps Knowledge Hub
+title: Effective Deployment (From PoC to Production)
 ---
 
 [<Back](index.md)

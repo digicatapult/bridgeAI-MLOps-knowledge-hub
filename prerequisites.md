@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Architecture Overview/Horizon Scan
-nav_order: 2
-parent: BridgeAI MLOps Knowledge Hub
+title: Prerequisites - Skills, Roles and Tools
 ---
 
 [<Back](index.md)
+
+1. Relevant skills and roles
+2. Understanding of architecture components (horizon scan with links to other pages/repos on MLOps architecture)
 
 # Architecture Overview
 
