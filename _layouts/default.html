@@ -21,7 +21,7 @@
 {% if site.github.is_project_page %}
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/" class="btn">Home</a>
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-<span style="font-size:15px;cursor:pointer" onclick="openNav()" class="btn">MENU</span>
+<span style="font-size:15px;cursor:pointer" onclick="toggleNav()" class="btn">MENU</span>
 {% endif %}
 {% if site.show_downloads %}
 <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
@@ -91,25 +91,25 @@
 </div>
 
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "450px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-// function toggleNav() {
-//     const sidebar = document.getElementById("mySidenav");
-//     // Check the current width of the sidebar
-//     if (sidebar.style.width === "250px") {
-//         // Close the sidebar
-//         sidebar.style.width = "0";
-//     } else {
-//         // Open the sidebar
-//         sidebar.style.width = "450px";
-//     }
+// function openNav() {
+//   document.getElementById("mySidenav").style.width = "450px";
 // }
+
+// function closeNav() {
+//   document.getElementById("mySidenav").style.width = "0";
+// }
+
+function toggleNav() {
+    const sidebar = document.getElementById("mySidenav");
+    // Check the current width of the sidebar
+    if (sidebar.style.width === "450px") {
+        // Close the sidebar
+        sidebar.style.width = "0";
+    } else {
+        // Open the sidebar
+        sidebar.style.width = "450px";
+    }
+}
 </script>
 </header>
 
