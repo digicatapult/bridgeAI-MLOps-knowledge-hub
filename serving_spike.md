@@ -65,11 +65,8 @@ Partner documentation from KServe - MLFlow - KServe Documentation Website
 Seldon core - has got no example code in MLFlow but the partner documentation is also rich - MLflow Server — seldon-core  documentation
 
 ---
-<details>
-<summary>MLFlow - Deploying MLFlow model to Kubernetes</summary>
-<br>
 
-<!-- ### MLFlow - Deploying MLFlow model to Kubernetes -->
+### MLFlow - Deploying MLFlow model to Kubernetes
 The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
 
 An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.
@@ -104,9 +101,8 @@ If using the model uri approach, we needs to specify the model URI in a remote s
 
 Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.
 
-</details>
-
 ---
+
 <h3>MLFlow - Summary</h3>
 Supports PyTorch and SKlearn models natively - [MLFlow models - built-in model flavors](https://mlflow.org/docs/latest/models.html#built-in-model-flavors)
 
