@@ -1,6 +1,6 @@
----
+<!-- ---
 layout: default
----
+--- -->
 
 What were the requirements for our ML model and the MLOps pipeline?
 

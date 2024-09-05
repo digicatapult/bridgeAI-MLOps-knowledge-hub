@@ -1,6 +1,6 @@
----
+<!-- ---
 layout: default
----
+--- -->
 
 # Model Serving Spike Content
 
@@ -59,7 +59,10 @@ Partner documentation from KServe - MLFlow - KServe Documentation Website
 
 Seldon core - has got no example code in MLFlow but the partner documentation is also rich - MLflow Server — seldon-core  documentation
 
-### MLFlow - Deploying MLFlow model to Kubernetes
+<!-- ### MLFlow - Deploying MLFlow model to Kubernetes -->
+<details>
+<h3><summary>MLFlow - Deploying MLFlow model to Kubernetes</summary></h3>
+<br>
 The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
 
 An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.
@@ -70,7 +73,7 @@ Summarised steps for the docker image based approach from the above link:
 
 Install the MLServer using
 
-pip install mlflow[extras]
+`pip install mlflow[extras]`
 
 Install Kserve to the kubernetes cluster
 
@@ -78,11 +81,11 @@ GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kuberne
 
 Test the model serving locally,
 
-mlflow models serve -m runs:/<run_id_for_your_best_run>/model -p 1234 --enable-mlserver
+`mlflow models serve -m runs:/<run_id_for_your_best_run>/model -p 1234 --enable-mlserver`
 
 Create a model docker is as simple as 
 
-mlflow models build-docker -m runs:/<run_id_for_your_best_run>/model -n <your_dockerhub_user_name>/<mlflow-model-name> --enable-mlserver
+`mlflow models build-docker -m runs:/<run_id_for_your_best_run>/model -n <your_dockerhub_user_name>/<mlflow-model-name> --enable-mlserver`
 
 Push the model to docker registry
 
@@ -93,6 +96,7 @@ Deploy to the kubernetes cluster using kubectl
 If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
 
 Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.
+</details>
 
 
 ### MLFlow - Summary
@@ -121,7 +125,8 @@ Once the container is ready, any serving platform like Seldon core or KServe(ope
 So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.
 FastAPI - Deploying MLFlow model to Kubernetes
 
-Deploying MLFlow model to Kubernetes
+### Deploying MLFlow model to Kubernetes
+
 
 ### FastAPI - Summary
 Using web frameworks for building API endpoints is the straightforward way to serve models
