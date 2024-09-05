@@ -61,7 +61,7 @@ Seldon core - has got no example code in MLFlow but the partner documentation is
 
 <!-- ### MLFlow - Deploying MLFlow model to Kubernetes -->
 <details>
-<h3><summary>MLFlow - Deploying MLFlow model to Kubernetes</summary></h3>
+<summary>MLFlow - Deploying MLFlow model to Kubernetes</summary>
 <br>
 The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
 
