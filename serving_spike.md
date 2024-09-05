@@ -16,8 +16,10 @@ To stick to a standard definition, I am sticking to the terminology used here in
 >
 >**Model Serving Platform**: An environment designed to dynamically scale the number of model containers in response to incoming traffic. Tools like KServe, Bento Cloud, and Seldon Core are examples of serving platforms. They manage the infrastructure needed to deploy and scale models efficiently, responding to varying traffic without manual intervention.
 >
->**Model Deployment**: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.\
-The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.\
+>**Model Deployment**: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.
+The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.
+
+---
 
 **Table of Contents**
 1. [MLFlow For Model Serving](#1-mlflow-for-model-serving)\
@@ -38,6 +40,8 @@ The terms 'model serving' and 'model deployment' are often loosely considered to
 Summary Table\
         Questions\
 References
+
+---
 
 ## 1. MLFlow For Model Serving
 MLFlow supports a variety of model deployment targets including Local Infra, AWS Sagemaker, Azure ML, Databricks, Kubernetes, etc. But we will be looking into the Kubernetes deployment here.
@@ -104,7 +108,7 @@ Since the detailed steps in the above mentioned document are self explanatory, n
 
 
 <h3>MLFlow - Summary</h3>
-Supports PyTorch and SKlearn models natively - MLFlow models - built-in model flavors
+Supports PyTorch and SKlearn models natively - [MLFlow models - built-in model flavors](https://mlflow.org/docs/latest/models.html#built-in-model-flavors)
 
 Models are already in supported MLFLow models format when the training completes
 
@@ -113,6 +117,8 @@ Easy integration with kubernetes is provided using KServe or Seldon Core
 Dependencies are already taken care of
 
 Easy serving and deployment process
+
+---
 
 ## 2. Model Serving using FastAPI
 
