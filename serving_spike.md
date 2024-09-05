@@ -30,7 +30,7 @@ To stick to a standard definition, I am sticking to the terminology used here in
 The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.
 
 **Table of Contents**
-1. [MLFlow For Model Serving](#MLFlow-For-Model-Serving)\
+1. [MLFlow For Model Serving](#mlflow-for-model-serving)\
         MLFlow - Model Serving Runtime\
         MLFlow- Model Serving Platforms\
         MLFlow - Deploying MLFlow model to Kubernetes\
@@ -49,7 +49,7 @@ Summary Table\
         Questions\
 References
 
-[1. MLFlow For Model Serving](#MLFlow-For-Model-Serving)
+# 1. MLFlow For Model Serving
 MLFlow supports a variety of model deployment targets including Local Infra, AWS Sagemaker, Azure ML, Databricks, Kubernetes, etc. But we will be looking into the Kubernetes deployment here.
 
 **MLFlow - Model Serving Runtime**
