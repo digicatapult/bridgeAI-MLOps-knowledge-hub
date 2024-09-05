@@ -3,7 +3,8 @@ layout: default
 ---
 
 
-### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit{target='_blank})
+### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
+<a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html" target="_blank">Maturity Assessment</a>
 
 Who doesn't need this assessment?
   - Any early-stage startups that is just exploring ArtificiaI Intelligence/Machine (AI/ML) Learning at a PoC level and not planning to deploy.
