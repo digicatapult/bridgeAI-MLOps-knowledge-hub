@@ -55,7 +55,7 @@ Current data refers to the new or recent dataset that is being evaluated for dri
 
 
 ### 2.1 Steps
->[ml_observability_course/module2/data_drift_deep_dive.ipynb at main · evidentlyai/ml_observability_course](https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb) 
+><h1><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">Data Drift Code Practice</a></h1>
 
 1. Load the Reference data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
 
@@ -63,7 +63,7 @@ Current data refers to the new or recent dataset that is being evaluated for dri
 
 3. Data Drift can be chosen for individual features (numerical as well as categorical features) or for all the features in the dataset used in Step 1 and Step 2.
 
-4. Choose a statistical test by which data drift needs to be analysed such as 'chisquare' 'jensenshannon', 'wasserstein' etc (list of all statistical tests are provided here - [Data drift parameters | Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests)). The statistical tests can be chosen for individual metrics as well.
+4. Choose a statistical test by which data drift needs to be analysed such as 'chisquare' 'jensenshannon', 'wasserstein' etc (list of all statistical tests are provided here - [Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests)). The statistical tests can be chosen for individual metrics as well.
 
 5. Use any of the Data Drift methods such as DatasetDriftMetric, this metric provides a overall summary of the drift detected from the comparison between the Reference data and the Current data.
 
