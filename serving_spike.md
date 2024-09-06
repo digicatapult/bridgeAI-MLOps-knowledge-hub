@@ -134,7 +134,7 @@ So the prefered option here is use FastPI to combine the dependencies and correc
 FastAPI - Deploying MLFlow model to Kubernetes
 
 <!-- ### FastAPI - Deploying MLFlow model to Kubernetes -->
-<style>
+<!-- <style>
 .dropdown {
 height: 10%;
 width: 10%;
@@ -145,18 +145,15 @@ overflow-x: hidden;
 transition: 0.5s;
 padding-top: 60px;
 }
-</style>
-<div id="myDropdown" class="dropdown">
+</style> -->
+<!-- <div id="myDropdown" class="dropdown">
 <details>
-<summary>FastAPI - Deploying MLFlow model to Kubernetes</summary>
+<summary>FastAPI - Deploying MLFlow model to Kubernetes</summary> -->
 <!--All you need is a blank line-->
 
-    + markdown list 1
-        + nested list 1
-        + nested list 2
-    + markdown list 2
-</details>
-</div>
+<!-- test text -->
+<!-- </details> -->
+<!-- </div> -->
 
 ### FastAPI - Summary
 Using web frameworks for building API endpoints is the straightforward way to serve models

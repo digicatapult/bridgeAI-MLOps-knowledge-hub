@@ -169,15 +169,15 @@ Understanding Data Drift and Model Drift: Drift Detection in Python . Also refer
 
 **Drift Detection**
 
-[Data drift parameters | Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests) 
+[Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests) 
 
-[Data drift algorithm | Evidently Documentation](https://docs.evidentlyai.com/reference/data-drift-algorithm) 
+[Data drift algorithm - Evidently Documentation](https://docs.evidentlyai.com/reference/data-drift-algorithm) 
 
 [ML Observability Course Repo](https://github.com/evidentlyai/ml_observability_course/tree/main/docs/book/ml-observability-course/module-2-ml-monitoring-metrics)
 
 **Statistical Tests Explained**
 
-[Data drift parameters | Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests) 
+[Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests) 
 
 [Which test is the best? We compared 5 methods to detect data drift on large datasets](https://www.evidentlyai.com/blog/data-drift-detection-large-datasets) 
 
