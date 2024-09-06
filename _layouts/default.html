@@ -16,8 +16,10 @@
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 
 <header class="page-header" role="banner">
-<img src="https://miro.medium.com/v2/resize:fit:800/0*566yfiZWjA1k1WLN.png" alt="Knowledge Hub Cover">
-<br>
+<h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+<h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+<!-- <img src="https://miro.medium.com/v2/resize:fit:800/0*566yfiZWjA1k1WLN.png" alt="Knowledge Hub Cover"> -->
+<!-- <br> -->
 {% if site.github.is_project_page %}
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/" class="btn">Home</a>
 <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>

@@ -1,6 +1,7 @@
-<!-- ---
+---
 layout: default
---- -->
+title: BridgeAI MLOps Knowledge Hub
+---
 
 
 <!-- ### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit) -->

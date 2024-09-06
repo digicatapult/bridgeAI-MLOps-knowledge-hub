@@ -1,6 +1,7 @@
-<!-- ---
+---
 layout: default
---- -->
+title: BridgeAI MLOps Knowledge Hub
+---
 
 # Effective ML Deployment
 

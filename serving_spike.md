@@ -1,16 +1,19 @@
-<!-- ---
+---
 layout: default
---- -->
+title: BridgeAI MLOps Knowledge Hub
+---
 
 # Model Serving Spike Content
 
 >Note:
 >This spike lists and compares some open-source model serving options or tools available based on ease of implementation, compatibility with PyTorch/Sklearn, and Kubernetes integration, and provides a recommendation for the most suitable tool for our use case.
 >
->We are particularly looking for real-time or online inference rather than batch inference. [Batch inference](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) processes a large batch of input data at once rather than processing each input data point individually in real time.\
+>We are particularly looking for real-time or online inference rather than batch inference. [Batch inference](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) processes a large batch of input data at once rather than processing each input data point individually in real time.
+<br>
+
 **Model Serving** vs **Model Deployment**
 
-To stick to a standard definition, I am sticking to the terminology used here in [this blog](https://neptune.ai/blog/ml-model-serving-best-tools).
+To make use of a standard definition, the team stuck to the terminology used here in [this blog](https://neptune.ai/blog/ml-model-serving-best-tools).
 
 >**Model Serving Runtime**: Packaging a trained machine learning model into a container and setting up APIs so it can handle incoming requests. This allows the model to be used in a production environment, responding to data inputs with predictions (inference). **BentoML**, **TorchServe**, **Tensorflow Serving** are examples.
 >
