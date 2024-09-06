@@ -31,10 +31,10 @@ The terms 'model serving' and 'model deployment' are often loosely considered to
         [MLFlow - Deploying MLFlow model to Kubernetes](#mlflow---deploying-mlflow-model-to-kubernetes)\
         [MLFlow - Summary](#mlflow---summary)
 2. [Model Serving using FastAPI](#2-model-serving-using-fastapi)\
-        FastAPI - Model Serving Runtime\
-        FastAPI - Model Serving Platforms\
-        FastAPI - Deploying MLFlow model to Kubernetes\
-        FastAPI - Summary
+        [FastAPI - Model Serving Runtime](#fastapi---model-serving-runtime)\
+        [FastAPI - Model Serving Platforms](#fastapi---model-serving-platforms)\
+        [FastAPI - Deploying MLFlow model to Kubernetes](#fastapi---deploying-mlflow-model-to-kubernetes)\
+        [FastAPI - Summary](#fastapi---summary)
 3. BentoML for Model serving\
         BentoML - Model Serving Runtime\
         BentoML - Model Serving Platforms\
@@ -106,7 +106,7 @@ Since the detailed steps in the above mentioned document are self explanatory, n
 
 ---
 
-<h3>MLFlow - Summary</h3>
+### MLFlow - Summary
 Supports PyTorch and SKlearn models natively - [MLFlow models - built-in model flavors](https://mlflow.org/docs/latest/models.html#built-in-model-flavors)
 
 Models are already in supported MLFLow models format when the training completes
@@ -134,7 +134,7 @@ Once the container is ready, any serving platform like Seldon core or KServe(ope
 So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.
 FastAPI - Deploying MLFlow model to Kubernetes
 
-### Deploying MLFlow model to Kubernetes
+### FastAPI - Deploying MLFlow model to Kubernetes
 
 
 ### FastAPI - Summary
