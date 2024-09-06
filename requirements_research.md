@@ -19,3 +19,4 @@ What were the requirements for our ML model and the MLOps pipeline?
 6. How we decided on using S3 for storage
 
 - How were the design decisions made across the pipeline for each component?
+    - Not all components had formal spikes, and were instead decided on because they are widely used in the industry and therefore have in-depth documentation/community notes
