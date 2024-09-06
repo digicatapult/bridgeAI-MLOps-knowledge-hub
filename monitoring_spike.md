@@ -55,7 +55,7 @@ Current data refers to the new or recent dataset that is being evaluated for dri
 
 
 ### 2.1 Steps
-><h1><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">Data Drift Code Practice</a></h1>
+><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">Data Drift Code Practice</a>
 
 1. Load the Reference data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
 
