@@ -117,7 +117,6 @@ Dependencies are already taken care of
 
 Easy serving and deployment process
 
----
 
 ## 2. Model Serving using FastAPI
 
@@ -134,8 +133,17 @@ Once the container is ready, any serving platform like Seldon core or KServe(ope
 So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.
 FastAPI - Deploying MLFlow model to Kubernetes
 
-### FastAPI - Deploying MLFlow model to Kubernetes
+<!-- ### FastAPI - Deploying MLFlow model to Kubernetes -->
 
+<details>
+<summary>FastAPI - Deploying MLFlow model to Kubernetes</summary>
+<!--All you need is a blank line-->
+
+    + markdown list 1
+        + nested list 1
+        + nested list 2
+    + markdown list 2
+</details>
 
 ### FastAPI - Summary
 Using web frameworks for building API endpoints is the straightforward way to serve models
