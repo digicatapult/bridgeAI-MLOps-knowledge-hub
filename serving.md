@@ -274,6 +274,7 @@ Key limitations:
 - Follows similar deployment process to other methods
 
 ## Summary Table
+
 Tool | MLFlow | FastAPI | BentoML
 --- | --- | --- | ---
 Ease of Implementation | Very easy | Easy | Easy
