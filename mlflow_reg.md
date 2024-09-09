@@ -3,9 +3,9 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-# Pipeline Component Default Decisions
+# MLflow Registry Evaluation
 <!-- do the defaults have to be in the horizon scan?? -->
-The team opted for Amazon S3 buckets, Airflow and MLflow for data storage, data engineering, and model registry and versioning, respectively.
+<!-- The team opted for Amazon S3 buckets, Airflow and MLflow for data storage, data engineering, and model registry and versioning, respectively.
 
 
 ## Amazon S3
@@ -21,4 +21,4 @@ Also Airflow Helm chart setup is easy. [Helm Chart for Apache Airflow — helm-c
 To run Prefect, the official Helm chart requires additional configurations to be setup. [Welcome to Prefect - Prefect](https://docs.prefect.io/3.0/get-started/index) 
 
 ## MLflow
-**See: [Prerequisites](prerequisites.md)**
+**See: [Prerequisites](prerequisites.md)** -->
