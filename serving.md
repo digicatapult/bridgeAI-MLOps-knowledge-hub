@@ -193,7 +193,7 @@ Follows similar deployment process to other methods
 - BentoML recommends Bento Cloud (a paid service) to deploy models in a kubernetes native manner
 - But similar model serving platforms like Seldon Core or KServe(open source) can be used here
 
->>So the prefered option here is use BentoML to create a container of for the model serving and then use Kserve as serving platform to deploy the service.
+>So the prefered option here is use BentoML to create a container of for the model serving and then use Kserve as serving platform to deploy the service.
 
 ### BentoML - Deploying MLFlow model to Kubernetes
 
@@ -290,32 +290,32 @@ Key limitations:
 | --- | --- | --- | ---
 | **Recommended** | Yes | Can be considered | Yes
 
->>What is recommended?
->>
->>It is better to start with MLFlow based deployment. Once things are in place, or time permits, or if we think the need to include preprocessing steps along with model loading and inference, we could move to the BentoML based approach.
->>
->>This decision is mainly because of the simplicity of the serving option that MLFlow provides and the additional learning/knowledge that BentoML requires. Other than that, the complexities look similar as per the preliminary check.
->>What needs to be changed when moving from mlflow to bentoml later?
->>- A bentoml service needs to be written with a consistent endpoint
->>        - Need to ensure model versions and dependencies are correctly packed
->>- Create a docker file using bentoml cli instead of mlflow cli
->>- Point the deployment services to use the new docker
+>What is recommended?
+>
+>It is better to start with MLFlow based deployment. Once things are in place, or time permits, or if we think the need to include preprocessing steps along with model loading and inference, we could move to the BentoML based approach.
+>
+>This decision is mainly because of the simplicity of the serving option that MLFlow provides and the additional learning/knowledge that BentoML requires. Other than that, the complexities look similar as per the preliminary check.
+>What needs to be changed when moving from mlflow to bentoml later?
+>- A bentoml service needs to be written with a consistent endpoint
+>        - Need to ensure model versions and dependencies are correctly packed
+>- Create a docker file using bentoml cli instead of mlflow cli
+>- Point the deployment services to use the new docker
 
-```
+
 Currently, the preprocessing pipeline used in the model training is just being saved locally during the training as an artefact. If we want to use the exact same preprocessing pipeline for inference, we may need to look for an option to log that artefact along with the model, pull it and use it before the inference. Once we have clarity on how is the deployment happening, this can be done without much difficulty.
-```
+
 
 **Questions:**
 Q. Decision between KServe or Seldon core - Which one is more suitable for our use case? 
+        A comparison - [KServe vs. Seldon Core - Superwise ML Observability](https://superwise.ai/blog/kserve-vs-seldon-core/) 
 
-A comparison - KServe vs. Seldon Core | Superwise ML Observability 
-
-KServe is open source whereas SeldonCore is expensive. And so is BentoCloud.
+        KServe is open source whereas [SeldonCore](https://www.seldon.io/pricing) is expensive. And so is [BentoCloud](https://www.bentoml.com/pricing).
 
 ## References
 1. MLFlow serving [Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation](https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html) 
 
 2. Kserve - [Home - KServe Documentation Website](https://kserve.github.io/website/latest/) 
+
   - Kserve using MLFlow models - [MLFlow - KServe Documentation Website](https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/) 
 
 3. [FastAPI](https://fastapi.tiangolo.com/) 
