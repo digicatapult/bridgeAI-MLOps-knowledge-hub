@@ -274,21 +274,21 @@ Key limitations:
 - Follows similar deployment process to other methods
 
 ## Summary Table
- Tool | MLFlow | FastAPI | BentoML
- --- | --- | --- | ---
- Ease of Implementation | Very easy | Easy | Easy
- --- | --- | --- | ---
- Compatibility with SKlearn and PyTorch | Fully compatible | Fully compatible| Fully compatible
- --- | --- | --- | ---
- Integration with MLFlow | Native | Need to do manually - Just need to get the model from the MLFlow and use it locally within the FastAPI app | Has MLFLow integration
- --- | --- | --- | ---
- Dependency management | Yes | Manual | Yes, can do it with the [MLFlow integration](https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips)
- --- | --- | --- | ---
- Additional components or things to consider | Install either via MLServer (`pip install mlflow[extras]`) or KServe to the Kubernetes cluster | Manually bind dependencies and model versions to a container; Install Kserve to the kubernetes cluster | Install bentoml using `pip install bentoml`; Install Kserve to the kubernetes cluster; NO need to follow [Yatai based installation](https://docs.yatai.io/en/latest/concepts/architecture.html#yatai-architecture) if we are using bentoML just for model serving runtime creation
- --- | --- | --- | ---
- Integration with Kubernetes | Flawless integration with KServe and Seldon Core | Easy integration once we have the container ready with any kubernetes deployment platform | Flawless integration
- --- | --- | --- | ---
- Recommended | Yes | Can be considered | Yes
+Tool | MLFlow | FastAPI | BentoML
+--- | --- | --- | ---
+Ease of Implementation | Very easy | Easy | Easy
+--- | --- | --- | ---
+Compatibility with SKlearn and PyTorch | Fully compatible | Fully compatible| Fully compatible
+--- | --- | --- | ---
+Integration with MLFlow | Native | Need to do manually - Just need to get the model from the MLFlow and use it locally within the FastAPI app | Has MLFLow integration
+--- | --- | --- | ---
+Dependency management | Yes | Manual | Yes, can do it with the [MLFlow integration](https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips)
+--- | --- | --- | ---
+Additional components or things to consider | Install either via MLServer (`pip install mlflow[extras]`) or KServe to the Kubernetes cluster | Manually bind dependencies and model versions to a container; Install Kserve to the kubernetes cluster | Install bentoml using `pip install bentoml`; Install Kserve to the kubernetes cluster; NO need to follow [Yatai based installation](https://docs.yatai.io/en/latest/concepts/architecture.html#yatai-architecture) if we are using bentoML just for model serving runtime creation
+--- | --- | --- | ---
+Integration with Kubernetes | Flawless integration with KServe and Seldon Core | Easy integration once we have the container ready with any kubernetes deployment platform | Flawless integration
+--- | --- | --- | ---
+Recommended | Yes | Can be considered | Yes
 
 >What is recommended?
 >
