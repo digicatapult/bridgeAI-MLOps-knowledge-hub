@@ -35,8 +35,8 @@ The terms 'model serving' and 'model deployment' are often loosely considered to
         [FastAPI - Model Serving Platforms](#fastapi---model-serving-platforms)\
         [FastAPI - Deploying MLFlow model to Kubernetes](#fastapi---deploying-mlflow-model-to-kubernetes)\
         [FastAPI - Summary](#fastapi---summary)
-3. BentoML for Model serving\
-        BentoML - Model Serving Runtime\
+3. [BentoML for Model serving](#3-bentoml-for-model-serving)\
+        [BentoML - Model Serving Runtime](#bentoml---model-serving-runtime)\
         BentoML - Model Serving Platforms\
         BentoML - Deploying MLFlow model to Kubernetes\
         BentoML - Summary
@@ -173,3 +173,155 @@ It is hard to automate the serving process
 Involves manual containerisation and then deploying to kubernetes
 
 Follows similar deployment process to other methods
+
+
+## 3. BentoML for Model Serving
+
+>BentoML is an open-source model serving library for building performant and scalable AI applications with Python. It comes with everything you need for serving optimization, model packaging, and production deployment.
+
+“Bentos” is an archive containing all the necessary components to package a model.
+
+### BentoML - Model Serving Runtime
+- Manually create a model serving runtime container using the following steps
+  - Install BentoML and create a service
+  - Build the Bento with your model and service
+  - Containerize the Bento using bentoml containerize
+  - Push the Docker image to GHCR
+- Model loading and inference related logic need to be implemented
+
+### BentoML - Model Serving Platforms
+- BentoML recommends Bento Cloud (a paid service) to deploy models in a kubernetes native manner
+- But similar model serving platforms like Seldon Core or KServe(open source) can be used here
+
+>>So the prefered option here is use BentoML to create a container of for the model serving and then use Kserve as serving platform to deploy the service.
+
+### BentoML - Deploying MLFlow model to Kubernetes
+
+1. Install BentoML and Dependencies
+
+`pip install bentoml`
+
+2. Create a BentoML Service
+
+Create a BentoML service for your model. Basically wrap the model with an api endpoint similar to the process of doing so using FastAPI. A sample not tested code:
+
+```
+# sample_service.py
+import bentoml
+import mlflow
+from transformers import pipeline
+model_artefact_path = "model_uri"
+model_uri = mlflow.get_artifact_uri(model_artefact_path)
+bento_model = bentoml.mlflow.import_model(
+    'mlflow_pytorch_mnist',
+    model_uri,
+    signatures={'predict': {'batchable': True}}
+)
+@bentoml.service(
+    resources={"cpu": "2"},
+    traffic={"timeout": 10},
+)
+class Summarization:
+    def __init__(self) -> None:
+        # Load model into pipeline
+        self.model = bento_model
+    @bentoml.api
+    def predict(self, data: str) -> str:
+        input_data = np.array(data)
+        predictions = self.model(input_data)
+        return {"predictions": predictions.tolist()}
+```
+
+3. Build the Bento for the service:
+
+`bentoml build -f sample_service.py`
+
+4. Containerize the Bento - Use BentoML to containerize the built Bento:
+
+`bentoml containerize sample_model:latest`
+
+This command builds a Docker image for the BentoML service.
+Now the Docker Container can be run locally
+
+`docker run -p 3000:3000 sample_model:latest`
+
+5. Deploy to Kubernetes with KServe
+
+Create a KServe InferenceService YAML file and deploy to kubernetes.
+
+ 
+
+**Here are the advantages and limitations of BentoML as per** [neptune.ai - The experiment tracker for foundation model training](https://neptune.ai/) 
+
+Advantages:
+  - **Ease of use:** BentoML is one of the most straightforward frameworks to use. Since the release of 1.2, it has become possible to build a Bento with a few lines of code.
+  - **ML Framework support:** BentoML supports all the leading machine learning frameworks, such as PyTorch, Keras, TensorFlow, and scikit-learn.
+  - **Concurrent model execution:** [BentoML supports fractional GPU allocation](https://github.com/bentoml/BentoML/blob/main/src/_bentoml_impl/server/allocator.py). In other words, you can spawn multiple instances of a model on a single GPU to distribute the processing.
+  - **Integration:** BentoML comes with integrations for ZenML, Spark, MLflow, [fast.ai](https://www.fast.ai/), Triton Inference Server, and more.
+  - **Flexibility:** BentoML is “Pythonic” and allows you to package any pre-trained model that you can import with Python, such as Large Language Models (LLMs), Stable Diffusion, or CLIP.
+  - **Clear documentation:** The documentation is easy to read, well-structured, and contains plenty of helpful examples.
+  - **Monitoring:** BentoML integrates with ArizeAI and Prometheus metrics.
+
+Key limitations:
+  - Requires extra implementation: As BentoML is “Pythonic,” you are required to implement model loading and inference methods on your own.
+  - Native support for high-performance runtime: BentoML runs on Python. Therefore, it is not as optimal as Tensorflow Serving or TorchServe, both of which run on backends written in C++ that are compiled to machine code. However, it is possible to use the [ONNX Python API](https://docs.bentoml.com/en/latest/reference/frameworks/onnx.html) to speed up the inference time.
+
+### BentoML - Summary
+- Supports multiple ML frameworks
+- Gets more control on the preprocessing and postprocessing here similar to FastAPI
+- Time consuming to create consistent APIs but with pre and post processing
+- Optimised model serving docker
+- Follows similar deployment process to other methods
+
+## Summary Table
+|  | MLFlow | FastAPI | BentoML
+| --- | --- | --- | ---
+| **Ease of Implementation** | Very easy | Easy | Easy
+| **Compatibility with SKlearn and PyTorch** | Fully compatible | Fully compatible| Fully compatible
+| **Integration with MLFlow** | Native | Need to do manually - Just need to get the model from the MLFlow and use it locally within the FastAPI app | Has MLFLow integration
+| **Dependency management** | Yes | Manual | Yes, can do it with the [MLFlow integration](https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips)
+| **Additional components or things to consider** | Install either via MLServer (`pip install mlflow[extras]`) or KServe to the Kubernetes cluster | Manually bind dependencies and model versions to a container; Install Kserve to the kubernetes cluster | Install bentoml using `pip install bentoml`; Install Kserve to the kubernetes cluster; NO need to follow [Yatai based installation](https://docs.yatai.io/en/latest/concepts/architecture.html#yatai-architecture) if we are using bentoML just for model serving runtime creation
+| **Integration with Kubernetes** | Flawless integration with KServe and Seldon Core | Easy integration once we have the container ready with any kubernetes deployment platform | Flawless integration
+| **Recommended** | Yes | Can be considered | Yes
+
+>>What is recommended?
+>>
+>>It is better to start with MLFlow based deployment. Once things are in place, or time permits, or if we think the need to include preprocessing steps along with model loading and inference, we could move to the BentoML based approach.
+>>
+>>This decision is mainly because of the simplicity of the serving option that MLFlow provides and the additional learning/knowledge that BentoML requires. Other than that, the complexities look similar as per the preliminary check.
+>>What needs to be changed when moving from mlflow to bentoml later?
+>>- A bentoml service needs to be written with a consistent endpoint
+>>        - Need to ensure model versions and dependencies are correctly packed
+>>- Create a docker file using bentoml cli instead of mlflow cli
+>>- Point the deployment services to use the new docker
+
+```
+Currently, the preprocessing pipeline used in the model training is just being saved locally during the training as an artefact. If we want to use the exact same preprocessing pipeline for inference, we may need to look for an option to log that artefact along with the model, pull it and use it before the inference. Once we have clarity on how is the deployment happening, this can be done without much difficulty.
+```
+
+**Questions:**
+Q. Decision between KServe or Seldon core - Which one is more suitable for our use case? 
+
+A comparison - KServe vs. Seldon Core | Superwise ML Observability 
+
+KServe is open source whereas SeldonCore is expensive. And so is BentoCloud.
+
+## References
+1. MLFlow serving [Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation](https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html) 
+
+2. Kserve - [Home - KServe Documentation Website](https://kserve.github.io/website/latest/) 
+  - Kserve using MLFlow models - [MLFlow - KServe Documentation Website](https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/) 
+
+3. [FastAPI](https://fastapi.tiangolo.com/) 
+
+4. [FastAPI vs Flask: Comparison Guide for Data Science Enthusiasts](https://analyticsindiamag.com/developers-corner/fastapi-vs-flask-comparison-guide-for-data-science-enthusiasts/) 
+
+5. [KubeFlow serving options](https://www.kubeflow.org/docs/external-add-ons/serving/overview/) 
+
+6. KServe installation - [GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kubernetes](https://github.com/kserve/kserve#hammer_and_wrench-installation) 
+
+7. [Best Tools For ML Model Serving](https://neptune.ai/blog/ml-model-serving-best-tools) 
+
+8. MLFlow BentoML - [MLflow](https://docs.bentoml.com/en/1.1/integrations/mlflow.html) 
+
+9. BentoML MLFlow dependency management - [MLflow additional tips](https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips)
