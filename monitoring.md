@@ -5,6 +5,22 @@ title: BridgeAI MLOps Knowledge Hub
 
 # Model Monitoring Spike Content
 
+**Table of Contents**
+1. [Model Monitoring](#1-model-monitoring)\
+        [Data Drift](#11-data-drift)\
+        [Concept Drift](#12-concept-drift)\
+        [Target Drift](#13-target-drift)
+2. [Data Drift with Evidently Explained](#2-data-drift-with-evidently-explained)\
+        [Steps](#21-steps)\
+        [General Steps](#22-general-steps)\
+        [Key Questions Before Retraining](#23-key-questions-before-retraining)\
+        [Possible Action Items Based on Data Drift Detection](#24-possible-action-items-based-on-data-drift-detection)\
+        [Testing Before Pushing a Newly Trained Model to Production](#25-testing-before-pushing-a-newly-trained-model-to-production)
+3. [Data Drift for the House Price Prediction Use Case](#3-data-drift-for-the-house-price-prediction-use-case)\
+[References](#references)
+
+
+
 ## 1. Model Monitoring
 Building a machine learning model is just the beginning. Once you deploy that model into the real world, it faces many challenges that can affect its predictive performance (Model Drift) and require continuous monitoring. Model Drift refers to the decay of the ML model quality over time. Simply put, it is a way of saying “the model quality got worse” or “the model no longer serves its purpose.” Model Drift doesn't pinpoint a specific cause; it's just an observation that the model no longer works as well as it used to. The model decay might happen due to various reasons, including [data drift](https://www.evidentlyai.com/ml-in-production/data-drift), data quality issues, or concept drift. [What is concept drift in ML, and how to detect and address it](https://www.evidentlyai.com/ml-in-production/concept-drift)
 

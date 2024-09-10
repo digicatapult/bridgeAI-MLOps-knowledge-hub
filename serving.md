@@ -37,12 +37,12 @@ The terms 'model serving' and 'model deployment' are often loosely considered to
         [FastAPI - Summary](#fastapi---summary)
 3. [BentoML for Model serving](#3-bentoml-for-model-serving)\
         [BentoML - Model Serving Runtime](#bentoml---model-serving-runtime)\
-        BentoML - Model Serving Platforms\
-        BentoML - Deploying MLFlow model to Kubernetes\
-        BentoML - Summary
-Summary Table\
-        Questions\
-References
+        [BentoML - Model Serving Platforms](#bentoml---model-serving-platforms)\
+        [BentoML - Deploying MLFlow model to Kubernetes](#bentoml---deploying-mlflow-model-to-kubernetes)\
+        [BentoML - Summary](#bentoml---summary)
+[Summary Table](#summary-table)\
+        [Questions](#questions)\
+[References](#references)
 
 ---
 
@@ -291,6 +291,8 @@ Integration with Kubernetes | Flawless integration with KServe and Seldon Core |
 --- | --- | --- | ---
 Recommended | Yes | Can be considered | Yes
 
+
+
 >What is recommended?
 >
 >It is better to start with MLFlow based deployment. Once things are in place, or time permits, or if we think the need to include preprocessing steps along with model loading and inference, we could move to the BentoML based approach.
@@ -303,10 +305,12 @@ Recommended | Yes | Can be considered | Yes
 >- Point the deployment services to use the new docker
 
 
+
 Currently, the preprocessing pipeline used in the model training is just being saved locally during the training as an artefact. If we want to use the exact same preprocessing pipeline for inference, we may need to look for an option to log that artefact along with the model, pull it and use it before the inference. Once we have clarity on how is the deployment happening, this can be done without much difficulty.
 
 
-**Questions:**\
+## Questions:
+
 Q. Decision between KServe or Seldon core - Which one is more suitable for our use case?\
         A comparison - [KServe vs. Seldon Core - Superwise ML Observability](https://superwise.ai/blog/kserve-vs-seldon-core/)\ 
         KServe is open source whereas [SeldonCore](https://www.seldon.io/pricing) is expensive. And so is [BentoCloud](https://www.bentoml.com/pricing).
