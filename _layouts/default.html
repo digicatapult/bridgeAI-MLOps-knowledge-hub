@@ -60,19 +60,19 @@
     }
 
     .dropdown {
-    height: 0%;
-    width: 18%;
-    position: fixed;
-    /* z-index: 1; */
-    /* top: 0; */
-    left: 0;
-    background-color: rgb(24, 137, 105);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    position: relative;
+    display: inline-block;
     }
 
-    .dropdown a {
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(24, 137, 105);
+    min-width: none;
+    z-index: 1;
+    }
+
+    .dropdown-content a {
     text-align: left;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -84,6 +84,10 @@
     
     .dropdown a:hover {
     color: #201d1d;
+    }
+
+    .dropdown:hover .dropdown-content {
+    display: block;
     }
 
     /* .btn {
@@ -115,7 +119,8 @@
 <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
 <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
-    <div id="myDropdown" class="dropdown" onclick="toggleNav()">Team Journey
+    <div id="myDropdown" class="dropdown" onclick="toggleNav()"><span>Team Journey</span>
+    <div class="dropdown-content">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Team Journey - Requirements and Research</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlflow_reg.html">Team Journey - MLflow Registry</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Team Journey - Model Serving</a>
