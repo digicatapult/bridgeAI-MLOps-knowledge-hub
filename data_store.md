@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-# MLflow Registry Spike Content
+# Data Store Spike Content
 
 **Table of Contents**
 
