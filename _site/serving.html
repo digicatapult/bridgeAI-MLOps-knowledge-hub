@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>BridgeAI MLOps Knowledge Hub</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="BridgeAI MLOps Knowledge Hub" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/serving.html" />
+<meta property="og:url" content="http://localhost:4000/serving.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BridgeAI MLOps Knowledge Hub" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"BridgeAI MLOps Knowledge Hub","url":"http://localhost:4000/serving.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#157878">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/assets/css/style.css?v=">
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+<body>
+<a id="skip-to-content" href="#content">Skip to the content.</a>
+
+<header class="page-header" role="banner">
+<h1 class="project-name">BridgeAI MLOps Knowledge Hub</h1>
+<!-- <img src="https://miro.medium.com/v2/resize:fit:800/0*566yfiZWjA1k1WLN.png" alt="Knowledge Hub Cover"> -->
+<!-- <br> -->
+
+
+<style>
+    body {
+    font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    
+    .sidenav a {
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+    color: #201d1d;
+    }
+
+    .dropdown {
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+
+    .dropdown a {
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+    }
+    
+    .dropdown a:hover {
+    color: #201d1d;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+
+    </style>
+    <div id="mySidenav" class="sidenav">
+    <a href="/">Home</a>
+    <a href="/maturity_assessment.html">Maturity Assessment</a>
+    <a onclick="toggleNav()">Team Journey</a>
+    <div id="myDropdown" class="dropdown">
+        <a href="/requirements_research.html">Requirements and Research</a>
+        <a href="/mlflow_reg.html">MLflow Registry</a>
+        <a href="/serving.html">Model Serving</a>
+        <a href="/monitoring.html">Model Monitoring</a>
+        <a href="/versioning.html">Data Versioning</a>
+    </div>
+    <a href="/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+    <a href="/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+    <a href="/best_practices.html">MLOps Best Practices</a>
+</div>
+
+<script>
+function toggleNav() {
+    const dropdown = document.getElementById("myDropdown");
+    if (dropdown.style.height === "280px") {
+        dropdown.style.height = "0px";
+    } else {
+        dropdown.style.height = "280px";
+    }
+}
+</script>
+</header>
+
+<main id="content" class="main-content" role="main">
+<h1 id="model-serving-spike-content">Model Serving Spike Content</h1>
+
+<blockquote>
+  <p>Note:
+This spike lists and compares some open-source model serving options or tools available based on ease of implementation, compatibility with PyTorch/Sklearn, and Kubernetes integration, and provides a recommendation for the most suitable tool for our use case.</p>
+
+  <p>We are particularly looking for real-time or online inference rather than batch inference. <a href="https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2">Batch inference</a> processes a large batch of input data at once rather than processing each input data point individually in real time.
+<br /></p>
+</blockquote>
+
+<p><strong>Model Serving</strong> vs <strong>Model Deployment</strong></p>
+
+<p>To make use of a standard definition, the team stuck to the terminology used here in <a href="https://neptune.ai/blog/ml-model-serving-best-tools">this blog</a>.</p>
+
+<blockquote>
+  <p><strong>Model Serving Runtime</strong>: Packaging a trained machine learning model into a container and setting up APIs so it can handle incoming requests. This allows the model to be used in a production environment, responding to data inputs with predictions (inference). <strong>BentoML</strong>, <strong>TorchServe</strong>, <strong>Tensorflow Serving</strong> are examples.</p>
+
+  <p><strong>Model Serving Platform</strong>: An environment designed to dynamically scale the number of model containers in response to incoming traffic. Tools like KServe, Bento Cloud, and Seldon Core are examples of serving platforms. They manage the infrastructure needed to deploy and scale models efficiently, responding to varying traffic without manual intervention.</p>
+
+  <p><strong>Model Deployment</strong>: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.
+The terms ‘model serving’ and ‘model deployment’ are often loosely considered to have the same meaning, and some documents use them interchangeably.</p>
+</blockquote>
+
+<hr />
+
+<p><strong>Table of Contents</strong></p>
+<ol>
+  <li><a href="#1-mlflow-for-model-serving">MLFlow For Model Serving</a><br />
+     <a href="#mlflow---model-serving-runtime">MLFlow - Model Serving Runtime</a><br />
+     <a href="#mlflow---model-serving-platforms">MLFlow - Model Serving Platforms</a><br />
+     <a href="#mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</a><br />
+     <a href="#mlflow---summary">MLFlow - Summary</a></li>
+  <li><a href="#2-model-serving-using-fastapi">Model Serving using FastAPI</a><br />
+     <a href="#fastapi---model-serving-runtime">FastAPI - Model Serving Runtime</a><br />
+     <a href="#fastapi---model-serving-platforms">FastAPI - Model Serving Platforms</a><br />
+     <a href="#fastapi---deploying-mlflow-model-to-kubernetes">FastAPI - Deploying MLFlow model to Kubernetes</a><br />
+     <a href="#fastapi---summary">FastAPI - Summary</a></li>
+  <li><a href="#3-bentoml-for-model-serving">BentoML for Model serving</a><br />
+     <a href="#bentoml---model-serving-runtime">BentoML - Model Serving Runtime</a><br />
+     <a href="#bentoml---model-serving-platforms">BentoML - Model Serving Platforms</a><br />
+     <a href="#bentoml---deploying-mlflow-model-to-kubernetes">BentoML - Deploying MLFlow model to Kubernetes</a><br />
+     <a href="#bentoml---summary">BentoML - Summary</a>
+<a href="#summary-table">Summary Table</a><br />
+     <a href="#questions">Questions</a><br />
+<a href="#references">References</a></li>
+</ol>
+
+<hr />
+
+<h2 id="1-mlflow-for-model-serving">1. MLFlow For Model Serving</h2>
+<p>MLFlow supports a variety of model deployment targets including Local Infra, AWS Sagemaker, Azure ML, Databricks, Kubernetes, etc. But we will be looking into the Kubernetes deployment here.</p>
+
+<h3 id="mlflow---model-serving-runtime">MLFlow - Model Serving Runtime</h3>
+<ul>
+  <li>
+    <p>MLFlow uses MLServer for creating a serving runtime – <a href="https://mlserver.readthedocs.io/en/latest/">MLServer — MLServer Documentation</a></p>
+  </li>
+  <li>
+    <p>By default MLFlow uses Flask, but prefers MLServer for production – <a href="https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks">Deploy MLflow Model as a Local Inference Server — MLflow 2.15.1 documentation</a></p>
+  </li>
+  <li>
+    <p>Supports almost all machine learning frameworks and no vendor lock is present here unlike TorchServe or Tensorflow serve</p>
+  </li>
+  <li>
+    <p>With simple steps, the url <code class="language-plaintext highlighter-rouge">http://&lt;host&gt;:&lt;port&gt;/invocations</code> endpoint URL can do predictions</p>
+  </li>
+</ul>
+
+<h3 id="mlflow---model-serving-platforms">MLFlow - Model Serving Platforms</h3>
+<p>MLFlow native model serving using MLSerer supports KServe and Seldon Core both are kubernetes native</p>
+
+<p>KServe has some example code and more documentation and details from MLFlow side - Develop ML model with MLflow and deploy to Kubernetes — MLflow 2.15.1 documentation</p>
+
+<p>Partner documentation from KServe - MLFlow - KServe Documentation Website</p>
+
+<p>Seldon core - has got no example code in MLFlow but the partner documentation is also rich - MLflow Server — seldon-core  documentation</p>
+
+<hr />
+
+<h3 id="mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</h3>
+<p>The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.</p>
+
+<p>An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.</p>
+
+<p>Once we have the model ready, deploying the model to Kserve can be done in two ways as mentioned here; either using a docker image or using a model uri.</p>
+
+<p>Summarised steps for the docker image based approach from the above link:</p>
+
+<p>Install the MLServer using</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip install mlflow[extras]</code></p>
+
+<p>Install Kserve to the kubernetes cluster</p>
+
+<p>GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kubernetes</p>
+
+<p>Test the model serving locally,</p>
+
+<p><code class="language-plaintext highlighter-rouge">mlflow models serve -m runs:/&lt;run_id_for_your_best_run&gt;/model -p 1234 --enable-mlserver</code></p>
+
+<p>Create a model docker is as simple as</p>
+
+<p><code class="language-plaintext highlighter-rouge">mlflow models build-docker -m runs:/&lt;run_id_for_your_best_run&gt;/model -n &lt;your_dockerhub_user_name&gt;/&lt;mlflow-model-name&gt; --enable-mlserver</code></p>
+
+<p>Push the model to docker registry</p>
+
+<p>Write a deployment configuration yaml file</p>
+
+<p>Deploy to the kubernetes cluster using kubectl</p>
+
+<p>If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.</p>
+
+<p>Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.</p>
+
+<hr />
+
+<h3 id="mlflow---summary">MLFlow - Summary</h3>
+<p>Supports PyTorch and SKlearn models natively - <a href="https://mlflow.org/docs/latest/models.html#built-in-model-flavors">MLFlow models - built-in model flavors</a></p>
+
+<p>Models are already in supported MLFLow models format when the training completes</p>
+
+<p>Easy integration with kubernetes is provided using KServe or Seldon Core</p>
+
+<p>Dependencies are already taken care of</p>
+
+<p>Easy serving and deployment process</p>
+
+<h2 id="2-model-serving-using-fastapi">2. Model Serving using FastAPI</h2>
+
+<h3 id="fastapi---model-serving-runtime">FastAPI - Model Serving Runtime</h3>
+<p>Manually create a model serving runtime using FastAPI</p>
+
+<p>Containerise the so created FastAPI app to create model endpoints</p>
+
+<p>Need to create custom consistent endpoint urls</p>
+
+<h3 id="fastapi---model-serving-platforms">FastAPI - Model Serving Platforms</h3>
+<p>Once the container is ready, any serving platform like Seldon core or KServe(open source) can be used</p>
+
+<p>So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.
+FastAPI - Deploying MLFlow model to Kubernetes</p>
+
+<!-- ### FastAPI - Deploying MLFlow model to Kubernetes -->
+<!-- <style>
+.dropdown {
+height: 10%;
+width: 10%;
+position: fixed;
+/* z-index: 1; */
+background-color: rgb(24, 137, 105);
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+</style> -->
+<!-- <div id="myDropdown" class="dropdown">
+<details>
+<summary>FastAPI - Deploying MLFlow model to Kubernetes</summary> -->
+<!--All you need is a blank line-->
+
+<!-- test text -->
+<!-- </details> -->
+<!-- </div> -->
+
+<h3 id="fastapi---summary">FastAPI - Summary</h3>
+<p>Using web frameworks for building API endpoints is the straightforward way to serve models</p>
+
+<p>Not only MLFlow models, any models can be served using this approach</p>
+
+<p>Gets more control on the preprocessing and postprocessing here</p>
+
+<p>Time consuming to create consistent APIs</p>
+
+<p>Need to capture the dependencies separately for running the model</p>
+
+<p>Model and its specific versions need to be manually added to the</p>
+
+<p>It is hard to automate the serving process</p>
+
+<p>Involves manual containerisation and then deploying to kubernetes</p>
+
+<p>Follows similar deployment process to other methods</p>
+
+<h2 id="3-bentoml-for-model-serving">3. BentoML for Model Serving</h2>
+
+<blockquote>
+  <p>BentoML is an open-source model serving library for building performant and scalable AI applications with Python. It comes with everything you need for serving optimization, model packaging, and production deployment.</p>
+</blockquote>
+
+<p>“Bentos” is an archive containing all the necessary components to package a model.</p>
+
+<h3 id="bentoml---model-serving-runtime">BentoML - Model Serving Runtime</h3>
+<ul>
+  <li>Manually create a model serving runtime container using the following steps
+    <ul>
+      <li>Install BentoML and create a service</li>
+      <li>Build the Bento with your model and service</li>
+      <li>Containerize the Bento using bentoml containerize</li>
+      <li>Push the Docker image to GHCR</li>
+    </ul>
+  </li>
+  <li>Model loading and inference related logic need to be implemented</li>
+</ul>
+
+<h3 id="bentoml---model-serving-platforms">BentoML - Model Serving Platforms</h3>
+<ul>
+  <li>BentoML recommends Bento Cloud (a paid service) to deploy models in a kubernetes native manner</li>
+  <li>But similar model serving platforms like Seldon Core or KServe(open source) can be used here</li>
+</ul>
+
+<blockquote>
+  <p>So the prefered option here is use BentoML to create a container of for the model serving and then use Kserve as serving platform to deploy the service.</p>
+</blockquote>
+
+<h3 id="bentoml---deploying-mlflow-model-to-kubernetes">BentoML - Deploying MLFlow model to Kubernetes</h3>
+
+<ol>
+  <li>Install BentoML and Dependencies</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">pip install bentoml</code></p>
+
+<ol>
+  <li>Create a BentoML Service</li>
+</ol>
+
+<p>Create a BentoML service for your model. Basically wrap the model with an api endpoint similar to the process of doing so using FastAPI. A sample not tested code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># sample_service.py
+import bentoml
+import mlflow
+from transformers import pipeline
+model_artefact_path = "model_uri"
+model_uri = mlflow.get_artifact_uri(model_artefact_path)
+bento_model = bentoml.mlflow.import_model(
+    'mlflow_pytorch_mnist',
+    model_uri,
+    signatures={'predict': {'batchable': True}}
+)
+@bentoml.service(
+    resources={"cpu": "2"},
+    traffic={"timeout": 10},
+)
+class Summarization:
+    def __init__(self) -&gt; None:
+        # Load model into pipeline
+        self.model = bento_model
+    @bentoml.api
+    def predict(self, data: str) -&gt; str:
+        input_data = np.array(data)
+        predictions = self.model(input_data)
+        return {"predictions": predictions.tolist()}
+</code></pre></div></div>
+
+<ol>
+  <li>Build the Bento for the service:</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">bentoml build -f sample_service.py</code></p>
+
+<ol>
+  <li>Containerize the Bento - Use BentoML to containerize the built Bento:</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">bentoml containerize sample_model:latest</code></p>
+
+<p>This command builds a Docker image for the BentoML service.
+Now the Docker Container can be run locally</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker run -p 3000:3000 sample_model:latest</code></p>
+
+<ol>
+  <li>Deploy to Kubernetes with KServe</li>
+</ol>
+
+<p>Create a KServe InferenceService YAML file and deploy to kubernetes.</p>
+
+<p><strong>Here are the advantages and limitations of BentoML as per</strong> <a href="https://neptune.ai/">neptune.ai - The experiment tracker for foundation model training</a></p>
+
+<p>Advantages:</p>
+<ul>
+  <li><strong>Ease of use:</strong> BentoML is one of the most straightforward frameworks to use. Since the release of 1.2, it has become possible to build a Bento with a few lines of code.</li>
+  <li><strong>ML Framework support:</strong> BentoML supports all the leading machine learning frameworks, such as PyTorch, Keras, TensorFlow, and scikit-learn.</li>
+  <li><strong>Concurrent model execution:</strong> <a href="https://github.com/bentoml/BentoML/blob/main/src/_bentoml_impl/server/allocator.py">BentoML supports fractional GPU allocation</a>. In other words, you can spawn multiple instances of a model on a single GPU to distribute the processing.</li>
+  <li><strong>Integration:</strong> BentoML comes with integrations for ZenML, Spark, MLflow, <a href="https://www.fast.ai/">fast.ai</a>, Triton Inference Server, and more.</li>
+  <li><strong>Flexibility:</strong> BentoML is “Pythonic” and allows you to package any pre-trained model that you can import with Python, such as Large Language Models (LLMs), Stable Diffusion, or CLIP.</li>
+  <li><strong>Clear documentation:</strong> The documentation is easy to read, well-structured, and contains plenty of helpful examples.</li>
+  <li><strong>Monitoring:</strong> BentoML integrates with ArizeAI and Prometheus metrics.</li>
+</ul>
+
+<p>Key limitations:</p>
+<ul>
+  <li>Requires extra implementation: As BentoML is “Pythonic,” you are required to implement model loading and inference methods on your own.</li>
+  <li>Native support for high-performance runtime: BentoML runs on Python. Therefore, it is not as optimal as Tensorflow Serving or TorchServe, both of which run on backends written in C++ that are compiled to machine code. However, it is possible to use the <a href="https://docs.bentoml.com/en/latest/reference/frameworks/onnx.html">ONNX Python API</a> to speed up the inference time.</li>
+</ul>
+
+<h3 id="bentoml---summary">BentoML - Summary</h3>
+<ul>
+  <li>Supports multiple ML frameworks</li>
+  <li>Gets more control on the preprocessing and postprocessing here similar to FastAPI</li>
+  <li>Time consuming to create consistent APIs but with pre and post processing</li>
+  <li>Optimised model serving docker</li>
+  <li>Follows similar deployment process to other methods</li>
+</ul>
+
+<h2 id="summary-table">Summary Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>MLFlow</th>
+      <th>FastAPI</th>
+      <th>BentoML</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ease of Implementation</td>
+      <td>Very easy</td>
+      <td>Easy</td>
+      <td>Easy</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Compatibility with SKlearn and PyTorch</td>
+      <td>Fully compatible</td>
+      <td>Fully compatible</td>
+      <td>Fully compatible</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Integration with MLFlow</td>
+      <td>Native</td>
+      <td>Need to do manually - Just need to get the model from the MLFlow and use it locally within the FastAPI app</td>
+      <td>Has MLFLow integration</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Dependency management</td>
+      <td>Yes</td>
+      <td>Manual</td>
+      <td>Yes, can do it with the <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips">MLFlow integration</a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Additional components or things to consider</td>
+      <td>Install either via MLServer (<code class="language-plaintext highlighter-rouge">pip install mlflow[extras]</code>) or KServe to the Kubernetes cluster</td>
+      <td>Manually bind dependencies and model versions to a container; Install Kserve to the kubernetes cluster</td>
+      <td>Install bentoml using <code class="language-plaintext highlighter-rouge">pip install bentoml</code>; Install Kserve to the kubernetes cluster; NO need to follow <a href="https://docs.yatai.io/en/latest/concepts/architecture.html#yatai-architecture">Yatai based installation</a> if we are using bentoML just for model serving runtime creation</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Integration with Kubernetes</td>
+      <td>Flawless integration with KServe and Seldon Core</td>
+      <td>Easy integration once we have the container ready with any kubernetes deployment platform</td>
+      <td>Flawless integration</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Recommended</td>
+      <td>Yes</td>
+      <td>Can be considered</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>What is recommended?</p>
+
+  <p>It is better to start with MLFlow based deployment. Once things are in place, or time permits, or if we think the need to include preprocessing steps along with model loading and inference, we could move to the BentoML based approach.</p>
+
+  <p>This decision is mainly because of the simplicity of the serving option that MLFlow provides and the additional learning/knowledge that BentoML requires. Other than that, the complexities look similar as per the preliminary check.
+What needs to be changed when moving from mlflow to bentoml later?</p>
+  <ul>
+    <li>A bentoml service needs to be written with a consistent endpoint
+     - Need to ensure model versions and dependencies are correctly packed</li>
+    <li>Create a docker file using bentoml cli instead of mlflow cli</li>
+    <li>Point the deployment services to use the new docker</li>
+  </ul>
+</blockquote>
+
+<p>Currently, the preprocessing pipeline used in the model training is just being saved locally during the training as an artefact. If we want to use the exact same preprocessing pipeline for inference, we may need to look for an option to log that artefact along with the model, pull it and use it before the inference. Once we have clarity on how is the deployment happening, this can be done without much difficulty.</p>
+
+<h2 id="questions">Questions:</h2>
+
+<p>Q. Decision between KServe or Seldon core - Which one is more suitable for our use case?<br />
+        A comparison - <a href="https://superwise.ai/blog/kserve-vs-seldon-core/">KServe vs. Seldon Core - Superwise ML Observability</a>\ 
+        KServe is open source whereas <a href="https://www.seldon.io/pricing">SeldonCore</a> is expensive. And so is <a href="https://www.bentoml.com/pricing">BentoCloud</a>.</p>
+
+<h2 id="references">References</h2>
+<ol>
+  <li>
+    <p>MLFlow serving <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html">Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation</a></p>
+  </li>
+  <li>
+    <p>Kserve - <a href="https://kserve.github.io/website/latest/">Home - KServe Documentation Website</a></p>
+  </li>
+</ol>
+
+<ul>
+  <li>Kserve using MLFlow models - <a href="https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/">MLFlow - KServe Documentation Website</a></li>
+</ul>
+
+<ol>
+  <li>
+    <p><a href="https://fastapi.tiangolo.com/">FastAPI</a></p>
+  </li>
+  <li>
+    <p><a href="https://analyticsindiamag.com/developers-corner/fastapi-vs-flask-comparison-guide-for-data-science-enthusiasts/">FastAPI vs Flask: Comparison Guide for Data Science Enthusiasts</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.kubeflow.org/docs/external-add-ons/serving/overview/">KubeFlow serving options</a></p>
+  </li>
+  <li>
+    <p>KServe installation - <a href="https://github.com/kserve/kserve#hammer_and_wrench-installation">GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kubernetes</a></p>
+  </li>
+  <li>
+    <p><a href="https://neptune.ai/blog/ml-model-serving-best-tools">Best Tools For ML Model Serving</a></p>
+  </li>
+  <li>
+    <p>MLFlow BentoML - <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html">MLflow</a></p>
+  </li>
+  <li>
+    <p>BentoML MLFlow dependency management - <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips">MLflow additional tips</a></p>
+  </li>
+</ol>
+
+<footer class="site-footer">
+
+<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>BridgeAI MLOps Knowledge Hub</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="BridgeAI MLOps Knowledge Hub" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/prerequisites.html" />
+<meta property="og:url" content="http://localhost:4000/prerequisites.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BridgeAI MLOps Knowledge Hub" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"BridgeAI MLOps Knowledge Hub","url":"http://localhost:4000/prerequisites.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#157878">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/assets/css/style.css?v=">
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+<body>
+<a id="skip-to-content" href="#content">Skip to the content.</a>
+
+<header class="page-header" role="banner">
+<h1 class="project-name">BridgeAI MLOps Knowledge Hub</h1>
+<!-- <img src="https://miro.medium.com/v2/resize:fit:800/0*566yfiZWjA1k1WLN.png" alt="Knowledge Hub Cover"> -->
+<!-- <br> -->
+
+
+<style>
+    body {
+    font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    
+    .sidenav a {
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+    color: #201d1d;
+    }
+
+    .dropdown {
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+
+    .dropdown a {
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+    }
+    
+    .dropdown a:hover {
+    color: #201d1d;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+
+    </style>
+    <div id="mySidenav" class="sidenav">
+    <a href="/">Home</a>
+    <a href="/maturity_assessment.html">Maturity Assessment</a>
+    <a onclick="toggleNav()">Team Journey</a>
+    <div id="myDropdown" class="dropdown">
+        <a href="/requirements_research.html">Requirements and Research</a>
+        <a href="/mlflow_reg.html">MLflow Registry</a>
+        <a href="/serving.html">Model Serving</a>
+        <a href="/monitoring.html">Model Monitoring</a>
+        <a href="/versioning.html">Data Versioning</a>
+    </div>
+    <a href="/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+    <a href="/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+    <a href="/best_practices.html">MLOps Best Practices</a>
+</div>
+
+<script>
+function toggleNav() {
+    const dropdown = document.getElementById("myDropdown");
+    if (dropdown.style.height === "280px") {
+        dropdown.style.height = "0px";
+    } else {
+        dropdown.style.height = "280px";
+    }
+}
+</script>
+</header>
+
+<main id="content" class="main-content" role="main">
+<ol>
+  <li>Relevant skills and roles</li>
+  <li>Understanding of architecture components (horizon scan with links to other pages/repos on MLOps architecture)</li>
+</ol>
+
+<h1 id="architecture-overview">Architecture Overview</h1>
+
+<p>The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. Generally, the following components make up the average MLOps workflow:</p>
+
+<ol>
+  <li>Data store and retrieval
+    <ul>
+      <li>These can include databases for structured or unstructured data, data lakes, APIs and files (eg <code class="language-plaintext highlighter-rouge">.csv</code>, <code class="language-plaintext highlighter-rouge">.parquet</code>)</li>
+    </ul>
+  </li>
+  <li>Data and feature engineering
+    <ul>
+      <li>This step involves the use of Directed Acyclic Graphs (DAGs) to group and automate tasks organised with dependencies and relationships dictating how they should run. These can come with timing intervals, timeouts, etc.</li>
+    </ul>
+  </li>
+  <li>Model training and registry
+    <ul>
+      <li>This step involves the use of relevant tools for model versioning, storage, testing, and eventually model deployment subject to approval.</li>
+      <li>When different iterations of models are tested, the model, its data and its hyperparameters are stored for future reference. Model registries can also store information like metadata and the lineage of a given model.</li>
+    </ul>
+  </li>
+  <li>Model deployment
+    <ul>
+      <li>When the appropriate model is selected, it is then manually pushed to the model server to serve in production. Serving a model is the act of making it accessible to end users, typically via API.</li>
+    </ul>
+  </li>
+  <li>Model monitoring
+    <ul>
+      <li>Upon a model being deployed, relevant tools are then used to monitor its performance and detect occurrences of model drift, and logging</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="design-decisions">Design Decisions:</h3>
+<p>For the Pre-built MLOps pipeline created by the team, a deploy-as-model approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.</p>
+
+<p>It is important to note that the components and workflow differ; the components themselves comprise the architecture, but the workflow (the order in which the components are used to create an MLOps pipeline) can vary. For further insight on the typical structure of an MLOps workflow, you can refer to the following resources:</p>
+<ul>
+  <li><a href="https://ml-ops.org/content/mlops-stack-canvas">MLOps Stack Canvas</a></li>
+  <li><a href="https://neptune.ai/blog/mlops-architecture-guide">MLOps Architecture Guide</a></li>
+  <li><a href="https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html">MLOps Workflow by Databricks</a></li>
+</ul>
+
+<h1 id="model-training-and-registry">Model training and registry</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tool</th>
+      <th>Description</th>
+      <th>Scalability</th>
+      <th>Cost Effectiveness</th>
+      <th>Flexibility</th>
+      <th>Accessibility</th>
+      <th>Integrated Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MLflow</td>
+      <td>MLflow is a versatile, expandable, open-source platform for managing workflows and artifacts across the machine learning lifecycle</td>
+      <td>Supports distributed training and can scale with underlying infrastructure eg Kubernetes</td>
+      <td>Open-source allows for more control over expenses; depends on underlying infrastructure</td>
+      <td>Modular design with components for tracking experiments, packaging artifacts into reproducible runs and deploying models; scalable depending on underlying infrastructure</td>
+      <td>Platform-agnostic; supports multiple languages and frameworks</td>
+      <td>Stage transition tags; model lineage; model file versioning; model packaging</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>AWS Sagemaker</td>
+      <td>Amazon SageMaker is a fully managed machine learning (ML) service. With SageMaker, data scientists and developers can quickly and confidently build, train, and deploy ML models into a production-ready hosted environment</td>
+      <td>Fully managed and automatically scales to handle large datasets and complex models</td>
+      <td>PAYG model; comes with automatic model tuning to optimise costs</td>
+      <td>Supports multiple frameworks and offers built-in algorithms and jupyter notebooks for development</td>
+      <td>Fully integrated with AWS, allowing for ease of utilisation of other AWS services</td>
+      <td>No stage transition tags; limited model lineage; model file versioning; limited model packaging</td>
+    </tr>
+  </tbody>
+</table>
+
+<footer class="site-footer">
+
+<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+</footer>
+</main>
+</body>
+</html>
