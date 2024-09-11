@@ -8,15 +8,13 @@
 <meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="BridgeAI MLOps Knowledge Hub" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Your superstore for practical MLOps information!" />
-<meta property="og:description" content="Your superstore for practical MLOps information!" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<link rel="canonical" href="http://localhost:4000/gitops.html" />
+<meta property="og:url" content="http://localhost:4000/gitops.html" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="BridgeAI MLOps Knowledge Hub" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Your superstore for practical MLOps information!","headline":"BridgeAI MLOps Knowledge Hub","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"BridgeAI MLOps Knowledge Hub","url":"http://localhost:4000/gitops.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -139,32 +137,42 @@ function toggleNav() {
 </header>
 
 <main id="content" class="main-content" role="main">
-<h1 id="bridgeai-mlops-knowledge-hub">BridgeAI MLOps Knowledge Hub</h1>
+<h2 id="gitops-spike-content">GitOps Spike Content</h2>
 
-<h3 id="about-this-project">About this project</h3>
+<p>GitOps is the pattern of using Git as the source of truth to achieve a particular state for clusters, applications, environments, files, and pipelines, typically with one or more Kubernetes controllers monitoring the target for change. It would serve to automate much of the control plane for MLOps and should be especially useful to demonstrate to AI/ML SMEs for that reason, to reduce the cognitive load of managing backends, clusters, and integration.</p>
 
-<p>BridgeAI is an InnovateUK-funded national level AI (Artificial Intelligence) acceleration programme designed to stimulate the adoption of responsible AI in priority sectors such as Construction, Transport, Creative and Agriculture, by bridging the gap between innovation and implementation.</p>
+<p>Two options for GitOps stand out, respectively <strong>Argo CD</strong> and <strong>Flux</strong>:</p>
 
-<p>As one of the four main strategic partners of BridgeAI, Digital Catapult plays a crucial role in the business and technology co-creation aspects of the programme. For its Year-2 contributions to BridgeAI, Digital Catapult (DC) focuses on the topic of Machine Learning in production / Operationalizing ML.</p>
-
-<p>Organisations often face numerous technical, organisational and operational challenges when transitioning their ML (Machine learning) models from development to production. These challenges include complexity in integration, lack of required skills and expertise, absence of mature tools and robust frameworks for ML Operations (MLOps) and more. In response to these challenges, Digital Catapult has developed its Applied AI suite offering, which includes the following:</p>
+<p><strong>Argo CD</strong></p>
 <ul>
-  <li>A comprehensive, web accessible MLOps maturity assessment.</li>
-  <li>An end-to-end pre-built MLOps pipeline using open-source tools.</li>
-  <li>A complementary ‘MLOps knowledge Hub’ that contains all relevant information on practical MLOps and how to successfully build an MLOps pipeline from scratch for commercial projects.</li>
-  <li>An in-person MLOps clinic that offers hands-on help to participants via workshops as well as interactive support from a bunch of MLOps providers in the market.</li>
+  <li><a href="argoproj.github.io">Argo project</a></li>
+  <li><a href="cncf.io/case-studies">Argo case studies</a></li>
 </ul>
 
-<h3 id="why-this-knowledge-hub">Why this knowledge hub?</h3>
+<p><strong>Flux</strong></p>
+<ul>
+  <li><a href="fluxcd.io">Flux project</a></li>
+  <li><a href="cncf.io/case-studies">Flux case studies</a></li>
+</ul>
 
-<p>While other knowledge bases offer in depth insights on how individual MLOps component / tool works, DC’s MLOps knowledge hub aims at explaining the design and implementation of an end-to-end MLOps pipeline, the hardware and infrastructure involves, software tool choices, containerisation and container orchestration, the CI/CD pipelines, the development and production environments and how all of the above are put together to implement a practical / viable MLOps pipeline for an organisation. It also aims to cover the research our team had undergone and the decision design made with explanation on why they were made and on what grounds.</p>
+<p>Among the various case studies above, Intuit’s use and promotion of Argo CD is the clearest. They ended up buying Applatix, the developers behind Argo itself.</p>
 
-<!-- ### Topics covered
-1. Assessing your organisation's MLOps readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
-2. [Team Journey - Requirements and Research](team_journey.md)
-3. [Prerequisites - Skills, Roles and Tools](prerequisites.md)
-4. [Effective Deployment - From PoC to Production](effective_deployment.md)
-5. [MLOps Best Practices](best_practices.md) -->
+<p>Both Argo and Flux are cloud native projects under the CNCF. We have used Flux v2 internally on various projects and that makes adoption somewhat easier, if reusing scripts to spin up clusters. However, it lacks a GUI out-of-the-box; integration with Weave Works’ own UI isn’t an option anymore as that company shut down in February 2024. That doesn’t affect Flux itself, since the two organisations are distinct entities. But Argo CD does have its own working GUI bundled with it.</p>
+
+<p><br />
+<strong>Requirements</strong></p>
+<ol>
+  <li>Should have a GUI and CLI, Flux</li>
+  <li>Should be well-maintained, either by corporates or the community</li>
+  <li>Should have up-to-date documentation</li>
+  <li>Should be able to sync with kubectl</li>
+</ol>
+
+<p><br />
+<strong>Note: GUIs are an easier sell in an SME solution.</strong></p>
+
+<p><br />
+Since Weave Works closed, there have been various articles published about the implications for Flux’s own development. Selecting Flux for Bridge AI under those circumstances will likely force us to revisit the subject and explain why we selected a project that just lost a major component (through no fault of Flux’s own team), where there’s no alternative UI integration available. We might be making future showcases simpler for ourselves, running with Argo’s own functional UI.</p>
 
 <footer class="site-footer">
 
