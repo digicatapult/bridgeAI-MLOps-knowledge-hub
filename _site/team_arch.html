@@ -103,6 +103,48 @@
     .sidenav a {font-size: 18px;}
     }
 
+    .callout.callout_default {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #f8f8f9;
+    --border: #8b939c;
+    } /* gray */
+
+    .callout.callout_info {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #e3edf2;
+    --border: #5bc0de;
+    } /* blue */
+
+    .callout.callout_okay {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #f3f8f3;
+    --border: #50af51;
+    } /* green */
+
+    .callout.callout_warn {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #fcf8f2;
+    --border: #f0ad4e;
+    } /* orange */
+
+    .callout.callout_error {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #fdf7f7;
+    --border: #d9534f;
+    } /* red */
+
+    .callout.callout {
+    background: var(--background);
+    border-color: var(--border);
+    color: var(--text);
+    padding: 1rem;
+    }
+
     </style>
     <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
@@ -110,13 +152,11 @@
     <a onclick="toggleNav()">Team Journey</a>
     <div id="myDropdown" class="dropdown">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlflow_reg.html">MLflow Registry</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/versioning.html">Data Versioning</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/pred_service.html">Prediction Service</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/data_store.html">Data Store</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/gitops.html">GitOps</a>
     </div>
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
@@ -152,7 +192,15 @@ function toggleNav() {
 
 ## Components
 
-### Industry Data -->
+### Industry Data 
+
+[blurb on what/why]
+
+[explanation of process (copy from Mural)]
+
+[expand on process]
+
+-->
 
 <footer class="site-footer">
 

@@ -103,6 +103,48 @@
     .sidenav a {font-size: 18px;}
     }
 
+    .callout.callout_default {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #f8f8f9;
+    --border: #8b939c;
+    } /* gray */
+
+    .callout.callout_info {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #e3edf2;
+    --border: #5bc0de;
+    } /* blue */
+
+    .callout.callout_okay {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #f3f8f3;
+    --border: #50af51;
+    } /* green */
+
+    .callout.callout_warn {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #fcf8f2;
+    --border: #f0ad4e;
+    } /* orange */
+
+    .callout.callout_error {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #fdf7f7;
+    --border: #d9534f;
+    } /* red */
+
+    .callout.callout {
+    background: var(--background);
+    border-color: var(--border);
+    color: var(--text);
+    padding: 1rem;
+    }
+
     </style>
     <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
@@ -110,13 +152,11 @@
     <a onclick="toggleNav()">Team Journey</a>
     <div id="myDropdown" class="dropdown">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlflow_reg.html">MLflow Registry</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/versioning.html">Data Versioning</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/pred_service.html">Prediction Service</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/data_store.html">Data Store</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/gitops.html">GitOps</a>
     </div>
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
@@ -138,22 +178,34 @@ function toggleNav() {
 </header>
 
 <main id="content" class="main-content" role="main">
-<!-- ### [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit) -->
-<h1><a href="https://apps.digicatapult.org.uk/ai-adoption-toolkit" target="_blank">Maturity Assessment</a></h1>
+<h2 id="maturity-assessment"><a href="https://apps.digicatapult.org.uk/ai-adoption-toolkit" target="_blank">Maturity Assessment</a></h2>
 
-<p>Who doesn’t need this assessment?</p>
+<h3>What is a maturity assessment?</h3>
+
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️<b> Definition</b></span>
+    <br />
+    A maturity assessment is a structured evaluation that measures an organization's capabilities and processes against predefined criteria.
+</blockquote>
+
+<h3 id="why-is-it-necessary">Why is it necessary?</h3>
+<p>To quote <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model" target="_blank">Microsoft</a>:</p>
+
+<p>“The purpose of this maturity model is to help clarify the Machine Learning Operations (MLOps) principles and practices. The maturity model shows the continuous improvement in the creation and operation of a production level machine learning application environment. You can use it as a metric for establishing the progressive requirements needed to measure the maturity of a machine learning production environment and its associated processes.”</p>
+
+<h3 id="who-needs-this-maturity-assessment">Who needs this maturity assessment?</h3>
+<ul>
+  <li>Any organisation who has an AI/ML PoC and is looking to deploy their models in production.</li>
+</ul>
+
+<h3 id="who-doesnt-need-this-assessment">Who <em>doesn’t</em> need this assessment?</h3>
 <ul>
   <li>Any early-stage startups that is just exploring ArtificiaI Intelligence/Machine (AI/ML) Learning at a PoC level and not planning to deploy.</li>
   <li>An organisation developing small scale ML applications; manual approach is sufficient.</li>
   <li>An organisation interested in ad hoc ML tasks and does not require full MLOps implementation.</li>
 </ul>
 
-<p>Who needs this maturity assessment?</p>
-<ul>
-  <li>Any organisation who has an AI/ML PoC and is looking to deploy their models in production.</li>
-</ul>
-
-<p>Disclaimer: this assessment doesn’t necessarily cover GenAI/LLMs at this point.</p>
+<p><strong>Disclaimer:</strong> this assessment doesn’t necessarily cover GenAI/LLMs at this point.</p>
 
 <footer class="site-footer">
 

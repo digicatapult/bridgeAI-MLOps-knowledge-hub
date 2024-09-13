@@ -17,4 +17,12 @@ title: BridgeAI MLOps Knowledge Hub
 
 ## Components
 
-### Industry Data -->
+### Industry Data 
+
+[blurb on what/why]
+
+[explanation of process (copy from Mural)]
+
+[expand on process]
+
+-->
