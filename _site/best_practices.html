@@ -98,9 +98,11 @@
     color: #201d1d;
     }
     
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: 450px){
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .dropdown {padding-top: 15px;}
+    .dropdown a {font-size: 18px;}
     }
 
     .callout.callout_default {
@@ -168,17 +170,65 @@
 <script>
 function toggleNav() {
     const dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.height === "450px") {
+    if (dropdown.style.height === "400px") {
         dropdown.style.height = "0px";
     } else {
-        dropdown.style.height = "450px";
+        dropdown.style.height = "400px";
     }
 }
 </script>
 </header>
 
 <main id="content" class="main-content" role="main">
-<h1 id="mlops-best-practices">MLOps Best Practices</h1>
+<h2 id="mlops-best-practices">MLOps Best Practices</h2>
+
+<!-- AWS framework -->
+
+<!-- A note on the fact that this is technically covered in the prerequisites section, but requires further elaboration given its importance -->
+
+<blockquote class="callout callout_warn">
+<span class="callout-icon">⚠️<b> Note</b></span>
+    <br />
+    While best practices for MLOps is technically covered in the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
+</blockquote>
+
+<p>The principles (or best practices) concerning MLOps are:</p>
+<ul>
+  <li>Automation</li>
+  <li>Continuous X</li>
+  <li>Versioning</li>
+  <li>Experiment Tracking</li>
+  <li>Testing</li>
+  <li>Monitoring</li>
+</ul>
+
+<p>Here is a summary of core considerations for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code):</p>
+
+<p><img src="mlops_principles.png" /></p>
+
+<h2 id="considerations-for-a-well-architected-framework">Considerations for a Well-Architected Framework</h2>
+
+<p>While this does not contain a strict set of guidelines, the <a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html" target="_blank">AWS Well-Architected Framework</a> is a reliable resource for evaluating whether specific architecture aligns well with cloud best practices. The pillars of the framework (each with their own set of additional considerations) are:</p>
+
+<ul>
+  <li>Operational excellence</li>
+  <li>Security</li>
+  <li>Reliability</li>
+  <li>Performance efficiency</li>
+  <li>Cost optimization</li>
+  <li>Sustainability</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<ol>
+  <li>
+    <p><a href="https://ml-ops.org/content/mlops-principles" target="_blank">MLOps.org</a></p>
+  </li>
+  <li>
+    <p><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html" target="_blank">AWS Well-Architected Framework Guide</a></p>
+  </li>
+</ol>
 
 <footer class="site-footer">
 

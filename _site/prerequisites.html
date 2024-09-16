@@ -98,9 +98,11 @@
     color: #201d1d;
     }
     
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: 450px){
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .dropdown {padding-top: 15px;}
+    .dropdown a {font-size: 18px;}
     }
 
     .callout.callout_default {
@@ -168,22 +170,48 @@
 <script>
 function toggleNav() {
     const dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.height === "450px") {
+    if (dropdown.style.height === "400px") {
         dropdown.style.height = "0px";
     } else {
-        dropdown.style.height = "450px";
+        dropdown.style.height = "400px";
     }
 }
 </script>
 </header>
 
 <main id="content" class="main-content" role="main">
-<ol>
-  <li>Relevant skills and roles</li>
-  <li>Understanding of architecture components (horizon scan with links to other pages/repos on MLOps architecture)</li>
-</ol>
+<h1 id="relevant-skills-and-roles">Relevant Skills and roles</h1>
 
-<h1 id="architecture-overview">Architecture Overview</h1>
+<h2 id="roles">Roles</h2>
+
+<p>Required roles to create and deploy an MLOps pipeline can vary, but may include:</p>
+
+<ul>
+  <li>Data scientist</li>
+  <li>Data analyst</li>
+  <li>Data engineer</li>
+  <li>DevOps engineer</li>
+  <li>ML architect</li>
+  <li>Software developer</li>
+  <li>Domain expert/business translator</li>
+</ul>
+
+<h2 id="skills">Skills</h2>
+
+<p>Required skills include knowledge of:</p>
+
+<ul>
+  <li>Scripting languages (e.g. Python)</li>
+  <li>DAG software (e.g. Airflow)</li>
+  <li>Cloud solutions (e.g. AWS, Azure, GCP)</li>
+  <li>Logging and monitoring tools (e.g. Evidently A.I.)</li>
+  <li>CI/CD pipeline implementation and Infrastructure as Code (e.g. Terraform)</li>
+  <li>Data stores (e.g. AWS S3)</li>
+  <li>Machine learning algorithms (e.g. Logistic Regression) and frameworks (e.g. PyTorch, SK-Learn)</li>
+  <li>Containerization (with Kubernetes, Docker)</li>
+</ul>
+
+<h2 id="architecture-overview">Architecture Overview</h2>
 
 <p>The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. Generally, the following components make up the average MLOps workflow:</p>
 
@@ -216,7 +244,7 @@ function toggleNav() {
   </li>
 </ol>
 
-<h3 id="design-decisions">Design Decisions:</h3>
+<h2 id="design-decisions">Design Decisions:</h2>
 <p>For the Pre-built MLOps pipeline created by the team, a deploy-as-model approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.</p>
 
 <p>It is important to note that the components and workflow differ; the components themselves comprise the architecture, but the workflow (the order in which the components are used to create an MLOps pipeline) can vary. For further insight on the typical structure of an MLOps workflow, you can refer to the following resources:</p>
@@ -226,43 +254,20 @@ function toggleNav() {
   <li><a href="https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html">MLOps Workflow by Databricks</a></li>
 </ul>
 
-<h1 id="model-training-and-registry">Model training and registry</h1>
+<!-- # Model training and registry
 
-<table>
-  <thead>
-    <tr>
-      <th>Tool</th>
-      <th>Description</th>
-      <th>Scalability</th>
-      <th>Cost Effectiveness</th>
-      <th>Flexibility</th>
-      <th>Accessibility</th>
-      <th>Integrated Features</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>MLflow</td>
-      <td>MLflow is a versatile, expandable, open-source platform for managing workflows and artifacts across the machine learning lifecycle</td>
-      <td>Supports distributed training and can scale with underlying infrastructure eg Kubernetes</td>
-      <td>Open-source allows for more control over expenses; depends on underlying infrastructure</td>
-      <td>Modular design with components for tracking experiments, packaging artifacts into reproducible runs and deploying models; scalable depending on underlying infrastructure</td>
-      <td>Platform-agnostic; supports multiple languages and frameworks</td>
-      <td>Stage transition tags; model lineage; model file versioning; model packaging</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>AWS Sagemaker</td>
-      <td>Amazon SageMaker is a fully managed machine learning (ML) service. With SageMaker, data scientists and developers can quickly and confidently build, train, and deploy ML models into a production-ready hosted environment</td>
-      <td>Fully managed and automatically scales to handle large datasets and complex models</td>
-      <td>PAYG model; comes with automatic model tuning to optimise costs</td>
-      <td>Supports multiple frameworks and offers built-in algorithms and jupyter notebooks for development</td>
-      <td>Fully integrated with AWS, allowing for ease of utilisation of other AWS services</td>
-      <td>No stage transition tags; limited model lineage; model file versioning; limited model packaging</td>
-    </tr>
-  </tbody>
-</table>
+Tool | Description | Scalability | Cost Effectiveness | Flexibility | Accessibility | Integrated Features
+--- | --- | --- | --- | --- | --- | ---
+MLflow | MLflow is a versatile, expandable, open-source platform for managing workflows and artifacts across the machine learning lifecycle | Supports distributed training and can scale with underlying infrastructure eg Kubernetes | Open-source allows for more control over expenses; depends on underlying infrastructure | Modular design with components for tracking experiments, packaging artifacts into reproducible runs and deploying models; scalable depending on underlying infrastructure | Platform-agnostic; supports multiple languages and frameworks | Stage transition tags; model lineage; model file versioning; model packaging 
+--- | --- | --- | --- | --- | --- | ---
+AWS Sagemaker | Amazon SageMaker is a fully managed machine learning (ML) service. With SageMaker, data scientists and developers can quickly and confidently build, train, and deploy ML models into a production-ready hosted environment | Fully managed and automatically scales to handle large datasets and complex models | PAYG model; comes with automatic model tuning to optimise costs | Supports multiple frameworks and offers built-in algorithms and jupyter notebooks for development | Fully integrated with AWS, allowing for ease of utilisation of other AWS services | No stage transition tags; limited model lineage; model file versioning; limited model packaging
+ -->
+
+<h2 id="resources">Resources</h2>
+
+<ol>
+  <li><a href="https://neptune.ai/blog/mlops-engineer">Neptune.ai</a></li>
+</ol>
 
 <footer class="site-footer">
 

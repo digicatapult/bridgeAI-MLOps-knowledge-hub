@@ -100,9 +100,11 @@
     color: #201d1d;
     }
     
-    @media screen and (max-height: 450px) {
+    @media screen and (max-height: 450px){
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .dropdown {padding-top: 15px;}
+    .dropdown a {font-size: 18px;}
     }
 
     .callout.callout_default {
@@ -170,10 +172,10 @@
 <script>
 function toggleNav() {
     const dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.height === "450px") {
+    if (dropdown.style.height === "400px") {
         dropdown.style.height = "0px";
     } else {
-        dropdown.style.height = "450px";
+        dropdown.style.height = "400px";
     }
 }
 </script>
