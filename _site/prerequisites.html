@@ -76,18 +76,22 @@
     }
 
     .dropdown {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
     text-align: left;
     padding: 8px 8px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
-    display: inline-block;
+    display: block;
     background-color: rgb(24, 137, 105);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.5s ease;
     }
 
     .dropdown a {
+    display: block;
     text-align: left;
     font-size: 18px;
     color: #ffffff;
@@ -151,7 +155,7 @@
     <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
-    <a onclick="toggleNav()">Team Journey</a>
+    <a onclick="toggleNav()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Team Journey</a>
     <div id="myDropdown" class="dropdown">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
@@ -170,10 +174,15 @@
 <script>
 function toggleNav() {
     const dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.height === "400px") {
+    if (dropdown.style.height === "350px") {
         dropdown.style.height = "0px";
+        dropdown.style.opacity = "0"
+        dropdown.style.visibility = "hidden"
     } else {
-        dropdown.style.height = "400px";
+        dropdown.style.height = "350px";
+        dropdown.style.opacity = "100"
+        dropdown.style.visibility = "visible"
+
     }
 }
 </script>
@@ -268,6 +277,13 @@ AWS Sagemaker | Amazon SageMaker is a fully managed machine learning (ML) servic
 <ol>
   <li><a href="https://neptune.ai/blog/mlops-engineer">Neptune.ai</a></li>
 </ol>
+
+<!-- <details>
+    <summary>Resources</summary>
+    1. <a href="https://neptune.ai/blog/mlops-engineer" target="_blank">Neptune.ai</a><br>
+    2. element<br>
+    3. another Element<br>
+</details> -->
 
 <footer class="site-footer">
 
