@@ -22,7 +22,7 @@ title: BridgeAI MLOps Knowledge Hub
 
 
 ## 1. Model Monitoring
-Building a machine learning model is just the beginning. Once you deploy that model into the real world, it faces many challenges that can affect its predictive performance (Model Drift) and require continuous monitoring. Model Drift refers to the decay of the ML model quality over time. Simply put, it is a way of saying “the model quality got worse” or “the model no longer serves its purpose.” Model Drift doesn't pinpoint a specific cause; it's just an observation that the model no longer works as well as it used to. The model decay might happen due to various reasons, including [data drift](https://www.evidentlyai.com/ml-in-production/data-drift), data quality issues, or concept drift. [What is concept drift in ML, and how to detect and address it](https://www.evidentlyai.com/ml-in-production/concept-drift)
+Building a machine learning model is just the beginning. Once you deploy that model into the real world, it faces many challenges that can affect its predictive performance (Model Drift) and require continuous monitoring. Model Drift refers to the decay of the ML model quality over time. Simply put, it is a way of saying “the model quality got worse” or “the model no longer serves its purpose.” Model Drift doesn't pinpoint a specific cause; it's just an observation that the model no longer works as well as it used to. The model decay might happen due to various reasons, including [data drift](https://www.evidentlyai.com/ml-in-production/data-drift){:target="_blank"}, data quality issues, or concept drift. [What is concept drift in ML, and how to detect and address it](https://www.evidentlyai.com/ml-in-production/concept-drift){:target="_blank"}
 
 
 Below are the 2 Model Drifts discussed widely by “many industry experts”.
@@ -79,7 +79,7 @@ Current data refers to the new or recent dataset that is being evaluated for dri
 
 3. Data Drift can be chosen for individual features (numerical as well as categorical features) or for all the features in the dataset used in Step 1 and Step 2.
 
-4. Choose a statistical test by which data drift needs to be analysed such as 'chisquare' 'jensenshannon', 'wasserstein' etc (list of all statistical tests are provided here - [Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests)). The statistical tests can be chosen for individual metrics as well.
+4. Choose a statistical test by which data drift needs to be analysed such as 'chisquare' 'jensenshannon', 'wasserstein' etc (list of all statistical tests are provided here - [Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests){:target="_blank"}). The statistical tests can be chosen for individual metrics as well.
 
 5. Use any of the Data Drift methods such as DatasetDriftMetric, this metric provides a overall summary of the drift detected from the comparison between the Reference data and the Current data.
 
@@ -181,23 +181,23 @@ Understanding Data Drift and Model Drift: Drift Detection in Python . Also refer
 ## References
 **Model Monitoring, Data Drift & Concept Drift**
 
-[Evidently AI - A complete guide to ML in production](https://www.evidentlyai.com/ml-in-production)
+[Evidently AI - A complete guide to ML in production](https://www.evidentlyai.com/ml-in-production){:target="_blank"}
 
 **Drift Detection**
 
-[Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests) 
+[Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests){:target="_blank"}
 
-[Data drift algorithm - Evidently Documentation](https://docs.evidentlyai.com/reference/data-drift-algorithm) 
+[Data drift algorithm - Evidently Documentation](https://docs.evidentlyai.com/reference/data-drift-algorithm){:target="_blank"}
 
-[ML Observability Course Repo](https://github.com/evidentlyai/ml_observability_course/tree/main/docs/book/ml-observability-course/module-2-ml-monitoring-metrics)
+[ML Observability Course Repo](https://github.com/evidentlyai/ml_observability_course/tree/main/docs/book/ml-observability-course/module-2-ml-monitoring-metrics){:target="_blank"}
 
 **Statistical Tests Explained**
 
-[Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests) 
+[Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests){:target="_blank"} 
 
-[Which test is the best? We compared 5 methods to detect data drift on large datasets](https://www.evidentlyai.com/blog/data-drift-detection-large-datasets) 
+[Which test is the best? We compared 5 methods to detect data drift on large datasets](https://www.evidentlyai.com/blog/data-drift-detection-large-datasets){:target="_blank"} 
 
-[A Comprehensive Guide on How to Monitor Your Models in Production](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide) 
+[A Comprehensive Guide on How to Monitor Your Models in Production](https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide){:target="_blank"}
 
 **Mitigation after Drift Detection**
 

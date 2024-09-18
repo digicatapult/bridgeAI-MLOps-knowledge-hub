@@ -18,7 +18,7 @@ format: gfm
 
 ## 1. Introduction
 
-The team chose Airflow as its [DAG](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html) implementation software as it is widely used in the community based on the GitHub stars of a repository (denoting the quality of a project). Also based on the fork of a repository (being contributed by more users).
+The team chose Airflow as its [DAG](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html){:target="_blank"} implementation software as it is widely used in the community based on the GitHub stars of a repository (denoting the quality of a project). Also based on the fork of a repository (being contributed by more users).
 
 <p>Also Airflow Helm chart setup is easy. <a href="https://airflow.apache.org/docs/helm-chart/stable/index.html" target="_blank">Helm Chart for Apache Airflow — helm-chart Documentation</a></p>
 
@@ -72,6 +72,6 @@ The team chose Airflow as its [DAG](https://airflow.apache.org/docs/apache-airfl
 
 ## References
 
-1. [Airflow](https://airflow.apache.org/)
+1. [Airflow](https://airflow.apache.org/){:target="_blank"} 
 
-2. [Prefect](https://www.prefect.io/)
+2. [Prefect](https://www.prefect.io/){:target="_blank"} 

@@ -55,9 +55,9 @@ The components of an MLOps workflow, otherwise known as its architecture, vary d
 For the Pre-built MLOps pipeline created by the team, a deploy-as-model approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.
 
 It is important to note that the components and workflow differ; the components themselves comprise the architecture, but the workflow (the order in which the components are used to create an MLOps pipeline) can vary. For further insight on the typical structure of an MLOps workflow, you can refer to the following resources:
-* [MLOps Stack Canvas](https://ml-ops.org/content/mlops-stack-canvas)
-* [MLOps Architecture Guide](https://neptune.ai/blog/mlops-architecture-guide)
-* [MLOps Workflow by Databricks](https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html)
+* [MLOps Stack Canvas](https://ml-ops.org/content/mlops-stack-canvas){:target="_blank"}
+* [MLOps Architecture Guide](https://neptune.ai/blog/mlops-architecture-guide){:target="_blank"}
+* [MLOps Workflow by Databricks](https://docs.databricks.com/en/machine-learning/mlops/mlops-workflow.html){:target="_blank"}
 
 
 <!-- # Model training and registry
@@ -71,7 +71,7 @@ AWS Sagemaker | Amazon SageMaker is a fully managed machine learning (ML) servic
 
 ## Resources
 
-1. [Neptune.ai](https://neptune.ai/blog/mlops-engineer)
+1. [Neptune.ai](https://neptune.ai/blog/mlops-engineer){:target="_blank"}
 
 <!-- <details>
     <summary>Resources</summary>

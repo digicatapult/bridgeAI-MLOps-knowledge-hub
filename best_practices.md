@@ -9,8 +9,9 @@ title: BridgeAI MLOps Knowledge Hub
 
 <!-- A note on the fact that this is technically covered in the prerequisites section, but requires further elaboration given its importance -->
 
-<blockquote class="callout callout_warn">
-<span class="callout-icon">⚠️<b> Note</b></span>
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br>
     <br>
     While best practices for MLOps is technically covered in the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
 </blockquote>
@@ -26,6 +27,7 @@ The principles (or best practices) concerning MLOps are:
 Here is a summary of core considerations for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code):
 
 <img src="mlops_principles.png">
+Source: [MLOps.org](https://ml-ops.org/content/mlops-principles#summary-of-mlops-principles-and-best-practices){:target="_blank"}
 
 ## Considerations for a Well-Architected Framework
 

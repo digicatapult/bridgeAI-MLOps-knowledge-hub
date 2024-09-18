@@ -75,7 +75,7 @@
     color: #201d1d;
     }
 
-    .dropdown {
+    .dropdown-mlops {
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -90,7 +90,7 @@
     transition: 0.5s ease;
     }
 
-    .dropdown a {
+    .dropdown-mlops a {
     display: block;
     text-align: left;
     font-size: 18px;
@@ -98,7 +98,61 @@
     transition: 0.3s;
     }
     
-    .dropdown a:hover {
+    .dropdown-mlops a:hover {
+    color: #201d1d;
+    }
+
+    .dropdown-business {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-business a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+    }
+    
+    .dropdown-business a:hover {
+    color: #201d1d;
+    }
+
+    .dropdown-technical {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-technical a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+    }
+    
+    .dropdown-technical a:hover {
     color: #201d1d;
     }
     
@@ -123,12 +177,12 @@
     --border: #5bc0de;
     } /* blue */
 
-    .callout.callout_okay {
+    .callout.callout_definition {
     --text: #6a737d; /*theme text color default*/
     --title: inherit; /*theme title color (falls back to text color by default)*/
-    --background: #f3f8f3;
-    --border: #50af51;
-    } /* green */
+    --background: #f1eeff;
+    --border: #5e4db2;
+    } /* purple */
 
     .callout.callout_warn {
     --text: #6a737d; /*theme text color default*/
@@ -152,11 +206,12 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
-    <a onclick="toggleNav()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Team Journey</a>
-    <div id="myDropdown" class="dropdown">
+    <br>
+    <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
+    <div id="myDropdownMlops" class="dropdown-mlops">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_summary.html">Summary</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
@@ -165,54 +220,189 @@
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/gitops.html">GitOps</a>
     </div>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Effective Deployment - From PoC to Production</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
+    <a onclick="toggleNavBusiness()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Business Approach</a>
+    <div id="myDropdownBusiness" class="dropdown-business">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+    </div>
+    <a onclick="toggleNavTechnical()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Technical Approach</a>
+    <div id="myDropdownTechnical" class="dropdown-technical">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
+    </div> -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="http://localhost:4000/">Home</a>
+        <br>
+        <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
+        <div id="myDropdownMlops" class="dropdown-mlops">
+            <a href="http://localhost:4000/mlops_summary.html">Summary</a>
+            <a href="http://localhost:4000/requirements_research.html">Requirements and Research</a>
+            <a href="http://localhost:4000/serving.html">Model Serving</a>
+            <a href="http://localhost:4000/monitoring.html">Model Monitoring</a>
+            <a href="http://localhost:4000/versioning.html">Data Versioning</a>
+            <a href="http://localhost:4000/pred_service.html">Prediction Service</a>
+            <a href="http://localhost:4000/DAG.html">Training Pipeline</a>
+            <a href="http://localhost:4000/gitops.html">GitOps</a>
+        </div>
+        <a onclick="toggleNavBusiness()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Business Approach</a>
+        <div id="myDropdownBusiness" class="dropdown-business">
+            <a href="http://localhost:4000/maturity_assessment.html">Maturity Assessment</a>
+            <a href="http://localhost:4000/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+            <a href="http://localhost:4000/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+        </div>
+        <a onclick="toggleNavTechnical()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Technical Approach</a>
+        <div id="myDropdownTechnical" class="dropdown-technical">
+            <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
+            <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
+        </div>
+
 </div>
 
 <script>
-function toggleNav() {
-    const dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.height === "350px") {
-        dropdown.style.height = "0px";
-        dropdown.style.opacity = "0"
-        dropdown.style.visibility = "hidden"
-    } else {
-        dropdown.style.height = "350px";
-        dropdown.style.opacity = "100"
-        dropdown.style.visibility = "visible"
 
+function toggleNavMlops() {
+    const dropdownmlops = document.getElementById("myDropdownMlops");
+    if (dropdownmlops.style.height === "360px") {
+        dropdownmlops.style.height = "0px";
+        dropdownmlops.style.opacity = "0";
+        dropdownmlops.style.visibility = "hidden";
+        localStorage.setItem("dropdownMlopsState", "closed");
+    } else {
+        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.opacity = "100";
+        dropdownmlops.style.visibility = "visible";
+        localStorage.setItem("dropdownMlopsState", "open");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownmlops = document.getElementById("myDropdownMlops");
+    const dropdownState = localStorage.getItem("dropdownMlopsState");
+    
+    if (dropdownState === "open") {
+        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.opacity = "100";
+        dropdownmlops.style.visibility = "visible";
+    } else {
+        dropdownmlops.style.height = "0px";
+        dropdownmlops.style.opacity = "0";
+        dropdownmlops.style.visibility = "hidden";
+    }
+});
+
+</script>
+
+
+<script>
+
+    function toggleNavBusiness() {
+    const dropdownbusiness = document.getElementById("myDropdownBusiness");
+    if (dropdownbusiness.style.height === "200px") {
+        dropdownbusiness.style.height = "0px";
+        dropdownbusiness.style.opacity = "0";
+        dropdownbusiness.style.visibility = "hidden";
+        localStorage.setItem("dropdownBusinessState", "closed");
+    } else {
+        dropdownbusiness.style.height = "200px";
+        dropdownbusiness.style.opacity = "100";
+        dropdownbusiness.style.visibility = "visible";
+        localStorage.setItem("dropdownBusinessState", "open");
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownbusiness = document.getElementById("myDropdownBusiness");
+        const dropdownState = localStorage.getItem("dropdownBusinessState");
+        
+        if (dropdownState === "open") {
+            dropdownbusiness.style.height = "200px";
+            dropdownbusiness.style.opacity = "100";
+            dropdownbusiness.style.visibility = "visible";
+        } else {
+            dropdownbusiness.style.height = "0px";
+            dropdownbusiness.style.opacity = "0";
+            dropdownbusiness.style.visibility = "hidden";
+        }
+    });
+</script>
+
+<script>
+
+    function toggleNavTechnical() {
+    const dropdowntech = document.getElementById("myDropdownTechnical");
+    if (dropdowntech.style.height === "180px") {
+        dropdowntech.style.height = "0px";
+        dropdowntech.style.opacity = "0";
+        dropdowntech.style.visibility = "hidden";
+        localStorage.setItem("dropdownTechState", "closed");
+    } else {
+        dropdowntech.style.height = "180px";
+        dropdowntech.style.opacity = "100";
+        dropdowntech.style.visibility = "visible";
+        localStorage.setItem("dropdownTechState", "open");
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdowntech = document.getElementById("myDropdownTechnical");
+        const dropdownState = localStorage.getItem("dropdownTechState");
+        
+        if (dropdownState === "open") {
+            dropdowntech.style.height = "180px";
+            dropdowntech.style.opacity = "100";
+            dropdowntech.style.visibility = "visible";
+        } else {
+            dropdowntech.style.height = "0px";
+            dropdowntech.style.opacity = "0";
+            dropdowntech.style.visibility = "hidden";
+        }
+    });
+
 </script>
 </header>
 
 <main id="content" class="main-content" role="main">
 <h1 id="model-serving-spike-content">Model Serving Spike Content</h1>
 
-<blockquote>
-  <p>Note:
-This spike lists and compares some open-source model serving options or tools available based on ease of implementation, compatibility with PyTorch/Sklearn, and Kubernetes integration, and provides a recommendation for the most suitable tool for our use case.</p>
-
-  <p>We are particularly looking for real-time or online inference rather than batch inference. <a href="https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2">Batch inference</a> processes a large batch of input data at once rather than processing each input data point individually in real time.
-<br /></p>
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br />
+    <br />
+    This spike lists and compares some open-source model serving options or tools available based on ease of implementation, compatibility with PyTorch/Sklearn, and Kubernetes integration, and provides a recommendation for the most suitable tool for our use case.
+    <br />  
+    <br /> 
+    We are particularly looking for real-time or online inference rather than batch inference. <a href="https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2" target="_blank">Batch (offline) inference </a>
+    processes a large batch of input data at once rather than processing each input data point individually in real time.
 </blockquote>
+
+<p><br /></p>
 
 <p><strong>Model Serving</strong> vs <strong>Model Deployment</strong></p>
 
 <p>To make use of a standard definition, the team stuck to the terminology used here in <a href="https://neptune.ai/blog/ml-model-serving-best-tools">this blog</a>.</p>
 
-<blockquote>
-  <p><strong>Model Serving Runtime</strong>: Packaging a trained machine learning model into a container and setting up APIs so it can handle incoming requests. This allows the model to be used in a production environment, responding to data inputs with predictions (inference). <strong>BentoML</strong>, <strong>TorchServe</strong>, <strong>Tensorflow Serving</strong> are examples.</p>
-
-  <p><strong>Model Serving Platform</strong>: An environment designed to dynamically scale the number of model containers in response to incoming traffic. Tools like KServe, Bento Cloud, and Seldon Core are examples of serving platforms. They manage the infrastructure needed to deploy and scale models efficiently, responding to varying traffic without manual intervention.</p>
-
-  <p><strong>Model Deployment</strong>: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.
-The terms ‘model serving’ and ‘model deployment’ are often loosely considered to have the same meaning, and some documents use them interchangeably.</p>
+<blockquote class="callout callout_definition">
+<span class="callout-icon">📓</span>
+    <br />
+    <br />
+    <b>Model Serving Runtime</b>: Packaging a trained machine learning model into a container and setting up APIs so it can handle incoming requests. This allows the model to be used in a production environment, responding to data inputs with predictions (inference). <b>BentoML</b>, <b>TorchServe</b>, <b>Tensorflow Serving</b> are examples.
+    <br />
+    <br />
+    <b>Model Serving Platform</b>: An environment designed to dynamically scale the number of model containers in response to incoming traffic. Tools like <b>KServe</b>, <b>Bento Cloud</b>, and <b>Seldon Core</b> are examples of serving platforms. They manage the infrastructure needed to deploy and scale models efficiently, responding to varying traffic without manual intervention.
+    <br />
+    <br />
+    <b>Model Deployment</b>: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.
 </blockquote>
 
+<p>The terms ‘model serving’ and ‘model deployment’ are often loosely considered to have the same meaning, and some documents use them interchangeably.</p>
+
+<p><br /></p>
+
 <hr />
+
+<p><br /></p>
 
 <p><strong>Table of Contents</strong></p>
 <ol>
@@ -244,10 +434,10 @@ The terms ‘model serving’ and ‘model deployment’ are often loosely consi
 <h3 id="mlflow---model-serving-runtime">MLFlow - Model Serving Runtime</h3>
 <ul>
   <li>
-    <p>MLFlow uses MLServer for creating a serving runtime – <a href="https://mlserver.readthedocs.io/en/latest/">MLServer — MLServer Documentation</a></p>
+    <p>MLFlow uses MLServer for creating a serving runtime – <a href="https://mlserver.readthedocs.io/en/latest/" target="_blank">MLServer — MLServer Documentation</a></p>
   </li>
   <li>
-    <p>By default MLFlow uses Flask, but prefers MLServer for production – <a href="https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks">Deploy MLflow Model as a Local Inference Server — MLflow 2.15.1 documentation</a></p>
+    <p>By default MLFlow uses Flask, but prefers MLServer for production – <a href="https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks" target="_blank">Deploy MLflow Model as a Local Inference Server — MLflow 2.15.1 documentation</a></p>
   </li>
   <li>
     <p>Supports almost all machine learning frameworks and no vendor lock is present here unlike TorchServe or Tensorflow serve</p>
@@ -258,15 +448,22 @@ The terms ‘model serving’ and ‘model deployment’ are often loosely consi
 </ul>
 
 <h3 id="mlflow---model-serving-platforms">MLFlow - Model Serving Platforms</h3>
-<p>MLFlow native model serving using MLSerer supports KServe and Seldon Core both are kubernetes native</p>
+<p>MLFlow native model serving using MLSerer supports <a href="https://kserve.github.io/website/latest/" target="_blank">KServe</a> and <a href="https://docs.seldon.io/projects/seldon-core/en/latest/" target="_blank">Seldon Core</a> both are kubernetes native</p>
 
-<p>KServe has some example code and more documentation and details from MLFlow side - Develop ML model with MLflow and deploy to Kubernetes — MLflow 2.15.1 documentation</p>
+<p>KServe has some example code and more documentation and details from MLFlow side - <a href="" target="_blank">Develop ML model with MLflow and deploy to Kubernetes</a></p>
 
-<p>Partner documentation from KServe - MLFlow - KServe Documentation Website</p>
+<p>Partner documentation from KServe - <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html" target="_blank">MLFlow - KServe Documentation Website</a></p>
 
-<p>Seldon core - has got no example code in MLFlow but the partner documentation is also rich - MLflow Server — seldon-core  documentation</p>
+<p>Seldon core - has got no example code in MLFlow but the partner documentation is also rich - <a href="https://docs.seldon.io/projects/seldon-core/en/latest/servers/mlflow.html" target="_blank">MLflow Server — seldon-core  documentation</a></p>
 
-<hr />
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br />
+    <br />
+    The prefered option here when deploying ML models in the MLFlow ecosystem is to use MLServer as serving runtime and Kserve as serving platform which are natively supported by MLFlow.
+</blockquote>
+
+<p><br /></p>
 
 <h3 id="mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</h3>
 <p>The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.</p>
@@ -626,7 +823,7 @@ What needs to be changed when moving from mlflow to bentoml later?</p>
 
 <footer class="site-footer">
 
-<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</span>
 </footer>
 </main>
 </body>

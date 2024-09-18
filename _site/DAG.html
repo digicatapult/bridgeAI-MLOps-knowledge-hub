@@ -75,7 +75,7 @@
     color: #201d1d;
     }
 
-    .dropdown {
+    .dropdown-mlops {
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -90,7 +90,7 @@
     transition: 0.5s ease;
     }
 
-    .dropdown a {
+    .dropdown-mlops a {
     display: block;
     text-align: left;
     font-size: 18px;
@@ -98,7 +98,61 @@
     transition: 0.3s;
     }
     
-    .dropdown a:hover {
+    .dropdown-mlops a:hover {
+    color: #201d1d;
+    }
+
+    .dropdown-business {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-business a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+    }
+    
+    .dropdown-business a:hover {
+    color: #201d1d;
+    }
+
+    .dropdown-technical {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: rgb(24, 137, 105);
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-technical a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #ffffff;
+    transition: 0.3s;
+    }
+    
+    .dropdown-technical a:hover {
     color: #201d1d;
     }
     
@@ -123,12 +177,12 @@
     --border: #5bc0de;
     } /* blue */
 
-    .callout.callout_okay {
+    .callout.callout_definition {
     --text: #6a737d; /*theme text color default*/
     --title: inherit; /*theme title color (falls back to text color by default)*/
-    --background: #f3f8f3;
-    --border: #50af51;
-    } /* green */
+    --background: #f1eeff;
+    --border: #5e4db2;
+    } /* purple */
 
     .callout.callout_warn {
     --text: #6a737d; /*theme text color default*/
@@ -152,11 +206,12 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
-    <a onclick="toggleNav()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Team Journey</a>
-    <div id="myDropdown" class="dropdown">
+    <br>
+    <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
+    <div id="myDropdownMlops" class="dropdown-mlops">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_summary.html">Summary</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
@@ -165,26 +220,146 @@
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/gitops.html">GitOps</a>
     </div>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Effective Deployment - From PoC to Production</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
+    <a onclick="toggleNavBusiness()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Business Approach</a>
+    <div id="myDropdownBusiness" class="dropdown-business">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+    </div>
+    <a onclick="toggleNavTechnical()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Technical Approach</a>
+    <div id="myDropdownTechnical" class="dropdown-technical">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
+    </div> -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="http://localhost:4000/">Home</a>
+        <br>
+        <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
+        <div id="myDropdownMlops" class="dropdown-mlops">
+            <a href="http://localhost:4000/mlops_summary.html">Summary</a>
+            <a href="http://localhost:4000/requirements_research.html">Requirements and Research</a>
+            <a href="http://localhost:4000/serving.html">Model Serving</a>
+            <a href="http://localhost:4000/monitoring.html">Model Monitoring</a>
+            <a href="http://localhost:4000/versioning.html">Data Versioning</a>
+            <a href="http://localhost:4000/pred_service.html">Prediction Service</a>
+            <a href="http://localhost:4000/DAG.html">Training Pipeline</a>
+            <a href="http://localhost:4000/gitops.html">GitOps</a>
+        </div>
+        <a onclick="toggleNavBusiness()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Business Approach</a>
+        <div id="myDropdownBusiness" class="dropdown-business">
+            <a href="http://localhost:4000/maturity_assessment.html">Maturity Assessment</a>
+            <a href="http://localhost:4000/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+            <a href="http://localhost:4000/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+        </div>
+        <a onclick="toggleNavTechnical()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Technical Approach</a>
+        <div id="myDropdownTechnical" class="dropdown-technical">
+            <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
+            <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
+        </div>
+
 </div>
 
 <script>
-function toggleNav() {
-    const dropdown = document.getElementById("myDropdown");
-    if (dropdown.style.height === "350px") {
-        dropdown.style.height = "0px";
-        dropdown.style.opacity = "0"
-        dropdown.style.visibility = "hidden"
-    } else {
-        dropdown.style.height = "350px";
-        dropdown.style.opacity = "100"
-        dropdown.style.visibility = "visible"
 
+function toggleNavMlops() {
+    const dropdownmlops = document.getElementById("myDropdownMlops");
+    if (dropdownmlops.style.height === "360px") {
+        dropdownmlops.style.height = "0px";
+        dropdownmlops.style.opacity = "0";
+        dropdownmlops.style.visibility = "hidden";
+        localStorage.setItem("dropdownMlopsState", "closed");
+    } else {
+        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.opacity = "100";
+        dropdownmlops.style.visibility = "visible";
+        localStorage.setItem("dropdownMlopsState", "open");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownmlops = document.getElementById("myDropdownMlops");
+    const dropdownState = localStorage.getItem("dropdownMlopsState");
+    
+    if (dropdownState === "open") {
+        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.opacity = "100";
+        dropdownmlops.style.visibility = "visible";
+    } else {
+        dropdownmlops.style.height = "0px";
+        dropdownmlops.style.opacity = "0";
+        dropdownmlops.style.visibility = "hidden";
+    }
+});
+
+</script>
+
+
+<script>
+
+    function toggleNavBusiness() {
+    const dropdownbusiness = document.getElementById("myDropdownBusiness");
+    if (dropdownbusiness.style.height === "200px") {
+        dropdownbusiness.style.height = "0px";
+        dropdownbusiness.style.opacity = "0";
+        dropdownbusiness.style.visibility = "hidden";
+        localStorage.setItem("dropdownBusinessState", "closed");
+    } else {
+        dropdownbusiness.style.height = "200px";
+        dropdownbusiness.style.opacity = "100";
+        dropdownbusiness.style.visibility = "visible";
+        localStorage.setItem("dropdownBusinessState", "open");
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownbusiness = document.getElementById("myDropdownBusiness");
+        const dropdownState = localStorage.getItem("dropdownBusinessState");
+        
+        if (dropdownState === "open") {
+            dropdownbusiness.style.height = "200px";
+            dropdownbusiness.style.opacity = "100";
+            dropdownbusiness.style.visibility = "visible";
+        } else {
+            dropdownbusiness.style.height = "0px";
+            dropdownbusiness.style.opacity = "0";
+            dropdownbusiness.style.visibility = "hidden";
+        }
+    });
+</script>
+
+<script>
+
+    function toggleNavTechnical() {
+    const dropdowntech = document.getElementById("myDropdownTechnical");
+    if (dropdowntech.style.height === "180px") {
+        dropdowntech.style.height = "0px";
+        dropdowntech.style.opacity = "0";
+        dropdowntech.style.visibility = "hidden";
+        localStorage.setItem("dropdownTechState", "closed");
+    } else {
+        dropdowntech.style.height = "180px";
+        dropdowntech.style.opacity = "100";
+        dropdowntech.style.visibility = "visible";
+        localStorage.setItem("dropdownTechState", "open");
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdowntech = document.getElementById("myDropdownTechnical");
+        const dropdownState = localStorage.getItem("dropdownTechState");
+        
+        if (dropdownState === "open") {
+            dropdowntech.style.height = "180px";
+            dropdowntech.style.opacity = "100";
+            dropdowntech.style.visibility = "visible";
+        } else {
+            dropdowntech.style.height = "0px";
+            dropdowntech.style.opacity = "0";
+            dropdowntech.style.visibility = "hidden";
+        }
+    });
+
 </script>
 </header>
 
@@ -204,7 +379,7 @@ function toggleNav() {
 
 <h2 id="1-introduction">1. Introduction</h2>
 
-<p>The team chose Airflow as its <a href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html">DAG</a> implementation software as it is widely used in the community based on the GitHub stars of a repository (denoting the quality of a project). Also based on the fork of a repository (being contributed by more users).</p>
+<p>The team chose Airflow as its <a href="https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html" target="_blank">DAG</a> implementation software as it is widely used in the community based on the GitHub stars of a repository (denoting the quality of a project). Also based on the fork of a repository (being contributed by more users).</p>
 
 <p>Also Airflow Helm chart setup is easy. <a href="https://airflow.apache.org/docs/helm-chart/stable/index.html" target="_blank">Helm Chart for Apache Airflow — helm-chart Documentation</a></p>
 
@@ -266,16 +441,16 @@ function toggleNav() {
 
 <ol>
   <li>
-    <p><a href="https://airflow.apache.org/">Airflow</a></p>
+    <p><a href="https://airflow.apache.org/" target="_blank">Airflow</a></p>
   </li>
   <li>
-    <p><a href="https://www.prefect.io/">Prefect</a></p>
+    <p><a href="https://www.prefect.io/" target="_blank">Prefect</a></p>
   </li>
 </ol>
 
 <footer class="site-footer">
 
-<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</span>
 </footer>
 </main>
 </body>

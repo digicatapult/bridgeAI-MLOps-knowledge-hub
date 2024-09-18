@@ -106,7 +106,7 @@ It can later retrieve dataset information from runs
 
 DVC remotes are distributed storage locations for the data sets and ML models. It is similar to Git remotes, but for cached assets. This optional feature is typically used to share or back up copies of all or some of your data. Several types are supported: Amazon S3, Google Drive, SSH, HTTP, local file systems, among others.
 
-[DVC remote](https://dvc.org/doc/command-reference/remote#remote)
+[DVC remote](https://dvc.org/doc/command-reference/remote#remote){:target="_blank"}
 
 ### 3.2 MLFlow
 MLFlow tracking needs the following components.

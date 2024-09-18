@@ -17,8 +17,8 @@ Organisations often face numerous technical, organisational and operational chal
 While other knowledge bases offer in depth insights on how individual MLOps component / tool works, DC’s MLOps knowledge hub aims at explaining the design and implementation of an end-to-end MLOps pipeline, the hardware and infrastructure involves, software tool choices, containerisation and container orchestration, the CI/CD pipelines, the development and production environments and how all of the above are put together to implement a practical / viable MLOps pipeline for an organisation. It also aims to cover the research our team had undergone and the decision design made with explanation on why they were made and on what grounds.
 
 ### Topics covered
-1. Assessing your organisation's MLOps readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit)
-2. [Team Journey - Requirements and Research](team_journey.md)
-3. [Prerequisites - Skills, Roles and Tools](prerequisites.md)
-4. [Effective Deployment - From PoC to Production](effective_deployment.md)
-5. [MLOps Best Practices](best_practices.md)
+1. Assessing your organisation's MLOps readiness - [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit){:target="_blank"}
+2. [Team Journey - Requirements and Research](team_journey.md){:target="_blank"}
+3. [Prerequisites - Skills, Roles and Tools](prerequisites.md){:target="_blank"}
+4. [Effective Deployment - From PoC to Production](effective_deployment.md){:target="_blank"}
+5. [MLOps Best Practices](best_practices.md){:target="_blank"}

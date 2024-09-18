@@ -11,8 +11,8 @@ GitOps is the pattern of using Git as the source of truth to achieve a particula
 Two options for GitOps stand out, respectively **Argo CD** and **Flux**:
 
 **Argo CD**
-- [Argo project](argoproj.github.io)
-- [Argo case studies](cncf.io/case-studies)
+- [Argo project](argoproj.github.io){:target="_blank"} 
+- [Argo case studies](cncf.io/case-studies){:target="_blank"} 
 
 **Flux**
 - [Flux project](fluxcd.io)

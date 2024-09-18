@@ -5,24 +5,43 @@ title: BridgeAI MLOps Knowledge Hub
 
 # Model Serving Spike Content
 
->Note:
->This spike lists and compares some open-source model serving options or tools available based on ease of implementation, compatibility with PyTorch/Sklearn, and Kubernetes integration, and provides a recommendation for the most suitable tool for our use case.
->
->We are particularly looking for real-time or online inference rather than batch inference. [Batch inference](https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2) processes a large batch of input data at once rather than processing each input data point individually in real time.
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br>
+    <br>
+    This spike lists and compares some open-source model serving options or tools available based on ease of implementation, compatibility with PyTorch/Sklearn, and Kubernetes integration, and provides a recommendation for the most suitable tool for our use case.
+    <br>  
+    <br> 
+    We are particularly looking for real-time or online inference rather than batch inference. <a href="https://learn.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-machine-learning?view=azureml-api-2" target="_blank">Batch (offline) inference </a>
+    processes a large batch of input data at once rather than processing each input data point individually in real time.
+</blockquote>
+
 <br>
 
 **Model Serving** vs **Model Deployment**
 
 To make use of a standard definition, the team stuck to the terminology used here in [this blog](https://neptune.ai/blog/ml-model-serving-best-tools).
 
->**Model Serving Runtime**: Packaging a trained machine learning model into a container and setting up APIs so it can handle incoming requests. This allows the model to be used in a production environment, responding to data inputs with predictions (inference). **BentoML**, **TorchServe**, **Tensorflow Serving** are examples.
->
->**Model Serving Platform**: An environment designed to dynamically scale the number of model containers in response to incoming traffic. Tools like KServe, Bento Cloud, and Seldon Core are examples of serving platforms. They manage the infrastructure needed to deploy and scale models efficiently, responding to varying traffic without manual intervention.
->
->**Model Deployment**: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.
+<blockquote class="callout callout_definition">
+<span class="callout-icon">📓</span>
+    <br>
+    <br>
+    <b>Model Serving Runtime</b>: Packaging a trained machine learning model into a container and setting up APIs so it can handle incoming requests. This allows the model to be used in a production environment, responding to data inputs with predictions (inference). <b>BentoML</b>, <b>TorchServe</b>, <b>Tensorflow Serving</b> are examples.
+    <br>
+    <br>
+    <b>Model Serving Platform</b>: An environment designed to dynamically scale the number of model containers in response to incoming traffic. Tools like <b>KServe</b>, <b>Bento Cloud</b>, and <b>Seldon Core</b> are examples of serving platforms. They manage the infrastructure needed to deploy and scale models efficiently, responding to varying traffic without manual intervention.
+    <br>
+    <br>
+    <b>Model Deployment</b>: The process of integrating a packaged model into a serving platform and connecting it to the broader infrastructure, such as databases and downstream services. This ensures the model can access necessary data, perform its intended functions, and deliver inference results to consumers.
+</blockquote>
+
 The terms 'model serving' and 'model deployment' are often loosely considered to have the same meaning, and some documents use them interchangeably.
 
+<br>
+
 ---
+
+<br>
 
 **Table of Contents**
 1. [MLFlow For Model Serving](#1-mlflow-for-model-serving)\
@@ -50,24 +69,32 @@ The terms 'model serving' and 'model deployment' are often loosely considered to
 MLFlow supports a variety of model deployment targets including Local Infra, AWS Sagemaker, Azure ML, Databricks, Kubernetes, etc. But we will be looking into the Kubernetes deployment here.
 
 ### MLFlow - Model Serving Runtime
-- MLFlow uses MLServer for creating a serving runtime -- [MLServer — MLServer Documentation](https://mlserver.readthedocs.io/en/latest/) 
+- MLFlow uses MLServer for creating a serving runtime -- [MLServer — MLServer Documentation](https://mlserver.readthedocs.io/en/latest/){:target="_blank"} 
 
-- By default MLFlow uses Flask, but prefers MLServer for production -- [Deploy MLflow Model as a Local Inference Server — MLflow 2.15.1 documentation](https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks) 
+- By default MLFlow uses Flask, but prefers MLServer for production -- [Deploy MLflow Model as a Local Inference Server — MLflow 2.15.1 documentation](https://mlflow.org/docs/latest/deployment/deploy-model-locally.html#serving-frameworks){:target="_blank"}
 
 - Supports almost all machine learning frameworks and no vendor lock is present here unlike TorchServe or Tensorflow serve
 
 - With simple steps, the url `http://<host>:<port>/invocations` endpoint URL can do predictions
 
 ### MLFlow - Model Serving Platforms
-MLFlow native model serving using MLSerer supports KServe and Seldon Core both are kubernetes native
+MLFlow native model serving using MLSerer supports [KServe](https://kserve.github.io/website/latest/){:target="_blank"} and [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/){:target="_blank"} both are kubernetes native
 
-KServe has some example code and more documentation and details from MLFlow side - Develop ML model with MLflow and deploy to Kubernetes — MLflow 2.15.1 documentation 
+KServe has some example code and more documentation and details from MLFlow side - [Develop ML model with MLflow and deploy to Kubernetes](){:target="_blank"} 
 
-Partner documentation from KServe - MLFlow - KServe Documentation Website 
+Partner documentation from KServe - [MLFlow - KServe Documentation Website](https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html){:target="_blank"} 
 
-Seldon core - has got no example code in MLFlow but the partner documentation is also rich - MLflow Server — seldon-core  documentation
+Seldon core - has got no example code in MLFlow but the partner documentation is also rich - [MLflow Server — seldon-core  documentation](https://docs.seldon.io/projects/seldon-core/en/latest/servers/mlflow.html){:target="_blank"}
 
----
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br>
+    <br>
+    The prefered option here when deploying ML models in the MLFlow ecosystem is to use MLServer as serving runtime and Kserve as serving platform which are natively supported by MLFlow.
+</blockquote>
+
+<br>
+
 
 ### MLFlow - Deploying MLFlow model to Kubernetes
 The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
@@ -103,6 +130,7 @@ Deploy to the kubernetes cluster using kubectl
 If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
 
 Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.
+
 
 ---
 

@@ -8,8 +8,9 @@ title: BridgeAI MLOps Knowledge Hub
 
 <h3>What is a maturity assessment?</h3>
 
-<blockquote class="callout callout_info">
-<span class="callout-icon">ℹ️<b> Definition</b></span>
+<blockquote class="callout callout_definition">
+<span class="callout-icon">📓</span>
+    <br>
     <br>
     A maturity assessment is a structured evaluation that measures an organization's capabilities and processes against predefined criteria.
 </blockquote>
