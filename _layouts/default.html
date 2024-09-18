@@ -247,13 +247,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "360px") {
+    if (dropdownmlops.style.height === "380px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.height = "380px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.height = "380px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -282,13 +282,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleNavBusiness() {
     const dropdownbusiness = document.getElementById("myDropdownBusiness");
-    if (dropdownbusiness.style.height === "200px") {
+    if (dropdownbusiness.style.height === "230px") {
         dropdownbusiness.style.height = "0px";
         dropdownbusiness.style.opacity = "0";
         dropdownbusiness.style.visibility = "hidden";
         localStorage.setItem("dropdownBusinessState", "closed");
     } else {
-        dropdownbusiness.style.height = "200px";
+        dropdownbusiness.style.height = "230px";
         dropdownbusiness.style.opacity = "100";
         dropdownbusiness.style.visibility = "visible";
         localStorage.setItem("dropdownBusinessState", "open");
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownState = localStorage.getItem("dropdownBusinessState");
         
         if (dropdownState === "open") {
-            dropdownbusiness.style.height = "200px";
+            dropdownbusiness.style.height = "230px";
             dropdownbusiness.style.opacity = "100";
             dropdownbusiness.style.visibility = "visible";
         } else {
