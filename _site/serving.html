@@ -82,6 +82,54 @@
     color: #6a737d;
     }
 
+    /* ------- */
+    .container {
+    /* height: 15%;
+    width: 18%; */
+    /* top: 0; */
+    /* left: 0; */
+    /* background-color: #8C1437; */
+    position: relative;
+    overflow-x: hidden;
+    transition: 0.5s;
+    outline: 0.5px solid rgba(128, 128, 128, 0.506);
+    border-radius: 5px
+    /* padding-top: 60px; */
+    }
+
+    .container a {
+    text-align: left;
+    padding: 16px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #373535;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .contents {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .contents a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000000;
+    transition: 0.3s;
+    }
+    /* ------- */
+
     .dropdown-mlops {
     display: none;
     visibility: hidden;
@@ -213,7 +261,7 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -237,9 +285,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div>
+    </div> -->
 
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -263,9 +311,43 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div> -->
+        </div>
 
 </div>
+
+<script>
+
+    function toggleContents() {
+        const contents = document.getElementById("myContents");
+        if (contents.style.height === "800px") {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contents.style.height = "800px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents = document.getElementById("myContents");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contents.style.height = "800px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+        } else {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
+        }
+    });
+    
+</script>
 
 <script>
 
@@ -388,7 +470,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><strong>Model Serving</strong> vs <strong>Model Deployment</strong></p>
 
-<p>To make use of a standard definition, the team stuck to the terminology used here in <a href="https://neptune.ai/blog/ml-model-serving-best-tools">this blog</a>.</p>
+<p>To make use of a standard definition, the team stuck to the terminology used here in <a href="https://neptune.ai/blog/ml-model-serving-best-tools" target="_blank">this blog</a>.</p>
 
 <blockquote class="callout callout_definition">
 <span class="callout-icon">📓</span>
@@ -472,45 +554,73 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><br /></p>
 
-<h3 id="mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</h3>
-<p>The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.</p>
+<div id="myContainer" class="container">
+  <a onclick="toggleContents()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px" /> MLFlow - Deploying MLFlow model to Kubernetes</a>
+  <div id="myContents" class="contents">
+  The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
 
-<p>An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.</p>
+  <br />
+  <br />
 
-<p>Once we have the model ready, deploying the model to Kserve can be done in two ways as mentioned here; either using a docker image or using a model uri.</p>
+  An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.
 
-<p>Summarised steps for the docker image based approach from the above link:</p>
+  <br />
+  <br />
 
-<p>Install the MLServer using</p>
+  Once we have the model ready, deploying the model to Kserve can be done in two ways (methods linked in Resources); either using a docker image or using a model uri.
 
-<p><code class="language-plaintext highlighter-rouge">pip install mlflow[extras]</code></p>
+  <br />
+  <br />
 
-<p>Install Kserve to the kubernetes cluster</p>
+  Summarised steps for the docker image based approach:
 
-<p>GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kubernetes</p>
+  <br />
+  <br />
 
-<p>Test the model serving locally,</p>
+  1. Install the MLServer using
+  <br />
+  <code>pip install mlflow[extras]</code>
 
-<p><code class="language-plaintext highlighter-rouge">mlflow models serve -m runs:/&lt;run_id_for_your_best_run&gt;/model -p 1234 --enable-mlserver</code></p>
+  <br />
+  <br />
 
-<p>Create a model docker is as simple as</p>
+  2. Install Kserve to the kubernetes cluster
 
-<p><code class="language-plaintext highlighter-rouge">mlflow models build-docker -m runs:/&lt;run_id_for_your_best_run&gt;/model -n &lt;your_dockerhub_user_name&gt;/&lt;mlflow-model-name&gt; --enable-mlserver</code></p>
+  <br />
+  <br />
 
-<p>Push the model to docker registry</p>
+  3. Test the model serving locally,
 
-<p>Write a deployment configuration yaml file</p>
+  <br />
+  <br />
 
-<p>Deploy to the kubernetes cluster using kubectl</p>
+  <code>mlflow models serve -m runs:/{run_id_for_your_best_run}/model -p 1234 --enable-mlserver</code>
 
-<p>If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.</p>
+  <br />
+  <br />
 
-<p>Since the detailed steps in the above mentioned document are self explanatory, not adding much information here.</p>
+  4. Create a model docker is as simple as
+  <br />
+  <code>mlflow models build-docker -m runs:/{run_id_for_your_best_run}/model -n {your_dockerhub_user_name}/{mlflow-model-name} --enable-mlserver</code>
+  <br />
+
+  </div>
+</div>
+
+<!-- Push the model to docker registry
+
+Write a deployment configuration yaml file
+
+Deploy to the kubernetes cluster using kubectl
+
+If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
+
+Since the detailed steps in the above mentioned document are self explanatory, not adding much information here. -->
 
 <hr />
 
 <h3 id="mlflow---summary">MLFlow - Summary</h3>
-<p>Supports PyTorch and SKlearn models natively - <a href="https://mlflow.org/docs/latest/models.html#built-in-model-flavors">MLFlow models - built-in model flavors</a></p>
+<p>Supports PyTorch and SKlearn models natively - <a href="https://mlflow.org/docs/latest/models.html#built-in-model-flavors" target="_blank">MLFlow models - built-in model flavors</a></p>
 
 <p>Models are already in supported MLFLow models format when the training completes</p>
 
@@ -534,28 +644,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p>So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.
 FastAPI - Deploying MLFlow model to Kubernetes</p>
-
-<!-- ### FastAPI - Deploying MLFlow model to Kubernetes -->
-<!-- <style>
-.dropdown {
-height: 10%;
-width: 10%;
-position: fixed;
-/* z-index: 1; */
-background-color: rgb(24, 137, 105);
-overflow-x: hidden;
-transition: 0.5s;
-padding-top: 60px;
-}
-</style> -->
-<!-- <div id="myDropdown" class="dropdown">
-<details>
-<summary>FastAPI - Deploying MLFlow model to Kubernetes</summary> -->
-<!--All you need is a blank line-->
-
-<!-- test text -->
-<!-- </details> -->
-<!-- </div> -->
 
 <h3 id="fastapi---summary">FastAPI - Summary</h3>
 <p>Using web frameworks for building API endpoints is the straightforward way to serve models</p>
@@ -670,14 +758,14 @@ Now the Docker Container can be run locally</p>
 
 <p>Create a KServe InferenceService YAML file and deploy to kubernetes.</p>
 
-<p><strong>Here are the advantages and limitations of BentoML as per</strong> <a href="https://neptune.ai/">neptune.ai - The experiment tracker for foundation model training</a></p>
+<p><strong>Here are the advantages and limitations of BentoML as per</strong> <a href="https://neptune.ai/" target="_blank">neptune.ai - The experiment tracker for foundation model training</a></p>
 
 <p>Advantages:</p>
 <ul>
   <li><strong>Ease of use:</strong> BentoML is one of the most straightforward frameworks to use. Since the release of 1.2, it has become possible to build a Bento with a few lines of code.</li>
   <li><strong>ML Framework support:</strong> BentoML supports all the leading machine learning frameworks, such as PyTorch, Keras, TensorFlow, and scikit-learn.</li>
-  <li><strong>Concurrent model execution:</strong> <a href="https://github.com/bentoml/BentoML/blob/main/src/_bentoml_impl/server/allocator.py">BentoML supports fractional GPU allocation</a>. In other words, you can spawn multiple instances of a model on a single GPU to distribute the processing.</li>
-  <li><strong>Integration:</strong> BentoML comes with integrations for ZenML, Spark, MLflow, <a href="https://www.fast.ai/">fast.ai</a>, Triton Inference Server, and more.</li>
+  <li><strong>Concurrent model execution:</strong> <a href="https://github.com/bentoml/BentoML/blob/main/src/_bentoml_impl/server/allocator.py" target="_blank">BentoML supports fractional GPU allocation</a>. In other words, you can spawn multiple instances of a model on a single GPU to distribute the processing.</li>
+  <li><strong>Integration:</strong> BentoML comes with integrations for ZenML, Spark, MLflow, <a href="https://www.fast.ai/" target="_blank">fast.ai</a>, Triton Inference Server, and more.</li>
   <li><strong>Flexibility:</strong> BentoML is “Pythonic” and allows you to package any pre-trained model that you can import with Python, such as Large Language Models (LLMs), Stable Diffusion, or CLIP.</li>
   <li><strong>Clear documentation:</strong> The documentation is easy to read, well-structured, and contains plenty of helpful examples.</li>
   <li><strong>Monitoring:</strong> BentoML integrates with ArizeAI and Prometheus metrics.</li>
@@ -686,7 +774,7 @@ Now the Docker Container can be run locally</p>
 <p>Key limitations:</p>
 <ul>
   <li>Requires extra implementation: As BentoML is “Pythonic,” you are required to implement model loading and inference methods on your own.</li>
-  <li>Native support for high-performance runtime: BentoML runs on Python. Therefore, it is not as optimal as Tensorflow Serving or TorchServe, both of which run on backends written in C++ that are compiled to machine code. However, it is possible to use the <a href="https://docs.bentoml.com/en/latest/reference/frameworks/onnx.html">ONNX Python API</a> to speed up the inference time.</li>
+  <li>Native support for high-performance runtime: BentoML runs on Python. Therefore, it is not as optimal as Tensorflow Serving or TorchServe, both of which run on backends written in C++ that are compiled to machine code. However, it is possible to use the <a href="https://docs.bentoml.com/en/latest/reference/frameworks/onnx.html" target="_blank">ONNX Python API</a> to speed up the inference time.</li>
 </ul>
 
 <h3 id="bentoml---summary">BentoML - Summary</h3>
@@ -738,7 +826,7 @@ Now the Docker Container can be run locally</p>
       <td>Dependency management</td>
       <td>Yes</td>
       <td>Manual</td>
-      <td>Yes, can do it with the <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips">MLFlow integration</a></td>
+      <td>Yes, can do it with the <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips" target="_blank">MLFlow integration</a></td>
     </tr>
   </tbody>
   <tbody>
@@ -746,7 +834,7 @@ Now the Docker Container can be run locally</p>
       <td>Additional components or things to consider</td>
       <td>Install either via MLServer (<code class="language-plaintext highlighter-rouge">pip install mlflow[extras]</code>) or KServe to the Kubernetes cluster</td>
       <td>Manually bind dependencies and model versions to a container; Install Kserve to the kubernetes cluster</td>
-      <td>Install bentoml using <code class="language-plaintext highlighter-rouge">pip install bentoml</code>; Install Kserve to the kubernetes cluster; NO need to follow <a href="https://docs.yatai.io/en/latest/concepts/architecture.html#yatai-architecture">Yatai based installation</a> if we are using bentoML just for model serving runtime creation</td>
+      <td>Install bentoml using <code class="language-plaintext highlighter-rouge">pip install bentoml</code>; Install Kserve to the kubernetes cluster; NO need to follow <a href="https://docs.yatai.io/en/latest/concepts/architecture.html#yatai-architecture" target="_blank">Yatai based installation</a> if we are using bentoML just for model serving runtime creation</td>
     </tr>
   </tbody>
   <tbody>
@@ -787,44 +875,48 @@ What needs to be changed when moving from mlflow to bentoml later?</p>
 <h2 id="questions">Questions:</h2>
 
 <p>Q. Decision between KServe or Seldon core - Which one is more suitable for our use case?<br />
-        A comparison - <a href="https://superwise.ai/blog/kserve-vs-seldon-core/">KServe vs. Seldon Core - Superwise ML Observability</a>\ 
-        KServe is open source whereas <a href="https://www.seldon.io/pricing">SeldonCore</a> is expensive. And so is <a href="https://www.bentoml.com/pricing">BentoCloud</a>.</p>
+        A comparison - <a href="https://superwise.ai/blog/kserve-vs-seldon-core/" target="_blank">KServe vs. Seldon Core - Superwise ML Observability</a>\ 
+        KServe is open source whereas <a href="https://www.seldon.io/pricing" target="_blank">SeldonCore</a> is expensive. And so is <a href="https://www.bentoml.com/pricing" target="_blank">BentoCloud</a>.</p>
 
 <h2 id="references">References</h2>
+
 <ol>
-  <li>
-    <p>MLFlow serving <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html">Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation</a></p>
-  </li>
-  <li>
-    <p>Kserve - <a href="https://kserve.github.io/website/latest/">Home - KServe Documentation Website</a></p>
-  </li>
+  <li>MLFlow serving <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html" target="_blank">Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation</a></li>
 </ol>
 
 <ul>
-  <li>Kserve using MLFlow models - <a href="https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/">MLFlow - KServe Documentation Website</a></li>
+  <li><a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html#step-7-deploying-the-model-to-kserve" target="_blank">Deploying Models to KServe</a></li>
+</ul>
+
+<ol>
+  <li>Kserve - <a href="https://kserve.github.io/website/latest/" target="_blank">Home - KServe Documentation Website</a></li>
+</ol>
+
+<ul>
+  <li>Kserve using MLFlow models - <a href="https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/" target="_blank">MLFlow - KServe Documentation Website</a></li>
 </ul>
 
 <ol>
   <li>
-    <p><a href="https://fastapi.tiangolo.com/">FastAPI</a></p>
+    <p><a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a></p>
   </li>
   <li>
-    <p><a href="https://analyticsindiamag.com/developers-corner/fastapi-vs-flask-comparison-guide-for-data-science-enthusiasts/">FastAPI vs Flask: Comparison Guide for Data Science Enthusiasts</a></p>
+    <p><a href="https://analyticsindiamag.com/developers-corner/fastapi-vs-flask-comparison-guide-for-data-science-enthusiasts/" target="_blank">FastAPI vs Flask: Comparison Guide for Data Science Enthusiasts</a></p>
   </li>
   <li>
-    <p><a href="https://www.kubeflow.org/docs/external-add-ons/serving/overview/">KubeFlow serving options</a></p>
+    <p><a href="https://www.kubeflow.org/docs/external-add-ons/serving/overview/" target="_blank">KubeFlow serving options</a></p>
   </li>
   <li>
-    <p>KServe installation - <a href="https://github.com/kserve/kserve#hammer_and_wrench-installation">GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kubernetes</a></p>
+    <p>KServe installation - <a href="https://github.com/kserve/kserve#hammer_and_wrench-installation" target="_blank">GitHub - kserve/kserve: Standardized Serverless ML Inference Platform on Kubernetes</a></p>
   </li>
   <li>
-    <p><a href="https://neptune.ai/blog/ml-model-serving-best-tools">Best Tools For ML Model Serving</a></p>
+    <p><a href="https://neptune.ai/blog/ml-model-serving-best-tools" target="_blank">Best Tools For ML Model Serving</a></p>
   </li>
   <li>
-    <p>MLFlow BentoML - <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html">MLflow</a></p>
+    <p>MLFlow BentoML - <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html" target="_blank">MLflow</a></p>
   </li>
   <li>
-    <p>BentoML MLFlow dependency management - <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips">MLflow additional tips</a></p>
+    <p>BentoML MLFlow dependency management - <a href="https://docs.bentoml.com/en/1.1/integrations/mlflow.html#additional-tips" target="_blank">MLflow additional tips</a></p>
   </li>
 </ol>
 

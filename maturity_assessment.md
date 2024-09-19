@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-## [Maturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit){:target="_blank"}
+## [xMaturity Assessment](https://apps.digicatapult.org.uk/ai-adoption-toolkit){:target="_blank"}
 
 
 <h3>What is a maturity assessment?</h3>
