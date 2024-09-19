@@ -15,8 +15,9 @@ title: BridgeAI MLOps Knowledge Hub
     <br>
     While best practices for MLOps is technically covered in the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
 </blockquote>
+<br>
 
-The principles (or best practices) concerning MLOps are:
+The <span style="color:#8C1437"><b>principles</b></span> (or best practices) concerning MLOps are:
 - Automation
 - Continuous X
 - Versioning
@@ -24,7 +25,7 @@ The principles (or best practices) concerning MLOps are:
 - Testing
 - Monitoring
 
-Here is a summary of core considerations for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code):
+Some <span style="color:#8C1437"><b>core considerations</b></span> for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code) include:
 
 <img src="mlops_principles.png">
 Source: [MLOps.org](https://ml-ops.org/content/mlops-principles#summary-of-mlops-principles-and-best-practices){:target="_blank"}

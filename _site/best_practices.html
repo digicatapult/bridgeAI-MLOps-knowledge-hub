@@ -49,13 +49,20 @@
     font-family: "Lato", sans-serif;
     }
     
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
     .sidenav {
     height: 100%;
     width: 18%;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(24, 137, 105);
+    background-color: #8C1437;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -72,7 +79,7 @@
     }
     
     .sidenav a:hover {
-    color: #201d1d;
+    color: #6a737d;
     }
 
     .dropdown-mlops {
@@ -85,7 +92,7 @@
     width: 100%;
     position: relative;
     display: block;
-    background-color: rgb(24, 137, 105);
+    background-color: #8C1437;
     overflow-x: hidden;
     transition: 0.5s ease;
     }
@@ -99,7 +106,7 @@
     }
     
     .dropdown-mlops a:hover {
-    color: #201d1d;
+    color: #6a737d;
     }
 
     .dropdown-business {
@@ -112,7 +119,7 @@
     width: 100%;
     position: relative;
     display: block;
-    background-color: rgb(24, 137, 105);
+    background-color: #8C1437;
     overflow-x: hidden;
     transition: 0.5s ease;
     }
@@ -126,7 +133,7 @@
     }
     
     .dropdown-business a:hover {
-    color: #201d1d;
+    color: #6a737d;
     }
 
     .dropdown-technical {
@@ -139,7 +146,7 @@
     width: 100%;
     position: relative;
     display: block;
-    background-color: rgb(24, 137, 105);
+    background-color: #8C1437;
     overflow-x: hidden;
     transition: 0.5s ease;
     }
@@ -153,7 +160,7 @@
     }
     
     .dropdown-technical a:hover {
-    color: #201d1d;
+    color: #6a737d;
     }
     
     @media screen and (max-height: 450px){
@@ -206,57 +213,57 @@
     }
 
     </style>
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
     <div id="myDropdownMlops" class="dropdown-mlops">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_summary.html">Summary</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/versioning.html">Data Versioning</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/pred_service.html">Prediction Service</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/gitops.html">GitOps</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/pred_service.html">Prediction Service</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/versioning.html">Data Versioning</a>
     </div>
     <a onclick="toggleNavBusiness()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Business Approach</a>
     <div id="myDropdownBusiness" class="dropdown-business">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/deployment_lifecycle.html">Deployment Service Life Cycle</a>
     </div>
     <a onclick="toggleNavTechnical()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Technical Approach</a>
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div> -->
+    </div>
 
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
         <div id="myDropdownMlops" class="dropdown-mlops">
             <a href="http://localhost:4000/mlops_summary.html">Summary</a>
             <a href="http://localhost:4000/requirements_research.html">Requirements and Research</a>
-            <a href="http://localhost:4000/serving.html">Model Serving</a>
-            <a href="http://localhost:4000/monitoring.html">Model Monitoring</a>
-            <a href="http://localhost:4000/versioning.html">Data Versioning</a>
-            <a href="http://localhost:4000/pred_service.html">Prediction Service</a>
-            <a href="http://localhost:4000/DAG.html">Training Pipeline</a>
             <a href="http://localhost:4000/gitops.html">GitOps</a>
+            <a href="http://localhost:4000/serving.html">Model Serving</a>
+            <a href="http://localhost:4000/pred_service.html">Prediction Service</a>
+            <a href="http://localhost:4000/monitoring.html">Model Monitoring</a>
+            <a href="http://localhost:4000/DAG.html">Training Pipeline</a>
+            <a href="http://localhost:4000/versioning.html">Data Versioning</a>
         </div>
         <a onclick="toggleNavBusiness()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Business Approach</a>
         <div id="myDropdownBusiness" class="dropdown-business">
             <a href="http://localhost:4000/maturity_assessment.html">Maturity Assessment</a>
             <a href="http://localhost:4000/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
-            <a href="http://localhost:4000/effective_deployment.html">Effective Deployment - From PoC to Production</a>
+            <a href="http://localhost:4000/deployment_lifecycle.html">Deployment Service Life Cycle</a>
         </div>
         <a onclick="toggleNavTechnical()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> Technical Approach</a>
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div>
+        </div> -->
 
 </div>
 
@@ -264,13 +271,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "360px") {
+    if (dropdownmlops.style.height === "380px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.height = "380px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -282,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "360px";
+        dropdownmlops.style.height = "380px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -299,13 +306,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleNavBusiness() {
     const dropdownbusiness = document.getElementById("myDropdownBusiness");
-    if (dropdownbusiness.style.height === "200px") {
+    if (dropdownbusiness.style.height === "230px") {
         dropdownbusiness.style.height = "0px";
         dropdownbusiness.style.opacity = "0";
         dropdownbusiness.style.visibility = "hidden";
         localStorage.setItem("dropdownBusinessState", "closed");
     } else {
-        dropdownbusiness.style.height = "200px";
+        dropdownbusiness.style.height = "230px";
         dropdownbusiness.style.opacity = "100";
         dropdownbusiness.style.visibility = "visible";
         localStorage.setItem("dropdownBusinessState", "open");
@@ -317,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownState = localStorage.getItem("dropdownBusinessState");
         
         if (dropdownState === "open") {
-            dropdownbusiness.style.height = "200px";
+            dropdownbusiness.style.height = "230px";
             dropdownbusiness.style.opacity = "100";
             dropdownbusiness.style.visibility = "visible";
         } else {
@@ -376,8 +383,9 @@ document.addEventListener("DOMContentLoaded", function() {
     <br />
     While best practices for MLOps is technically covered in the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
 </blockquote>
+<p><br /></p>
 
-<p>The principles (or best practices) concerning MLOps are:</p>
+<p>The <span style="color:#8C1437"><b>principles</b></span> (or best practices) concerning MLOps are:</p>
 <ul>
   <li>Automation</li>
   <li>Continuous X</li>
@@ -387,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <li>Monitoring</li>
 </ul>
 
-<p>Here is a summary of core considerations for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code):</p>
+<p>Some <span style="color:#8C1437"><b>core considerations</b></span> for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code) include:</p>
 
 <p><img src="mlops_principles.png" />
 Source: <a href="https://ml-ops.org/content/mlops-principles#summary-of-mlops-principles-and-best-practices" target="_blank">MLOps.org</a></p>

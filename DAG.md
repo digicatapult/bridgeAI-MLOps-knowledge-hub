@@ -15,6 +15,7 @@ format: gfm
         <!-- [DAGster](#dagster)\ -->
 [References](#references)
 
+<br>
 
 ## 1. Introduction
 
@@ -26,7 +27,11 @@ The team chose Airflow as its [DAG](https://airflow.apache.org/docs/apache-airfl
 
 **Note:** Kubeflow does not have an official Helm chart. 
 
+<br>
+
 ## 2. Team Implementation
+
+Each of the links below will direct you to one of our repos for each process, which comes with a README to direct you on how to set up each process:
 
 ➡️ [Testing DAGs on Local Kind Cluster](https://github.com/digicatapult/bridgeAI-airflow-DAGs){:target="_blank"}
 
@@ -35,6 +40,8 @@ The team chose Airflow as its [DAG](https://airflow.apache.org/docs/apache-airfl
 ➡️ [Model Training DAG](https://github.com/digicatapult/bridgeAI-airflow-DAGs/blob/main/dags/regression_model_training/README.md){:target="_blank"}
 
 ➡️ [Drift Monitoring DAG](https://github.com/digicatapult/bridgeAI-airflow-DAGs/blob/main/dags/drift_monitoring/README.md){:target="_blank"}
+
+<br>
 
 ## 3. Evaluation
 
@@ -69,6 +76,8 @@ The team chose Airflow as its [DAG](https://airflow.apache.org/docs/apache-airfl
 - Paid
 - As above
 - As above -->
+
+<br>
 
 ## References
 
