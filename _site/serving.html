@@ -261,7 +261,7 @@
     }
 
     </style>
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -285,9 +285,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div> -->
+    </div>
 
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -311,7 +311,7 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div>
+        </div> -->
 
 </div>
 
@@ -344,6 +344,40 @@
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsTwo() {
+        const contentsTwo = document.getElementById("myContentsTwo");
+        if (contentsTwo.style.height === "800px") {
+            contentsTwo.style.height = "0px";
+            contentsTwo.style.opacity = "0";
+            contentsTwo.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contentsTwo.style.height = "800px";
+            contentsTwo.style.opacity = "100";
+            contentsTwo.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentsTwo = document.getElementById("myContentsTwo");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contentsTwo.style.height = "800px";
+            contentsTwo.style.opacity = "100";
+            contentsTwo.style.visibility = "visible";
+        } else {
+            contentsTwo.style.height = "0px";
+            contentsTwo.style.opacity = "0";
+            contentsTwo.style.visibility = "hidden";
         }
     });
     
@@ -557,6 +591,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <div id="myContainer" class="container">
   <a onclick="toggleContents()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px" /> MLFlow - Deploying MLFlow model to Kubernetes</a>
   <div id="myContents" class="contents">
+  <br />
   The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
 
   <br />
@@ -590,10 +625,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <br />
 
   3. Test the model serving locally,
-
   <br />
-  <br />
-
   <code>mlflow models serve -m runs:/{run_id_for_your_best_run}/model -p 1234 --enable-mlserver</code>
 
   <br />
@@ -603,19 +635,25 @@ document.addEventListener("DOMContentLoaded", function() {
   <br />
   <code>mlflow models build-docker -m runs:/{run_id_for_your_best_run}/model -n {your_dockerhub_user_name}/{mlflow-model-name} --enable-mlserver</code>
   <br />
+  <br />
+
+  5. Push the model to docker registry
+
+  <br />
+  <br />
+
+  6. Write a deployment configuration yaml file
+
+  <br />
+  <br />
+
+  If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. <code>s3://xxx</code> or <code>gs://xxx</code>. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store (linked in Resources) for setup instructions.
+
+  <br />
+  <br />
 
   </div>
 </div>
-
-<!-- Push the model to docker registry
-
-Write a deployment configuration yaml file
-
-Deploy to the kubernetes cluster using kubectl
-
-If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. s3://xxx or gs://xxx. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store for setup instructions.
-
-Since the detailed steps in the above mentioned document are self explanatory, not adding much information here. -->
 
 <hr />
 
@@ -643,7 +681,95 @@ Since the detailed steps in the above mentioned document are self explanatory, n
 <p>Once the container is ready, any serving platform like Seldon core or KServe(open source) can be used</p>
 
 <p>So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.
-FastAPI - Deploying MLFlow model to Kubernetes</p>
+<br /></p>
+<div id="myContainer" class="container">
+  <a onclick="toggleContentsTwo()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px" /> FastAPI - Deploying MLFlow model to Kubernetes</a>
+  <div id="myContentsTwo" class="contents">
+  <br />
+  
+  1. Install BentoML and Dependencies
+  <br />
+  <code>pip install bentoml</code>
+  <br />
+  <br />
+  2. Create a BentoML Service
+  <br />
+  Create a BentoML service for your model. Basically wrap the model with an api endpoint similar to the process of doing so using FastAPI. A sample not tested code;
+  <br />
+  <code> # sample_service.py
+  import bentoml
+  import mlflow
+  from transformers import pipeline
+  model_artefact_path = "model_uri"
+  model_uri = mlflow.get_artifact_uri(model_artefact_path)
+  bento_model = bentoml.mlflow.import_model(
+      'mlflow_pytorch_mnist',
+      model_uri,
+      signatures={'predict': {'batchable': True}}
+  )
+  @bentoml.service(
+      resources={"cpu": "2"},
+      traffic={"timeout": 10},
+  )
+  class Summarization:
+      def __init__(self) -&gt; None:
+          # Load model into pipeline
+          self.model = bento_model
+      @bentoml.api
+      def predict(self, data: str) -&gt; str:
+          input_data = np.array(data)
+          predictions = self.model(input_data)
+          return {"predictions": predictions.tolist()}</code>
+  <br />
+  <br />
+  3. Build the Bento for the service:
+  <br />
+  <code>bentoml build -f sample_service.py</code>
+  <br />
+  <br />
+  4. Containerize the Bento - Use BentoML to containerize the built Bento:
+  <br />
+  <code>bentoml containerize sample_model:latest</code>
+  <br />
+  <br />
+  This command builds a Docker image for the BentoML service.
+  <br />
+  Now the Docker Container can be run locally
+  <br />
+  <code>docker run -p 3000:3000 sample_model:latest</code>
+  <br />
+  <br />
+  5. Deploy to Kubernetes with KServe
+  <br />
+  <br />
+  6. Create a KServe InferenceService YAML file and deploy to kubernetes.
+  <br />
+  <br />
+  <!-- Here are the advantages and limitations of BentoML as per neptune.ai | The experiment tracker for foundation model training 
+
+  Advantages:
+
+  Ease of use: BentoML is one of the most straightforward frameworks to use. Since the release of 1.2, it has become possible to build a Bento with a few lines of code.
+
+  ML Framework support: BentoML supports all the leading machine learning frameworks, such as PyTorch, Keras, TensorFlow, and scikit-learn.
+
+  Concurrent model execution: BentoML supports fractional GPU allocation. In other words, you can spawn multiple instances of a model on a single GPU to distribute the processing.
+
+  Integration: BentoML comes with integrations for ZenML, Spark, MLflow, fast.ai - fast.ai—Making neural nets uncool again , Triton Inference Server, and more.
+
+  Flexibility: BentoML is “Pythonic” and allows you to package any pre-trained model that you can import with Python, such as Large Language Models (LLMs), Stable Diffusion, or CLIP.
+
+  Clear documentation: The documentation is easy to read, well-structured, and contains plenty of helpful examples.
+
+  Monitoring: BentoML integrates with ArizeAI and Prometheus metrics.
+
+  Key limitations:
+
+  Requires extra implementation: As BentoML is “Pythonic,” you are required to implement model loading and inference methods on your own.
+
+  Native support for high-performance runtime: BentoML runs on Python. Therefore, it is not as optimal as Tensorflow Serving or TorchServe, both of which run on backends written in C++ that are compiled to machine code. However, it is possible to use the ONNX Python API to speed up the inference time. -->
+  </div>
+</div>
 
 <h3 id="fastapi---summary">FastAPI - Summary</h3>
 <p>Using web frameworks for building API endpoints is the straightforward way to serve models</p>

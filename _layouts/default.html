@@ -334,6 +334,40 @@
 
 <script>
 
+    function toggleContentsTwo() {
+        const contentsTwo = document.getElementById("myContentsTwo");
+        if (contentsTwo.style.height === "800px") {
+            contentsTwo.style.height = "0px";
+            contentsTwo.style.opacity = "0";
+            contentsTwo.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contentsTwo.style.height = "800px";
+            contentsTwo.style.opacity = "100";
+            contentsTwo.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentsTwo = document.getElementById("myContentsTwo");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contentsTwo.style.height = "800px";
+            contentsTwo.style.opacity = "100";
+            contentsTwo.style.visibility = "visible";
+        } else {
+            contentsTwo.style.height = "0px";
+            contentsTwo.style.opacity = "0";
+            contentsTwo.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
     if (dropdownmlops.style.height === "380px") {

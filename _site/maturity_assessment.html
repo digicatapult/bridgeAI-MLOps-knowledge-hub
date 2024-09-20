@@ -261,7 +261,7 @@
     }
 
     </style>
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -285,9 +285,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div> -->
+    </div>
 
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -311,7 +311,7 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div>
+        </div> -->
 
 </div>
 
@@ -344,6 +344,40 @@
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsTwo() {
+        const contentsTwo = document.getElementById("myContentsTwo");
+        if (contentsTwo.style.height === "800px") {
+            contentsTwo.style.height = "0px";
+            contentsTwo.style.opacity = "0";
+            contentsTwo.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contentsTwo.style.height = "800px";
+            contentsTwo.style.opacity = "100";
+            contentsTwo.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentsTwo = document.getElementById("myContentsTwo");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contentsTwo.style.height = "800px";
+            contentsTwo.style.opacity = "100";
+            contentsTwo.style.visibility = "visible";
+        } else {
+            contentsTwo.style.height = "0px";
+            contentsTwo.style.opacity = "0";
+            contentsTwo.style.visibility = "hidden";
         }
     });
     
@@ -453,7 +487,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </header>
 
 <main id="content" class="main-content" role="main">
-<h2 id="xmaturity-assessment"><a href="https://apps.digicatapult.org.uk/ai-adoption-toolkit" target="_blank">xMaturity Assessment</a></h2>
+<h2 id="maturity-assessment"><a href="https://apps.digicatapult.org.uk/ai-adoption-toolkit" target="_blank">Maturity Assessment</a></h2>
 
 <h3>What is a maturity assessment?</h3>
 
