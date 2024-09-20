@@ -559,25 +559,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <h3>The Team's Architecture <a href="https://app.mural.co/t/jmsandbox6893/m/jmsandbox6893/1723564838519/90dee27020222851bf2f8b62c04fd272c25fd1d3?sender=udec36d924fb252f9f2506642" target="_blank">Mural</a>:</h3>
 
-<p><img src="mlops_arch.png" usemap="#lessons" width="787" height="670" /></p>
+<p><img src="mlops_architecture.png" usemap="#arch" width="839" height="650.64" /></p>
 
-<!-- <map name = "lessons">
-    <area shape = "rect" coords = "22,83,126,125" alt = "Industry Data"
-    href = "/team_arch.html#industry-data"/>
+<map name="arch">
+    <area shape="rect" coords="1774,1274,23" alt="Model Development" href="/team_arch.html#1-model-development" />
+    <area shape="rect" coords="22,83,126,125" alt="Industry Data" href="/team_arch.html#22-industry-data" />
 </map>
 
+<h2 id="components">Components</h2>
 
-## Components
+<p>The following explanations apply to the team’s MLOps architecture:</p>
 
-### Industry Data 
+<h3 id="1-model-development">1. Model Development</h3>
 
-[blurb on what/why]
+<p>Data scientists develop models locally.</p>
+
+<h3 id="2-models-pushed">2. Model(s) pushed</h3>
+
+<p>All models are stored in the artefact store in MLflow.</p>
+
+<p>File type: <code class="language-plaintext highlighter-rouge">.pth</code><br />
+Data visibility: High<br />
+Frequency of data flow: On demand</p>
+
+<!-- ### 22. Industry Data  -->
+
+<!-- [blurb on what/why]
 
 [explanation of process (copy from Mural)]
 
-[expand on process]
+[expand on process] -->
 
--->
+<!-- <area shape = "circle" coords="" alt="" href = ""> -->
 
 <footer class="site-footer">
 
