@@ -261,7 +261,7 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -285,9 +285,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div>
+    </div> -->
 
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -311,7 +311,7 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div> -->
+        </div>
 
 </div>
 
@@ -378,6 +378,74 @@
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsThree() {
+        const contentsThree = document.getElementById("myContentsThree");
+        if (contentsThree.style.height === "800px") {
+            contentsThree.style.height = "0px";
+            contentsThree.style.opacity = "0";
+            contentsThree.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contentsThree.style.height = "800px";
+            contentsThree.style.opacity = "100";
+            contentsThree.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentsThree = document.getElementById("myContentsThree");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contentsThree.style.height = "800px";
+            contentsThree.style.opacity = "100";
+            contentsThree.style.visibility = "visible";
+        } else {
+            contentsThree.style.height = "0px";
+            contentsThree.style.opacity = "0";
+            contentsThree.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsFour() {
+        const contents = document.getElementById("myContentsFour");
+        if (contents.style.height === "800px") {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contents.style.height = "800px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents = document.getElementById("myContentsFour");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contents.style.height = "800px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+        } else {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
         }
     });
     
@@ -512,16 +580,21 @@ document.addEventListener("DOMContentLoaded", function() {
 <a href="#references">References</a></li>
 </ol>
 
-<blockquote>
-  <p>Here is a summary of the investigation conducted to determine which version control tool is best suited for our MLOps pipeline and integrates well with our existing technology and tool stack.</p>
-
-  <p>The tools compared are MLFlow and DVC (Data Version Control).</p>
+<p><br /></p>
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br />
+    <br />
+    Here is a summary of the investigation conducted to determine which version control tool is best suited for our MLOps pipeline and integrates well with our existing technology and tool stack.
+    <br />
+    <br />
+    The tools compared are MLFlow and DVC (Data Version Control).
 </blockquote>
 
 <p><img src="image-20240724-204151.png" />
-An image showing the different versions of data, features and model. Source: <a href="https://dvc.org/doc/use-cases/versioning-data-and-model-files">DVC</a></p>
-
-<hr />
+An image showing the different versions of data, features and model. Source: <a href="https://dvc.org/doc/use-cases/versioning-data-and-model-files">DVC</a>
+<br />
+—</p>
 
 <p>The type of data versioning each tool supports:</p>
 
@@ -702,7 +775,7 @@ Experiment metadata including run ID, start &amp; end time, parameters, metrics,
 
 <p><strong>Detailed steps:</strong></p>
 
-<p>Create a dataset</p>
+<p>1 - Create a dataset</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import mlflow.data
 import pandas as pd
@@ -714,7 +787,7 @@ and specify the web URL as the source
 dataset: PandasDataset = mlflow.data.from_pandas(df, source=dataset_source_url)
 </code></pre></div></div>
 
-<p>Log the dataset</p>
+<p>2 - Log the dataset</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>with mlflow.start_run():
     # Log the dataset to the MLflow Run. Specify the "training" context 
@@ -722,7 +795,7 @@ dataset: PandasDataset = mlflow.data.from_pandas(df, source=dataset_source_url)
     mlflow.log_input(dataset, context="training")
 </code></pre></div></div>
 
-<p>Retrieve the dataset when needed</p>
+<p>3 - Retrieve the dataset when needed</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Retrieve the run, including dataset information
 run = mlflow.get_run(mlflow.last_active_run().info.run_id)
@@ -733,12 +806,17 @@ dataset_source = mlflow.data.get_source(dataset_info)
 dataset_source.load()
 </code></pre></div></div>
 
-<blockquote>
-  <p>The above way of tracking the data is tightly coupled to the training. If the data (say test data) needs to be used outside the training repo, it can be done by using the run id from MLFlow.</p>
-</blockquote>
+<p><br /></p>
+<blockquote class="callout callout_definition">
+<span class="callout-icon">📓</span>
+<br />
 
-<blockquote>
-  <p>An alternative to using MLFlow.data might be using MLFlow’s log artefact to log the data as such to every run. But this will not track the difference, instead it just pushes the entire data used for the run to the artefact store.</p>
+The above way of tracking the data is tightly coupled to the training. If the data (say test data) needs to be used outside the training repo, it can be done by using the run id from MLFlow.
+
+<br />
+<br />
+
+An alternative to using MLFlow.data might be using MLFlow’s log artefact to log the data as such to every run. But this will not track the difference, instead it just pushes the entire data used for the run to the artefact store.
 </blockquote>
 
 <h2 id="5-potential-options">5. Potential Options</h2>

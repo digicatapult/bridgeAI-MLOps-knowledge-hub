@@ -26,13 +26,20 @@ title: BridgeAI MLOps Knowledge Hub
 [Summary](#summary)\
 [References](#references)
 
->Here is a summary of the investigation conducted to determine which version control tool is best suited for our MLOps pipeline and integrates well with our existing technology and tool stack.
->
->The tools compared are MLFlow and DVC (Data Version Control).
+<br>
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br>
+    <br>
+    Here is a summary of the investigation conducted to determine which version control tool is best suited for our MLOps pipeline and integrates well with our existing technology and tool stack.
+    <br>
+    <br>
+    The tools compared are MLFlow and DVC (Data Version Control).
+</blockquote>
 
 <img src="image-20240724-204151.png">
 An image showing the different versions of data, features and model. Source: [DVC](https://dvc.org/doc/use-cases/versioning-data-and-model-files)
-
+<br>
 ---
 
 The type of data versioning each tool supports:
@@ -165,7 +172,7 @@ You can get the DatasetSource of a dataset logged to a run in MLflow Tracking us
 
 **Detailed steps:**
 
-Create a dataset
+1 - Create a dataset
 
 ```
 import mlflow.data
@@ -178,7 +185,7 @@ and specify the web URL as the source
 dataset: PandasDataset = mlflow.data.from_pandas(df, source=dataset_source_url)
 ```
 
-Log the dataset
+2 - Log the dataset
 
 ```
 with mlflow.start_run():
@@ -187,7 +194,7 @@ with mlflow.start_run():
     mlflow.log_input(dataset, context="training")
 ```
 
-Retrieve the dataset when needed
+3 - Retrieve the dataset when needed
 
 ```
 # Retrieve the run, including dataset information
@@ -198,11 +205,20 @@ dataset_info = run.inputs.dataset_inputs[0].dataset
 dataset_source = mlflow.data.get_source(dataset_info)
 dataset_source.load()
 ```
- 
 
->The above way of tracking the data is tightly coupled to the training. If the data (say test data) needs to be used outside the training repo, it can be done by using the run id from MLFlow.
+<br>
+<blockquote class="callout callout_definition">
+<span class="callout-icon">📓</span>
+<br>
 
->An alternative to using MLFlow.data might be using MLFlow’s log artefact to log the data as such to every run. But this will not track the difference, instead it just pushes the entire data used for the run to the artefact store.
+The above way of tracking the data is tightly coupled to the training. If the data (say test data) needs to be used outside the training repo, it can be done by using the run id from MLFlow.
+
+<br>
+<br>
+
+An alternative to using MLFlow.data might be using MLFlow’s log artefact to log the data as such to every run. But this will not track the difference, instead it just pushes the entire data used for the run to the artefact store.
+</blockquote>
+
 
 ## 5. Potential Options
 ### 5.1 Using MLFlow

@@ -68,28 +68,44 @@ Reference data refers to the dataset that serves as the baseline or standard for
 
 Current data refers to the new or recent dataset that is being evaluated for drift. This is the dataset that has been collected more recently, possibly after the model was deployed or during ongoing operations.
 
-
+<br>
 
 ### 2.1 Steps
-><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">Data Drift Code Practice</a>
+<div id="myContainer" class="container">
+  <a onclick="toggleContentsFour()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Steps</a>
+  <div id="myContentsFour" class="contents">
+  <br>
+  <b>Note:</b> Data Drift Code Practice is linked in References
+        <br>
+        <br>
+  1. Load the Reference data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
+        <br>
+        <br>
+  2. Load the Current data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
+        <br>
+        <br>
+  3. Data Drift can be chosen for individual features (numerical as well as categorical features) or for all the features in the dataset used in Step 1 and Step 2.
+        <br>
+        <br>
 
-1. Load the Reference data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
+  4. Choose a statistical test by which data drift needs to be analysed such as <b>'chisquare'</b> <b>'jensenshannon'</b>, <b>'wasserstein'</b> etc (list of all statistical tests are provided here - https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests). The statistical tests can be chosen for individual metrics as well.
+        <br>
+        <br>
+        
+  5. Use any of the Data Drift methods such as DatasetDriftMetric, this metric provides a overall summary of the drift detected from the comparison between the Reference data and the Current data.
+        <br>
+        <br>
+  6. Method “DataDriftTable“ generates a table which compares drift between individual features of the Reference data and the Current data.
+        <br>
+        <br>
+  7. The results from the report generated can be saved as a json or a html file.
+        <br>
+        <br>
+  8. Evidently also supports creating your own statistical test and using it in the drift detection methods.
 
-2. Load the Current data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
-
-3. Data Drift can be chosen for individual features (numerical as well as categorical features) or for all the features in the dataset used in Step 1 and Step 2.
-
-4. Choose a statistical test by which data drift needs to be analysed such as 'chisquare' 'jensenshannon', 'wasserstein' etc (list of all statistical tests are provided here - [Data drift parameters - Evidently Documentation](https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests){:target="_blank"}). The statistical tests can be chosen for individual metrics as well.
-
-5. Use any of the Data Drift methods such as DatasetDriftMetric, this metric provides a overall summary of the drift detected from the comparison between the Reference data and the Current data.
-
-6. Method “DataDriftTable“ generates a table which compares drift between individual features of the Reference data and the Current data.
-
-7. The results from the report generated can be saved as a json or a html file.
-
-8. Evidently also supports creating your own statistical test and using it in the drift detection methods.
-
-
+  </div>
+</div>
+<br>
 
 **Note:**
 
@@ -105,7 +121,7 @@ How much of data needed in the Reference data and the Current data? (Refer to Ev
 
 
 
-### 2.2 General Steps
+### 2.2 High Level Process
 In general an organisation who wants to analyse drift would have to:
 
 Have data continuously flowing from the upstream, i.e. daily/weekly/monthly.
@@ -202,3 +218,5 @@ Understanding Data Drift and Model Drift: Drift Detection in Python . Also refer
 **Mitigation after Drift Detection**
 
 https://towardsdatascience.com/drift-in-machine-learning-e49df46803a  
+
+[Data Drift Code Practice](https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb){:target="_blank"}

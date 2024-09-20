@@ -261,7 +261,7 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -285,9 +285,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div>
+    </div> -->
 
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -311,7 +311,7 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div> -->
+        </div>
 
 </div>
 
@@ -378,6 +378,74 @@
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsThree() {
+        const contentsThree = document.getElementById("myContentsThree");
+        if (contentsThree.style.height === "800px") {
+            contentsThree.style.height = "0px";
+            contentsThree.style.opacity = "0";
+            contentsThree.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contentsThree.style.height = "800px";
+            contentsThree.style.opacity = "100";
+            contentsThree.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentsThree = document.getElementById("myContentsThree");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contentsThree.style.height = "800px";
+            contentsThree.style.opacity = "100";
+            contentsThree.style.visibility = "visible";
+        } else {
+            contentsThree.style.height = "0px";
+            contentsThree.style.opacity = "0";
+            contentsThree.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsFour() {
+        const contents = document.getElementById("myContentsFour");
+        if (contents.style.height === "800px") {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
+            localStorage.setItem("dropdownContentsState", "closed");
+        } else {
+            contents.style.height = "800px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+            localStorage.setItem("dropdownContentsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents = document.getElementById("myContentsFour");
+        const contentsState = localStorage.getItem("dropdownContentsState");
+        
+        if (contentsState === "open") {
+            contents.style.height = "800px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+        } else {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
         }
     });
     
