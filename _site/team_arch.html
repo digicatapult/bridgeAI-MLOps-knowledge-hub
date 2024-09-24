@@ -112,7 +112,7 @@
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 50px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
@@ -319,13 +319,13 @@
 
     function toggleContents() {
         const contents = document.getElementById("myContents");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -337,7 +337,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -353,13 +353,13 @@
 
     function toggleContentsTwo() {
         const contentsTwo = document.getElementById("myContentsTwo");
-        if (contentsTwo.style.height === "800px") {
+        if (contentsTwo.style.height === "2300px") {
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -371,7 +371,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
         } else {
@@ -387,13 +387,13 @@
 
     function toggleContentsThree() {
         const contentsThree = document.getElementById("myContentsThree");
-        if (contentsThree.style.height === "800px") {
+        if (contentsThree.style.height === "1400px") {
             contentsThree.style.height = "0px";
             contentsThree.style.opacity = "0";
             contentsThree.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -405,7 +405,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
         } else {
@@ -421,13 +421,13 @@
 
     function toggleContentsFour() {
         const contents = document.getElementById("myContentsFour");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "750px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -439,7 +439,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -455,13 +455,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "380px") {
+    if (dropdownmlops.style.height === "390px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -563,28 +563,28 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- intrinsic size - 1980 by 1542; div w and h by 2.36 --></p>
 
 <map name="arch">
-    <area alt="Model Development" href="/team_arch.html#1-model-development" coords="752,540,10" shape="circle" />
-    <area alt="Models Pushed" href="/team_arch.html#2-models-pushed" coords="606,461,9" shape="circle" />
-    <area alt="Model Commit" href="/team_arch.html#3-model-commit" coords="453,597,10" shape="circle" />
-    <area alt="Model Registry and Store" href="/team_arch.html#4---6-model-registry-and-store" coords="311,122,9" shape="circle" />
-    <area alt="Model Registry and Store" href="/team_arch.html#4---6-model-registry-and-store" coords="406,122,9" shape="circle" />
-    <area alt="Model Registry and Store" href="/team_arch.html#4---6-model-registry-and-store" coords="493,123,9" shape="circle" />
-    <area alt="Manual Push to Model Server" href="/team_arch.html#7-manual-push-to-model-server" coords="617,110,10" shape="circle" />
-    <area alt="Prediction Service" href="/team_arch.html#8-prediction-service" coords="698,155,11" shape="circle" />
-    <area alt="User input and Predictions Output" href="/team_arch.html#9-user-input-and-predictions-output" coords="789,222,9" shape="circle" />
-    <area alt="User Interaction Data Captured" href="/team_arch.html#10-user-interaction-data-captured" coords="618,190,11" shape="circle" />
-    <area alt="Model Monitoring For Decay" href="/team_arch.html#11-model-monitoring-for-decay" coords="712,288,10" shape="circle" />
-    <area alt="Scheduler Initiates Training Process" href="/team_arch.html#12-scheduler-initiates-training-process" coords="254,309,10" shape="circle" />
-    <area alt="DAG Initiates Docker Instance to be Run" href="/team_arch.html#13-dag-initiates-docker-instance-to-be-run" coords="333,454,8" shape="circle" />
-    <area alt="Data Retrieved From S3 Bucket" href="/team_arch.html#14-data-retrieved-from-s3-bucket" coords="208,453,8" shape="circle" />
-    <area alt="Data is Preprocessed and Transformed" href="/team_arch.html#15-data-is-preprocessed-and-transformed" coords="323,354,9" shape="circle" />
-    <area alt="Features Stored" href="/team_arch.html#16-features-stored" coords="415,303,9" shape="circle" />
-    <area alt="Feature Store Fetch" href="/team_arch.html#17-feature-store-fetch" coords="464,364,11" shape="circle" />
-    <area alt="Model Created" href="/team_arch.html#18-model-created" coords="543,369,9" shape="circle" />
-    <area alt="Model Version Storing" href="/team_arch.html#19-model-version-storing" coords="465,303,9" shape="circle" />
-    <area alt="Model Monitor Pull" href="/team_arch.html#20-model-monitor-pull" coords="724,408,12" shape="circle" />
-    <area alt="Potential Retrigger" href="/team_arch.html#21-potential-retrigger" coords="680,401,11" shape="circle" />
-    <area alt="Industry Data" href="/team_arch.html#22-industry-data" coords="39,142,9" shape="circle" />
+    <area alt="Model Development" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#1-model-development" coords="752,540,10" shape="circle" />
+    <area alt="Models Pushed" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#2-models-pushed" coords="606,461,9" shape="circle" />
+    <area alt="Model Commit" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#3-model-commit" coords="453,597,10" shape="circle" />
+    <area alt="Model Registry and Store" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#4---6-model-registry-and-store" coords="311,122,9" shape="circle" />
+    <area alt="Model Registry and Store" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#4---6-model-registry-and-store" coords="406,122,9" shape="circle" />
+    <area alt="Model Registry and Store" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#4---6-model-registry-and-store" coords="493,123,9" shape="circle" />
+    <area alt="Manual Push to Model Server" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#7-manual-push-to-model-server" coords="617,110,10" shape="circle" />
+    <area alt="Prediction Service" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#8-prediction-service" coords="698,155,11" shape="circle" />
+    <area alt="User input and Predictions Output" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#9-user-input-and-predictions-output" coords="789,222,9" shape="circle" />
+    <area alt="User Interaction Data Captured" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#10-user-interaction-data-captured" coords="618,190,11" shape="circle" />
+    <area alt="Model Monitoring For Decay" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#11-model-monitoring-for-decay" coords="712,288,10" shape="circle" />
+    <area alt="Scheduler Initiates Training Process" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#12-scheduler-initiates-training-process" coords="254,309,10" shape="circle" />
+    <area alt="DAG Initiates Docker Instance to be Run" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#13-dag-initiates-docker-instance-to-be-run" coords="333,454,8" shape="circle" />
+    <area alt="Data Retrieved From S3 Bucket" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#14-data-retrieved-from-s3-bucket" coords="208,453,8" shape="circle" />
+    <area alt="Data is Preprocessed and Transformed" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#15-data-is-preprocessed-and-transformed" coords="323,354,9" shape="circle" />
+    <area alt="Features Stored" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#16-features-stored" coords="415,303,9" shape="circle" />
+    <area alt="Feature Store Fetch" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#17-feature-store-fetch" coords="464,364,11" shape="circle" />
+    <area alt="Model Created" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#18-model-created" coords="543,369,9" shape="circle" />
+    <area alt="Model Version Storing" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#19-model-version-storing" coords="465,303,9" shape="circle" />
+    <area alt="Model Monitor Pull" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#20-model-monitor-pull" coords="724,408,12" shape="circle" />
+    <area alt="Potential Retrigger" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#21-potential-retrigger" coords="680,401,11" shape="circle" />
+    <area alt="Industry Data" href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html#22-industry-data" coords="39,142,9" shape="circle" />
 </map>
 
 <h2 id="components">Components</h2>

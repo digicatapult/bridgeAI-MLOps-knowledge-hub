@@ -73,9 +73,6 @@ AWS Sagemaker | Amazon SageMaker is a fully managed machine learning (ML) servic
 
 1. [Neptune.ai](https://neptune.ai/blog/mlops-engineer){:target="_blank"}
 
-<!-- <details>
-    <summary>Resources</summary>
-    1. <a href="https://neptune.ai/blog/mlops-engineer" target="_blank">Neptune.ai</a><br>
-    2. element<br>
-    3. another Element<br>
-</details> -->
+2. [MLOps.org](){:target="_blank"}
+
+3. [Databricks Docs](https://docs.databricks.com/){:target="_blank"}

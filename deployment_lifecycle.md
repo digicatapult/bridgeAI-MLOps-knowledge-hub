@@ -5,7 +5,7 @@ title: BridgeAI MLOps Knowledge Hub
 
 ## Deployment Service Life Cycle
 
-The following graphic summarises the deployment service life cycle, which can be followed by startups and larg(er) organisations alike:
+The following graphic summarises the deployment service life cycle, which can be followed by <span style="color:#8C1437"><b>startups</b></span> and <span style="color:#8C1437"><b>larg(er) organisations</b></span> alike:
 
 <img class="center" alt="Deployment service life cycle" src="https://github.com/hema-dc/ML-Deployment/assets/93590728/9ff383ea-12b0-43a2-88c7-98a1537093b9">
 

@@ -18,7 +18,7 @@ title: BridgeAI MLOps Knowledge Hub
 ### Why is it necessary?
 To quote [Microsoft](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model){:target="_blank"}: 
 
-"The purpose of this maturity model is to help clarify the Machine Learning Operations (MLOps) principles and practices. The maturity model shows the continuous improvement in the creation and operation of a production level machine learning application environment. You can use it as a metric for establishing the progressive requirements needed to measure the maturity of a machine learning production environment and its associated processes."
+>"The purpose of this maturity model is to help clarify the Machine Learning Operations (MLOps) principles and practices. The maturity model shows the continuous improvement in the creation and operation of a production level machine learning application environment. You can use it as a metric for establishing the progressive requirements needed to measure the maturity of a machine learning production environment and its associated processes."
 
 ### Who needs this maturity assessment?
   - Any organisation who has an AI/ML PoC and is looking to deploy their models in production.
@@ -29,3 +29,7 @@ To quote [Microsoft](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/
   - An organisation interested in ad hoc ML tasks and does not require full MLOps implementation.
 
 **Disclaimer:** this assessment doesn't necessarily cover GenAI/LLMs at this point.
+
+### Resources
+
+[Microsoft Learn](learn.microsoft.com){:target="_blank"}

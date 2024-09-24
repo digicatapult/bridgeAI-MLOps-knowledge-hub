@@ -112,7 +112,7 @@
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 50px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
@@ -319,13 +319,13 @@
 
     function toggleContents() {
         const contents = document.getElementById("myContents");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -337,7 +337,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -353,13 +353,13 @@
 
     function toggleContentsTwo() {
         const contentsTwo = document.getElementById("myContentsTwo");
-        if (contentsTwo.style.height === "800px") {
+        if (contentsTwo.style.height === "2300px") {
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -371,7 +371,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
         } else {
@@ -387,13 +387,13 @@
 
     function toggleContentsThree() {
         const contentsThree = document.getElementById("myContentsThree");
-        if (contentsThree.style.height === "800px") {
+        if (contentsThree.style.height === "1400px") {
             contentsThree.style.height = "0px";
             contentsThree.style.opacity = "0";
             contentsThree.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -405,7 +405,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
         } else {
@@ -421,13 +421,13 @@
 
     function toggleContentsFour() {
         const contents = document.getElementById("myContentsFour");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "750px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -439,7 +439,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -455,13 +455,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "380px") {
+    if (dropdownmlops.style.height === "390px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -557,7 +557,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <main id="content" class="main-content" role="main">
 <h2 id="deployment-service-life-cycle">Deployment Service Life Cycle</h2>
 
-<p>The following graphic summarises the deployment service life cycle, which can be followed by startups and larg(er) organisations alike:</p>
+<p>The following graphic summarises the deployment service life cycle, which can be followed by <span style="color:#8C1437"><b>startups</b></span> and <span style="color:#8C1437"><b>larg(er) organisations</b></span> alike:</p>
 
 <p><img class="center" alt="Deployment service life cycle" src="https://github.com/hema-dc/ML-Deployment/assets/93590728/9ff383ea-12b0-43a2-88c7-98a1537093b9" /></p>
 

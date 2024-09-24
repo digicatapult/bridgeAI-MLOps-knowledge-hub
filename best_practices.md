@@ -5,10 +5,6 @@ title: BridgeAI MLOps Knowledge Hub
 
 ## MLOps Best Practices
 
-<!-- AWS framework -->
-
-<!-- A note on the fact that this is technically covered in the prerequisites section, but requires further elaboration given its importance -->
-
 <blockquote class="callout callout_info">
 <span class="callout-icon">ℹ️</span>
     <br>

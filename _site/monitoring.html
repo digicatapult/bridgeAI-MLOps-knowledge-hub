@@ -112,7 +112,7 @@
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 50px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
@@ -319,13 +319,13 @@
 
     function toggleContents() {
         const contents = document.getElementById("myContents");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -337,7 +337,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -353,13 +353,13 @@
 
     function toggleContentsTwo() {
         const contentsTwo = document.getElementById("myContentsTwo");
-        if (contentsTwo.style.height === "800px") {
+        if (contentsTwo.style.height === "2300px") {
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -371,7 +371,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
         } else {
@@ -387,13 +387,13 @@
 
     function toggleContentsThree() {
         const contentsThree = document.getElementById("myContentsThree");
-        if (contentsThree.style.height === "800px") {
+        if (contentsThree.style.height === "1400px") {
             contentsThree.style.height = "0px";
             contentsThree.style.opacity = "0";
             contentsThree.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -405,7 +405,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
         } else {
@@ -421,13 +421,13 @@
 
     function toggleContentsFour() {
         const contents = document.getElementById("myContentsFour");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "750px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -439,7 +439,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -455,13 +455,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "380px") {
+    if (dropdownmlops.style.height === "390px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -559,18 +559,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><strong>Table of Contents</strong></p>
 <ol>
-  <li><a href="#1-model-monitoring">Model Monitoring</a><br />
-     <a href="#11-data-drift">Data Drift</a><br />
-     <a href="#12-concept-drift">Concept Drift</a><br />
-     <a href="#13-target-drift">Target Drift</a></li>
-  <li><a href="#2-data-drift-with-evidently-explained">Data Drift with Evidently Explained</a><br />
-     <a href="#21-steps">Steps</a><br />
-     <a href="#22-general-steps">General Steps</a><br />
-     <a href="#23-key-questions-before-retraining">Key Questions Before Retraining</a><br />
-     <a href="#24-possible-action-items-based-on-data-drift-detection">Possible Action Items Based on Data Drift Detection</a><br />
-     <a href="#25-testing-before-pushing-a-newly-trained-model-to-production">Testing Before Pushing a Newly Trained Model to Production</a></li>
-  <li><a href="#3-data-drift-for-the-house-price-prediction-use-case">Data Drift for the House Price Prediction Use Case</a><br />
-<a href="#references">References</a></li>
+  <li><a href="#1-model-monitoring">Model Monitoring</a>
+    <ul>
+      <li><a href="#11-data-drift">Data Drift</a></li>
+      <li><a href="#12-concept-drift">Concept Drift</a></li>
+      <li><a href="#13-target-drift">Target Drift</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-data-drift-with-evidently-explained">Data Drift with Evidently Explained</a>
+    <ul>
+      <li><a href="#21-steps">Steps</a></li>
+      <li><a href="#22-general-steps">General Steps</a></li>
+      <li><a href="#23-key-questions-before-retraining">Key Questions Before Retraining</a></li>
+      <li><a href="#24-possible-action-items-based-on-data-drift-detection">Possible Action Items Based on Data Drift Detection</a></li>
+      <li><a href="#25-testing-before-pushing-a-newly-trained-model-to-production">Testing Before Pushing a Newly Trained Model to Production</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-data-drift-for-the-house-price-prediction-use-case">Data Drift for the House Price Prediction Use Case</a></li>
+  <li><a href="#resources">Resources</a></li>
 </ol>
 
 <h2 id="1-model-monitoring">1. Model Monitoring</h2>
@@ -584,46 +590,67 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><strong>Note:</strong></p>
 <ul>
-  <li>To establish a monitoring strategy refer to the “Establishing the monitoring strategy” section from the link Model monitoring for ML in production: a comprehensive guide</li>
-  <li>Model monitoring architectures refer to the “Model monitoring architectures” section from the link Model monitoring for ML in production: a comprehensive guide</li>
+  <li>
+    <p>To establish a monitoring strategy refer to the <span style="color:#8C1437"><b>Establishing the monitoring strategy</b></span> section from the link: <a href="https://www.evidentlyai.com/ml-in-production/model-monitoring" target="_blank">Model monitoring for ML in production: a comprehensive guide</a></p>
+  </li>
+  <li>
+    <p>Model monitoring architectures refer to the <span style="color:#8C1437"><b>Model monitoring architectures</b></span> section from the same link</p>
+  </li>
 </ul>
 
 <h3 id="11-data-drift">1.1 Data Drift</h3>
-<p>Data drift is a change in the statistical properties and characteristics of the input data. It occurs when a Machine Learning model is in production, as the data it encounters deviates from the data the model was initially trained on or earlier production data. What is data drift in ML, and how to detect and handle it</p>
+<p>Data drift is a change in the statistical properties and characteristics of the input data. It occurs when a Machine Learning model is in production, as the data it encounters deviates from the data the model was initially trained on or earlier production data.</p>
 
-<p>Data Drift Detection methods,</p>
+<p><a href="https://www.evidentlyai.com/ml-in-production/data-drift" target="_blank">What is data drift in ML, and how to detect and handle it</a></p>
 
-<p>Summary statistics</p>
+<p>Data Drift Detection methods:</p>
 
-<p>Statistical tests</p>
-
-<p>Distance metrics</p>
-
-<p>Rule-based checks</p>
+<ul>
+  <li>
+    <p>Summary statistics</p>
+  </li>
+  <li>
+    <p>Statistical tests</p>
+  </li>
+  <li>
+    <p>Distance metrics</p>
+  </li>
+  <li>
+    <p>Rule-based checks</p>
+  </li>
+</ul>
 
 <h3 id="12-concept-drift">1.2 Concept Drift</h3>
-<p>Concept Drift implies a change in the learned relationships between the input features. Model Drift is often caused by Concept Drift. What is concept drift in ML, and how to detect and address it</p>
+<p>Concept Drift implies a change in the learned relationships between the input features. Model Drift is often caused by Concept Drift.</p>
+
+<p><a href="https://www.evidentlyai.com/ml-in-production/concept-drift" target="_blank">What is concept drift in ML, and how to detect and address it</a></p>
 
 <h3 id="13-target-drift">1.3 Target Drift</h3>
-<p>Occurs when the goal or target of your prediction changes. What is concept drift in ML, and how to detect and address it</p>
+<p>Occurs when the goal or target of your prediction changes.</p>
 
 <h2 id="2-data-drift-with-evidently-explained">2. Data Drift with Evidently Explained</h2>
 <p>Two datasets are used to evaluate whether there is a Data Drift.</p>
 
-<p>Reference data refers to the dataset that serves as the baseline or standard for comparison. This is typically the dataset that the Machine Learning model was trained on or a dataset from a previous period that is considered stable and representative of normal conditions.</p>
-
-<p>Current data refers to the new or recent dataset that is being evaluated for drift. This is the dataset that has been collected more recently, possibly after the model was deployed or during ongoing operations.</p>
+<ol>
+  <li>
+    <p><strong>Reference data</strong> refers to the dataset that serves as the baseline or standard for comparison. This is typically the dataset that the Machine Learning model was trained on or a dataset from a previous period that is considered stable and representative of normal conditions.</p>
+  </li>
+  <li>
+    <p><strong>Current data</strong> refers to the new or recent dataset that is being evaluated for drift. This is the dataset that has been collected more recently, possibly after the model was deployed or during ongoing operations.</p>
+  </li>
+</ol>
 
 <p><br /></p>
 
 <h3 id="21-steps">2.1 Steps</h3>
+
+<p><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">Data Drift Code Practice</a></p>
+
 <div id="myContainer" class="container">
   <a onclick="toggleContentsFour()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px" /> Steps</a>
   <div id="myContentsFour" class="contents">
   <br />
-  <b>Note:</b> Data Drift Code Practice is linked in References
-        <br />
-        <br />
+
   1. Load the Reference data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
         <br />
         <br />
@@ -675,68 +702,102 @@ document.addEventListener("DOMContentLoaded", function() {
 <h3 id="22-high-level-process">2.2 High Level Process</h3>
 <p>In general an organisation who wants to analyse drift would have to:</p>
 
-<p>Have data continuously flowing from the upstream, i.e. daily/weekly/monthly.</p>
-
-<p>Have prior to model monitoring implementation, depending on the use case have a detailed discussion as to how model monitoring is to be performed, what drift detection has to be implemented, what input features are required for analysis.</p>
-
-<p>Have a plan on when to schedule Model Monitoring i.e daily/weekly/monthly</p>
-
-<p>Have the action item once a drift has been detected.</p>
-
-<p>The above is not an exhaustive list, these change as per use case.</p>
+<ol>
+  <li>
+    <p>Have data continuously flowing from the upstream, i.e. daily/weekly/monthly.</p>
+  </li>
+  <li>
+    <p>Have prior to model monitoring implementation, depending on the use case have a detailed discussion as to how model monitoring is to be performed, what drift detection has to be implemented, what input features are required for analysis.</p>
+  </li>
+  <li>
+    <p>Have a plan on when to schedule Model Monitoring i.e daily/weekly/monthly</p>
+  </li>
+  <li>
+    <p>Have the action item once a drift has been detected.</p>
+  </li>
+  <li>
+    <p>The above is not an exhaustive list, these change as per use case.</p>
+  </li>
+</ol>
 
 <h3 id="23-key-questions-before-retraining">2.3 Key Questions before Retraining</h3>
-<p>How much overall Data Drift is acceptable?</p>
+<ul>
+  <li>
+    <p>How much overall Data Drift is acceptable?</p>
+  </li>
+  <li>
+    <p>How much Data Drift for each individual features is acceptable?</p>
+  </li>
+  <li>
+    <p>Before Retraining with the new data, can data be manually labelled? So that we can test the model’s accuracy/error rate</p>
+  </li>
+</ul>
 
-<p>How much Data Drift for each individual features is acceptable?</p>
+<p><a href="https://www.evidentlyai.com/blog/retrain-or-not-retrain" target="_blank">To retrain, or not to retrain? Let’s get analytical about ML model updates</a></p>
 
-<p>Before Retraining with the new data, can data be manually labelled? So that we can test the model’s accuracy/error rate</p>
-
-<p>To retrain, or not to retrain? Let’s get analytical about ML model updates</p>
-
-<p>Note:</p>
+<p><strong>Note:</strong></p>
 
 <p>Retraining is required when there is a significant Drift detected and how sensitive will be the model’s prediction if no action is taken when a Drift is detected.</p>
 
 <h3 id="24-possible-action-items-based-on-data-drift-detection">2.4 Possible Action Items based on Data Drift detection</h3>
-<p>Update the model i.e training the model with old data (can drop some of the historical data) + new data (delta) without changing any of the model’s algorithm or the hyperparameters used. Evaluate the performance of the newly created model against the validation and the test data.</p>
+<ul>
+  <li>
+    <p>Update the model i.e training the model with old data (can drop some of the historical data) + new data (delta) <strong>without changing</strong> any of the model’s algorithm or the hyperparameters used. Evaluate the performance of the newly created model against the validation and the test data.</p>
+  </li>
+  <li>
+    <p>Retrain the model i.e training the model with old data (can drop some of the historical data) + new data (delta) by <strong>experimenting</strong> with new set of hyperparameters <strong>or changing</strong> the algorithm used to build the model itself. Evaluate the performance of the newly created model against the validation and the test data.</p>
+  </li>
+</ul>
 
-<p>Retrain the model i.e training the model with old data (can drop some of the historical data) + new data (delta) by experimenting with new set of hyperparameters or changing the algorithm used to build the model itself. Evaluate the performance of the newly created model against the validation and the test data.</p>
-
-<p>To retrain, or not to retrain? Let’s get analytical about ML model updates</p>
-
-<p>Note:</p>
+<p><strong>Note:</strong></p>
 
 <p>The above 2 training points mentioned above are performed in the local/Dev environment for the Deploy Model solution.</p>
 
 <h3 id="25-testing-before-pushing-a-newly-trained-model-to-production">2.5 Testing before Pushing a Newly Trained Model to Production</h3>
-<p>Prepare the test dataset ideally which is a combination of old model’s test data + new data (neither of the model should have seen this data during training). Use the same test dataset to evaluate the performance of the newly trained model and the existing production model.</p>
+<ul>
+  <li>
+    <p>Prepare the test dataset ideally which is a combination of old model’s test data + new data (neither of the model should have seen this data during training). Use the same test dataset to evaluate the performance of the newly trained model and the existing production model.</p>
+  </li>
+  <li>
+    <p>If the accuracy/error of the existing production model’s performance on the test dataset is not good, then the newly trained model could become the production model.</p>
+  </li>
+  <li>
+    <p>The existing production model is archived.</p>
+  </li>
+  <li>
+    <p>Deployment patterns of newly trained model will be covered in another Spike.</p>
+  </li>
+</ul>
 
-<p>If the accuracy/error of the existing production model’s performance on the test dataset is not good, then the newly trained model could become the production model.</p>
-
-<p>The existing production model is archived.</p>
-
-<p>Deployment patterns of newly trained model will be covered in another Spike.</p>
-
-<p>Evaluating Model Performance: Key Metrics to Assess Before Transitioning to Production</p>
+<p><a href="https://medium.com/@stefanmii/evaluating-model-performance-key-metrics-to-assess-before-transitioning-to-production-345ee51241d0" target="_blank">Evaluating Model Performance: Key Metrics to Assess Before Transitioning to Production</a></p>
 
 <h2 id="3-data-drift-for-the-house-price-prediction-use-case">3 Data Drift for the House Price Prediction Use Case</h2>
-<p>Make sure the Reference data and the Current data  (Section 2.1) is available in S3/any storage location</p>
+<ol>
+  <li>
+    <p>Make sure the Reference data and the Current data  (Section 2.1) is available in S3/any storage location</p>
+  </li>
+  <li>
+    <p>Manually trigger the Data Drift DAG from Airflow.</p>
+  </li>
+  <li>
+    <p>Based on the Drift Report that is generated, a DS analyses the Drift Report and decides whether to Update or Retrain the model manually (as discussed in Section 2.4).</p>
+  </li>
+</ol>
 
-<p>Manually trigger the Data Drift DAG from Airflow.</p>
+<p>An implementation of Data Drift is given here:</p>
 
-<p>Based on the Drift Report that is generated, a DS analyses the Drift Report and decides whether to Update or Retrain the model manually (as discussed in Section 2.4).</p>
+<p><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">ml_observability_course/module2/data_drift_deep_dive.ipynb at main · evidentlyai/ml_observability_course</a></p>
 
-<p>An implementation of Data Drift is given here,</p>
+<p><a href="https://www.datacamp.com/tutorial/understanding-data-drift-model-drift" target="_blank">Understanding Data Drift and Model Drift: Drift Detection in Python</a>.</p>
 
-<p>ml_observability_course/module2/data_drift_deep_dive.ipynb at main · evidentlyai/ml_observability_course</p>
+<p>Also refer to the FAQs section from the link provided above.</p>
 
-<p>Understanding Data Drift and Model Drift: Drift Detection in Python . Also refer to the FAQs section from the link provided above.</p>
-
-<h2 id="references">References</h2>
+<h2 id="resources">Resources</h2>
 <p><strong>Model Monitoring, Data Drift &amp; Concept Drift</strong></p>
 
 <p><a href="https://www.evidentlyai.com/ml-in-production" target="_blank">Evidently AI - A complete guide to ML in production</a></p>
+
+<p><br /></p>
 
 <p><strong>Drift Detection</strong></p>
 
@@ -746,6 +807,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><a href="https://github.com/evidentlyai/ml_observability_course/tree/main/docs/book/ml-observability-course/module-2-ml-monitoring-metrics" target="_blank">ML Observability Course Repo</a></p>
 
+<p><br /></p>
+
 <p><strong>Statistical Tests Explained</strong></p>
 
 <p><a href="https://docs.evidentlyai.com/user-guide/customization/options-for-statistical-tests" target="_blank">Data drift parameters - Evidently Documentation</a></p>
@@ -754,9 +817,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><a href="https://neptune.ai/blog/how-to-monitor-your-models-in-production-guide" target="_blank">A Comprehensive Guide on How to Monitor Your Models in Production</a></p>
 
+<p><br /></p>
+
 <p><strong>Mitigation after Drift Detection</strong></p>
 
-<p>https://towardsdatascience.com/drift-in-machine-learning-e49df46803a</p>
+<p><a href="https://towardsdatascience.com/drift-in-machine-learning-e49df46803a" target="_blank">Medium - Drift in Machine Learning</a></p>
 
 <p><a href="https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb" target="_blank">Data Drift Code Practice</a></p>
 

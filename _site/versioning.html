@@ -112,7 +112,7 @@
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 50px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
@@ -319,13 +319,13 @@
 
     function toggleContents() {
         const contents = document.getElementById("myContents");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -337,7 +337,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -353,13 +353,13 @@
 
     function toggleContentsTwo() {
         const contentsTwo = document.getElementById("myContentsTwo");
-        if (contentsTwo.style.height === "800px") {
+        if (contentsTwo.style.height === "2300px") {
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -371,7 +371,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
         } else {
@@ -387,13 +387,13 @@
 
     function toggleContentsThree() {
         const contentsThree = document.getElementById("myContentsThree");
-        if (contentsThree.style.height === "800px") {
+        if (contentsThree.style.height === "1400px") {
             contentsThree.style.height = "0px";
             contentsThree.style.opacity = "0";
             contentsThree.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -405,7 +405,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
         } else {
@@ -421,13 +421,13 @@
 
     function toggleContentsFour() {
         const contents = document.getElementById("myContentsFour");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "750px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -439,7 +439,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -455,13 +455,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "380px") {
+    if (dropdownmlops.style.height === "390px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -559,25 +559,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><strong>Table of Contents</strong></p>
 <ol>
-  <li><a href="#1-general-comparison">General Comparison</a><br />
-     <a href="#11-dvc">DVC</a><br />
-     <a href="#12-mlflow">MLFlow</a><br />
-     <a href="#13-general-comparison-table">General Comparison Table</a></li>
-  <li><a href="#2-data-versioning">Data Versioning</a><br />
-     <a href="#21-dvc">DVC</a><br />
-     <a href="#22-mlflow">MLFlow</a></li>
-  <li><a href="#3-where-the-data-is-stored">Where Data is Stored</a><br />
-     <a href="#31-dvc">DVC</a><br />
-     <a href="#32-mlflow">MLFlow</a></li>
+  <li><a href="#1-general-comparison">General Comparison</a>
+    <ul>
+      <li><a href="#11-dvc">DVC</a></li>
+      <li><a href="#12-mlflow">MLFlow</a></li>
+      <li><a href="#13-general-comparison-table">General Comparison Table</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-data-versioning">Data Versioning</a>
+    <ul>
+      <li><a href="#21-dvc">DVC</a></li>
+      <li><a href="#22-mlflow">MLFlow</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-where-the-data-is-stored">Where Data is Stored</a>
+    <ul>
+      <li><a href="#31-dvc">DVC</a></li>
+      <li><a href="#32-mlflow">MLFlow</a></li>
+    </ul>
+  </li>
   <li><a href="#4-how-to-version">How to Version</a>
-     <a href="#41-dvc">DVC</a><br />
-     <a href="#42-mlflow">MLFlow</a></li>
+    <ul>
+      <li><a href="#41-dvc">DVC</a></li>
+      <li><a href="#42-mlflow">MLFlow</a></li>
+    </ul>
+  </li>
   <li><a href="#5-potential-options">Potential Options</a>
-     <a href="#51-using-mlflow">Using MLFlow</a><br />
-     <a href="#52-use-dvc-within-train-repo">Using DVC Within Train Repo</a><br />
-     <a href="#53-use-dvc-for-data-versioning-during-ingestion-with-train-eval-and-test-split">Using DVC for Data Versioning During Ingestion with Train, Eval, and Test Split</a>
-<a href="#summary">Summary</a><br />
-<a href="#references">References</a></li>
+    <ul>
+      <li><a href="#51-using-mlflow">Using MLFlow</a></li>
+      <li><a href="#52-use-dvc-within-train-repo">Using DVC Within Train Repo</a></li>
+      <li><a href="#53-use-dvc-for-data-versioning-during-ingestion-with-train-eval-and-test-split">Using DVC for Data Versioning During Ingestion with Train, Eval, and Test Split</a></li>
+    </ul>
+  </li>
+  <li><a href="#summary">Summary</a></li>
+  <li><a href="#resources">Resources</a></li>
 </ol>
 
 <p><br /></p>
@@ -594,21 +609,36 @@ document.addEventListener("DOMContentLoaded", function() {
 <p><img src="image-20240724-204151.png" />
 An image showing the different versions of data, features and model. Source: <a href="https://dvc.org/doc/use-cases/versioning-data-and-model-files">DVC</a>
 <br />
-—</p>
+<br /></p>
 
-<p>The type of data versioning each tool supports:</p>
+<hr />
 
-<p>Standalone data versioning</p>
+<ul>
+  <li>
+    <p>The type of data versioning each tool supports:</p>
 
-<p>Associating data with a training run in an experiment</p>
-
-<p>Where the data is stored (remote, local, or database)</p>
-
-<p>How to perform versioning with each tool (including sample steps and code snippets)</p>
-
-<p>How to retrieve versioned data for re-training or reproducibility</p>
-
-<p>A verdict on which tool is more suitable for our current use case</p>
+    <ul>
+      <li>
+        <p>Standalone data versioning</p>
+      </li>
+      <li>
+        <p>Associating data with a training run in an experiment</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Where the data is stored (remote, local, or database)</p>
+  </li>
+  <li>
+    <p>How to perform versioning with each tool (including sample steps and code snippets)</p>
+  </li>
+  <li>
+    <p>How to retrieve versioned data for re-training or reproducibility</p>
+  </li>
+  <li>
+    <p>A verdict on which tool is more suitable for our current use case</p>
+  </li>
+</ul>
 
 <hr />
 
@@ -621,7 +651,7 @@ An image showing the different versions of data, features and model. Source: <a 
 <h3 id="12-mlflow">1.2 MLFlow</h3>
 <p>MLFlow is an open-source platform designed to manage the end-to-end machine learning lifecycle, including experimentation, reproducibility, and deployment. It is particularly well-suited for tracking and managing machine learning experiments.</p>
 
-<p>MLflow offers the ability to track datasets that are associated with model training events. These metadata associated with the Dataset can be stored through the use of the mlflow.log_input() API.</p>
+<p>MLflow offers the ability to track datasets that are associated with model training events. These metadata associated with the Dataset can be stored through the use of the <code class="language-plaintext highlighter-rouge">mlflow.log_input()</code> API.</p>
 
 <h3 id="13-general-comparison-table">1.3 General Comparison Table:</h3>
 
@@ -695,19 +725,31 @@ An image showing the different versions of data, features and model. Source: <a 
 
 <h3 id="21-dvc">2.1 DVC</h3>
 
-<p>DVC tracks changes in data files and directories</p>
-
-<p>When you add data files to DVC, it creates metadata files (.dvc files) that store information about the data, including its version and remote location</p>
-
-<p>These DVC files can be committed to a Git repository, allowing you to track the data’s history and lineage along with your code.</p>
+<ul>
+  <li>
+    <p>DVC tracks changes in data files and directories</p>
+  </li>
+  <li>
+    <p>When you add data files to DVC, it creates metadata files (<code class="language-plaintext highlighter-rouge">.dvc</code> files) that store information about the data, including its version and remote location</p>
+  </li>
+  <li>
+    <p>These DVC files can be committed to a Git repository, allowing you to track the data’s history and lineage along with your code.</p>
+  </li>
+</ul>
 
 <h3 id="22-mlflow">2.2 MLFlow</h3>
 
-<p>MLFlow doesn’t really can do version control of data independently, it relies on external tools</p>
-
-<p>However, the <code class="language-plaintext highlighter-rouge">mlflow.data</code> module helps you record your model training and evaluation datasets to runs and stores in artefact store</p>
-
-<p>It can later retrieve dataset information from runs</p>
+<ul>
+  <li>
+    <p>MLFlow doesn’t really can do version control of data independently, it relies on external tools</p>
+  </li>
+  <li>
+    <p>However, the <code class="language-plaintext highlighter-rouge">mlflow.data</code> module helps you record your model training and evaluation datasets to runs and stores in artefact store</p>
+  </li>
+  <li>
+    <p>It can later retrieve dataset information from runs</p>
+  </li>
+</ul>
 
 <h2 id="3-where-the-data-is-stored">3. Where the Data is Stored</h2>
 
@@ -720,18 +762,25 @@ An image showing the different versions of data, features and model. Source: <a 
 <h3 id="32-mlflow">3.2 MLFlow</h3>
 <p>MLFlow tracking needs the following components.</p>
 
-<p><strong>Backend store</strong>
-Experiment metadata including run ID, start &amp; end time, parameters, metrics, etc are stored in Backend store. MLflow supports two types of storage for the backend: file-system-based like local files and database-based like PostgreSQL. Default is sqlite.</p>
+<p><strong>1. Backend store</strong></p>
 
-<p><strong>Artefact store</strong></p>
+<p>Experiment metadata including run ID, start &amp; end time, parameters, metrics, etc are stored in Backend store. MLflow supports two types of storage for the backend: file-system-based like local files and database-based like PostgreSQL. Default is sqlite.</p>
+
+<p><strong>2. Artefact store</strong></p>
 
 <p>Artifact store persists typically large artifacts for each run, such as model weights (e.g. a pickled scikit-learn model, pytorch model, etc) and data files (e.g. csv or parquet files). MLflow stores artifacts in a local file (mlruns) by default, but also supports different storage options such as Amazon S3 and Azure Blob Storage.</p>
 
-<p>Backend store - Backend Stores — MLflow 2.15.1 documentation</p>
-
-<p>Artefact store - Artifact Stores — MLflow 2.15.1 documentation</p>
-
-<p>Tracking server - MLflow Tracking Server</p>
+<ul>
+  <li>
+    <p>Backend store - <a href="https://mlflow.org/docs/latest/tracking/backend-stores.html" target="_blank">Backend Stores</a></p>
+  </li>
+  <li>
+    <p>Artefact store - <a href="https://mlflow.org/docs/latest/tracking/artifacts-stores.html" target="_blank">Artifact Stores</a></p>
+  </li>
+  <li>
+    <p>Tracking server - <a href="https://mlflow.org/docs/latest/tracking/server.html" target="_blank">MLflow Tracking Server</a></p>
+  </li>
+</ul>
 
 <h2 id="4-how-to-version">4. How to Version</h2>
 
@@ -739,24 +788,39 @@ Experiment metadata including run ID, start &amp; end time, parameters, metrics,
 
 <p>DVC uses git and similar to git commands to version data.</p>
 
-<p>Install DVC: <code class="language-plaintext highlighter-rouge">pip install dvc</code></p>
+<ol>
+  <li>
+    <p>Install DVC: <code class="language-plaintext highlighter-rouge">pip install dvc</code></p>
+  </li>
+  <li>
+    <p>Initialize DVC from a git repo: <code class="language-plaintext highlighter-rouge">dvc init</code></p>
+  </li>
+  <li>
+    <p>Configure remote (s3): <code class="language-plaintext highlighter-rouge">dvc remote add -d myremote s3://mybucket/path/to/dvcstore</code></p>
+  </li>
+  <li>
+    <p>Add data files or directories: <code class="language-plaintext highlighter-rouge">dvc add training_data test_data data.csv</code></p>
+  </li>
+  <li>
+    <p>Commit changes: <code class="language-plaintext highlighter-rouge">git add *.dvc .gitignore</code> and <code class="language-plaintext highlighter-rouge">git commit -m "Add data files to DVC"</code></p>
+  </li>
+  <li>
+    <p>Push data to the remote: <code class="language-plaintext highlighter-rouge">dvc push</code></p>
+  </li>
+  <li>
+    <p>Tag repo for the data version [optional]: <code class="language-plaintext highlighter-rouge">git tag -a v1.0 -m "Version 1.0"</code> and <code class="language-plaintext highlighter-rouge">git push origin v1.0</code></p>
+  </li>
+  <li>
+    <p>When pulling data from the repository: <code class="language-plaintext highlighter-rouge">dvc pull</code> or <code class="language-plaintext highlighter-rouge">dvc pull &lt;file&gt;.dvc</code></p>
+  </li>
+</ol>
 
-<p>Initialize DVC from a git repo: <code class="language-plaintext highlighter-rouge">dvc init</code></p>
-
-<p>Configure remote (s3): <code class="language-plaintext highlighter-rouge">dvc remote add -d myremote s3://mybucket/path/to/dvcstore</code></p>
-
-<p>Add data files or directories: <code class="language-plaintext highlighter-rouge">dvc add training_data test_data data.csv</code></p>
-
-<p>Commit changes: <code class="language-plaintext highlighter-rouge">git add *.dvc .gitignore</code> and <code class="language-plaintext highlighter-rouge">git commit -m "Add data files to DVC"</code></p>
-
-<p>Push data to the remote: <code class="language-plaintext highlighter-rouge">dvc push</code></p>
-
-<p>Tag repo for the data version [optional]: <code class="language-plaintext highlighter-rouge">git tag -a v1.0 -m "Version 1.0"</code> and <code class="language-plaintext highlighter-rouge">git push origin v1.0</code></p>
-
-<p>When pulling data from the repository: <code class="language-plaintext highlighter-rouge">dvc pull</code> or <code class="language-plaintext highlighter-rouge">dvc pull &lt;file&gt;.dvc</code></p>
-
-<blockquote>
-  <p>The above can be done in the same repo where the training is happening. This will make the data tightly coupled to the training. But if we do this outside the training repo, it will make the data easily retrievable from anywhere else for other use like getting the test result or for measuring the data drift.</p>
+<p><br /></p>
+<blockquote class="callout callout_info">
+<span class="callout-icon">ℹ️</span>
+    <br />
+    <br />
+    The above can be done in the same repo where the training is happening. This will make the data tightly coupled to the training. But if we do this outside the training repo, it will make the data easily retrievable from anywhere else for other use like getting the test result or for measuring the data drift.
 </blockquote>
 
 <h3 id="42-mlflow">4.2 MLFlow</h3>
@@ -765,46 +829,66 @@ Experiment metadata including run ID, start &amp; end time, parameters, metrics,
 
 <p>MLFlow uses the following major interfaces for data tracking.</p>
 
-<p>Dataset: Represents a dataset used in model training or evaluation, including features, targets, predictions, and metadata such as the dataset’s name, digest (hash) schema, profile, and source.</p>
+<ul>
+  <li>
+    <p>Dataset: Represents a dataset used in model training or evaluation, including features, targets, predictions, and metadata such as the dataset’s name, digest (hash) schema, profile, and source.</p>
 
-<p>You can log this metadata to a run in MLflow Tracking using the mlflow.log_input() API. mlflow.data provides APIs for constructing Datasets from a variety of Python data objects, including Pandas DataFrames (<code class="language-plaintext highlighter-rouge">mlflow.data.from_pandas()</code>), NumPy arrays (<code class="language-plaintext highlighter-rouge">mlflow.data.from_numpy()</code>), Spark DataFrames (<code class="language-plaintext highlighter-rouge">mlflow.data.from_spark()</code> / <code class="language-plaintext highlighter-rouge">mlflow.data.load_delta()</code>) and more.</p>
+    <ul>
+      <li>You can log this metadata to a run in MLflow Tracking using the <code class="language-plaintext highlighter-rouge">mlflow.log_input()</code> API. mlflow.data provides APIs for constructing Datasets from a variety of Python data objects, including Pandas DataFrames (<code class="language-plaintext highlighter-rouge">mlflow.data.from_pandas()</code>), NumPy arrays (<code class="language-plaintext highlighter-rouge">mlflow.data.from_numpy()</code>), Spark DataFrames (<code class="language-plaintext highlighter-rouge">mlflow.data.from_spark()</code> / <code class="language-plaintext highlighter-rouge">mlflow.data.load_delta()</code>) and more.</li>
+    </ul>
+  </li>
+  <li>
+    <p>DatasetSource: Represents the source of a dataset. For example, this may be a directory of files stored in S3, a Delta Table, or a web URL. Each Dataset references the source from which it was derived. A Dataset’s features and targets may differ from the source if transformations and filtering were applied.</p>
 
-<p>DatasetSource: Represents the source of a dataset. For example, this may be a directory of files stored in S3, a Delta Table, or a web URL. Each Dataset references the source from which it was derived. A Dataset’s features and targets may differ from the source if transformations and filtering were applied.</p>
+    <ul>
+      <li>You can get the DatasetSource of a dataset logged to a run in MLflow Tracking using the <code class="language-plaintext highlighter-rouge">mlflow.data.get_source()</code> API.</li>
+    </ul>
+  </li>
+</ul>
 
-<p>You can get the DatasetSource of a dataset logged to a run in MLflow Tracking using the <code class="language-plaintext highlighter-rouge">mlflow.data.get_source()</code> API.</p>
+<p><br /></p>
 
 <p><strong>Detailed steps:</strong></p>
 
 <p>1 - Create a dataset</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import mlflow.data
-import pandas as pd
-from mlflow.data.pandas_dataset import PandasDataset
-dataset_source_url = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
+<pre><code>
+<span style="color:blue"><b>import</b></span> mlflow.data
+<span style="color:blue"><b>import</b></span> pandas as pd
+<span style="color:blue"><b>from</b></span> mlflow.data.pandas_dataset <span style="color:blue"><b>import</b></span> PandasDataset
+<br />
+dataset_source_url = <span style="color:green">"http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"</span>
 df = pd.read_csv(dataset_source_url)
-# Construct an MLflow PandasDataset from the Pandas DataFrame, 
-and specify the web URL as the source
-dataset: PandasDataset = mlflow.data.from_pandas(df, source=dataset_source_url)
-</code></pre></div></div>
+<br />
+<i># Construct an MLflow PandasDataset from the Pandas DataFrame, 
+# and specify the web URL as the source
+# dataset: PandasDataset = mlflow.data.from_pandas(df, source=dataset_source_url)</i>
+
+</code></pre>
 
 <p>2 - Log the dataset</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>with mlflow.start_run():
-    # Log the dataset to the MLflow Run. Specify the "training" context 
-    # to indicate that the dataset is used for model training
-    mlflow.log_input(dataset, context="training")
-</code></pre></div></div>
+<pre><code>
+<span style="color:blue"><b>with</b></span> mlflow.start_run():
+    <i># Log the dataset to the MLflow Run. Specify the "training" context 
+    # to indicate that the dataset is used for model training</i>
+    mlflow.log_input(dataset, context=<span style="color:green">"training"</span>)
+
+</code></pre>
 
 <p>3 - Retrieve the dataset when needed</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Retrieve the run, including dataset information
+<pre><code>
+<i># Retrieve the run, including dataset information</i>
 run = mlflow.get_run(mlflow.last_active_run().info.run_id)
-dataset_info = run.inputs.dataset_inputs[0].dataset
-# Load the dataset's source, which downloads the content from the source URL
-# to the local filesystem
+dataset_info = run.inputs.dataset_inputs[<span style="color:blue">0</span>].dataset
+<br />
+<i># Load the dataset's source, which downloads the content from the source URL
+# to the local filesystem</i>
 dataset_source = mlflow.data.get_source(dataset_info)
 dataset_source.load()
-</code></pre></div></div>
+
+</code></pre>
 
 <p><br /></p>
 <blockquote class="callout callout_definition">
@@ -821,19 +905,27 @@ An alternative to using MLFlow.data might be using MLFlow’s log artefact to lo
 
 <h2 id="5-potential-options">5. Potential Options</h2>
 <h3 id="51-using-mlflow">5.1 Using MLFlow</h3>
-<p>Use MLFlow to just log the data used for each experiment runs. Need artefact store set up(which anyway is needed for storing the models)</p>
+<p>Use MLFlow to just log the data used for each experiment runs. Need artefact store set up (which anyway is needed for storing the models)</p>
 
 <p><strong>Pros:</strong></p>
 
-<p>No additional tool or library is needed</p>
+<ul>
+  <li>No additional tool or library is needed</li>
+</ul>
 
 <p><strong>Cons:</strong></p>
 
-<p>Data needs to be converted to MLFlow Datasets using simple steps</p>
-
-<p>Not really versioning, it is tracking the data used for training runs</p>
-
-<p>Extracting the data form outside the train repo is difficult. It needs the exact MLFlow run_id and hence adds additional dependencies</p>
+<ul>
+  <li>
+    <p>Data needs to be converted to MLFlow Datasets using simple steps</p>
+  </li>
+  <li>
+    <p>Not really versioning, it is tracking the data used for training runs</p>
+  </li>
+  <li>
+    <p>Extracting the data form outside the train repo is difficult. It needs the exact MLFlow run_id and hence adds additional dependencies</p>
+  </li>
+</ul>
 
 <h3 id="52-use-dvc-within-train-repo">5.2 Use dvc within train repo</h3>
 <p>This method can be used to track the data used for experiment runs.</p>
@@ -842,68 +934,111 @@ An alternative to using MLFlow.data might be using MLFlow’s log artefact to lo
 
 <p><strong>Pros:</strong></p>
 
-<p>No overhead of creating dataset. Data or directory can be versioned or tracked as it is.</p>
-
-<p>Seamless integration with git</p>
+<ul>
+  <li>
+    <p>No overhead of creating dataset. Data or directory can be versioned or tracked as it is.</p>
+  </li>
+  <li>
+    <p>Seamless integration with git</p>
+  </li>
+</ul>
 
 <p><strong>Cons:</strong></p>
 
-<p>Overhead of creating additional remote data storage for dvc</p>
-
-<p>If the dvc is used within the same training repo, it makes a dependency on the entire training repo for retrieving the data outside the context of training (say for testing the accuracy or for model drift detection)</p>
-
-<p>Introducing a different model in a different repo will introduce inconsistency in data split and versions.</p>
+<ul>
+  <li>
+    <p>Overhead of creating additional remote data storage for dvc</p>
+  </li>
+  <li>
+    <p>If the dvc is used within the same training repo, it makes a dependency on the entire training repo for retrieving the data outside the context of training (say for testing the accuracy or for model drift detection)</p>
+  </li>
+  <li>
+    <p>Introducing a different model in a different repo will introduce inconsistency in data split and versions.</p>
+  </li>
+</ul>
 
 <h3 id="53-use-dvc-for-data-versioning-during-ingestion-with-train-eval-and-test-split">5.3 Use dvc for data versioning during ingestion with train, eval, and test split</h3>
-<p>With this approach the workflow is as follows;</p>
+<p>With this approach the workflow is as follows:</p>
 
-<p>→ Use dvc in the data ingestion repo (with version tagging to the repo to indicate the data version)</p>
-
-<p>→  Do ETL related preprocessing of the data as usual in the repo</p>
-
-<p>→ Split the data into train, val and test and add those data separately to the dvc</p>
-
-<p>→ Push these dvc files (metadata) to a remote</p>
-
-<p>→ Git commit, tag and push the meta data files</p>
-
-<p>→ Clone or use the data ingestion repo as a submodule in the model training repo or wherever data is needed</p>
-
-<p>→ Checkout to the data version that is needed</p>
-
-<p>→ Pull the data from the remote to local</p>
-
-<p>→ Train as usual</p>
+<ol>
+  <li>
+    <p>Use dvc in the data ingestion repo (with version tagging to the repo to indicate the data version)</p>
+  </li>
+  <li>
+    <p>Do ETL related preprocessing of the data as usual in the repo</p>
+  </li>
+  <li>
+    <p>Split the data into train, val and test and add those data separately to the dvc</p>
+  </li>
+  <li>
+    <p>Push these dvc files (metadata) to a remote</p>
+  </li>
+  <li>
+    <p>Git commit, tag and push the meta data files</p>
+  </li>
+  <li>
+    <p>Clone or use the data ingestion repo as a submodule in the model training repo or wherever data is needed</p>
+  </li>
+  <li>
+    <p>Checkout to the data version that is needed</p>
+  </li>
+  <li>
+    <p>Pull the data from the remote to local</p>
+  </li>
+  <li>
+    <p>Train as usual</p>
+  </li>
+</ol>
 
 <p><strong>Pros:</strong></p>
 
-<p>Single source of truth for train, test and validation data</p>
-
-<p>Data is decoupled and can be retrieved using just version from anywhere from the data ingestion repo</p>
-
-<p>The dataset associated with experiment runs will be captured in MLFlow parameters along with other params</p>
+<ul>
+  <li>
+    <p>Single source of truth for train, test and validation data</p>
+  </li>
+  <li>
+    <p>Data is decoupled and can be retrieved using just version from anywhere from the data ingestion repo</p>
+  </li>
+  <li>
+    <p>The dataset associated with experiment runs will be captured in MLFlow parameters along with other params</p>
+  </li>
+</ul>
 
 <p><strong>Cons:</strong></p>
 
-<p>Overhead of creating additional remote data storage for dvc</p>
-
-<p>Overhead of cloning the data ingestion repo or using it as a submodule wherever data is needed</p>
+<ul>
+  <li>
+    <p>Overhead of creating additional remote data storage for dvc</p>
+  </li>
+  <li>
+    <p>Overhead of cloning the data ingestion repo or using it as a submodule wherever data is needed</p>
+  </li>
+</ul>
 
 <h2 id="summary">Summary</h2>
 <p>As per the comparison of the potential options, based on our use case, the third option seems suitable for our use case.</p>
 
-<h2 id="references">References</h2>
-<p>DVC official documentation - Home</p>
-
-<p>MLFlow data official documentation - mlflow.data</p>
-
-<p>DVC remote -remote</p>
-
-<p>MLFlow Backend store - Backend Stores — MLflow 2.15.1 documentation</p>
-
-<p>MLFlow Artefact store - Artifact Stores — MLflow 2.15.1 documentation</p>
-
-<p>MLFlow Tracking server - MLflow Tracking Server</p>
+<h2 id="resources">Resources</h2>
+<ol>
+  <li>
+    <p>DVC official documentation - <a href="https://dvc.org/doc" target="_blank">Home</a></p>
+  </li>
+  <li>
+    <p>MLFlow data official documentation - <a href="https://mlflow.org/docs/latest/python_api/mlflow.data.html" target="_blank">mlflow.data</a></p>
+  </li>
+  <li>
+    <p>DVC remote - <a href="https://dvc.org/doc/command-reference/remote#remote" target="_blank">remote</a></p>
+  </li>
+  <li>
+    <p>MLFlow Backend store - <a href="https://mlflow.org/docs/latest/tracking/backend-stores.html" target="_blank">Backend Stores</a></p>
+  </li>
+  <li>
+    <p>MLFlow Artefact store - <a href="https://mlflow.org/docs/latest/tracking/artifacts-stores.html" target="_blank">Artifact Stores</a></p>
+  </li>
+  <li>
+    <p>MLFlow Tracking server - <a href="https://mlflow.org/docs/latest/tracking/server.html" target="_blank">MLflow Tracking Server</a></p>
+  </li>
+</ol>
 
 <footer class="site-footer">
 

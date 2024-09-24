@@ -112,7 +112,7 @@
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 50px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
@@ -319,13 +319,13 @@
 
     function toggleContents() {
         const contents = document.getElementById("myContents");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -337,7 +337,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -353,13 +353,13 @@
 
     function toggleContentsTwo() {
         const contentsTwo = document.getElementById("myContentsTwo");
-        if (contentsTwo.style.height === "800px") {
+        if (contentsTwo.style.height === "2300px") {
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -371,7 +371,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
         } else {
@@ -387,13 +387,13 @@
 
     function toggleContentsThree() {
         const contentsThree = document.getElementById("myContentsThree");
-        if (contentsThree.style.height === "800px") {
+        if (contentsThree.style.height === "1400px") {
             contentsThree.style.height = "0px";
             contentsThree.style.opacity = "0";
             contentsThree.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -405,7 +405,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
         } else {
@@ -421,13 +421,13 @@
 
     function toggleContentsFour() {
         const contents = document.getElementById("myContentsFour");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "750px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -439,7 +439,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -455,13 +455,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "380px") {
+    if (dropdownmlops.style.height === "390px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -597,24 +597,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><strong>Table of Contents</strong></p>
 <ol>
-  <li><a href="#1-mlflow-for-model-serving">MLFlow For Model Serving</a><br />
-     <a href="#mlflow---model-serving-runtime">MLFlow - Model Serving Runtime</a><br />
-     <a href="#mlflow---model-serving-platforms">MLFlow - Model Serving Platforms</a><br />
-     <a href="#mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</a><br />
-     <a href="#mlflow---summary">MLFlow - Summary</a></li>
-  <li><a href="#2-model-serving-using-fastapi">Model Serving using FastAPI</a><br />
-     <a href="#fastapi---model-serving-runtime">FastAPI - Model Serving Runtime</a><br />
-     <a href="#fastapi---model-serving-platforms">FastAPI - Model Serving Platforms</a><br />
-     <a href="#fastapi---deploying-mlflow-model-to-kubernetes">FastAPI - Deploying MLFlow model to Kubernetes</a><br />
-     <a href="#fastapi---summary">FastAPI - Summary</a></li>
-  <li><a href="#3-bentoml-for-model-serving">BentoML for Model serving</a><br />
-     <a href="#bentoml---model-serving-runtime">BentoML - Model Serving Runtime</a><br />
-     <a href="#bentoml---model-serving-platforms">BentoML - Model Serving Platforms</a><br />
-     <a href="#bentoml---deploying-mlflow-model-to-kubernetes">BentoML - Deploying MLFlow model to Kubernetes</a><br />
-     <a href="#bentoml---summary">BentoML - Summary</a>
-<a href="#summary-table">Summary Table</a><br />
-     <a href="#questions">Questions</a><br />
-<a href="#references">References</a></li>
+  <li><a href="#1-mlflow-for-model-serving">MLFlow For Model Serving</a>
+    <ul>
+      <li><a href="#mlflow---model-serving-runtime">MLFlow - Model Serving Runtime</a></li>
+      <li><a href="#mlflow---model-serving-platforms">MLFlow - Model Serving Platforms</a></li>
+      <li><a href="#mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</a></li>
+      <li><a href="#mlflow---summary">MLFlow - Summary</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-model-serving-using-fastapi">Model Serving using FastAPI</a>
+    <ul>
+      <li><a href="#fastapi---model-serving-runtime">FastAPI - Model Serving Runtime</a></li>
+      <li><a href="#fastapi---model-serving-platforms">FastAPI - Model Serving Platforms</a></li>
+      <li><a href="#fastapi---deploying-mlflow-model-to-kubernetes">FastAPI - Deploying MLFlow model to Kubernetes</a></li>
+      <li><a href="#fastapi---summary">FastAPI - Summary</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-bentoml-for-model-serving">BentoML for Model serving</a>
+    <ul>
+      <li><a href="#bentoml---model-serving-runtime">BentoML - Model Serving Runtime</a></li>
+      <li><a href="#bentoml---model-serving-platforms">BentoML - Model Serving Platforms</a></li>
+      <li><a href="#bentoml---deploying-mlflow-model-to-kubernetes">BentoML - Deploying MLFlow model to Kubernetes</a></li>
+      <li><a href="#bentoml---summary">BentoML - Summary</a></li>
+    </ul>
+  </li>
+  <li><a href="#summary-table">Summary Table</a>
+    <ul>
+      <li><a href="#questions">Questions</a></li>
+    </ul>
+  </li>
+  <li><a href="#references">References</a></li>
 </ol>
 
 <hr />
@@ -639,36 +651,52 @@ document.addEventListener("DOMContentLoaded", function() {
 </ul>
 
 <h3 id="mlflow---model-serving-platforms">MLFlow - Model Serving Platforms</h3>
-<p>MLFlow native model serving using MLSerer supports <a href="https://kserve.github.io/website/latest/" target="_blank">KServe</a> and <a href="https://docs.seldon.io/projects/seldon-core/en/latest/" target="_blank">Seldon Core</a> both are kubernetes native</p>
-
-<p>KServe has some example code and more documentation and details from MLFlow side - <a href="" target="_blank">Develop ML model with MLflow and deploy to Kubernetes</a></p>
-
-<p>Partner documentation from KServe - <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html" target="_blank">MLFlow - KServe Documentation Website</a></p>
-
-<p>Seldon core - has got no example code in MLFlow but the partner documentation is also rich - <a href="https://docs.seldon.io/projects/seldon-core/en/latest/servers/mlflow.html" target="_blank">MLflow Server — seldon-core  documentation</a></p>
+<ul>
+  <li>
+    <p>MLFlow native model serving using MLSerer supports <a href="https://kserve.github.io/website/latest/" target="_blank">KServe</a> and <a href="https://docs.seldon.io/projects/seldon-core/en/latest/" target="_blank">Seldon Core</a> both are kubernetes native</p>
+  </li>
+  <li>KServe has some example code and more documentation and details from MLFlow side - <a href="" target="_blank">Develop ML model with MLflow and deploy to Kubernetes</a>
+    <ul>
+      <li>Partner documentation from KServe - <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html" target="_blank">MLFlow - KServe Documentation Website</a>
+<br />
+<br /></li>
+    </ul>
+  </li>
+  <li>Seldon core - has got no example code in MLFlow but the partner documentation is also rich - <a href="https://docs.seldon.io/projects/seldon-core/en/latest/servers/mlflow.html" target="_blank">MLflow Server — seldon-core  documentation</a></li>
+</ul>
 
 <blockquote class="callout callout_info">
 <span class="callout-icon">ℹ️</span>
     <br />
     <br />
-    The prefered option here when deploying ML models in the MLFlow ecosystem is to use MLServer as serving runtime and Kserve as serving platform which are natively supported by MLFlow.
+    The prefered option here when deploying ML models in the MLFlow ecosystem is to use <b>MLServer as serving runtime</b> and <b>Kserve as serving platform</b> which are natively supported by MLFlow.
 </blockquote>
 
 <p><br /></p>
 
 <h3 id="mlflow---deploying-mlflow-model-to-kubernetes">MLFlow - Deploying MLFlow model to Kubernetes</h3>
+
+<p><a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html#step-5-packaging-the-model-and-dependencies" target="_blank">Kubernetes Model Deploy: Packaging and Dependencies</a></p>
+
+<p><a href="https://github.com/kserve/kserve#hammer_and_wrench-installation" target="_blank">KServe install</a></p>
+
 <div id="myContainer" class="container">
   <a onclick="toggleContents()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px" /> MLFlow - Deploying MLFlow model to Kubernetes</a>
   <div id="myContents" class="contents">
   <br />
-  The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned here. This is what we are already doing during the end of model training process.
+  The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned in <span style="color:#8C1437"><b>Packaging and Dependencies</b></span> (linked above).
+  
+  <br />
+  <br />
+  This is what we are already doing during the end of model training process.
 
   <br />
   <br />
 
-  An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.
+  <blockquote class="callout callout_default">
+      An MLflow Model already packages your model and its dependencies, hence MLflow can create either a virtual environment (for local deployment) or a Docker container image containing everything needed to run your model. So we don’t need to bind the dependencies separately.
+  </blockquote>
 
-  <br />
   <br />
 
   Once we have the model ready, deploying the model to Kserve can be done in two ways (methods linked in Resources); either using a docker image or using a model uri.
@@ -688,7 +716,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <br />
   <br />
 
-  2. Install Kserve to the kubernetes cluster
+  2. Install Kserve to the kubernetes cluster (<span style="color:#8C1437"><b>KServe install</b></span> linked above)
 
   <br />
   <br />
@@ -716,6 +744,11 @@ document.addEventListener("DOMContentLoaded", function() {
   <br />
   <br />
 
+  7. Deploy to the kubernetes cluster using kubectl
+
+  <br />
+  <br />
+
   If using the model uri approach, we needs to specify the model URI in a remote storage URI format e.g. <code>s3://xxx</code> or <code>gs://xxx</code>. By default, MLflow stores the model in the local file system, so you need to configure MLflow to store the model in remote storage. Please refer to Artifact Store (linked in Resources) for setup instructions.
 
   <br />
@@ -725,32 +758,50 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 <p><br /></p>
 
-<hr />
-
 <h3 id="mlflow---summary">MLFlow - Summary</h3>
-<p>Supports PyTorch and SKlearn models natively - <a href="https://mlflow.org/docs/latest/models.html#built-in-model-flavors" target="_blank">MLFlow models - built-in model flavors</a></p>
+<ul>
+  <li>
+    <p>Supports PyTorch and SKlearn models natively - <a href="https://mlflow.org/docs/latest/models.html#built-in-model-flavors" target="_blank">MLFlow models - built-in model flavors</a></p>
+  </li>
+  <li>
+    <p>Models are already in supported MLFLow models format when the training completes</p>
+  </li>
+  <li>
+    <p>Easy integration with kubernetes is provided using KServe or Seldon Core</p>
+  </li>
+  <li>
+    <p>Dependencies are already taken care of</p>
+  </li>
+  <li>
+    <p>Easy serving and deployment process</p>
+  </li>
+</ul>
 
-<p>Models are already in supported MLFLow models format when the training completes</p>
-
-<p>Easy integration with kubernetes is provided using KServe or Seldon Core</p>
-
-<p>Dependencies are already taken care of</p>
-
-<p>Easy serving and deployment process</p>
+<p><br /></p>
 
 <h2 id="2-model-serving-using-fastapi">2. Model Serving using FastAPI</h2>
 
 <h3 id="fastapi---model-serving-runtime">FastAPI - Model Serving Runtime</h3>
-<p>Manually create a model serving runtime using FastAPI</p>
-
-<p>Containerise the so created FastAPI app to create model endpoints</p>
-
-<p>Need to create custom consistent endpoint urls</p>
+<ul>
+  <li>
+    <p>Manually create a model serving runtime using <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a></p>
+  </li>
+  <li>
+    <p>Containerise the so created FastAPI app to create model endpoints</p>
+  </li>
+  <li>
+    <p>Need to create custom consistent endpoint urls</p>
+  </li>
+</ul>
 
 <h3 id="fastapi---model-serving-platforms">FastAPI - Model Serving Platforms</h3>
-<p>Once the container is ready, any serving platform like Seldon core or KServe(open source) can be used</p>
+<ul>
+  <li>Once the container is ready, any serving platform like Seldon core or KServe(open source) can be used</li>
+</ul>
 
-<p>So the prefered option here is use FastPI to combine the dependencies and correct model version to create a web serving app and then use Kserve as serving platform to deploy the app.</p>
+<blockquote class="callout callout_default">
+    The prefered option here is use FastAPI to combine the dependencies and correct model version to create a web serving app and then use <b>Kserve as serving platform to deploy the app.</b>
+</blockquote>
 
 <p><br /></p>
 
@@ -764,15 +815,16 @@ document.addEventListener("DOMContentLoaded", function() {
   The steps involved are as follows;
   <br />
   <br />
+
   1. <b>Export the Model from MLFlow</b>
 
-  <ul>Load the model from MLFlow so that it can be loaded by FastAPI application.</ul>
+  <ul>- Load the model from MLFlow so that it can be loaded by FastAPI application.</ul>
 
-  <ul>For pytorch models - <code>mlflow.sklearn.load_model</code>(model_uri, dst_path=None)</ul>
+  <ul>- For pytorch models - <code>mlflow.sklearn.load_model</code>(model_uri, dst_path=None)</ul>
 
-  <ul>For sklearn models - <code>mlflow.sklearn.load_model</code>(model_uri, dst_path=None)</ul>
+  <ul>- For sklearn models - <code>mlflow.sklearn.load_model</code>(model_uri, dst_path=None)</ul>
 
-  <ul>SKlearn supports several models and it can even support custom models using the <code>mlflow.pyfunc</code> api</ul>
+  <ul>- SKlearn supports several models and it can even support custom models using the <code>mlflow.pyfunc</code> api</ul>
 
   2. <b>Create a FastAPI Application</b>
     <ul>Build an application to serve the model</ul>
@@ -805,11 +857,11 @@ document.addEventListener("DOMContentLoaded", function() {
   <br />
   3. <b>Containerize the FastAPI Application</b>
 
-  <ul>List the requirements in a requirements.txt file or using poetry</ul>
+  <ul>- List the requirements in a requirements.txt file or using poetry</ul>
 
-  <ul>Create a Docker image for the FastAPI application with the requirements preinstalled</ul>
+  <ul>- Create a Docker image for the FastAPI application with the requirements preinstalled</ul>
 
-  <ul>Ensure you are exposing the relevant ports and running the app when the container launches using something similar</ul>
+  <ul>- Ensure you are exposing the relevant ports and running the app when the container launches using something similar</ul>
 
   <code>EXPOSE 80</code>
   <br />
@@ -818,34 +870,48 @@ document.addEventListener("DOMContentLoaded", function() {
   <br />
   4. <b>Deploy the Docker Container to Kubernetes</b>
 
-  <ul>Use Kubernetes to deploy and manage the container probably using the same KServe method mentioned above</ul>
+  <ul>- Use Kubernetes to deploy and manage the container probably using the same KServe method mentioned above</ul>
   </div>
 </div>
 <p><br /></p>
 
 <h3 id="fastapi---summary">FastAPI - Summary</h3>
-<p>Using web frameworks for building API endpoints is the straightforward way to serve models</p>
+<ul>
+  <li>
+    <p>Using web frameworks for building API endpoints is the straightforward way to serve models</p>
+  </li>
+  <li>
+    <p>Not only MLFlow models, any models can be served using this approach</p>
+  </li>
+  <li>
+    <p>Gets more control on the preprocessing and postprocessing here</p>
+  </li>
+  <li>
+    <p>Time consuming to create consistent APIs</p>
+  </li>
+  <li>
+    <p>Need to capture the dependencies separately for running the model</p>
+  </li>
+  <li>
+    <p>Model and its specific versions need to be manually added to the</p>
+  </li>
+  <li>
+    <p>It is hard to automate the serving process</p>
+  </li>
+  <li>
+    <p>Involves manual containerisation and then deploying to kubernetes</p>
+  </li>
+  <li>
+    <p>Follows similar deployment process to other methods</p>
+  </li>
+</ul>
 
-<p>Not only MLFlow models, any models can be served using this approach</p>
-
-<p>Gets more control on the preprocessing and postprocessing here</p>
-
-<p>Time consuming to create consistent APIs</p>
-
-<p>Need to capture the dependencies separately for running the model</p>
-
-<p>Model and its specific versions need to be manually added to the</p>
-
-<p>It is hard to automate the serving process</p>
-
-<p>Involves manual containerisation and then deploying to kubernetes</p>
-
-<p>Follows similar deployment process to other methods</p>
+<p><br /></p>
 
 <h2 id="3-bentoml-for-model-serving">3. BentoML for Model Serving</h2>
 
-<blockquote>
-  <p>BentoML is an open-source model serving library for building performant and scalable AI applications with Python. It comes with everything you need for serving optimization, model packaging, and production deployment.</p>
+<blockquote class="callout callout_default">
+    <a href="https://github.com/bentoml/BentoML" target="_blank">BentoML</a> is an open-source model serving library for building performant and scalable AI applications with Python. It comes with everything you need for serving optimization, model packaging, and production deployment.
 </blockquote>
 
 <p>“Bentos” is an archive containing all the necessary components to package a model.</p>
@@ -865,15 +931,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <h3 id="bentoml---model-serving-platforms">BentoML - Model Serving Platforms</h3>
 <ul>
-  <li>BentoML recommends Bento Cloud (a paid service) to deploy models in a kubernetes native manner</li>
-  <li>But similar model serving platforms like Seldon Core or KServe(open source) can be used here</li>
+  <li>BentoML recommends <a href="https://docs.bentoml.com/en/latest/bentocloud/get-started.html" target="_blank">Bento Cloud</a> (<a href="https://www.bentoml.com/pricing" target="_blank">a paid service</a>) to deploy models in a kubernetes native manner</li>
+  <li>But similar model serving platforms like Seldon Core or KServe (open source) can be used here</li>
 </ul>
-
-<blockquote>
-  <p>So the prefered option here is use BentoML to create a container of for the model serving and then use Kserve as serving platform to deploy the service.</p>
-</blockquote>
-
-<p><br /></p>
 
 <h3 id="bentoml---deploying-mlflow-model-to-kubernetes">BentoML - Deploying MLFlow model to Kubernetes</h3>
 <div id="myContainer" class="container">
@@ -984,7 +1044,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <table>
   <thead>
     <tr>
-      <th>Tool</th>
+      <th>Feature</th>
       <th>MLFlow</th>
       <th>FastAPI</th>
       <th>BentoML</th>
@@ -1085,32 +1145,28 @@ document.addEventListener("DOMContentLoaded", function() {
 <h2 id="questions">Questions:</h2>
 
 <p>Q. Decision between KServe or Seldon core - Which one is more suitable for our use case?
-        <br />
-        <br />
-        A comparison - <a href="https://superwise.ai/blog/kserve-vs-seldon-core/" target="_blank">KServe vs. Seldon Core - Superwise ML Observability</a>
-        <br />
-        <br />
-        KServe is open source whereas <a href="https://www.seldon.io/pricing" target="_blank">SeldonCore</a> is expensive. And so is <a href="https://www.bentoml.com/pricing" target="_blank">BentoCloud</a>.</p>
+    <br />
+    <br />
+    A comparison - <a href="https://superwise.ai/blog/kserve-vs-seldon-core/" target="_blank">KServe vs. Seldon Core - Superwise ML Observability</a>
+    <br />
+    <br />
+    KServe is open source whereas <a href="https://www.seldon.io/pricing" target="_blank">SeldonCore</a> is expensive. And so is <a href="https://www.bentoml.com/pricing" target="_blank">BentoCloud</a>.</p>
 
 <h2 id="references">References</h2>
 
 <ol>
-  <li>MLFlow serving <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html" target="_blank">Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation</a></li>
-</ol>
-
-<ul>
-  <li><a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html#step-7-deploying-the-model-to-kserve" target="_blank">Deploying Models to KServe</a></li>
-</ul>
-
-<ol>
-  <li>Kserve - <a href="https://kserve.github.io/website/latest/" target="_blank">Home - KServe Documentation Website</a></li>
-</ol>
-
-<ul>
-  <li>Kserve using MLFlow models - <a href="https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/" target="_blank">MLFlow - KServe Documentation Website</a></li>
-</ul>
-
-<ol>
+  <li>
+    <p>MLFlow serving <a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html" target="_blank">Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation</a></p>
+  </li>
+  <li>
+    <p><a href="https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/tutorial.html#step-7-deploying-the-model-to-kserve" target="_blank">Deploying Models to KServe</a></p>
+  </li>
+  <li>
+    <p>Kserve - <a href="https://kserve.github.io/website/latest/" target="_blank">Home - KServe Documentation Website</a></p>
+  </li>
+  <li>
+    <p>Kserve using MLFlow models - <a href="https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/" target="_blank">MLFlow - KServe Documentation Website</a></p>
+  </li>
   <li>
     <p><a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a></p>
   </li>

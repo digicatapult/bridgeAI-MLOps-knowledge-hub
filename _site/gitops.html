@@ -112,7 +112,7 @@
     visibility: hidden;
     opacity: 0;
     text-align: left;
-    padding: 8px 8px 8px 32px;
+    padding: 8px 50px 8px 32px;
     height: 0%;
     width: 100%;
     position: relative;
@@ -319,13 +319,13 @@
 
     function toggleContents() {
         const contents = document.getElementById("myContents");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -337,7 +337,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -353,13 +353,13 @@
 
     function toggleContentsTwo() {
         const contentsTwo = document.getElementById("myContentsTwo");
-        if (contentsTwo.style.height === "800px") {
+        if (contentsTwo.style.height === "2300px") {
             contentsTwo.style.height = "0px";
             contentsTwo.style.opacity = "0";
             contentsTwo.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -371,7 +371,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsTwo.style.height = "800px";
+            contentsTwo.style.height = "2300px";
             contentsTwo.style.opacity = "100";
             contentsTwo.style.visibility = "visible";
         } else {
@@ -387,13 +387,13 @@
 
     function toggleContentsThree() {
         const contentsThree = document.getElementById("myContentsThree");
-        if (contentsThree.style.height === "800px") {
+        if (contentsThree.style.height === "1400px") {
             contentsThree.style.height = "0px";
             contentsThree.style.opacity = "0";
             contentsThree.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -405,7 +405,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contentsThree.style.height = "800px";
+            contentsThree.style.height = "1400px";
             contentsThree.style.opacity = "100";
             contentsThree.style.visibility = "visible";
         } else {
@@ -421,13 +421,13 @@
 
     function toggleContentsFour() {
         const contents = document.getElementById("myContentsFour");
-        if (contents.style.height === "800px") {
+        if (contents.style.height === "750px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
             localStorage.setItem("dropdownContentsState", "closed");
         } else {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
             localStorage.setItem("dropdownContentsState", "open");
@@ -439,7 +439,7 @@
         const contentsState = localStorage.getItem("dropdownContentsState");
         
         if (contentsState === "open") {
-            contents.style.height = "800px";
+            contents.style.height = "750px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
         } else {
@@ -455,13 +455,13 @@
 
 function toggleNavMlops() {
     const dropdownmlops = document.getElementById("myDropdownMlops");
-    if (dropdownmlops.style.height === "380px") {
+    if (dropdownmlops.style.height === "390px") {
         dropdownmlops.style.height = "0px";
         dropdownmlops.style.opacity = "0";
         dropdownmlops.style.visibility = "hidden";
         localStorage.setItem("dropdownMlopsState", "closed");
     } else {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
         localStorage.setItem("dropdownMlopsState", "open");
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownState = localStorage.getItem("dropdownMlopsState");
     
     if (dropdownState === "open") {
-        dropdownmlops.style.height = "380px";
+        dropdownmlops.style.height = "390px";
         dropdownmlops.style.opacity = "100";
         dropdownmlops.style.visibility = "visible";
     } else {
@@ -563,14 +563,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p><strong>Argo CD</strong></p>
 <ul>
-  <li><a href="argoproj.github.io" target="_blank">Argo project</a></li>
-  <li><a href="cncf.io/case-studies" target="_blank">Argo case studies</a></li>
+  <li><a href="https://argoproj.github.io/" target="_blank">Argo project</a></li>
+  <li><a href="https://www.cncf.io/case-studies/?_sft_lf-project=argo" target="_blank">Argo case studies</a></li>
 </ul>
 
 <p><strong>Flux</strong></p>
 <ul>
-  <li><a href="fluxcd.io" target="_blank">Flux project</a></li>
-  <li><a href="cncf.io/case-studies" target="_blank">Flux case studies</a></li>
+  <li><a href="https://fluxcd.io/" target="_blank">Flux project</a></li>
+  <li><a href="https://www.cncf.io/case-studies/?_sft_lf-project=flux" target="_blank">Flux case studies</a></li>
 </ul>
 
 <p>Among the various case studies above, Intuit’s use and promotion of Argo CD is the clearest. They ended up buying Applatix, the developers behind Argo itself.</p>
@@ -587,11 +587,23 @@ document.addEventListener("DOMContentLoaded", function() {
   <li>Should be able to sync with kubectl</li>
 </ol>
 
-<h4 id="note-guis-are-an-easier-sell-in-an-sme-solution">Note: GUIs are an easier sell in an SME solution.</h4>
-
-<p><br /></p>
+<p><strong>Note: GUIs are an easier sell in an SME solution.</strong></p>
 
 <p>Since Weave Works closed, there have been various articles published about the implications for Flux’s own development. Selecting Flux for Bridge AI under those circumstances will likely force us to revisit the subject and explain why we selected a project that just lost a major component (through no fault of Flux’s own team), where there’s no alternative UI integration available. We might be making future showcases simpler for ourselves, running with Argo’s own functional UI.</p>
+
+<h3 id="resources">Resources</h3>
+
+<ol>
+  <li>
+    <p><a href="https://argoproj.github.io/" target="_blank">Argo</a></p>
+  </li>
+  <li>
+    <p><a href="https://fluxcd.io/" target="_blank">Flux</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.cncf.io/case-studies/" target="_blank">CNCF Case Studies</a></p>
+  </li>
+</ol>
 
 <footer class="site-footer">
 
