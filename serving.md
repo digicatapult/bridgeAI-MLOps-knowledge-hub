@@ -498,7 +498,7 @@ Q. Decision between KServe or Seldon core - Which one is more suitable for our u
 
 3. Kserve - [Home - KServe Documentation Website](https://kserve.github.io/website/latest/){:target="_blank"}
 
-4.  Kserve using MLFlow models - [MLFlow - KServe Documentation Website](https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/){:target="_blank"}
+4. Kserve using MLFlow models - [MLFlow - KServe Documentation Website](https://kserve.github.io/website/latest/modelserving/v1beta1/mlflow/v2/){:target="_blank"}
 
 3. [FastAPI](https://fastapi.tiangolo.com/){:target="_blank"} 
 
