@@ -11,30 +11,28 @@ title: BridgeAI MLOps Knowledge Hub
 <!-- intrinsic size - 1980 by 1542; div w and h by 2.36 -->
 
 <map name = "arch">
-    <area shape = "circle" coords="752,540,10" alt="Model Development" href = "/team_arch.html#1-model-development">
-    <!-- <area target="" alt="" title="" href="" coords="1431,1087,22" shape="circle">
-    <area target="" alt="" title="" href="" coords="1069,1409,23" shape="circle">
-    <area target="" alt="" title="" href="" coords="733,288,20" shape="circle">
-    <area target="" alt="" title="" href="" coords="957,289,21" shape="circle">
-    <area target="" alt="" title="" href="" coords="1164,291,21" shape="circle">
-    <area target="" alt="" title="" href="" coords="1456,260,24" shape="circle">
-    <area target="" alt="" title="" href="" coords="1648,366,26" shape="circle">
-    <area target="" alt="" title="" href="" coords="1862,523,21" shape="circle">
-    <area target="" alt="" title="" href="" coords="1459,448,26" shape="circle">
-    <area target="" alt="" title="" href="" coords="1680,679,23" shape="circle">
-    <area target="" alt="" title="" href="" coords="599,730,24" shape="circle">
-    <area target="" alt="" title="" href="" coords="786,1071,20" shape="circle">
-    <area target="" alt="" title="" href="" coords="492,1070,20" shape="circle">
-    <area target="" alt="" title="" href="" coords="763,836,21" shape="circle">
-    <area target="" alt="" title="" href="" coords="980,714,21" shape="circle">
-    <area target="" alt="" title="" href="" coords="1094,858,25" shape="circle">
-    <area target="" alt="" title="" href="" coords="1281,870,21" shape="circle">
-    <area target="" alt="" title="" href="" coords="1097,714,22" shape="circle">
-    <area target="" alt="" title="" href="" coords="1708,963,28" shape="circle">
-    <area target="" alt="" title="" href="" coords="1605,947,25" shape="circle">
-    <area target="" alt="" title="" href="" coords="92,335,22" shape="circle"> -->
-    <area shape = "rect" coords = "22,83,126,125" alt = "Industry Data"
-    href = "/team_arch.html#22-industry-data"/>
+    <area  alt="Model Development" href = "/team_arch.html#1-model-development" coords="752,540,10" shape = "circle" >
+    <area  alt="Models Pushed"  href="/team_arch.html#2-models-pushed" coords="606,461,9" shape="circle">
+    <area  alt="Model Commit"  href="/team_arch.html#3-model-commit" coords="453,597,10" shape="circle">
+    <area  alt="Model Registry and Store"  href="/team_arch.html#4---6-model-registry-and-store" coords="311,122,9" shape="circle">
+    <area  alt="Model Registry and Store"  href="/team_arch.html#4---6-model-registry-and-store" coords="406,122,9" shape="circle">
+    <area  alt="Model Registry and Store"  href="/team_arch.html#4---6-model-registry-and-store" coords="493,123,9" shape="circle">
+    <area  alt="Manual Push to Model Server"  href="/team_arch.html#7-manual-push-to-model-server" coords="617,110,10" shape="circle">
+    <area  alt="Prediction Service"  href="/team_arch.html#8-prediction-service" coords="698,155,11" shape="circle">
+    <area  alt="User input and Predictions Output"  href="/team_arch.html#9-user-input-and-predictions-output" coords="789,222,9" shape="circle">
+    <area  alt="User Interaction Data Captured"  href="/team_arch.html#10-user-interaction-data-captured" coords="618,190,11" shape="circle">
+    <area  alt="Model Monitoring For Decay"  href="/team_arch.html#11-model-monitoring-for-decay" coords="712,288,10" shape="circle">
+    <area  alt="Scheduler Initiates Training Process"  href="/team_arch.html#12-scheduler-initiates-training-process" coords="254,309,10" shape="circle">
+    <area  alt="DAG Initiates Docker Instance to be Run"  href="/team_arch.html#13-dag-initiates-docker-instance-to-be-run" coords="333,454,8" shape="circle">
+    <area  alt="Data Retrieved From S3 Bucket"  href="/team_arch.html#14-data-retrieved-from-s3-bucket" coords="208,453,8" shape="circle">
+    <area  alt="Data is Preprocessed and Transformed"  href="/team_arch.html#15-data-is-preprocessed-and-transformed" coords="323,354,9" shape="circle">
+    <area  alt="Features Stored"  href="/team_arch.html#16-features-stored" coords="415,303,9" shape="circle">
+    <area  alt="Feature Store Fetch"  href="/team_arch.html#17-feature-store-fetch" coords="464,364,11" shape="circle">
+    <area  alt="Model Created"  href="/team_arch.html#18-model-created" coords="543,369,9" shape="circle">
+    <area  alt="Model Version Storing"  href="/team_arch.html#19-model-version-storing" coords="465,303,9" shape="circle">
+    <area  alt="Model Monitor Pull"  href="/team_arch.html#20-model-monitor-pull" coords="724,408,12" shape="circle">
+    <area  alt="Potential Retrigger"  href="/team_arch.html#21-potential-retrigger" coords="680,401,11" shape="circle">
+    <area  alt="Industry Data"  href="/team_arch.html#22-industry-data" coords="39,142,9" shape="circle">
 </map>
 
 
@@ -46,20 +44,173 @@ The following explanations apply to the team's MLOps architecture:
 
 Data scientists develop models locally.
 
-### 2. Model(s) pushed
+### 2. Models pushed
 
 All models are stored in the artefact store in MLflow.
 
-File type: `.pth`\
+<!-- explanation of process -->
+
+Data format: `.pth`\
 Data visibility: High\
 Frequency of data flow: On demand
 
-<!-- ### 22. Industry Data  -->
+Artefact store contains:
+- Hyperparameters
+- URI
+- `.pth`
 
-<!-- [blurb on what/why]
+### 3. Model commit
 
-[explanation of process (copy from Mural)]
+One chosen algorithm, parameters, data and model development code is finalised and checked into the main branch and baselined.
 
-[expand on process] -->
+Data format: `.pth`, `.csv`
+
+### 4 - 6. Model Registry and Store
+
+As models move through MLflow Store:
+
+Data visibility: High\
+Frequency of data flow: On demand
+
+4 - The best model is manually chosen to be promoted, and tagged as None.
+
+5 - Manual compliance checks are made, and model is then tagged as Staging.
+
+6 - Model tagged manually as Production based on Comparison / AB testing.
+
+### 7. Manual push to model server
+
+Model manually pushed to Model Server to serve in Production
+
+<!-- explanation of process -->
+
+Frequency of archiving of data: On demand
+
+### 8. Prediction service
+
+Prediction Service is ready to serve users.
+
+<!-- explanation of how -->
+
+Data format: URI\
+Data visibility: Low\
+Frequency of data flow: Real-time
+
+### 9. User input and predictions output
+
+As user interacts with prediction service, their input is returned to them.
+
+<!-- explanation of process -->
+
+Data format: JSON\
+Data visibility: Med\
+Frequency of data flow: Real-time
+
+### 10. User interaction data captured
+
+User interaction data is captured and stored in logs database in S3.
+
+<!-- explanation of process -->
+
+### 11. Model monitoring for decay
+
+Model monitoring setup checks model and data for drift or decay.
+
+<!-- explanation of process -->
+
+
+### 12. Scheduler initiates training process
+
+<!-- explanation of process -->
+
+### 13. DAG initiates docker instance to be run
+
+<!-- explanation of process -->
+
+### 14. Data retrieved from S3 bucket
+
+The data for training, testing and evaluation is retrieved from Amazon S3 bucket.
+
+<!-- explanation of process -->
+
+Data format: `.csv`\
+Data visibility: Low\
+Frequency of data flow: Based on scheduler or on demand, depending on whether training process is manually retriggered later on.
+
+### 15. Data is preprocessed and transformed
+
+<!-- explanation of process -->
+
+Data format: `.csv`\
+Data visibility: Low\
+Frequency of data flow: Based on scheduler or on demand, depending on whether training process is manually retriggered later on.
+
+
+### 16. Features stored
+
+The output of preprocessing is stored in feature store
+
+<!-- explanation of process -->
+
+Data format: `.csv.dvc`\
+Data visibility: Low\
+Frequency of data flow: Based on scheduler or on demand, depending on whether training process is manually retriggered later on.
+
+
+### 17. Feature store fetch
+
+Data from feature store is fetched for training and evaluation
+
+<!-- explanation of process -->
+
+Data format: `.csv.dvc`\
+Data visibility: High\
+Frequency of data flow: Based on scheduler or on demand, depending on whether training process is manually retriggered later on.
+
+
+### 18. Model created
+
+Model is created and trained against test data using metrics
+
+<!-- explanation of process -->
+
+Data format: `.csv`\
+Data visibility: Low\
+Frequency of data flow: Based on scheduler 
+
+
+### 19. Model version storing
+
+Each model version is stored in the database within the model store
+
+<!-- explanation of process -->
+
+Data format: `.pth`\
+Data visibility: High\
+Frequency of data flow: Based on scheduler
+
+### 20. Model monitor pull
+
+Model monitor pulls new data periodically from S3 and investigates it for decay
+
+<!-- explanation of process -->
+
+<!-- ALL TBC -->
+
+### 21. Potential retrigger
+
+Upon identifying model decay, Data Scientists manually retrigger the retraining process.
+
+<!-- explanation of process -->
+
+<!-- ALL TBC -->
+
+### 22. Industry Data 
+
+Simulated industry data is supplied to the pipeline on-demand
+
+<!-- explanation of process -->
+
+<!-- ALL TBC -->
 
 <!-- <area shape = "circle" coords="" alt="" href = ""> -->
