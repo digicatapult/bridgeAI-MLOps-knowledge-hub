@@ -7,7 +7,7 @@ title: BridgeAI MLOps Knowledge Hub
 
 <h3>The Team's Architecture <a href="https://app.mural.co/t/jmsandbox6893/m/jmsandbox6893/1723564838519/90dee27020222851bf2f8b62c04fd272c25fd1d3?sender=udec36d924fb252f9f2506642" target="_blank">Mural</a>:</h3>
 
-Note: click on a number icon in the image for a brief description of the process associated with it.
+Click on a number icon in the image for a brief description of the process associated with it.
 
 <img src="mlops_architecture.png" usemap = "#arch" width="839" height="650.64"/>
 <!-- intrinsic size - 1980 by 1542; div w and h by 2.36 -->
@@ -56,10 +56,10 @@ Data format: `.pth`\
 Data visibility: High\
 Frequency of data flow: On demand
 
-Artefact store contains:
-- Hyperparameters
-- URI
-- `.pth`
+For each model, artefact store contains:
+- Hyperparameters 
+- Uniform Resource Identifier (URI) 
+- `.pth` file
 
 ### 3. Model commit
 

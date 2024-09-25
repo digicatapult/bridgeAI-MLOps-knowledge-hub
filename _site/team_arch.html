@@ -211,11 +211,25 @@
     color: #6a737d;
     }
     
-    @media screen and (max-height: 450px){
+    /* scale sidebar fonts and padding */
+    @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-    .dropdown {padding-top: 15px;}
-    .dropdown a {font-size: 18px;}
+    .sidenav a {font-size: 10px;}
+    .dropdown-mlops {padding-top: 15px;}
+    .dropdown-mlops a {font-size: 10px;}
+    .dropdown-business {padding-top: 15px;}
+    .dropdown-business a {font-size: 10px;}
+    .dropdown-technical {padding-top: 15px;}
+    .dropdown-technical a {font-size: 10px;}
+    }
+
+    /* close sidebar if screen is small */
+    @media screen and (max-width: 80em) {
+    .sidenav {width: 0%;}
+    .sidenav {background-color: #f0f0f000}
+    .dropdown-mlops {background-color: #f0f0f000}
+    .dropdown-business {background-color: #f0f0f000}
+    .dropdown-technical {background-color: #f0f0f000}
     }
 
     .callout.callout_default {
@@ -261,7 +275,7 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -285,9 +299,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div>
+    </div> -->
 
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -311,7 +325,7 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div> -->
+        </div>
 
 </div>
 
@@ -559,7 +573,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <h3>The Team's Architecture <a href="https://app.mural.co/t/jmsandbox6893/m/jmsandbox6893/1723564838519/90dee27020222851bf2f8b62c04fd272c25fd1d3?sender=udec36d924fb252f9f2506642" target="_blank">Mural</a>:</h3>
 
-<p>Note: click on a number icon in the image for a brief description of the process associated with it.</p>
+<p>Click on a number icon in the image for a brief description of the process associated with it.</p>
 
 <p><img src="mlops_architecture.png" usemap="#arch" width="839" height="650.64" />
 <!-- intrinsic size - 1980 by 1542; div w and h by 2.36 --></p>
@@ -607,11 +621,11 @@ document.addEventListener("DOMContentLoaded", function() {
 Data visibility: High<br />
 Frequency of data flow: On demand</p>
 
-<p>Artefact store contains:</p>
+<p>For each model, artefact store contains:</p>
 <ul>
   <li>Hyperparameters</li>
-  <li>URI</li>
-  <li><code class="language-plaintext highlighter-rouge">.pth</code></li>
+  <li>Uniform Resource Identifier (URI)</li>
+  <li><code class="language-plaintext highlighter-rouge">.pth</code> file</li>
 </ul>
 
 <h3 id="3-model-commit">3. Model commit</h3>
