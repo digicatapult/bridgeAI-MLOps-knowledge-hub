@@ -39,9 +39,8 @@
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 
 <header class="page-header" role="banner">
+    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/"><img src="logo.svg" class="top-left" width="124px" height="124px"></a>
 <h1 class="project-name">BridgeAI MLOps Knowledge Hub</h1>
-<!-- <img src="https://miro.medium.com/v2/resize:fit:800/0*566yfiZWjA1k1WLN.png" alt="Knowledge Hub Cover"> -->
-<!-- <br> -->
 
 
 <style>
@@ -54,6 +53,12 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    }
+
+    .top-left {
+    position: absolute;
+    top: 0;
+    right: 0;
     }
 
     .sidenav {
@@ -613,20 +618,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <h3 id="2-models-pushed">2. Models pushed</h3>
 
-<p>All models are stored in the artefact store in MLflow.</p>
+<!-- All models are stored in the artefact store in MLflow.
 
-<!-- explanation of process -->
+Data format: `.pth`
+Data visibility: High
+Frequency of data flow: On demand
+
+For each model, artefact store contains:
+
+- Hyperparameters
+- Uniform Resource Identifier (URI)
+- `.pth` file -->
+
+<p>All models pushed from local machine are stored in the artefact store in MLflow. The store itself is an S3 bucket, where for each model a <code class="language-plaintext highlighter-rouge">.pth</code> file, evaluation metrics, hyperparameters (α,β,etc) and Uniform Resource Identifier (URI) are stored.</p>
 
 <p>Data format: <code class="language-plaintext highlighter-rouge">.pth</code><br />
 Data visibility: High<br />
 Frequency of data flow: On demand</p>
-
-<p>For each model, artefact store contains:</p>
-<ul>
-  <li>Hyperparameters</li>
-  <li>Uniform Resource Identifier (URI)</li>
-  <li><code class="language-plaintext highlighter-rouge">.pth</code> file</li>
-</ul>
 
 <h3 id="3-model-commit">3. Model commit</h3>
 

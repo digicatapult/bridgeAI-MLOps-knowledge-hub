@@ -48,18 +48,25 @@ Data scientists develop models locally.
 
 ### 2. Models pushed
 
-All models are stored in the artefact store in MLflow.
+<!-- All models are stored in the artefact store in MLflow.
 
-<!-- explanation of process -->
+Data format: `.pth`
+Data visibility: High
+Frequency of data flow: On demand
+
+For each model, artefact store contains:
+
+- Hyperparameters
+- Uniform Resource Identifier (URI)
+- `.pth` file -->
+
+All models pushed from local machine are stored in the artefact store in MLflow. The store itself is an S3 bucket, where for each model a `.pth` file, evaluation metrics, hyperparameters (α,β,etc) and Uniform Resource Identifier (URI) are stored.
+
 
 Data format: `.pth`\
 Data visibility: High\
 Frequency of data flow: On demand
 
-For each model, artefact store contains:
-- Hyperparameters 
-- Uniform Resource Identifier (URI) 
-- `.pth` file
 
 ### 3. Model commit
 

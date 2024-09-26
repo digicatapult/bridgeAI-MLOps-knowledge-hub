@@ -16,11 +16,10 @@
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 
 <header class="page-header" role="banner">
+    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/"><img src="logo.svg" class="top-left" width="124px" height="124px"></a>
 <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-<!-- <img src="https://miro.medium.com/v2/resize:fit:800/0*566yfiZWjA1k1WLN.png" alt="Knowledge Hub Cover"> -->
-<!-- <br> -->
 {% if site.github.is_project_page %}
-<a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/" class="btn">Home</a>
+<!-- <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/" class="btn">Home</a> -->
 <a href="{{ site.github.repository_url }}" class="btn" target="_blank">View on GitHub</a>
 {% endif %}
 {% if site.show_downloads %}
@@ -37,6 +36,12 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    }
+
+    .top-left {
+    position: absolute;
+    top: 0;
+    right: 0;
     }
 
     .sidenav {
@@ -258,7 +263,7 @@
     }
 
     </style>
-    <div id="mySidenav" class="sidenav">
+    <!-- <div id="mySidenav" class="sidenav">
     <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
     <br>
     <a onclick="toggleNavMlops()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -282,9 +287,9 @@
     <div id="myDropdownTechnical" class="dropdown-technical">
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
-    </div>
+    </div> -->
 
-    <!-- <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav">
         <a href="http://localhost:4000/">Home</a>
         <br>
         <a onclick="toggleNavMlops()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> MLOps: The Big Picture</a>
@@ -308,7 +313,7 @@
         <div id="myDropdownTechnical" class="dropdown-technical">
             <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
             <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
-        </div> -->
+        </div>
 
 </div>
 
