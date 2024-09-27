@@ -61,7 +61,7 @@ The terms 'model serving' and 'model deployment' are often loosely considered to
   - [BentoML - Summary](#bentoml---summary)
 4. [Summary Table](#summary-table)
   - [Questions](#questions)
-5. [References](#references)
+5. [Resources](#resources)
 
 ---
 
@@ -103,8 +103,8 @@ MLFlow supports a variety of model deployment targets including Local Infra, AWS
 [KServe install](https://github.com/kserve/kserve#hammer_and_wrench-installation){:target="_blank"}
 
 <div id="myContainer" class="container">
-  <a onclick="toggleContents()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> MLFlow - Deploying MLFlow model to Kubernetes</a>
-  <div id="myContents" class="contents">
+  <a onclick="toggleContentsS_ML_Deploy()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> MLFlow - Deploying MLFlow model to Kubernetes</a>
+  <div id="myContentsS_ML_Deploy" class="contents">
   <br>
   The prerequisite to deploy a model to kubernetes is packaging the model as MLFlow Model mentioned in <span style="color:#8C1437"><b>Packaging and Dependencies</b></span> (linked above).
   
@@ -216,8 +216,8 @@ MLFlow supports a variety of model deployment targets including Local Infra, AWS
 
 ### FastAPI - Deploying MLFlow model to Kubernetes
 <div id="myContainer" class="container">
-  <a onclick="toggleContentsThree()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> FastAPI - Deploying MLFlow model to Kubernetes</a>
-  <div id="myContentsThree" class="contents">
+  <a onclick="toggleContentsS_Fast_Deploy()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> FastAPI - Deploying MLFlow model to Kubernetes</a>
+  <div id="myContentsS_Fast_Deploy" class="contents">
 
   Model serving and deployment using FastAPI is straightforward and similar to classical s/w deployments.
 
@@ -328,8 +328,8 @@ MLFlow supports a variety of model deployment targets including Local Infra, AWS
 
 ### BentoML - Deploying MLFlow model to Kubernetes
 <div id="myContainer" class="container">
-  <a onclick="toggleContentsTwo()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> BentoML - Deploying MLFlow model to Kubernetes</a>
-  <div id="myContentsTwo" class="contents">
+  <a onclick="toggleContentsS_Ben_Deploy()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> BentoML - Deploying MLFlow model to Kubernetes</a>
+  <div id="myContentsS_Ben_Deploy" class="contents">
   <br>
   
   1. Install BentoML and Dependencies
@@ -490,7 +490,7 @@ Q. Decision between KServe or Seldon core - Which one is more suitable for our u
     <br>
     KServe is open source whereas [SeldonCore](https://www.seldon.io/pricing){:target="_blank"} is expensive. And so is [BentoCloud](https://www.bentoml.com/pricing){:target="_blank"}.
 
-## References
+## Resources
 
 1. MLFlow serving [Deploy MLflow Model to Kubernetes — MLflow 2.15.1 documentation](https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html){:target="_blank"} 
 

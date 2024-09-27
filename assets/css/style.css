@@ -78,8 +78,15 @@
   * Remove the gray background color from active links in IE 10.
   */
  a {
-   background-color: transparent;
- }
+  background-color: transparent;
+  color: #1e6bb8;
+  text-decoration: none;
+  display: inline-flex;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
  
  /**
   * Improve readability when focused and also mouse hovered in all browsers.
@@ -684,14 +691,6 @@
    outline: thick solid #e19447;
  }
  
- a {
-   color: #1e6bb8;
-   text-decoration: none;
- }
- a:hover {
-   text-decoration: underline;
- }
- 
  .btn {
    display: inline-block;
    margin-bottom: 1rem;
@@ -700,7 +699,7 @@
    border-color: rgba(255, 255, 255, 0.2);
    border-style: solid;
    border-width: 1px;
-   border-radius: 0.3rem;
+   border-radius: 0.1rem;
    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
  }
  .btn:hover {
@@ -802,6 +801,7 @@
  
  .main-content {
    word-wrap: break-word;
+   margin-left: 8.1rem;
  }
  .main-content :first-child {
    margin-top: 0;
@@ -950,6 +950,7 @@
    padding: 0.5rem 1rem;
    border: 1px solid #e9ebec;
  }
+ 
  .main-content dl {
    padding: 0;
  }

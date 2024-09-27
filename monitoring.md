@@ -82,8 +82,8 @@ Two datasets are used to evaluate whether there is a Data Drift.
 [Data Drift Code Practice](https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb){:target="_blank"}
 
 <div id="myContainer" class="container">
-  <a onclick="toggleContentsFour()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Steps</a>
-  <div id="myContentsFour" class="contents">
+  <a onclick="toggleContentsM_Drift()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Steps</a>
+  <div id="myContentsM_Drift" class="contents">
   <br>
 
   1. Load the Reference data (depending on the use case, if dataset is huge, it can be a subset or samples drawn from the dataset) as a DataFrame
