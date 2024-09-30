@@ -39,9 +39,8 @@
 <a id="skip-to-content" href="#content">Skip to the content.</a>
 
 <header class="page-header" role="banner">
-    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/"><img src="logo.svg" class="top-left" width="124px" height="124px"></a>
+    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/"><img src="logo.png" class="top-left" width="124px" height="124px"></a>
 <h1 class="project-name">BridgeAI MLOps Knowledge Hub</h1>
-<br>
 <br>
 <br>
 
@@ -297,11 +296,11 @@
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/versioning.html">Data Versioning</a>
     </div>
-    <a onclick="toggleNavBusiness()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Business Approach</a>
+        <a onclick="toggleNavBusiness()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Business Approach</a>
     <div id="myDropdownBusiness" class="dropdown-business">
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
-        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
         <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/deployment_lifecycle.html">Deployment Service Life Cycle</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
     </div>
     <a onclick="toggleNavTechnical()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Technical Approach</a>
     <div id="myDropdownTechnical" class="dropdown-technical">
@@ -325,9 +324,9 @@
         </div>
         <a onclick="toggleNavBusiness()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Business Approach</a>
         <div id="myDropdownBusiness" class="dropdown-business">
-            <a href="http://localhost:4000/maturity_assessment.html">Maturity Assessment</a>
-            <a href="http://localhost:4000/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
             <a href="http://localhost:4000/deployment_lifecycle.html">Deployment Service Life Cycle</a>
+            <a href="http://localhost:4000/prerequisites.html">Prerequisites - Skills, Roles and Tools</a>
+            <a href="http://localhost:4000/maturity_assessment.html">Maturity Assessment</a>
         </div>
         <a onclick="toggleNavTechnical()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Technical Approach</a>
         <div id="myDropdownTechnical" class="dropdown-technical">
@@ -802,7 +801,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <h2 id="architecture-overview">Architecture Overview</h2>
 
-<p>The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. Generally, the following components make up the average MLOps workflow:</p>
+<p>The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project.</p>
+
+<p>Generally, the following components make up the average MLOps workflow:</p>
 
 <ol>
   <li>Data store and retrieval
@@ -834,7 +835,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </ol>
 
 <h2 id="design-decisions">Design Decisions:</h2>
-<p>For the Pre-built MLOps pipeline created by the team, a deploy-as-model approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.</p>
+<p>For the pre-built MLOps pipeline created by the team, a <a href="https://docs.databricks.com/en/machine-learning/mlops/deployment-patterns.html" target="_blank">deploy-as-model</a> approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.</p>
 
 <p>It is important to note that the components and workflow differ; the components themselves comprise the architecture, but the workflow (the order in which the components are used to create an MLOps pipeline) can vary. For further insight on the typical structure of an MLOps workflow, you can refer to the following resources:</p>
 <ul>
@@ -1119,6 +1120,30 @@ document.addEventListener("DOMContentLoaded", function() {
   </li>
   <li>
     <p><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html" target="_blank">AWS</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.evidentlyai.com/" target="_blank">Evidently AI</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.bentoml.com/" target="_blank">BentoML</a></p>
+  </li>
+  <li>
+    <p><a href="https://mlflow.org/" target="_blank">MLflow</a></p>
+  </li>
+  <li>
+    <p><a href="https://airflow.apache.org/" target="_blank">Airflow</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.prefect.io/" target="_blank">Prefect</a></p>
+  </li>
+  <li>
+    <p><a href="https://aws.amazon.com/what-is/api/" target="_blank">What is an API?</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.snowflake.com/guides/what-data-lake/" target="_blank">What is a data lake?</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.oracle.com/in/database/what-is-database/" target="_blank">What is a database?</a></p>
   </li>
 </ol>
 

@@ -48,7 +48,9 @@ Required skills include knowledge of:
 
 ## Architecture Overview
 
-The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. Generally, the following components make up the average MLOps workflow:
+The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. 
+
+Generally, the following components make up the average MLOps workflow:
 
 1. Data store and retrieval
     * These can include databases for structured or unstructured data, data lakes, APIs and files (eg `.csv`, `.parquet`)
@@ -67,7 +69,7 @@ The components of an MLOps workflow, otherwise known as its architecture, vary d
     * Upon a model being deployed, relevant tools are then used to monitor its performance and detect occurrences of model drift, and logging
 
 ## Design Decisions: 
-For the Pre-built MLOps pipeline created by the team, a deploy-as-model approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.
+For the pre-built MLOps pipeline created by the team, a [deploy-as-model](https://docs.databricks.com/en/machine-learning/mlops/deployment-patterns.html){:target="_blank"} approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.
 
 It is important to note that the components and workflow differ; the components themselves comprise the architecture, but the workflow (the order in which the components are used to create an MLOps pipeline) can vary. For further insight on the typical structure of an MLOps workflow, you can refer to the following resources:
 * [MLOps Stack Canvas](https://ml-ops.org/content/mlops-stack-canvas){:target="_blank"}
@@ -345,3 +347,19 @@ It is important to note that the components and workflow differ; the components 
 5. [Grafana](https://grafana.com/){:target="_blank"}
 
 6. [AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html){:target="_blank"}
+
+7. [Evidently AI](https://www.evidentlyai.com/){:target="_blank"}
+
+8. [BentoML](https://www.bentoml.com/){:target="_blank"}
+
+9. [MLflow](https://mlflow.org/){:target="_blank"}
+
+10. [Airflow](https://airflow.apache.org/){:target="_blank"}
+
+11. [Prefect](https://www.prefect.io/){:target="_blank"}
+
+12. [What is an API?](https://aws.amazon.com/what-is/api/){:target="_blank"}
+
+13. [What is a data lake?](https://www.snowflake.com/guides/what-data-lake/){:target="_blank"}
+
+14. [What is a database?](https://www.oracle.com/in/database/what-is-database/){:target="_blank"}
