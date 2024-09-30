@@ -27,7 +27,7 @@ Both Argo and Flux are cloud native projects under the CNCF. We have used Flux v
 <br>
 
 ### Requirements
-1. Should have a GUI and CLI, Flux
+1. Should have a GUI and CLI
 2. Should be well-maintained, either by corporates or the community
 3. Should have up-to-date documentation
 4. Should be able to sync with kubectl

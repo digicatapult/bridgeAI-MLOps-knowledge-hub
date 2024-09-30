@@ -16,39 +16,38 @@ title: BridgeAI MLOps Knowledge Hub
   - [Model Training and Registry](#model-training-and-registry)
   - [Model Deployment and Serving](#model-deployment-and-serving)
   - [Model Monitoring](#model-monitoring)
+  - [GitOps](#gitops)
 5. [Resources](#resources)
 
 ## Relevant Skills and roles
 
 ### Roles
 
-Required roles to create and deploy an MLOps pipeline can vary, but may include:
+The roles required to create and deploy an MLOps pipeline can vary, though our team consists of:
 
-- Data scientist
-- Data analyst
-- Data engineer
-- DevOps engineer
-- Machine Learning Engineer
-- Software developer
-- Domain expert/business translator
+- Data scientists
+- Data analysts
+- DevOps engineers
+- Machine Learning Engineers
+- Domain experts/business translators
 
 ### Skills
 
 Required skills include knowledge of:
 
 - Scripting languages (e.g. Python)
-- DAG software (e.g. Airflow)
 - Cloud solutions (e.g. AWS, Azure, GCP)
-- Logging and monitoring tools (e.g. Evidently A.I.)
 - CI/CD pipeline implementation and Infrastructure as Code (e.g. Terraform)
 - Data stores (e.g. AWS S3)
 - Machine learning algorithms (e.g. Logistic Regression) and frameworks (e.g. PyTorch, SK-Learn)
+- DAG software (e.g. Airflow)
+- Logging and monitoring tools (e.g. Evidently AI)
 - Containerization (with Kubernetes, Docker)
 
 
 ## Architecture Overview
 
-The components of an MLOps workflow, otherwise known as its architecture, vary depending on the scope and restraints of a given project. 
+The components of an MLOps workflow, otherwise known as its architecture, can vary depending on the scope and restraints of a given project. 
 
 Generally, the following components make up the average MLOps workflow:
 
@@ -78,6 +77,8 @@ It is important to note that the components and workflow differ; the components 
 
 
 ## Horizon Scan
+
+Below are sets of comparisons for tools you can use for each component of your MLOps pipeline. The criteria for evaluation was derived using the team's requirements, which you may also wish to consider using for your own pipeline.
 
 ### Data Store and Retrieval
 
@@ -150,7 +151,7 @@ It is important to note that the components and workflow differ; the components 
 </div>
 <br>
 
-### Data and Feature Engineering
+### Data and Feature Engineering (Training) Pipeline
 <div id="myContainer" class="container">
   <a onclick="toggleContentsPre_FeatEng()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Data and Feature Engineering</a>
   <div id="myContentsPre_FeatEng" class="contents">
@@ -334,6 +335,48 @@ It is important to note that the components and workflow differ; the components 
 </div>
 <br>
 
+### GitOps
+<div id="myContainer" class="container">
+  <a onclick="toggleContentsPre_GitOps()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> GitOps</a>
+  <div id="myContentsPre_GitOps" class="contents">
+  <br>
+
+  <table>
+  <tr>
+    <th></th>
+    <th>Argo CD</th>
+    <th>Flux</th>
+  </tr>
+
+  <tr>
+    <td><b>Description</b></td>
+    <td>Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.</td>
+    <td>Flux is a set of continuous and progressive delivery solutions for Kubernetes that are open and extensible.</td>
+  </tr>
+
+  <tr>
+    <td><b>Architecture</b></td>
+    <td>Standalone application with a built-in UI and dashboard.</td>
+    <td>Set of controllers that run within Kubernetes.</td>
+  </tr>
+
+  <tr>
+    <td><b>User interface</b></td>
+    <td>Yes</td>
+    <td>More CLI-centric</td>
+  </tr>
+
+  <tr>
+    <td><b>Security</b></td>
+    <td>Role-Based Access Control (RBAC) function, single sign-on (SSO), and multi-user support.</td>
+    <td>RBAC function, selective resource access, and SSO provisions.</td>
+  </tr>
+  </table>
+
+  </div>
+</div>
+<br>
+
 ## Resources
 
 1. [Neptune.ai](https://neptune.ai/blog/mlops-engineer){:target="_blank"}
@@ -363,3 +406,5 @@ It is important to note that the components and workflow differ; the components 
 13. [What is a data lake?](https://www.snowflake.com/guides/what-data-lake/){:target="_blank"}
 
 14. [What is a database?](https://www.oracle.com/in/database/what-is-database/){:target="_blank"}
+
+15. [Argo vs Flux](https://blog.aenix.io/argo-cd-vs-flux-cd-7b1d67a246ca){:target="_blank"}
