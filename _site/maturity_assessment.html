@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>BridgeAI MLOps Knowledge Hub</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="BridgeAI MLOps Knowledge Hub" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/maturity_assessment.html" />
+<meta property="og:url" content="http://localhost:4000/maturity_assessment.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="BridgeAI MLOps Knowledge Hub" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"BridgeAI MLOps Knowledge Hub","url":"http://localhost:4000/maturity_assessment.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#157878">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/assets/css/style.css?v=">
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+</head>
+<body>
+<a id="skip-to-content" href="#content">Skip to the content.</a>
+
+<header class="page-header" role="banner">
+    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/"><img src="logo.png" class="top-left" width="124px" height="124px"></a>
+<h1 class="project-name">BridgeAI MLOps Knowledge Hub</h1>
+<br>
+<br>
+
+
+<style>
+    body {
+    font-family: "Lato", sans-serif;
+    }
+    
+    .center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    }
+
+    .top-left {
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+
+    .sidenav {
+    height: 100%;
+    width: 18%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    
+    .sidenav a {
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #8C1437;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+    color: #6a737d;
+    }
+
+    /* ------- */
+    .container {
+    /* height: 15%;
+    width: 18%; */
+    /* top: 0; */
+    /* left: 0; */
+    /* background-color: #8C1437; */
+    position: relative;
+    overflow-x: hidden;
+    transition: 0.5s;
+    outline: 0.5px solid rgba(128, 128, 128, 0.506);
+    border-radius: 5px
+    /* padding-top: 60px; */
+    }
+
+    .container a {
+    text-align: left;
+    padding: 16px 4px 4px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #373535;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .contents {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 50px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .contents a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000000;
+    transition: 0.3s;
+    }
+    /* ------- */
+
+    .dropdown-mlops {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-mlops a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #8C1437;
+    transition: 0.3s;
+    }
+    
+    .dropdown-mlops a:hover {
+    color: #6a737d;
+    }
+
+    .dropdown-business {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-business a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #8C1437;
+    transition: 0.3s;
+    }
+    
+    .dropdown-business a:hover {
+    color: #6a737d;
+    }
+
+    .dropdown-technical {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    text-align: left;
+    padding: 8px 8px 8px 32px;
+    height: 0%;
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: #F0F0F0;
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    }
+
+    .dropdown-technical a {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #8C1437;
+    transition: 0.3s;
+    }
+    
+    .dropdown-technical a:hover {
+    color: #6a737d;
+    }
+    
+    /* scale sidebar fonts and padding */
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 10px;}
+    .dropdown-mlops {padding-top: 15px;}
+    .dropdown-mlops a {font-size: 10px;}
+    .dropdown-business {padding-top: 15px;}
+    .dropdown-business a {font-size: 10px;}
+    .dropdown-technical {padding-top: 15px;}
+    .dropdown-technical a {font-size: 10px;}
+    }
+
+    /* close sidebar if screen is small */
+    @media screen and (max-width: 80em) {
+    .sidenav {width: 0%;}
+    .sidenav {background-color: #f0f0f000}
+    .dropdown-mlops {background-color: #f0f0f000}
+    .dropdown-business {background-color: #f0f0f000}
+    .dropdown-technical {background-color: #f0f0f000}
+    }
+
+    .callout.callout_default {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #f8f8f9;
+    --border: #8b939c;
+    } /* gray */
+
+    .callout.callout_info {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #e3edf2;
+    --border: #5bc0de;
+    } /* blue */
+
+    .callout.callout_definition {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #f1eeff;
+    --border: #5e4db2;
+    } /* purple */
+
+    .callout.callout_warn {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #fcf8f2;
+    --border: #f0ad4e;
+    } /* orange */
+
+    .callout.callout_error {
+    --text: #6a737d; /*theme text color default*/
+    --title: inherit; /*theme title color (falls back to text color by default)*/
+    --background: #fdf7f7;
+    --border: #d9534f;
+    } /* red */
+
+    .callout.callout {
+    background: var(--background);
+    border-color: var(--border);
+    color: var(--text);
+    padding: 1rem;
+    }
+
+    </style>
+    <!-- <div id="mySidenav" class="sidenav">
+    <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/">Home</a>
+    <br>
+    <a onclick="toggleNavMlops()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> MLOps: The Big Picture</a>
+    <div id="myDropdownMlops" class="dropdown-mlops">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_summary.html">Summary</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/requirements_research.html">Requirements and Research</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/versioning.html">Data Versioning</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/DAG.html">Training Pipeline</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/serving.html">Model Serving</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/pred_service.html">Prediction Service</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/monitoring.html">Model Monitoring</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/gitops.html">GitOps</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/team_arch.html">Team Architecture</a>
+    </div>
+        <a onclick="toggleNavBusiness()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Corporate Perspective</a>
+    <div id="myDropdownBusiness" class="dropdown-business">
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/deployment_lifecycle.html">Deployment Service Life Cycle</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html">Skills, Roles and Tool Horizon Scan</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html">Maturity Assessment</a>
+        <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html">MLOps Best Practices</a>
+    </div> -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="http://localhost:4000/">Home</a>
+        <br>
+        <a onclick="toggleNavMlops()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> MLOps: The Big Picture</a>
+        <div id="myDropdownMlops" class="dropdown-mlops">
+            <a href="http://localhost:4000/mlops_summary.html">Summary</a>
+            <a href="http://localhost:4000/requirements_research.html">Requirements and Research</a>
+            <a href="http://localhost:4000/versioning.html">Data Versioning</a>
+            <a href="http://localhost:4000/DAG.html">Training Pipeline</a>
+            <a href="http://localhost:4000/serving.html">Model Serving</a>
+            <a href="http://localhost:4000/pred_service.html">Prediction Service</a>
+            <a href="http://localhost:4000/monitoring.html">Model Monitoring</a>
+            <a href="http://localhost:4000/gitops.html">GitOps</a>
+            <a href="http://localhost:4000/team_arch.html">Team Architecture</a>
+        </div>
+        <a onclick="toggleNavBusiness()"><img src="https://cdn0.iconfinder.com/data/icons/rounded-basics/24/rounded__menu-512.png" width="15px" height="15px"> Corporate Perspective</a>
+        <div id="myDropdownBusiness" class="dropdown-business">
+            <a href="http://localhost:4000/deployment_lifecycle.html">Deployment Service Life Cycle</a>
+            <a href="http://localhost:4000/prerequisites.html">Skills, Roles and Tool Horizon Scan</a>
+            <a href="http://localhost:4000/maturity_assessment.html">Maturity Assessment</a>
+            <a href="http://localhost:4000/best_practices.html">MLOps Best Practices</a>
+        </div>
+
+</div>
+
+<script>
+
+    function toggleContentsS_ML_Deploy() {
+        const contents = document.getElementById("myContentsS_ML_Deploy");
+        if (contents.style.height === "1200px") {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
+            localStorage.setItem("dropdownS_ML_DeployState", "closed");
+        } else {
+            contents.style.height = "1200px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+            localStorage.setItem("dropdownS_ML_DeployState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents = document.getElementById("myContentsS_ML_Deploy");
+        const contentsState = localStorage.getItem("dropdownS_ML_DeployState");
+        
+        if (contentsState === "open") {
+            contents.style.height = "1200px";
+            contents.style.opacity = "100";
+            contents.style.visibility = "visible";
+        } else {
+            contents.style.height = "0px";
+            contents.style.opacity = "0";
+            contents.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsS_Ben_Deploy() {
+        const contents2 = document.getElementById("myContentsS_Ben_Deploy");
+        if (contents2.style.height === "2300px") {
+            contents2.style.height = "0px";
+            contents2.style.opacity = "0";
+            contents2.style.visibility = "hidden";
+            localStorage.setItem("dropdownS_Ben_DeployState", "closed");
+        } else {
+            contents2.style.height = "2300px";
+            contents2.style.opacity = "100";
+            contents2.style.visibility = "visible";
+            localStorage.setItem("dropdownS_Ben_DeployState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents2 = document.getElementById("myContentsS_Ben_Deploy");
+        const contentsState = localStorage.getItem("dropdownS_Ben_DeployState");
+        
+        if (contentsState === "open") {
+            contents2.style.height = "2300px";
+            contents2.style.opacity = "100";
+            contents2.style.visibility = "visible";
+        } else {
+            contents2.style.height = "0px";
+            contents2.style.opacity = "0";
+            contents2.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsS_Fast_Deploy() {
+        const contents3 = document.getElementById("myContentsS_Fast_Deploy");
+        if (contents3.style.height === "1400px") {
+            contents3.style.height = "0px";
+            contents3.style.opacity = "0";
+            contents3.style.visibility = "hidden";
+            localStorage.setItem("dropdownS_Fast_DeployState", "closed");
+        } else {
+            contents3.style.height = "1400px";
+            contents3.style.opacity = "100";
+            contents3.style.visibility = "visible";
+            localStorage.setItem("dropdownS_Fast_DeployState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents3 = document.getElementById("myContentsS_Fast_Deploy");
+        const contentsState = localStorage.getItem("dropdownS_Fast_DeployState");
+        
+        if (contentsState === "open") {
+            contents3.style.height = "1400px";
+            contents3.style.opacity = "100";
+            contents3.style.visibility = "visible";
+        } else {
+            contents3.style.height = "0px";
+            contents3.style.opacity = "0";
+            contents3.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsM_Drift() {
+        const contents4 = document.getElementById("myContentsM_Drift");
+        if (contents4.style.height === "750px") {
+            contents4.style.height = "0px";
+            contents4.style.opacity = "0";
+            contents4.style.visibility = "hidden";
+            localStorage.setItem("dropdownM_DriftState", "closed");
+        } else {
+            contents4.style.height = "750px";
+            contents4.style.opacity = "100";
+            contents4.style.visibility = "visible";
+            localStorage.setItem("dropdownM_DriftState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents4 = document.getElementById("myContentsM_Drift");
+        const contentsState = localStorage.getItem("dropdownM_DriftState");
+        
+        if (contentsState === "open") {
+            contents4.style.height = "750px";
+            contents4.style.opacity = "100";
+            contents4.style.visibility = "visible";
+        } else {
+            contents4.style.height = "0px";
+            contents4.style.opacity = "0";
+            contents4.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsPre_GitOps() {
+        const contents10 = document.getElementById("myContentsPre_GitOps");
+        if (contents10.style.height === "500px") {
+            contents10.style.height = "0px";
+            contents10.style.opacity = "0";
+            contents10.style.visibility = "hidden";
+            localStorage.setItem("dropdownPre_GitOpsState", "closed");
+        } else {
+            contents10.style.height = "500px";
+            contents10.style.opacity = "100";
+            contents10.style.visibility = "visible";
+            localStorage.setItem("dropdownPre_GitOpsState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents10 = document.getElementById("myContentsPre_GitOps");
+        const contentsState = localStorage.getItem("dropdownPre_GitOpsState");
+        
+        if (contentsState === "open") {
+            contents10.style.height = "500px";
+            contents10.style.opacity = "100";
+            contents10.style.visibility = "visible";
+        } else {
+            contents10.style.height = "0px";
+            contents10.style.opacity = "0";
+            contents10.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsPre_TrainReg() {
+        const contents5 = document.getElementById("myContentsPre_TrainReg");
+        if (contents5.style.height === "1000px") {
+            contents5.style.height = "0px";
+            contents5.style.opacity = "0";
+            contents5.style.visibility = "hidden";
+            localStorage.setItem("dropdownPre_TrainRegState", "closed");
+        } else {
+            contents5.style.height = "1000px";
+            contents5.style.opacity = "100";
+            contents5.style.visibility = "visible";
+            localStorage.setItem("dropdownPre_TrainRegState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents5 = document.getElementById("myContentsPre_TrainReg");
+        const contentsState = localStorage.getItem("dropdownPre_TrainRegState");
+        
+        if (contentsState === "open") {
+            contents5.style.height = "1000px";
+            contents5.style.opacity = "100";
+            contents5.style.visibility = "visible";
+        } else {
+            contents5.style.height = "0px";
+            contents5.style.opacity = "0";
+            contents5.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsPre_DeplServ() {
+        const contents6 = document.getElementById("myContentsPre_DeplServ");
+        if (contents6.style.height === "820px") {
+            contents6.style.height = "0px";
+            contents6.style.opacity = "0";
+            contents6.style.visibility = "hidden";
+            localStorage.setItem("dropdownPre_DeplServState", "closed");
+        } else {
+            contents6.style.height = "820px";
+            contents6.style.opacity = "100";
+            contents6.style.visibility = "visible";
+            localStorage.setItem("dropdownPre_DeplServState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents6 = document.getElementById("myContentsPre_DeplServ");
+        const contentsState = localStorage.getItem("dropdownPre_DeplServState");
+        
+        if (contentsState === "open") {
+            contents6.style.height = "820px";
+            contents6.style.opacity = "100";
+            contents6.style.visibility = "visible";
+        } else {
+            contents6.style.height = "0px";
+            contents6.style.opacity = "0";
+            contents6.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsPre_Monit() {
+        const contents7 = document.getElementById("myContentsPre_Monit");
+        if (contents7.style.height === "680px") {
+            contents7.style.height = "0px";
+            contents7.style.opacity = "0";
+            contents7.style.visibility = "hidden";
+            localStorage.setItem("dropdownPre_MonitState", "closed");
+        } else {
+            contents7.style.height = "680px";
+            contents7.style.opacity = "100";
+            contents7.style.visibility = "visible";
+            localStorage.setItem("dropdownPre_MonitState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents7 = document.getElementById("myContentsPre_Monit");
+        const contentsState = localStorage.getItem("dropdownPre_MonitState");
+        
+        if (contentsState === "open") {
+            contents7.style.height = "680px";
+            contents7.style.opacity = "100";
+            contents7.style.visibility = "visible";
+        } else {
+            contents7.style.height = "0px";
+            contents7.style.opacity = "0";
+            contents7.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsPre_Store() {
+        const contents8 = document.getElementById("myContentsPre_Store");
+        if (contents8.style.height === "2060px") {
+            contents8.style.height = "0px";
+            contents8.style.opacity = "0";
+            contents8.style.visibility = "hidden";
+            localStorage.setItem("dropdownPre_StoreState", "closed");
+        } else {
+            contents8.style.height = "2060px";
+            contents8.style.opacity = "100";
+            contents8.style.visibility = "visible";
+            localStorage.setItem("dropdownPre_StoreState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents8 = document.getElementById("myContentsPre_Store");
+        const contentsState = localStorage.getItem("dropdownPre_StoreState");
+        
+        if (contentsState === "open") {
+            contents8.style.height = "2060px";
+            contents8.style.opacity = "100";
+            contents8.style.visibility = "visible";
+        } else {
+            contents8.style.height = "0px";
+            contents8.style.opacity = "0";
+            contents8.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsPre_FeatEng() {
+        const contents9 = document.getElementById("myContentsPre_FeatEng");
+        if (contents9.style.height === "880px") {
+            contents9.style.height = "0px";
+            contents9.style.opacity = "0";
+            contents9.style.visibility = "hidden";
+            localStorage.setItem("dropdownPre_FeatEngState", "closed");
+        } else {
+            contents9.style.height = "880px";
+            contents9.style.opacity = "100";
+            contents9.style.visibility = "visible";
+            localStorage.setItem("dropdownPre_FeatEngState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contents9 = document.getElementById("myContentsPre_FeatEng");
+        const contentsState = localStorage.getItem("dropdownPre_FeatEngState");
+        
+        if (contentsState === "open") {
+            contents9.style.height = "880px";
+            contents9.style.opacity = "100";
+            contents9.style.visibility = "visible";
+        } else {
+            contents9.style.height = "0px";
+            contents9.style.opacity = "0";
+            contents9.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+function toggleNavMlops() {
+    const dropdownmlops = document.getElementById("myDropdownMlops");
+    if (dropdownmlops.style.height === "430px") {
+        dropdownmlops.style.height = "0px";
+        dropdownmlops.style.opacity = "0";
+        dropdownmlops.style.visibility = "hidden";
+        localStorage.setItem("dropdownMlopsState", "closed");
+    } else {
+        dropdownmlops.style.height = "430px";
+        dropdownmlops.style.opacity = "100";
+        dropdownmlops.style.visibility = "visible";
+        localStorage.setItem("dropdownMlopsState", "open");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownmlops = document.getElementById("myDropdownMlops");
+    const dropdownState = localStorage.getItem("dropdownMlopsState");
+    
+    if (dropdownState === "open") {
+        dropdownmlops.style.height = "430px";
+        dropdownmlops.style.opacity = "100";
+        dropdownmlops.style.visibility = "visible";
+    } else {
+        dropdownmlops.style.height = "0px";
+        dropdownmlops.style.opacity = "0";
+        dropdownmlops.style.visibility = "hidden";
+    }
+});
+
+</script>
+
+
+<script>
+
+    function toggleNavBusiness() {
+    const dropdownbusiness = document.getElementById("myDropdownBusiness");
+    if (dropdownbusiness.style.height === "280px") {
+        dropdownbusiness.style.height = "0px";
+        dropdownbusiness.style.opacity = "0";
+        dropdownbusiness.style.visibility = "hidden";
+        localStorage.setItem("dropdownBusinessState", "closed");
+    } else {
+        dropdownbusiness.style.height = "280px";
+        dropdownbusiness.style.opacity = "100";
+        dropdownbusiness.style.visibility = "visible";
+        localStorage.setItem("dropdownBusinessState", "open");
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownbusiness = document.getElementById("myDropdownBusiness");
+        const dropdownState = localStorage.getItem("dropdownBusinessState");
+        
+        if (dropdownState === "open") {
+            dropdownbusiness.style.height = "280px";
+            dropdownbusiness.style.opacity = "100";
+            dropdownbusiness.style.visibility = "visible";
+        } else {
+            dropdownbusiness.style.height = "0px";
+            dropdownbusiness.style.opacity = "0";
+            dropdownbusiness.style.visibility = "hidden";
+        }
+    });
+</script>
+
+<!-- <script>
+
+    function toggleNavTechnical() {
+    const dropdowntech = document.getElementById("myDropdownTechnical");
+    if (dropdowntech.style.height === "180px") {
+        dropdowntech.style.height = "0px";
+        dropdowntech.style.opacity = "0";
+        dropdowntech.style.visibility = "hidden";
+        localStorage.setItem("dropdownTechState", "closed");
+    } else {
+        dropdowntech.style.height = "180px";
+        dropdowntech.style.opacity = "100";
+        dropdowntech.style.visibility = "visible";
+        localStorage.setItem("dropdownTechState", "open");
+    }
+}
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdowntech = document.getElementById("myDropdownTechnical");
+        const dropdownState = localStorage.getItem("dropdownTechState");
+        
+        if (dropdownState === "open") {
+            dropdowntech.style.height = "180px";
+            dropdowntech.style.opacity = "100";
+            dropdowntech.style.visibility = "visible";
+        } else {
+            dropdowntech.style.height = "0px";
+            dropdowntech.style.opacity = "0";
+            dropdowntech.style.visibility = "hidden";
+        }
+    });
+
+</script> -->
+</header>
+
+<main id="content" class="main-content" role="main">
+<h2 id="maturity-assessment"><a href="https://apps.digicatapult.org.uk/ai-adoption-toolkit" target="_blank">Maturity Assessment</a></h2>
+
+<h3>What is a maturity assessment?</h3>
+
+<blockquote class="callout callout_definition">
+<span class="callout-icon">📓</span>
+    <br />
+    <br />
+    A maturity assessment is a structured evaluation that measures an organization's capabilities and processes against predefined criteria.
+</blockquote>
+
+<h3 id="why-is-it-necessary">Why is it necessary?</h3>
+
+<p>This maturity assessment was created to help users clarify MLOps principles and practices, and to highlight areas of development for each component of the pipeline regarding the extent to which it’s automated. This assessment can be used as a metric for establishing the requirements needed to measure the maturity of an ML production environment (<a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model" target="_blank">Microsoft</a>), as an example.</p>
+
+<p>DC’s maturity assessment in particular guides users to consider the maturity of their business and AI strategy, their model’s documentation, and model lifecycle management and governance in addition to the viability of each component of their architecture. For more detail on the components, please refer to the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub#in-scope" target="_blank">Home</a> page</p>
+
+<h3 id="who-needs-this-maturity-assessment">Who needs this maturity assessment?</h3>
+
+<p>Any organisation who has an AI/ML PoC, or is directly involved in the deployment and optimisation of an AI/ML model, and is looking to deploy their model(s) in production.</p>
+
+<h3 id="who-doesnt-need-this-assessment">Who <em>doesn’t</em> need this assessment?</h3>
+
+<ul>
+  <li>Any early-stage startup that is only exploring ArtificiaI Intelligence/Machine (AI/ML) Learning at a PoC level and not planning to deploy.</li>
+  <li>An organisation developing small scale ML applications, as manual approach is sufficient.</li>
+  <li>An organisation interested in ad hoc ML tasks and does therefore not require full MLOps implementation.</li>
+</ul>
+
+<p><span style="color:#8C1437"><b>Disclaimer:</b></span> this assessment doesn’t necessarily cover GenAI/LLMs at this point.</p>
+
+<h3 id="resources">Resources</h3>
+
+<ol>
+  <li><a href="learn.microsoft.com" target="_blank">Microsoft Learn</a></li>
+</ol>
+
+<footer class="site-footer">
+
+<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</span>
+</footer>
+</main>
+</body>
+</html>
