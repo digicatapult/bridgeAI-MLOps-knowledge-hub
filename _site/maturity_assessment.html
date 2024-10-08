@@ -51,10 +51,10 @@
     }
     
     .center {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
     }
 
     .top-left {
@@ -709,13 +709,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleNavBusiness() {
     const dropdownbusiness = document.getElementById("myDropdownBusiness");
-    if (dropdownbusiness.style.height === "230px") {
+    if (dropdownbusiness.style.height === "280px") {
         dropdownbusiness.style.height = "0px";
         dropdownbusiness.style.opacity = "0";
         dropdownbusiness.style.visibility = "hidden";
         localStorage.setItem("dropdownBusinessState", "closed");
     } else {
-        dropdownbusiness.style.height = "230px";
+        dropdownbusiness.style.height = "280px";
         dropdownbusiness.style.opacity = "100";
         dropdownbusiness.style.visibility = "visible";
         localStorage.setItem("dropdownBusinessState", "open");
@@ -727,7 +727,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownState = localStorage.getItem("dropdownBusinessState");
         
         if (dropdownState === "open") {
-            dropdownbusiness.style.height = "230px";
+            dropdownbusiness.style.height = "280px";
             dropdownbusiness.style.opacity = "100";
             dropdownbusiness.style.visibility = "visible";
         } else {
@@ -786,29 +786,30 @@ document.addEventListener("DOMContentLoaded", function() {
 </blockquote>
 
 <h3 id="why-is-it-necessary">Why is it necessary?</h3>
-<p>To quote <a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model" target="_blank">Microsoft</a>:</p>
 
-<blockquote>
-  <p>“The purpose of this maturity model is to help clarify the Machine Learning Operations (MLOps) principles and practices. The maturity model shows the continuous improvement in the creation and operation of a production level machine learning application environment. You can use it as a metric for establishing the progressive requirements needed to measure the maturity of a machine learning production environment and its associated processes.”</p>
-</blockquote>
+<p>This maturity assessment was created to help users clarify MLOps principles and practices, and to highlight areas of development for each component of the pipeline regarding the extent to which it’s automated. This assessment can be used as a metric for establishing the requirements needed to measure the maturity of an ML production environment (<a href="https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/mlops-maturity-model" target="_blank">Microsoft</a>), as an example.</p>
+
+<p>DC’s maturity assessment in particular guides users to consider the maturity of their business and AI strategy, their model’s documentation, and model lifecycle management and governance in addition to the viability of each component of their architecture. For more detail on the components, please refer to the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub#in-scope" target="_blank">Home</a> page</p>
 
 <h3 id="who-needs-this-maturity-assessment">Who needs this maturity assessment?</h3>
-<ul>
-  <li>Any organisation who has an AI/ML PoC, or is directly involved in the deployment and optimisation of an AI/ML model, and is looking to deploy their model(s) in production.</li>
-</ul>
+
+<p>Any organisation who has an AI/ML PoC, or is directly involved in the deployment and optimisation of an AI/ML model, and is looking to deploy their model(s) in production.</p>
 
 <h3 id="who-doesnt-need-this-assessment">Who <em>doesn’t</em> need this assessment?</h3>
+
 <ul>
-  <li>Any early-stage startups that is just exploring ArtificiaI Intelligence/Machine (AI/ML) Learning at a PoC level and not planning to deploy.</li>
-  <li>An organisation developing small scale ML applications; manual approach is sufficient.</li>
-  <li>An organisation interested in ad hoc ML tasks and does not require full MLOps implementation.</li>
+  <li>Any early-stage startup that is only exploring ArtificiaI Intelligence/Machine (AI/ML) Learning at a PoC level and not planning to deploy.</li>
+  <li>An organisation developing small scale ML applications, as manual approach is sufficient.</li>
+  <li>An organisation interested in ad hoc ML tasks and does therefore not require full MLOps implementation.</li>
 </ul>
 
-<p><strong>Disclaimer:</strong> this assessment doesn’t necessarily cover GenAI/LLMs at this point.</p>
+<p><span style="color:#8C1437"><b>Disclaimer:</b></span> this assessment doesn’t necessarily cover GenAI/LLMs at this point.</p>
 
 <h3 id="resources">Resources</h3>
 
-<p><a href="learn.microsoft.com" target="_blank">Microsoft Learn</a></p>
+<ol>
+  <li><a href="learn.microsoft.com" target="_blank">Microsoft Learn</a></li>
+</ol>
 
 <footer class="site-footer">
 

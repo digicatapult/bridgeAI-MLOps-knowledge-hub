@@ -51,10 +51,10 @@
     }
     
     .center {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
     }
 
     .top-left {
@@ -709,13 +709,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleNavBusiness() {
     const dropdownbusiness = document.getElementById("myDropdownBusiness");
-    if (dropdownbusiness.style.height === "230px") {
+    if (dropdownbusiness.style.height === "280px") {
         dropdownbusiness.style.height = "0px";
         dropdownbusiness.style.opacity = "0";
         dropdownbusiness.style.visibility = "hidden";
         localStorage.setItem("dropdownBusinessState", "closed");
     } else {
-        dropdownbusiness.style.height = "230px";
+        dropdownbusiness.style.height = "280px";
         dropdownbusiness.style.opacity = "100";
         dropdownbusiness.style.visibility = "visible";
         localStorage.setItem("dropdownBusinessState", "open");
@@ -727,7 +727,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownState = localStorage.getItem("dropdownBusinessState");
         
         if (dropdownState === "open") {
-            dropdownbusiness.style.height = "230px";
+            dropdownbusiness.style.height = "280px";
             dropdownbusiness.style.opacity = "100";
             dropdownbusiness.style.visibility = "visible";
         } else {
@@ -782,21 +782,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <p>Each page under “MLOps: The Big Picture” has been designed to address the research, implementation and troubleshooting regarding each component of the team’s MLOps pipeline. The components, which are reflective of the typical order in which data flows through an MLOps pipeline, comprise:</p>
 
-<ol>
-  <li>The team’s initial requirements and design decisions</li>
-  <li>Data Versioning</li>
-  <li>Training Pipeline</li>
-  <li>Model Serving</li>
-  <li>Prediction Service</li>
-  <li>Model Monitoring</li>
-  <li>GitOps</li>
-</ol>
+<p><img src="pipeline.png" width="619.5" height="619.5" alt="MLOps Pipeline Data FLow" class="center" /></p>
 
-<h2 id="business-and-technical-approach">Business and Technical Approach</h2>
+<p><span style="color:#8C1437">NOTE:</span> While GitOps is not a component of an MLOps pipeline that data can flow through, it is the foundation on which the DC AI/ML team built the MLOps pipeline available to you and is therefore discussed as part of the architecture of the pipeline.</p>
 
-<p>Aside from the research and implementation surrounding each component of our pipeline, we also captured aspects of our business and technical approaches to this project for your consideration.</p>
+<p>Overviews of each component through which data flows in an MLOps pipeline can be found in the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html#architecture-overview" target="_blank">Horizon Scan</a> page.</p>
 
-<p><span style="color:#8C1437"><b>Corporate perspective</b></span> considerations include a maturity assessment for evaluating the viability of your MLOps pipeline, required skills and roles and a horizon scan of tools you can use for each component of the pipeline, and a Deployment Service Life Cycle framework to use as a guide for additional considerations.</p>
+<h2 id="corporate-perspective-summary">Corporate Perspective Summary</h2>
+
+<p>Aside from the research and implementation surrounding each component of our pipeline, we also captured aspects of our corporate approaches to this project for your consideration.</p>
+
+<p><span style="color:#8C1437"><b>Corporate perspective</b></span> considerations include a maturity assessment for evaluating the viability of your MLOps pipeline, required skills and roles for automating your AI/ML offering, and a horizon scan of tools you can use for each component of the pipeline.</p>
+
+<p>A <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/deployment_lifecycle.html" target="_blank">Deployment Service Life Cycle framework</a> is also available for you to use as a guide for additional considerations in this context. This framework serves as</p>
 
 <h2 id="resources">Resources</h2>
 

@@ -53,10 +53,10 @@
     }
     
     .center {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 75%;
     }
 
     .top-left {
@@ -711,13 +711,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function toggleNavBusiness() {
     const dropdownbusiness = document.getElementById("myDropdownBusiness");
-    if (dropdownbusiness.style.height === "230px") {
+    if (dropdownbusiness.style.height === "280px") {
         dropdownbusiness.style.height = "0px";
         dropdownbusiness.style.opacity = "0";
         dropdownbusiness.style.visibility = "hidden";
         localStorage.setItem("dropdownBusinessState", "closed");
     } else {
-        dropdownbusiness.style.height = "230px";
+        dropdownbusiness.style.height = "280px";
         dropdownbusiness.style.opacity = "100";
         dropdownbusiness.style.visibility = "visible";
         localStorage.setItem("dropdownBusinessState", "open");
@@ -729,7 +729,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const dropdownState = localStorage.getItem("dropdownBusinessState");
         
         if (dropdownState === "open") {
-            dropdownbusiness.style.height = "230px";
+            dropdownbusiness.style.height = "280px";
             dropdownbusiness.style.opacity = "100";
             dropdownbusiness.style.visibility = "visible";
         } else {
@@ -778,23 +778,64 @@ document.addEventListener("DOMContentLoaded", function() {
 <main id="content" class="main-content" role="main">
 <h1 id="bridgeai-mlops-knowledge-hub">BridgeAI MLOps Knowledge Hub</h1>
 
-<h3 id="about-this-project">About this project</h3>
+<h2 id="about-this-project">About this project</h2>
 
-<p>BridgeAI is an InnovateUK-funded national level AI (Artificial Intelligence) acceleration programme designed to stimulate the adoption of responsible AI in priority sectors such as Construction, Transport, Creative and Agriculture, by bridging the gap between innovation and implementation.</p>
+<p>BridgeAI is an InnovateUK-funded, national level AI (Artificial Intelligence) acceleration programme designed to stimulate the adoption of responsible AI in priority sectors such as Construction, Transport, Creative and Agriculture, by bridging the gap between innovation and implementation.</p>
 
-<p>As one of the four main strategic partners of BridgeAI, Digital Catapult plays a crucial role in the business and technology co-creation aspects of the programme. For its Year-2 contributions to BridgeAI, Digital Catapult (DC) focuses on the topic of Machine Learning in production / Operationalizing ML.</p>
+<p>As one of the four main strategic partners of BridgeAI, Digital Catapult plays a crucial role in the business and technology co-creation aspects of the programme. As part of the BridgeAI contributions, Digital Catapult (DC) focuses on the topic of Machine Learning in production / Operationalizing ML.</p>
 
-<p>Organisations often face numerous technical, organisational and operational challenges when transitioning their ML (Machine learning) models from development to production. These challenges include complexity in integration, lack of required skills and expertise, absence of mature tools and robust frameworks for ML Operations (MLOps) and more. In response to these challenges, Digital Catapult has developed its Applied AI suite offering, which includes the following:</p>
+<!-- Previously, BridgeAI and DC worked together to revolved around assessing the data used (https://apps.digicatapult.org.uk/ai-adoption-toolkit/) as part of an AI adoption process by SMEs. This venture expands on that and assumes that SMEs are now actively involved in the implementation and automation of an AI/ML offering. -->
+
+<p>Organisations often face numerous organisational, technical and operational challenges when transitioning their ML (Machine learning) models from development to production. These challenges include complexity in integration, lack of required skills and expertise, absence of mature tools and robust frameworks for ML Operations (MLOps) and more. In response to these challenges, Digital Catapult has developed its Applied AI suite offering, which includes the following:</p>
+
 <ul>
-  <li>A comprehensive, web accessible MLOps maturity assessment.</li>
-  <li>An end-to-end pre-built MLOps pipeline using open-source tools.</li>
-  <li>A complementary ‘MLOps knowledge Hub’ that contains all relevant information on practical MLOps and how to successfully build an MLOps pipeline from scratch for commercial projects.</li>
-  <li>An in-person MLOps clinic that offers hands-on help to participants via workshops as well as interactive support from a bunch of MLOps providers in the market.</li>
+  <li>A comprehensive, web accessible <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html" target="_blank">MLOps maturity assessment</a>.</li>
+  <li>An end-to-end pre-built MLOps pipeline, created using open-source tools.
+    <ul>
+      <li>This pipeline has been designed to give SMEs the opportunity to engage with practical tools and resources that can notably enhance their automated AI/ML offerings, which is expanded on in the MLOps Clinic.</li>
+      <li>It has also been designed to give SMEs the opportunity to speed up the development of their AI/ML offerings that they seek to automate and deploy, with minimal coding on their behalf.</li>
+    </ul>
+  </li>
+  <li>A corresponding ‘MLOps knowledge Hub’ that contains relevant information on practical MLOps and how to successfully build an MLOps pipeline from scratch for commercial projects, based on the creation of the pre-built pipeline.</li>
+  <li>An in-person MLOps clinic that offers hands-on help to participants via workshops as well as interactive support from a range of MLOps providers in the market.</li>
 </ul>
 
-<h3 id="knowledge-hub-scope-and-purpose">Knowledge hub scope and purpose</h3>
+<h2 id="why-this-knowledge-hub">Why this knowledge hub?</h2>
 
-<p>While other knowledge bases offer in depth insights on how individual MLOps component / tool works, DC’s MLOps knowledge hub aims at explaining the design and implementation of an end-to-end MLOps pipeline, the hardware and infrastructure involves, software tool choices, containerisation and container orchestration, the CI/CD pipelines, the development and production environments and how all of the above are put together to implement a practical / viable MLOps pipeline for an organisation. It also aims to cover the research our team had undergone and the decision design made with explanation on why they were made and on what grounds.</p>
+<p>This knowledge hub has been designed to explain the design and implementation of a viable, end-to-end MLOps pipeline for small and larger organisations. It is important to note what is within and beyond the scope of this hub:</p>
+
+<h3 id="in-scope">In scope</h3>
+
+<ol>
+  <li>The research our team had undergone and design decisions made for each component of the MLOps pipeline with explanations on why they were made, with the components comprising:
+    <ul>
+      <li>Data versioning</li>
+      <li>Model training pipeline</li>
+      <li>Model serving</li>
+      <li>Prediction service</li>
+      <li>Model monitoring</li>
+      <li>GitOps
+ <br />
+ <br /></li>
+    </ul>
+  </li>
+  <li>Considerations for SMEs from a corporate perspective, including:
+    <ul>
+      <li>A Deployment Service Life Cycle framework to wholly assess considerations that such organisations should account for before, during and after the implementation of your automated AI/ML offering</li>
+      <li>An overview of the relevant skills and tools required to implement an MLOps pipeline, as well as a tool horizon scan to give SMEs a range of alternatives to the tools the DC team chose</li>
+      <li>A maturity assessment to evaluate the viability of the AI/ML offering(s)</li>
+      <li>An overview of the principles and core considerations surrounding MLOps, and an overview of the AWS Well-Architected Framework for further consideration on top of the principles and core concerns</li>
+    </ul>
+  </li>
+</ol>
+
+<p><span style="color:#8C1437"><b>In future</b></span>, this knowledge hub may also cover further troubleshooting the team has undergone to implement components of the pipeline, and an expanded horizon scan should the team have to consider other tools for the components.</p>
+
+<h3 id="out-of-scope">Out of scope</h3>
+
+<p>This knowledge hub does not provide any <span style="color:#8C1437">extensive</span> information on what MLOps is, its best practices, or on the functions of individual components of an MLOps pipeline. It does, however, provide links to platforms that address these points.</p>
+
+<p>The links to these platforms can be found in the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html#design-decisions" target="_blank">Horizon Scan</a> page, and the <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html#resources" target="_blank">Best Practices</a> page of this hub.</p>
 
 <footer class="site-footer">
 
