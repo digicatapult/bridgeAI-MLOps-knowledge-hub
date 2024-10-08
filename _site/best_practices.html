@@ -784,33 +784,113 @@ document.addEventListener("DOMContentLoaded", function() {
 </blockquote>
 <p><br /></p>
 
-<p>The <span style="color:#8C1437"><b>principles</b></span> (or best practices) concerning MLOps are:</p>
-<ul>
-  <li>Automation</li>
-  <li>Continuous X</li>
-  <li>Versioning</li>
-  <li>Experiment Tracking</li>
-  <li>Testing</li>
-  <li>Monitoring</li>
-</ul>
-
-<p>Some <span style="color:#8C1437"><b>core considerations</b></span> for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code) include:</p>
-
-<p><img src="mlops_principles.png" />
-Source: <a href="https://ml-ops.org/content/mlops-principles#summary-of-mlops-principles-and-best-practices" target="_blank">MLOps.org</a></p>
-
-<h2 id="considerations-for-a-well-architected-framework">Considerations for a Well-Architected Framework</h2>
-
-<p>While this does not contain a strict set of guidelines, the <a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html" target="_blank">AWS Well-Architected Framework</a> is a reliable resource for evaluating whether specific architecture aligns well with cloud best practices. The pillars of the framework (each with their own set of additional considerations) are:</p>
+<p>Within best practices for MLOps, there are a number of other areas where principles must be considered in order to implement an optimal AI/ML offering. The following considerations can be expanded on by clicking on them:</p>
 
 <ul>
-  <li>Operational excellence</li>
-  <li>Security</li>
-  <li>Reliability</li>
-  <li>Performance efficiency</li>
-  <li>Cost optimization</li>
-  <li>Sustainability</li>
+  <li><a href="#objective-and-metric-best-practices">Objective and Metric Best Practices</a></li>
+  <li><a href="#infrastructure-best-practices">Infrastructure Best Practices</a></li>
+  <li><a href="#data-best-practices">Data Best Practices</a></li>
+  <li><a href="#model-best-practices">Model Best Practices</a></li>
+  <li><a href="#code-best-practices">Code Best Practices</a></li>
 </ul>
+
+<h3 id="objective-and-metric-best-practices">Objective and Metric Best Practices</h3>
+
+<p>Before embarking on the design and implementation of an AI/ML offering, you must first have clearly defined business objectives.</p>
+
+<p>These include identifying your ‘problem’ to ensure that the ML Model is necessary, collecting data that aligns with your objective, and developing clear and scalable metrics. With regard to developing metrics, it is important to ensure that the process put in place to meet your business goal is reviewed thoroughly and regularly, as automation will address areas in which the current process faces challenges.</p>
+
+<p>The <a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/deployment_lifecycle.html" target="_blank">Deployment Service Life Cycle framework</a> provided contains a table of considerations to adequately clarify your business objectives, resource constraints (funding, time, in/tangible resources), and AI/ML use cases.</p>
+
+<!-- for this and all others - 3 sentences to get the point across, expand after everything is blurted out. -->
+
+<h3 id="infrastructure-best-practices">Infrastructure Best Practices</h3>
+
+<p>The right infrastructure must be in place to support the model <span style="color:#8C1437"><b>before</b></span> you invest time into constructing it. Best practice here includes creating a model that is self-sufficient and allows the infrastructure to be independent of it. This way, multiple features can be integrated later on.</p>
+
+<p>Key best practices when designing the infrastructure include selecting the right infrastructure components (from a range of containers, orchestration tools, software environments, CI/CD tools), deciding between cloud-based and on-premise infrastructure, and ensuring that the infrastructure is scalable.</p>
+
+<p>When deciding between cloud-based and on-premise infrastructure, three main points organisations should consider <span style="color:#8C1437">alongside</span> their scope, requirements and constraints are whether their choice of infrastructure is:</p>
+
+<ul>
+  <li><span style="color:#8C1437">cost effective</span> in terms of time and funding,</li>
+  <li><span style="color:#8C1437">low-maintenance</span>, and</li>
+  <li><span style="color:#8C1437">easily scalable</span>.</li>
+</ul>
+
+<p>Cloud-based architecture falls under all three of these criteria, with cloud solution providers like AWS, Azure and GCP having pre-made ML-specific infrastructure elements.</p>
+
+<p>While on-premise infrastructure can be costly when it comes to maintenance and scalability, it provides high levels of control and security over data, systems and software maintenance.</p>
+
+<p>Idealy, the scalability of your infrastructure should be configured in such a way that it enables you to continue testing your model’s features without affecting the deployed model. An optimal approach for this would be microservices architecture.</p>
+
+<h3 id="data-best-practices">Data Best Practices</h3>
+
+<p>The quality of the model is contingent on the data that is properly processed and fed into it. To ensure that your model is of strong quality, you must consider:</p>
+
+<ul>
+  <li>The quantity of your data, in that having copious amounts allows for better model performance. If you have minimal data available, you can use <strong><a href="https://aws.amazon.com/what-is/transfer-learning/" target="_blank">transfer learning</a></strong> to gather data.</li>
+  <li>Proper implementation of data pre-processing, feature engineering, and data validation as part of the ML workflow and for re-training,</li>
+  <li>The implementation of exploratory data analysis for sanity and validation checks, and the implementation of model logging and monitoring processes in order to identify when to stop the pipeline’s execution and address anomalies.</li>
+  <li>Documentation/storage of the data’s features for use throughout the ML lifecycle.</li>
+</ul>
+
+<h3 id="model-best-practices">Model Best Practices</h3>
+
+<p>With the objectives, metrics, infrastructure and data ready or in place, the ideal model can then be chosen. Best practices surrounding model creation comprise:</p>
+
+<ul>
+  <li>Developing a <span style="color:#8C1437">robust model</span>,</li>
+  <li>Developing and <span style="color:#8C1437">documenting</span> model <span style="color:#8C1437">training metrics</span>,</li>
+  <li><span style="color:#8C1437">Finetuning</span> the model that will be served, and</li>
+  <li><span style="color:#8C1437">Monitoring</span> and optimizing the model’s training.</li>
+</ul>
+
+<p>Developing a robust model involves implementing appropriate validation, testing and monitoring processes for your model’s pipeline. It is also crucial that you have defined and created usable test cases (i.e. criteria for deciding on an optimal model based on chosen training metrics) for your model’s training.</p>
+
+<p>The development and documentation of your model’s training metrics can be executed with platforms such as MLflow. Additionally, the use of data derived from serving your model (where possible) to train your models will make the model easier to deploy, as this way the data is trained for more accurate outputs given realistic vs simulated inputs, subject to data/model/concept drift not arising.</p>
+
+<p>Finally, given that the model must be retrained regularly, having an optimized training strategy will be ideal especially to account for fluctuations in model accuracy with the initial training batch.</p>
+
+<h3 id="code-best-practices">Code Best Practices</h3>
+
+<p>The code that is written must execute effectively at all stages of your pipeline. All relevant actors in your MLOps team (<span style="color:#8C1437">examples of actors</span> can be found in the <strong><a href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html#roles" target="_blank">Skills, Roles and Tools</a></strong> page) must be able to read, write or execute model codes.</p>
+
+<p>Where unit tests will evaluate individual features, continuous integration implementations will test the pipeline as a whole to guarantee that changes in the code will not break the model.</p>
+
+<p>Best practice for writing your code include:</p>
+
+<ul>
+  <li>Following <span style="color:#8C1437">naming conventions</span> for variables</li>
+  <li>Ensuring quality in the form of <span style="color:#8C1437">readability</span> and the ability of others to <span style="color:#8C1437">maintain</span> and <span style="color:#8C1437">extend</span> the code subject to changes in requirements</li>
+  <li>Writing <span style="color:#8C1437">productionised</span> code</li>
+  <li>Deploying models <span style="color:#8C1437">in containers</span> for easier integration</li>
+  <li><span style="color:#8C1437">Automating</span> unit and integration tests wherever possible</li>
+</ul>
+
+<!-- The best practices (or <span style="color:#8C1437"><b>principles</b></span>) on MLOps are:
+- Automation
+- Continuous X
+- Versioning
+- Experiment Tracking
+- Testing
+- Monitoring
+
+Some <span style="color:#8C1437"><b>core considerations</b></span> for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code) include:
+
+<img src="mlops_principles.png">
+Source: [MLOps.org](https://ml-ops.org/content/mlops-principles#summary-of-mlops-principles-and-best-practices){:target="_blank"}
+
+## Considerations for a Well-Architected Framework
+
+While this does not contain a strict set of guidelines, the [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html){:target="_blank"} is a reliable resource for evaluating whether specific architecture aligns well with cloud best practices. The pillars of the framework (each with their own set of additional considerations) are:
+
+- Operational excellence
+- Security
+- Reliability
+- Performance efficiency
+- Cost optimization
+- Sustainability -->
 
 <h2 id="resources">Resources</h2>
 
@@ -820,6 +900,12 @@ Source: <a href="https://ml-ops.org/content/mlops-principles#summary-of-mlops-pr
   </li>
   <li>
     <p><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html" target="_blank">AWS Well-Architected Framework Guide</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.zucisystems.com/blog/machine-learning-best-practices-a-comprehensive-list/#1" target="_blank">ML Best Practices: A Comprehensive List</a></p>
+  </li>
+  <li>
+    <p><a href="https://aws.amazon.com/what-is/transfer-learning/" target="_blank">What is Transfer Learning</a></p>
   </li>
 </ol>
 

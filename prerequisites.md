@@ -4,22 +4,21 @@ title: BridgeAI MLOps Knowledge Hub
 ---
 
 
-## Table of Contents
-1. [Relevant Skills and Roles](#relevant-skills-and-roles)
-  - [Roles](#roles)
-  - [Skills](#skills)
-2. [Architecture Overview](#architecture-overview)
-3. [Design Decisions](#design-decisions)
-4. [Horizon Scan](#horizon-scan)
+## Relevant Skills and roles
+
+### Table of Contents
+1. [Roles](#roles)
+2. [Skills](#skills)
+3. [Architecture Overview](#architecture-overview)
+4. [Design Decisions](#design-decisions)
+5. [Horizon Scan](#horizon-scan)
   - [Data Store and Retrieval](#data-store-and-retrieval)
   - [Data and Feature Engineering](#data-and-feature-engineering)
   - [Model Training and Registry](#model-training-and-registry)
   - [Model Deployment and Serving](#model-deployment-and-serving)
   - [Model Monitoring](#model-monitoring)
   - [GitOps](#gitops)
-5. [Resources](#resources)
-
-## Relevant Skills and roles
+6. [Resources](#resources)
 
 ### Roles
 
@@ -66,6 +65,8 @@ Generally, the following components make up the average MLOps workflow:
 
 5. Model monitoring
     * Upon a model being deployed, relevant tools are then used to monitor its performance and detect occurrences of model drift, and logging
+
+<!-- flow diagram is going here. -->
 
 ## Design Decisions: 
 For the pre-built MLOps pipeline created by the team, a [deploy-as-model](https://docs.databricks.com/en/machine-learning/mlops/deployment-patterns.html){:target="_blank"} approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.

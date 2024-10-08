@@ -11,7 +11,9 @@ The following graphic summarises the Deployment Service Life Cycle, which can be
 
 <br>
 
-While the considerations for startups and larger organisations are generally similar, they do <span style="color:#8C1437">vary</span> slightly. The considerations per step of the Deployment Service Life Cycle framework for <span style="color:#8C1437">both types of organisations</span> are listed below:
+While the considerations for startups and larger organisations are generally similar, they do <span style="color:#8C1437">vary</span> slightly. Startups and organisations that are generally smaller should take <span style="color:#8C1437">additional care</span> when working through each phase of the Deployment Service Life Cycle, as the cost of certain resources may put them beyond their scope.
+
+The considerations per step of the Deployment Service Life Cycle framework for <span style="color:#8C1437">both types of organisations</span> are listed below:
 
 <br>
 <table>
