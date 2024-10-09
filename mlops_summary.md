@@ -12,7 +12,7 @@ MLOps is a set of practices that aims to unify the release cycle for machine lea
 
 Each page under "MLOps: The Big Picture" has been designed to address the research, implementation and troubleshooting regarding each component of the team's MLOps pipeline. The components, which are reflective of the typical order in which data flows through an MLOps pipeline, comprise:
 
-<img src="pipeline.png" width="619.5" height="619.5" alt="MLOps Pipeline Data FLow" class="center"/>
+<img src="assets/pipeline.png" width="619.5" height="619.5" alt="MLOps Pipeline Data FLow" class="center"/>
 <!-- this image is to be replaced with flow diagram, to better show the data that flows through each stage -->
 
 
