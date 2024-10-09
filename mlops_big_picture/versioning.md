@@ -37,7 +37,7 @@ title: BridgeAI MLOps Knowledge Hub
     The tools compared are MLFlow and DVC (Data Version Control).
 </blockquote>
 
-<img src="image-20240724-204151.png">
+<img src="../assets/image-20240724-204151.png">
 An image showing the different versions of data, features and model. Source: [DVC](https://dvc.org/doc/use-cases/versioning-data-and-model-files)
 <br>
 <br>

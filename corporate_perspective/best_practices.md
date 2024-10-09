@@ -107,7 +107,7 @@ Best practices for writing your code include:
 
 Some <span style="color:#8C1437"><b>core considerations</b></span> for each principle as it relates to the the three levels where changes can take place (in your data, algorithm and code) include:
 
-<img src="mlops_principles.png">
+<img src="assets/mlops_principles.png">
 Source: [MLOps.org](https://ml-ops.org/content/mlops-principles#summary-of-mlops-principles-and-best-practices){:target="_blank"}
 
 ## Considerations for a Well-Architected Framework

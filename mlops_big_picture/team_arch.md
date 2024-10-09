@@ -9,7 +9,7 @@ title: BridgeAI MLOps Knowledge Hub
 
 Click on a number icon in the image for a brief description of the process associated with it.
 
-<img src="mlops_architecture.png" usemap = "#arch" width="839" height="650.64"/>
+<img src="../assets/mlops_architecture.png" usemap = "#arch" width="839" height="650.64"/>
 <!-- intrinsic size - 1980 by 1542; div w and h by 2.36 -->
 
 <map name = "arch">
