@@ -17,11 +17,5 @@ Our base requirements:
 
 We decided on different tools for different components of our pipeline such as registry, data versioning and model monitoring by conducting spikes (research) for optimal tools based on our requirements. This research is covered in the pages underneath <span style="color:#8C1437"><b>"MLOps: The Big Picture"</b></span>.
 
-Some components did not have formal spikes, and were instead decided on because they are widely used in the industry and therefore have in-depth documentation/community notes.
+Some components did not have formal research conducted, and were instead decided on because they are widely used in the industry and therefore have in-depth documentation/community notes.
 
-<!-- 1. Spike on DAG tools
-2. Spike on model registry tools
-3. Spike on Data Versioning tools
-4. Containerisation - understanding Docker and Kubernetes
-5. Spike on model monitoring
-6. How we decided on using S3 for storage -->
