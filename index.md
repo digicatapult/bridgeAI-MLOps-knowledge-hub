@@ -16,7 +16,7 @@ As one of the four main strategic partners of BridgeAI, Digital Catapult plays a
 
 Organisations often face numerous organisational, technical and operational challenges when transitioning their ML (Machine learning) models from development to production. These challenges include complexity in integration, lack of required skills and expertise, absence of mature tools and robust frameworks for ML Operations (MLOps) and more. In response to these challenges, Digital Catapult has developed its Applied AI suite offering, which includes the following:
 
-* A comprehensive, web accessible [MLOps maturity assessment](https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/maturity_assessment.html){:target="_blank"}.
+* A comprehensive, web accessible [MLOps maturity assessment](../maturity_assessment.html){:target="_blank"}.
 * An end-to-end pre-built MLOps pipeline, created using open-source tools.
     * This pipeline has been designed to give SMEs the opportunity to engage with practical tools and resources that can notably enhance their automated AI/ML offerings, which is expanded on in the MLOps Clinic.
     * It has also been designed to give SMEs the opportunity to speed up the development of their AI/ML offerings that they seek to automate and deploy, with minimal coding on their behalf.
@@ -50,4 +50,4 @@ This knowledge hub has been designed to explain the design and implementation of
 
 This knowledge hub does not provide any <span style="color:#8C1437">extensive</span> information on what MLOps is, its best practices, or on the functions of individual components of an MLOps pipeline. It does, however, provide links to platforms that address these points.
 
-The links to these platforms can be found in the [Horizon Scan](https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/prerequisites.html#design-decisions){:target="_blank"} page, and the [Best Practices](https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/best_practices.html#resources){:target="_blank"} page of this hub.
+The links to these platforms can be found in the [Horizon Scan](../prerequisites.html#design-decisions){:target="_blank"} page, and the [Best Practices](../best_practices.html#resources){:target="_blank"} page of this hub.
