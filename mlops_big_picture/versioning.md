@@ -39,6 +39,7 @@ title: BridgeAI MLOps Knowledge Hub
 
 <img src="../assets/image-20240724-204151.png">
 An image showing the different versions of data, features and model. Source: [DVC](https://dvc.org/doc/use-cases/versioning-data-and-model-files){:target="_blank"}
+
 <br>
 <br>
 
