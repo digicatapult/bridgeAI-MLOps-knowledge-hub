@@ -10,7 +10,7 @@ title: BridgeAI MLOps Knowledge Hub
 <span class="callout-icon">ℹ️</span>
     <br>
     <br>
-    While best practices for MLOps is technically covered in the <a href="/corporate_perspective/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
+    While best practices for MLOps is technically covered in the <a href="./corporate_perspective/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
 </blockquote>
 <br>
 
@@ -38,7 +38,7 @@ because tools for implementation may be costly, BUT the tools used to create the
 
 When developing your metrics, it is important to ensure that the process put in place to meet your business goal is reviewed thoroughly and regularly, as automation will address areas in which the current process faces challenges.
 
-The [Deployment Service Life Cycle framework](https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/corporate_perspective/deployment_lifecycle.html){:target="_blank"} provided in this hub contains a table of considerations to adequately clarify your business objectives, resource constraints (funding, time, in/tangible resources), and AI/ML use cases.
+The [Deployment Service Life Cycle framework](./corporate_perspective/deployment_lifecycle.html){:target="_blank"} provided in this hub contains a table of considerations to adequately clarify your business objectives, resource constraints (funding, time, in/tangible resources), and AI/ML use cases.
 
 
 ### Infrastructure Best Practices
@@ -47,7 +47,7 @@ The right infrastructure must be in place to support the model <span style="colo
 
 Key best practices when designing the infrastructure include selecting the <span style="color:#8C1437">right infrastructure components</span> that align with your scope/requirements/constraints, deciding between <span style="color:#8C1437">cloud-based and on-premise</span> infrastructure, and ensuring that the <span style="color:#8C1437">infrastructure is scalable</span>. 
 
-The right components can be derived from a range of containers, orchestration tools, software environments, CI/CD tools; these must be implemented step-wise regarding the flow of your ML pipeline. This hub offers a [Horizon Scan](https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/corporate_perspective/prerequisites.html#gitops){:target="_blank"} to assist you with identifying the ideal tools for your infrastructure as it relates to [GitOps](https://about.gitlab.com/topics/gitops/){:target="_blank"}.
+The right components can be derived from a range of containers, orchestration tools, software environments, CI/CD tools; these must be implemented step-wise regarding the flow of your ML pipeline. This hub offers a [Horizon Scan](./corporate_perspective/prerequisites.html#gitops){:target="_blank"} to assist you with identifying the ideal tools for your infrastructure as it relates to [GitOps](https://about.gitlab.com/topics/gitops/){:target="_blank"}.
 
 When deciding between cloud-based and on-premise infrastructure, three main points organisations should consider <span style="color:#8C1437">alongside</span> their scope, requirements and constraints are whether their choice of infrastructure is:
 
@@ -85,7 +85,7 @@ The development and documentation of your model's training metrics can be execut
 
 ### Code Best Practices
 
-The code that is written must execute effectively at all stages of your pipeline. All relevant actors in your MLOps team (<span style="color:#8C1437">examples of actors</span> can be found in the [Skills, Roles and Tool Horizon Scan](https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/corporate_perspective/prerequisites.html#roles){:target="_blank"} page of this hub) must be able to read, write or execute model codes. 
+The code that is written must execute effectively at all stages of your pipeline. All relevant actors in your MLOps team (<span style="color:#8C1437">examples of actors</span> can be found in the [Skills, Roles and Tool Horizon Scan](./corporate_perspective/prerequisites.html#roles){:target="_blank"} page of this hub) must be able to read, write or execute model codes. 
 
 Where unit tests will evaluate individual features, continuous integration implementations will test the pipeline as a whole to guarantee that changes in the code will not break the model.
 

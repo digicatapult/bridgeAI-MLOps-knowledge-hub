@@ -18,7 +18,7 @@ Each page under "MLOps: The Big Picture" has been designed to address the resear
 
 <span style="color:#8C1437">NOTE:</span> While GitOps is not a component of an MLOps pipeline that data can flow through, it is the foundation on which the DC AI/ML team built the MLOps pipeline available to you and is therefore discussed as part of the architecture of the pipeline.
 
-Overviews of each component through which data flows in an MLOps pipeline can be found in the [Horizon Scan](../corporate_perspective/prerequisites.html#architecture-overview){:target="_blank"} page.
+Overviews of each component through which data flows in an MLOps pipeline can be found in the [Horizon Scan](./corporate_perspective/prerequisites.html#architecture-overview){:target="_blank"} page.
 
 ## Corporate Perspective Summary
 
@@ -26,7 +26,7 @@ Aside from the research and implementation surrounding each component of our pip
 
 <span style="color:#8C1437"><b>Corporate perspective</b></span> considerations include a maturity assessment for evaluating the viability of your MLOps pipeline, required skills and roles for automating your AI/ML offering, and a horizon scan of tools you can use for each component of the pipeline. 
 
-A [Deployment Service Life Cycle framework](../corporate_perspective/deployment_lifecycle.html){:target="_blank"} is also available for you to use as a guide for additional considerations in this context. This framework serves as a starting point for ensuring that organisations adequately gather information on their requirements (as well as use cases, current infrastructure requirements, and constraints) before assessing these and designing and implementing an AI/ML offering around them. It also acts as a reminder for points of review for the offering after it has been implemented. 
+A [Deployment Service Life Cycle framework](./corporate_perspective/deployment_lifecycle.html){:target="_blank"} is also available for you to use as a guide for additional considerations in this context. This framework serves as a starting point for ensuring that organisations adequately gather information on their requirements (as well as use cases, current infrastructure requirements, and constraints) before assessing these and designing and implementing an AI/ML offering around them. It also acts as a reminder for points of review for the offering after it has been implemented. 
 
 ## Resources
 

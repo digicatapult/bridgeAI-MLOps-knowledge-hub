@@ -5,7 +5,7 @@ title: BridgeAI MLOps Knowledge Hub
 
 ## Where did the journey start? How were the design decisions made across the pipeline for each component?
 
-<!-- Our journey towards the creation of an end-to-end MLOps pipeline began as an extension of our AI Adoption Assessment initiative completed in collaboration with BridgeAI -->
+Our journey towards the creation of an end-to-end MLOps pipeline began as an extension of our [AI Adoption Assessment](https://iuk.ktn-uk.org/opportunities/ai-adoption-assessment-toolkit-from-digital-catapult/){:target="_blank"} initiative completed in collaboration with BridgeAI. 
 
 We decided on different tools for different components of our pipeline such as registry, data versioning and model monitoring by conducting spikes (research) for optimal tools based on our requirements. This research is covered in the pages underneath <span style="color:#8C1437"><b>"MLOps: The Big Picture"</b></span>.
 
