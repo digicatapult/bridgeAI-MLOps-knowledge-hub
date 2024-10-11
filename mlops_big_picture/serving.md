@@ -482,13 +482,13 @@ Recommended | Yes | Can be considered | Yes
 
 ## Questions:
 
-Q. Decision between KServe or Seldon core - Which one is more suitable for our use case?
-    <br>
-    <br>
-    A comparison - [KServe vs. Seldon Core - Superwise ML Observability](https://superwise.ai/blog/kserve-vs-seldon-core/){:target="_blank"}
-    <br>
-    <br>
-    KServe is open source whereas [SeldonCore](https://www.seldon.io/pricing){:target="_blank"} is expensive. And so is [BentoCloud](https://www.bentoml.com/pricing){:target="_blank"}.
+1 - Decision between KServe or Seldon core - Which one is more suitable for our use case?
+<br>
+
+  - A comparison - [KServe vs. Seldon Core - Superwise ML Observability](https://superwise.ai/blog/kserve-vs-seldon-core/){:target="_blank"}
+  <br>
+
+  - KServe is open source whereas [SeldonCore](https://www.seldon.io/pricing){:target="_blank"} is expensive. And so is [BentoCloud](https://www.bentoml.com/pricing){:target="_blank"}.
 
 ## Resources
 
