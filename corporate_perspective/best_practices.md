@@ -10,7 +10,7 @@ title: BridgeAI MLOps Knowledge Hub
 <span class="callout-icon">ℹ️</span>
     <br>
     <br>
-    While best practices for MLOps is technically covered in the <a href="/corporate_perspective/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
+    While best practices for MLOps is technically covered in the <a href="./corporate_perspective/prerequisites.html" target="_blank">Prerequisites</a> section, separate elaboration on these principles is required given their importance.
 </blockquote>
 <br>
 
