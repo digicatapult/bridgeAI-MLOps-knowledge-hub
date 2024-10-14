@@ -16,11 +16,11 @@ title: BridgeAI MLOps Knowledge Hub
 
 Within best practices for MLOps, there are a number of other areas where principles must be considered in order to implement an optimal AI/ML offering. The following considerations can be expanded on by clicking on them:
 
-* [Objective and Metric Best Practices](#objective-and-metric-best-practices)
-* [Infrastructure Best Practices](#infrastructure-best-practices)
-* [Data Best Practices](#data-best-practices)
-* [Model Best Practices](#model-best-practices)
-* [Code Best Practices](#code-best-practices)
+* [Objective and Metric Best Practices](./corporate_perspective/best_practices.html#objective-and-metric-best-practices)
+* [Infrastructure Best Practices]./corporate_perspective/best_practices.html(#infrastructure-best-practices)
+* [Data Best Practices](./corporate_perspective/best_practices.html#data-best-practices)
+* [Model Best Practices](./corporate_perspective/best_practices.html#model-best-practices)
+* [Code Best Practices](./corporate_perspective/best_practices.html#code-best-practices)
 
 
 ### Objective and Metric Best Practices
