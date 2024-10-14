@@ -79,7 +79,9 @@ It is important to note that the components and workflow differ; the components 
 
 ## Horizon Scan
 
-Below are sets of comparisons for tools you can use for each component of your MLOps pipeline. The criteria for evaluation was derived using the team's requirements, which you may also wish to consider using for your own pipeline.
+Below are sets of comparisons for tools you can use for each component of your MLOps pipeline. The criteria for evaluation was derived using the team's [requirements](./mlops_big_picture/requirements_research.html){:target="_blank"}, which you may also wish to consider using for your own pipeline. Each horizon scan per component comes with the team's design decision for the component.
+
+<!-- short paragraph on why a certain selection of tools for evaluation. -->
 
 ### Data Store and Retrieval
 
@@ -106,7 +108,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   </tr>
 
   <tr>
-    <td>Scalability</td>
+    <td><b>Scalability</b></td>
     <td>Highly scalable without human intervention</td>
     <td>Ability to enable scalable communication between systems</td>
     <td>Optimal for large amount of structured and unstructured data without predefined schemas</td>
@@ -114,7 +116,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   </tr>
 
   <tr>
-    <td>Cost Effectiveness</td>
+    <td><b>Cost Effectiveness</b></td>
     <td>PAYG model</td>
     <td>Option to reduce costs via modular system design for reuse of existing components/code</td>
     <td>Often more cost effective than DBs for storing large amounts of data</td>
@@ -122,7 +124,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   </tr>
 
   <tr>
-    <td>Security</td>
+    <td><b>Security</b></td>
     <td>Built in features including IAM policies and bucket policies, either can involve RBAC, keys, encryption</td>
     <td>Option to implement robust authentication (eg OAuth, API keys) and authorization mechanisms to control access to data</td>
     <td>Option to implement security measures like access controls and encryption</td>
@@ -130,7 +132,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   </tr>
 
   <tr>
-    <td>Accessibility</td>
+    <td><b>Accessibility</b></td>
     <td>Data can be accessed from anywhere via HTTP/HTTPS, allowing for smooth data retrieval via APIs for features like real-time data retrieval. S3 can also  also centralised</td>
     <td>Supports real-time data retrieval and updates</td>
     <td>Centralised repository making data accessible to different teams within an organisation</td>
@@ -138,7 +140,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   </tr>
 
   <tr>
-    <td>Flexibility</td>
+    <td><b>Flexibility</b></td>
     <td>Agnostic to file types and other storage formats; high fault tolerance (99.9%); allows different software systems to communicate via APIs</td>
     <td>Allows different software systems to communicate regardless of underlying technology stack (via REST, SOAP)</td>
     <td>Store data in raw format across wide range of file types</td>
@@ -147,6 +149,15 @@ Below are sets of comparisons for tools you can use for each component of your M
 
   </table>
   <br>
+  <br>
+
+  <b>Design decisions:</b>
+  <br>
+
+  The team chose Amazon S3 as the data storage system. Digital Catapult is already using AWS for a few other projects and our technologists are comfortable with this technology.
+  <br>
+  <br>
+  An evaluation of feature store software the team considered using, and decided on, can be found <a href="./mlops_big_picture/versioning.html" target="_blank">here</a>.
 
   </div>
 </div>
@@ -167,25 +178,25 @@ Below are sets of comparisons for tools you can use for each component of your M
   </tr>
 
   <tr>
-    <td>Description</td>
+    <td><b>Description</b></td>
     <td>Airflow is an open source workflow orchestration tool used for orchestrating distributed applications. It works by scheduling jobs across different servers or nodes using DAGs (Directed Acyclic Graphs). A DAG is the core concept of Airflow, collecting Tasks together, organised with dependencies and relationships to say how they should run</td>
     <td>Prefect decreases negative engineering by building a DAG structure with an emphasis on enabling positive with an orchestration layer for the current data stack</td>
   </tr>
 
   <tr>
-    <td>Cost Effectiveness</td>
+    <td><b>Cost Effectiveness</b></td>
     <td>Free</td>
     <td>Paid</td>
   </tr>
 
   <tr>
-    <td>Flexibility</td>
+    <td><b>Flexibility</b></td>
     <td>Supports the creation of dynamic workflows through Directed Acyclic Graphs (DAGs), enabling users to define complex dependencies and task relationships. Also viable for retraining/A-B testing/CICD</td>
     <td>Python package that makes it easier to design, test, operate, and construct complicated data applications. It has a user-friendly API that doesn’t require any configuration files or boilerplate. It allows for process orchestration and monitoring using best industry practices.</td>
   </tr>
 
   <tr>
-    <td>Scalability</td>
+    <td><b>Scalability</b></td>
     <td>Ease for Helm chart setup.</td>
     <td>To run Prefect, the official Helm chart requires additional configurations to be setup.</td>
   </tr>
