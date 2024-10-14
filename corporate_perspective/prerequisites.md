@@ -156,7 +156,6 @@ Below are sets of comparisons for tools you can use for each component of your M
   <br>
   <br>
   An evaluation of feature store software the team considered using, and decided on, can be found in the Resources section of this page.
-  <br>
 
   </div>
 </div>
