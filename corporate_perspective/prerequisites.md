@@ -66,8 +66,6 @@ Generally, the following components make up the average MLOps workflow:
 5. Model monitoring
     * Upon a model being deployed, relevant tools are then used to monitor its performance and detect occurrences of model drift, and logging
 
-<!-- flow diagram is going here. -->
-
 ## Design Decisions: 
 For the pre-built MLOps pipeline created by the team, a [deploy-as-model](https://docs.databricks.com/en/machine-learning/mlops/deployment-patterns.html){:target="_blank"} approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.
 
