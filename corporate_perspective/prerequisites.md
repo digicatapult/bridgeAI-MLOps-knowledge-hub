@@ -157,7 +157,8 @@ Below are sets of comparisons for tools you can use for each component of your M
   The team chose Amazon S3 as the data storage system. Digital Catapult is already using AWS for a few other projects and our technologists are comfortable with this technology.
   <br>
   <br>
-  An evaluation of feature store software the team considered using, and decided on, can be found <a href="./mlops_big_picture/versioning.html" target="_blank">here</a>.
+  An evaluation of feature store software the team considered using, and decided on, can be found in the Resources section of this page.
+  <br>
 
   </div>
 </div>
@@ -390,6 +391,8 @@ Below are sets of comparisons for tools you can use for each component of your M
 <br>
 
 ## Resources
+
+1. [Feature store software evaluation and decision](./mlops_big_picture/versioning.html){:target="_blank"}
 
 1. [Neptune.ai](https://neptune.ai/blog/mlops-engineer){:target="_blank"}
 
