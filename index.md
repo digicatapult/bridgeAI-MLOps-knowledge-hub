@@ -53,3 +53,4 @@ This knowledge hub does not provide any <span style="color:#8C1437">extensive</s
 The links to these platforms can be found in the [Horizon Scan](./corporate_perspective/prerequisites.html#design-decisions){:target="_blank"} page, and the [Best Practices](./corporate_perspective/best_practices.html#resources){:target="_blank"} page of this hub.
 
 Scalability, Security and Compliance of the MLOps pipeline are also not addressed in this knowledge hub. The team plans to take care of these aspects as a part of Digital Catapult’s Year-3 offerings.
+

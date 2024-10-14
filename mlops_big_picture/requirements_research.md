@@ -31,6 +31,3 @@ Our base requirements:
 4. The pipeline should accurately predict house prices, meeting predefined performance metrics such as mean absolute error (MAE) and mean squared error (MSE).
 5. All components (data ingestion, processing, model training, deployment, and monitoring) must function seamlessly and as intended.
 
-
- 
-
