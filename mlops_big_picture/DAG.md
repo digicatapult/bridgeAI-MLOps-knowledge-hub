@@ -6,12 +6,12 @@ title: BridgeAI MLOps Knowledge Hub
 # Training Pipeline
 
 **Table of Contents**
-1. [Introduction](./mlops_big_picture/DAG.html#1-introduction)
-2. [Evaluation](./mlops_big_picture/DAG.html#2-evaluation)
-3. [Team Implementation](./mlops_big_picture/DAG.html#3-team-implementation)\
-        [Apache Airflow](./mlops_big_picture/DAG.html#apache-airflow)\
-        [Prefect](./mlops_big_picture/DAG.html#prefect)
-4. [Resources](./mlops_big_picture/DAG.html#resources)
+1. [Introduction](#1-introduction)
+2. [Evaluation](#2-evaluation)
+3. [Team Implementation](#3-team-implementation)\
+        [Apache Airflow](#apache-airflow)\
+        [Prefect](#prefect)
+4. [Resources](#resources)
 
 <br>
 

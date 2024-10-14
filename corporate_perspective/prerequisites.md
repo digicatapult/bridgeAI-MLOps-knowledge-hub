@@ -7,18 +7,18 @@ title: BridgeAI MLOps Knowledge Hub
 ## Relevant Skills and roles
 
 ### Table of Contents
-1. [Roles](./corporate_perspective/prerequisites.html#roles)
-2. [Skills](./corporate_perspective/prerequisites.html#skills)
-3. [Architecture Overview](./corporate_perspective/prerequisites.html#architecture-overview)
-4. [Design Decisions](./corporate_perspective/prerequisites.html#design-decisions)
-5. [Horizon Scan](./corporate_perspective/prerequisites.html#horizon-scan)
-  - [Data Store and Retrieval](./corporate_perspective/prerequisites.html#data-store-and-retrieval)
-  - [Data and Feature Engineering](./corporate_perspective/prerequisites.html#data-and-feature-engineering)
-  - [Model Training and Registry](./corporate_perspective/prerequisites.html#model-training-and-registry)
-  - [Model Deployment and Serving](./corporate_perspective/prerequisites.html#model-deployment-and-serving)
-  - [Model Monitoring](./corporate_perspective/prerequisites.html#model-monitoring)
-  - [GitOps](./corporate_perspective/prerequisites.html#gitops)
-6. [Resources](./corporate_perspective/prerequisites.html#resources)
+1. [Roles](#roles)
+2. [Skills](#skills)
+3. [Architecture Overview](#architecture-overview)
+4. [Design Decisions](#design-decisions)
+5. [Horizon Scan](#horizon-scan)
+  - [Data Store and Retrieval](#data-store-and-retrieval)
+  - [Data and Feature Engineering](#data-and-feature-engineering)
+  - [Model Training and Registry](#model-training-and-registry)
+  - [Model Deployment and Serving](#model-deployment-and-serving)
+  - [Model Monitoring](#model-monitoring)
+  - [GitOps](#gitops)
+6. [Resources](#resources)
 
 ### Roles
 

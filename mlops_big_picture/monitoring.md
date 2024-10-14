@@ -6,18 +6,18 @@ title: BridgeAI MLOps Knowledge Hub
 # Model Monitoring
 
 **Table of Contents**
-1. [Model Monitoring](./mlops_big_picture/monitoring.html#1-model-monitoring)
-      - [Data Drift](./mlops_big_picture/monitoring.html#11-data-drift)
-      - [Concept Drift](./mlops_big_picture/monitoring.html#12-concept-drift)
-      - [Target Drift](./mlops_big_picture/monitoring.html#13-target-drift)
-2. [Data Drift with Evidently Explained](./mlops_big_picture/monitoring.html#2-data-drift-with-evidently-explained)
-      - [Steps](./mlops_big_picture/monitoring.html#21-steps)
-      - [General Steps](./mlops_big_picture/monitoring.html#22-general-steps)
-      - [Key Questions Before Retraining](./mlops_big_picture/monitoring.html#23-key-questions-before-retraining)
-      - [Possible Action Items Based on Data Drift Detection](./mlops_big_picture/monitoring.html#24-possible-action-items-based-on-data-drift-detection)
-      - [Testing Before Pushing a Newly Trained Model to Production](./mlops_big_picture/monitoring.html#25-testing-before-pushing-a-newly-trained-model-to-production)
-3. [Data Drift for the House Price Prediction Use Case](./mlops_big_picture/monitoring.html#3-data-drift-for-the-house-price-prediction-use-case)
-4. [Resources](./mlops_big_picture/monitoring.html#resources)
+1. [Model Monitoring](#1-model-monitoring)
+      - [Data Drift](#11-data-drift)
+      - [Concept Drift](#12-concept-drift)
+      - [Target Drift](#13-target-drift)
+2. [Data Drift with Evidently Explained](#2-data-drift-with-evidently-explained)
+      - [Steps](#21-steps)
+      - [General Steps](#22-general-steps)
+      - [Key Questions Before Retraining](#23-key-questions-before-retraining)
+      - [Possible Action Items Based on Data Drift Detection](#24-possible-action-items-based-on-data-drift-detection)
+      - [Testing Before Pushing a Newly Trained Model to Production](#25-testing-before-pushing-a-newly-trained-model-to-production)
+3. [Data Drift for the House Price Prediction Use Case](#3-data-drift-for-the-house-price-prediction-use-case)
+4. [Resources](#resources)
 
 
 
