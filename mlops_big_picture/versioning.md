@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-# Data Versioning Spike Content
+# Data Versioning
 
 **Table of Contents**
 1. [General Comparison](#1-general-comparison)

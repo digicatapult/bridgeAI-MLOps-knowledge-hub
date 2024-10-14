@@ -27,6 +27,10 @@ We wanted to demonstrate an end-to-end, open source, pre-made MLOps pipeline. We
 Our base requirements:
 1. The pipeline should be made of open source tools, to keep it cost-friendly and help with experimentation
 2. We should have a Minimum Viable MLOps pipeline with basic automation that users can then build on using the information provided in the hub, and other resources linked throughout the hub
+3. The MLOps pipeline must successfully handle the entire machine learning lifecycle, from data ingestion through to model deployment and monitoring.
+4. The pipeline should accurately predict house prices, meeting predefined performance metrics such as mean absolute error (MAE) and mean squared error (MSE).
+5. All components (data ingestion, processing, model training, deployment, and monitoring) must function seamlessly and as intended.
+
 
  
 
