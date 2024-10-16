@@ -20,16 +20,24 @@ title: BridgeAI MLOps Knowledge Hub
 4. [Resources](#resources)
 
 
+## Introduction
+This page has been designed to walk users through key concepts in model monitoring, and how to use EvidentlyAI to implement your model monitoring component as part of your MLOps pipeline. 
+
+The team chose EvidentlyAI as its model monitoring tool for similar [reasons](./mlops_big_picture/DAG.html#introduction) to the decision to use Airflow as the training pipeline tool - its wide community use, and its ease of setup. 
+
+The repository, containing steps for the implementation of the model monitoring component, is linked [here](https://github.com/digicatapult/bridgeAI-drift-monitoring){:target="_blank"}.
 
 ## 1. Model Monitoring
-Building a machine learning model is just the beginning. Once you deploy that model into the real world, it faces many challenges that can affect its predictive performance (Model Drift) and require continuous monitoring. Model Drift refers to the decay of the ML model quality over time. Simply put, it is a way of saying “the model quality got worse” or “the model no longer serves its purpose.” Model Drift doesn't pinpoint a specific cause; it's just an observation that the model no longer works as well as it used to. The model decay might happen due to various reasons, including [data drift](https://www.evidentlyai.com/ml-in-production/data-drift){:target="_blank"}, data quality issues, or concept drift. [What is concept drift in ML, and how to detect and address it](https://www.evidentlyai.com/ml-in-production/concept-drift){:target="_blank"}
+Building a machine learning model is just the beginning. Once you deploy that model into the real world, it faces many challenges that can affect its predictive performance (Model Drift) and require continuous monitoring. 
+
+Model Drift refers to the decay of the ML model quality over time. Simply put, it is a way of saying “the model quality got worse” or “the model no longer serves its purpose.” Model Drift doesn't pinpoint a specific cause; it's just an observation that the model no longer works as well as it used to. 
+
+The model decay might happen due to various reasons, including [data drift](https://www.evidentlyai.com/ml-in-production/data-drift){:target="_blank"}, data quality issues, or concept drift. [What is concept drift in ML, and how to detect and address it](https://www.evidentlyai.com/ml-in-production/concept-drift){:target="_blank"}
 
 
 Below are the 2 Model Drifts discussed widely by “many industry experts”.
 - Data Drift
 - Concept Drift
-
-
 
 **Note:**
 - To establish a monitoring strategy refer to the <span style="color:#8C1437"><b>Establishing the monitoring strategy</b></span> section from the link: [Model monitoring for ML in production: a comprehensive guide](https://www.evidentlyai.com/ml-in-production/model-monitoring){:target="_blank"} 
@@ -42,7 +50,7 @@ Below are the 2 Model Drifts discussed widely by “many industry experts”.
 ### 1.1 Data Drift
 Data drift is a change in the statistical properties and characteristics of the input data. It occurs when a Machine Learning model is in production, as the data it encounters deviates from the data the model was initially trained on or earlier production data. 
 
-[What is data drift in ML, and how to detect and handle it](https://www.evidentlyai.com/ml-in-production/data-drift){:target="_blank"}
+Further information on **[what data drift is in ML, and how to detect and handle it](https://www.evidentlyai.com/ml-in-production/data-drift){:target="_blank"}**, is linked.
 
 Data Drift Detection methods:
 
@@ -59,14 +67,11 @@ Data Drift Detection methods:
 ### 1.2 Concept Drift
 Concept Drift implies a change in the learned relationships between the input features. Model Drift is often caused by Concept Drift. 
 
-[What is concept drift in ML, and how to detect and address it](https://www.evidentlyai.com/ml-in-production/concept-drift){:target="_blank"} 
-
+Information on **[detecting and addressing it](https://www.evidentlyai.com/ml-in-production/concept-drift){:target="_blank"}**, is linked.
 
 
 ### 1.3 Target Drift
 Occurs when the goal or target of your prediction changes.
-
-
 
 ## 2. Data Drift with Evidently Explained
 Two datasets are used to evaluate whether there is a Data Drift.
@@ -149,9 +154,9 @@ In general an organisation who wants to analyse drift would have to:
 
 - How much Data Drift for each individual features is acceptable?
 
-- Before Retraining with the new data, can data be manually labelled? So that we can test the model’s accuracy/error rate
+- Before Retraining with the new data, can data be manually labelled so that we can test the model’s accuracy/error rate? 
 
-[To retrain, or not to retrain? Let's get analytical about ML model updates](https://www.evidentlyai.com/blog/retrain-or-not-retrain){:target="_blank"}
+A comprehensive **[evaluation](https://www.evidentlyai.com/blog/retrain-or-not-retrain){:target="_blank"}** of these questions, is linked.
 
 **Note:** 
 
@@ -177,13 +182,7 @@ The above 2 training points mentioned above are performed in the local/Dev envir
 
 - The existing production model is archived.
 
-- Deployment patterns of newly trained model will be covered in another Spike.
-
- 
-
-[Evaluating Model Performance: Key Metrics to Assess Before Transitioning to Production](https://medium.com/@stefanmii/evaluating-model-performance-key-metrics-to-assess-before-transitioning-to-production-345ee51241d0){:target="_blank"}
-
-
+An evaluation on **[key metrics to assess](https://medium.com/@stefanmii/evaluating-model-performance-key-metrics-to-assess-before-transitioning-to-production-345ee51241d0){:target="_blank"}** before transitioning to production, is linked.
 
 ## 3 Data Drift for the House Price Prediction Use Case
 1. Make sure the Reference data and the Current data  (Section 2.1) is available in S3/any storage location
@@ -192,15 +191,9 @@ The above 2 training points mentioned above are performed in the local/Dev envir
 
 3. Based on the Drift Report that is generated, a DS analyses the Drift Report and decides whether to Update or Retrain the model manually (as discussed in Section 2.4). 
 
-An implementation of Data Drift is given here:
+Examples of implementations of Data Drift is given [here](https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb){:target="_blank"} and [here](https://www.datacamp.com/tutorial/understanding-data-drift-model-drift){:target="_blank"}. 
 
-[ml_observability_course/module2/data_drift_deep_dive.ipynb at main · evidentlyai/ml_observability_course](https://github.com/evidentlyai/ml_observability_course/blob/main/module2/data_drift_deep_dive.ipynb){:target="_blank"}
-
-[Understanding Data Drift and Model Drift: Drift Detection in Python](https://www.datacamp.com/tutorial/understanding-data-drift-model-drift){:target="_blank"}. 
-
-Also refer to the FAQs section from the link provided above.
-
-
+**Note:** you may also wish to to the FAQs section from the links provided above.
 
 ## Resources
 **Model Monitoring, Data Drift & Concept Drift**
