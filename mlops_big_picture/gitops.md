@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-## GitOps Spike Content
+## GitOps
 
 
 GitOps is the pattern of using Git as the source of truth to achieve a particular state for clusters, applications, environments, files, and pipelines, typically with one or more Kubernetes controllers monitoring the target for change. It would serve to automate much of the control plane for MLOps and should be especially useful to demonstrate to AI/ML SMEs for that reason, to reduce the cognitive load of managing backends, clusters, and integration.

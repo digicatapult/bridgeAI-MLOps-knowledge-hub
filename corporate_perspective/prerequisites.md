@@ -66,8 +66,6 @@ Generally, the following components make up the average MLOps workflow:
 5. Model monitoring
     * Upon a model being deployed, relevant tools are then used to monitor its performance and detect occurrences of model drift, and logging
 
-<!-- flow diagram is going here. -->
-
 ## Design Decisions: 
 For the pre-built MLOps pipeline created by the team, a [deploy-as-model](https://docs.databricks.com/en/machine-learning/mlops/deployment-patterns.html){:target="_blank"} approach was taken. As such, the architecture followed by the team comprises a model registry with human intervention for stage tags, model deployment, model monitoring, data storing and retrieval, and finally data and feature engineering.
 
@@ -157,7 +155,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   The team chose Amazon S3 as the data storage system. Digital Catapult is already using AWS for a few other projects and our technologists are comfortable with this technology.
   <br>
   <br>
-  An evaluation of feature store software the team considered using, and decided on, can be found <a href="./mlops_big_picture/versioning.html" target="_blank">here</a>.
+  An evaluation of feature store software the team considered using, and decided on, can be found in the Resources section of this page.
 
   </div>
 </div>
@@ -390,6 +388,8 @@ Below are sets of comparisons for tools you can use for each component of your M
 <br>
 
 ## Resources
+
+1. [Feature store software evaluation and decision](./mlops_big_picture/versioning.html){:target="_blank"}
 
 1. [Neptune.ai](https://neptune.ai/blog/mlops-engineer){:target="_blank"}
 

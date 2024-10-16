@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-# Model Monitoring Spike Content
+# Model Monitoring
 
 **Table of Contents**
 1. [Model Monitoring](#1-model-monitoring)

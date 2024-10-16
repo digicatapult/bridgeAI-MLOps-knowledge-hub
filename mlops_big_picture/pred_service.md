@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-## Prediction Service Content
+## Prediction Service
 
 The team proposed the use of FastAPI over Flask for prediction service API following a quick comparison of FastAPI vs Flask from [here](https://www.netguru.com/blog/python-flask-versus-fastapi){:target="_blank"} and [here](https://www.turing.com/kb/fastapi-vs-flask-a-detailed-comparison){:target="_blank"}, with focus on the built in automatic swagger ui documentation support and data validation support.
 
