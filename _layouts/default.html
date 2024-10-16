@@ -294,24 +294,24 @@
 
 <script>
 
-    function toggleContentsS_ML_Deploy() {
-        const contents = document.getElementById("myContentsS_ML_Deploy");
+    function toggleContents_PDF_Embed() {
+        const contents = document.getElementById("myContents_PDF_Embed");
         if (contents.style.height === "1200px") {
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
-            localStorage.setItem("dropdownS_ML_DeployState", "closed");
+            localStorage.setItem("dropdown_PDF_Embed", "closed");
         } else {
             contents.style.height = "1200px";
             contents.style.opacity = "100";
             contents.style.visibility = "visible";
-            localStorage.setItem("dropdownS_ML_DeployState", "open");
+            localStorage.setItem("dropdown_PDF_Embed", "open");
         }
     }
     
     document.addEventListener("DOMContentLoaded", function() {
-        const contents = document.getElementById("myContentsS_ML_Deploy");
-        const contentsState = localStorage.getItem("dropdownS_ML_DeployState");
+        const contents = document.getElementById("myContents_PDF_Embed");
+        const contentsState = localStorage.getItem("dropdown_PDF_Embed");
         
         if (contentsState === "open") {
             contents.style.height = "1200px";
@@ -321,6 +321,40 @@
             contents.style.height = "0px";
             contents.style.opacity = "0";
             contents.style.visibility = "hidden";
+        }
+    });
+    
+</script>
+
+<script>
+
+    function toggleContentsS_ML_Deploy() {
+        const contentsP = document.getElementById("myContentsS_ML_Deploy");
+        if (contentsP.style.height === "1200px") {
+            contentsP.style.height = "0px";
+            contentsP.style.opacity = "0";
+            contentsP.style.visibility = "hidden";
+            localStorage.setItem("dropdownS_ML_DeployState", "closed");
+        } else {
+            contentsP.style.height = "1200px";
+            contentsP.style.opacity = "100";
+            contentsP.style.visibility = "visible";
+            localStorage.setItem("dropdownS_ML_DeployState", "open");
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentsP = document.getElementById("myContentsS_ML_Deploy");
+        const contentsState = localStorage.getItem("dropdownS_ML_DeployState");
+        
+        if (contentsState === "open") {
+            contentsP.style.height = "1200px";
+            contentsP.style.opacity = "100";
+            contentsP.style.visibility = "visible";
+        } else {
+            contentsP.style.height = "0px";
+            contentsP.style.opacity = "0";
+            contentsP.style.visibility = "hidden";
         }
     });
     

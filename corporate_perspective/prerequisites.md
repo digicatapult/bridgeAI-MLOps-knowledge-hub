@@ -387,6 +387,15 @@ Below are sets of comparisons for tools you can use for each component of your M
 </div>
 <br>
 
+### Horizon Scan
+
+<div id="myContainer" class="container">
+  <a onclick="toggleContents_PDF_Embed()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Horizon Scan</a>
+  <div id="myContents_PDF_Embed" class="contents">
+    <embed src="../assets/horizon_scan.pdf" width="780" height="1100">
+  </div>
+</div>
+
 ## Resources
 
 1. [Feature store software evaluation and decision](./mlops_big_picture/versioning.html){:target="_blank"}
