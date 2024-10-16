@@ -18,6 +18,7 @@ title: BridgeAI MLOps Knowledge Hub
   - [Model Deployment and Serving](#model-deployment-and-serving)
   - [Model Monitoring](#model-monitoring)
   - [GitOps](#gitops)
+  - [Horizon Scan Embed](#horizon-scan-embed)
 6. [Resources](#resources)
 
 ### Roles
@@ -387,7 +388,7 @@ Below are sets of comparisons for tools you can use for each component of your M
 </div>
 <br>
 
-### Horizon Scan
+### Horizon Scan Embed
 
 <div id="myContainer" class="container">
   <a onclick="toggleContents_PDF_Embed()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Horizon Scan</a>
