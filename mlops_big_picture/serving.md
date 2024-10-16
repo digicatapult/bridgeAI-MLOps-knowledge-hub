@@ -3,7 +3,7 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-# Model Serving Spike Content
+# Model Serving
 
 <blockquote class="callout callout_info">
 <span class="callout-icon">ℹ️</span>
