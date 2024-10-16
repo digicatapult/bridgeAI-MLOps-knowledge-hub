@@ -3,9 +3,10 @@ layout: default
 title: BridgeAI MLOps Knowledge Hub
 ---
 
-# Data Versioning Spike Content
+# Data Versioning
 
 **Table of Contents**
+1. [Introduction](#introduction)
 1. [General Comparison](#1-general-comparison)
 - [DVC](#11-dvc)
 - [MLFlow](#12-mlflow)
@@ -23,42 +24,17 @@ title: BridgeAI MLOps Knowledge Hub
 - [Using MLFlow](#51-using-mlflow)
 - [Using DVC Within Train Repo](#52-use-dvc-within-train-repo)
 - [Using DVC for Data Versioning During Ingestion with Train, Eval, and Test Split](#53-use-dvc-for-data-versioning-during-ingestion-with-train-eval-and-test-split)
-6. [Summary](#summary)
+6. [Verdict](#verdict)
 7. [Resources](#resources)
 
-<br>
-<blockquote class="callout callout_info">
-<span class="callout-icon">ℹ️</span>
-    <br>
-    <br>
-    Here is a summary of the investigation conducted to determine which version control tool is best suited for our MLOps pipeline and integrates well with our existing technology and tool stack.
-    <br>
-    <br>
-    The tools compared are MLFlow and DVC (Data Version Control).
-</blockquote>
-
-<img src="../assets/image-20240724-204151.png">
-An image showing the different versions of data, features and model. Source: [DVC](https://dvc.org/doc/use-cases/versioning-data-and-model-files){:target="_blank"}
-<br>
-<br>
-
 ---
 
-- The type of data versioning each tool supports:
+## Introduction
 
-  - Standalone data versioning
+This page details the team's investigation conducted to determine which version control tool is best suited for our MLOps pipeline and integrates well with our existing technology and tool stack.
 
-  - Associating data with a training run in an experiment
+The tools compared are MLFlow and DVC (Data Version Control) - the team's repository for this component can be found [here](https://github.com/digicatapult/bridgeAI-regression-model-training/blob/main/src/fetch_data.py){:target="_blank"}.
 
-- Where the data is stored (remote, local, or database)
-
-- How to perform versioning with each tool (including sample steps and code snippets)
-
-- How to retrieve versioned data for re-training or reproducibility
-
-- A verdict on which tool is more suitable for our current use case
-
----
 
 ## 1. General Comparison
 ### 1.1 DVC
@@ -95,17 +71,23 @@ Ease of Use | User-friendly interface, extensive documentation, simple python AP
 
 ### 2.1 DVC
 
-- DVC tracks changes in data files and directories
+- [DVC](https://dvc.org/doc){:target="_blank"} tracks changes in data files and directories
 
 - When you add data files to DVC, it creates metadata files (`.dvc` files) that store information about the data, including its version and remote location
 
 - These DVC files can be committed to a Git repository, allowing you to track the data's history and lineage along with your code.
 
+<br>
+<img src="./assets/image-20240724-204151.png">
+An image showing the different versions of data, features and model. Source: [DVC](https://dvc.org/doc/use-cases/versioning-data-and-model-files){:target="_blank"}
+<br>
+<br>
+
 ### 2.2 MLFlow
 
-- MLFlow doesn’t really can do version control of data independently, it relies on external tools
+- MLFlow doesn’t really do version control of data independently, it relies on external tools
 
-- However, the `mlflow.data` module helps you record your model training and evaluation datasets to runs and stores in artefact store
+- However, the [`mlflow.data`](https://mlflow.org/docs/latest/python_api/mlflow.data.html){:target="_blank"} module helps you record your model training and evaluation datasets to runs and stores in ifact store
 
 - It can later retrieve dataset information from runs
 
@@ -113,9 +95,7 @@ Ease of Use | User-friendly interface, extensive documentation, simple python AP
 
 ### 3.1 DVC
 
-DVC remotes are distributed storage locations for the data sets and ML models. It is similar to Git remotes, but for cached assets. This optional feature is typically used to share or back up copies of all or some of your data. Several types are supported: Amazon S3, Google Drive, SSH, HTTP, local file systems, among others.
-
-[DVC remote](https://dvc.org/doc/command-reference/remote#remote){:target="_blank"}
+[DVC remotes](https://dvc.org/doc/command-reference/remote#remote){:target="_blank"} are distributed storage locations for the data sets and ML models. It is similar to Git remotes, but for cached assets. This optional feature is typically used to share or back up copies of all or some of your data. Several types are supported: Amazon S3, Google Drive, SSH, HTTP, local file systems, among others.
 
 ### 3.2 MLFlow
 MLFlow tracking needs the following components.
@@ -124,13 +104,13 @@ MLFlow tracking needs the following components.
 
 Experiment metadata including run ID, start & end time, parameters, metrics, etc are stored in Backend store. MLflow supports two types of storage for the backend: file-system-based like local files and database-based like PostgreSQL. Default is sqlite.
 
-**2. Artefact store**
+**2. Artifact store**
 
 Artifact store persists typically large artifacts for each run, such as model weights (e.g. a pickled scikit-learn model, pytorch model, etc) and data files (e.g. csv or parquet files). MLflow stores artifacts in a local file (mlruns) by default, but also supports different storage options such as Amazon S3 and Azure Blob Storage.
 
 - Backend store - [Backend Stores](https://mlflow.org/docs/latest/tracking/backend-stores.html){:target="_blank"}
 
-- Artefact store - [Artifact Stores](https://mlflow.org/docs/latest/tracking/artifacts-stores.html){:target="_blank"}
+- Artifact store - [Artifact Stores](https://mlflow.org/docs/latest/tracking/artifacts-stores.html){:target="_blank"}
 
 - Tracking server - [MLflow Tracking Server](https://mlflow.org/docs/latest/tracking/server.html){:target="_blank"} 
 
@@ -232,13 +212,13 @@ The above way of tracking the data is tightly coupled to the training. If the da
 <br>
 <br>
 
-An alternative to using MLFlow.data might be using MLFlow’s log artefact to log the data as such to every run. But this will not track the difference, instead it just pushes the entire data used for the run to the artefact store.
+An alternative to using MLFlow.data might be using MLFlow’s log artifact to log the data as such to every run. But this will not track the difference, instead it just pushes the entire data used for the run to the artifact store.
 </blockquote>
 
 
 ## 5. Potential Options
 ### 5.1 Using MLFlow
-Use MLFlow to just log the data used for each experiment runs. Need artefact store set up (which anyway is needed for storing the models)
+Use MLFlow to just log the data used for each experiment runs. Need artifact store set up (which anyway is needed for storing the models)
 
 **Pros:**
 
@@ -276,7 +256,7 @@ With this approach the workflow is as follows:
 
 1. Use dvc in the data ingestion repo (with version tagging to the repo to indicate the data version) 
 
-2.  Do ETL related preprocessing of the data as usual in the repo
+2. Do ETL related preprocessing of the data as usual in the repo
 
 3. Split the data into train, val and test and add those data separately to the dvc
 
@@ -306,10 +286,9 @@ With this approach the workflow is as follows:
 
 - Overhead of cloning the data ingestion repo or using it as a submodule wherever data is needed
 
-## Summary
-As per the comparison of the potential options, based on our use case, the third option seems suitable for our use case.
+## Verdict
+As per the comparison of the potential options, based on our use case, the team decided on DVC as our data versioning component tool for our pipeline. DVC's features are more fit for this component of our pipeline than MLflow's, which revolve more around tracking data than actual version control.
 
- 
 
 ## Resources
 1. DVC official documentation - [Home](https://dvc.org/doc){:target="_blank"} 
@@ -320,6 +299,6 @@ As per the comparison of the potential options, based on our use case, the third
 
 4. MLFlow Backend store - [Backend Stores](https://mlflow.org/docs/latest/tracking/backend-stores.html){:target="_blank"}
 
-5. MLFlow Artefact store - [Artifact Stores](https://mlflow.org/docs/latest/tracking/artifacts-stores.html){:target="_blank"}
+5. MLFlow Artifact store - [Artifact Stores](https://mlflow.org/docs/latest/tracking/artifacts-stores.html){:target="_blank"}
 
 6. MLFlow Tracking server - [MLflow Tracking Server](https://mlflow.org/docs/latest/tracking/server.html){:target="_blank"}
