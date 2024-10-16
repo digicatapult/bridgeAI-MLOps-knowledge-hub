@@ -10,31 +10,32 @@ title: BridgeAI MLOps Knowledge Hub
 Click on a number icon in the image for a brief description of the process associated with it.
 
 <img src="./assets/mlops_architecture.png" usemap = "#arch" width="839" height="650.64"/>
+
 <!-- intrinsic size - 1980 by 1542; div w and h by 2.36 -->
 
 <map name = "arch">
-    <area  alt="Model Development" href = "https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#1-model-development" coords="752,540,10" shape = "circle" >
-    <area  alt="Models Pushed"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#2-models-pushed" coords="606,461,9" shape="circle">
-    <area  alt="Model Commit"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#3-model-commit" coords="453,597,10" shape="circle">
-    <area  alt="Model Registry and Store"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#4---6-model-registry-and-store" coords="311,122,9" shape="circle">
-    <area  alt="Model Registry and Store"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#4---6-model-registry-and-store" coords="406,122,9" shape="circle">
-    <area  alt="Model Registry and Store"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#4---6-model-registry-and-store" coords="493,123,9" shape="circle">
-    <area  alt="Manual Push to Model Server"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#7-manual-push-to-model-server" coords="617,110,10" shape="circle">
-    <area  alt="Prediction Service"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#8-prediction-service" coords="698,155,11" shape="circle">
-    <area  alt="User input and Predictions Output"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#9-user-input-and-predictions-output" coords="789,222,9" shape="circle">
-    <area  alt="User Interaction Data Captured"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#10-user-interaction-data-captured" coords="618,190,11" shape="circle">
-    <area  alt="Model Monitoring For Decay"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#11-model-monitoring-for-decay" coords="712,288,10" shape="circle">
-    <area  alt="Scheduler Initiates Training Process"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#12-scheduler-initiates-training-process" coords="254,309,10" shape="circle">
-    <area  alt="DAG Initiates Docker Instance to be Run"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#13-dag-initiates-docker-instance-to-be-run" coords="333,454,8" shape="circle">
-    <area  alt="Data Retrieved From S3 Bucket"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#14-data-retrieved-from-s3-bucket" coords="208,453,8" shape="circle">
-    <area  alt="Data is Preprocessed and Transformed"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#15-data-is-preprocessed-and-transformed" coords="323,354,9" shape="circle">
-    <area  alt="Features Stored"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#16-features-stored" coords="415,303,9" shape="circle">
-    <area  alt="Feature Store Fetch"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#17-feature-store-fetch" coords="464,364,11" shape="circle">
-    <area  alt="Model Created"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#18-model-created" coords="543,369,9" shape="circle">
-    <area  alt="Model Version Storing"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#19-model-version-storing" coords="465,303,9" shape="circle">
-    <area  alt="Model Monitor Pull"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#20-model-monitor-pull" coords="724,408,12" shape="circle">
-    <area  alt="Potential Retrigger"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#21-potential-retrigger" coords="680,401,11" shape="circle">
-    <area  alt="Industry Data"  href="https://digicatapult.github.io/bridgeAI-MLOps-knowledge-hub/mlops_big_picture/team_arch.html#22-industry-data" coords="39,142,9" shape="circle">
+    <area  alt="Model Development" href = "./mlops_big_picture/team_arch.html#1-model-development" coords="752,540,10" shape = "circle" >
+    <area  alt="Models Pushed"  href="./mlops_big_picture/team_arch.html#2-models-pushed" coords="606,461,9" shape="circle">
+    <area  alt="Model Commit"  href="./mlops_big_picture/team_arch.html#3-model-commit" coords="453,597,10" shape="circle">
+    <area  alt="Model Registry and Store"  href="./mlops_big_picture/team_arch.html#4---6-model-registry-and-store" coords="311,122,9" shape="circle">
+    <area  alt="Model Registry and Store"  href="./mlops_big_picture/team_arch.html#4---6-model-registry-and-store" coords="406,122,9" shape="circle">
+    <area  alt="Model Registry and Store"  href="./mlops_big_picture/team_arch.html#4---6-model-registry-and-store" coords="493,123,9" shape="circle">
+    <area  alt="Manual Push to Model Server"  href="./mlops_big_picture/team_arch.html#7-manual-push-to-model-server" coords="617,110,10" shape="circle">
+    <area  alt="Prediction Service"  href="./mlops_big_picture/team_arch.html#8-prediction-service" coords="698,155,11" shape="circle">
+    <area  alt="User input and Predictions Output"  href="./mlops_big_picture/team_arch.html#9-user-input-and-predictions-output" coords="789,222,9" shape="circle">
+    <area  alt="User Interaction Data Captured"  href="./mlops_big_picture/team_arch.html#10-user-interaction-data-captured" coords="618,190,11" shape="circle">
+    <area  alt="Model Monitoring For Decay"  href="./mlops_big_picture/team_arch.html#11-model-monitoring-for-decay" coords="712,288,10" shape="circle">
+    <area  alt="Scheduler Initiates Training Process"  href="./mlops_big_picture/team_arch.html#12-scheduler-initiates-training-process" coords="254,309,10" shape="circle">
+    <area  alt="DAG Initiates Docker Instance to be Run"  href="./mlops_big_picture/team_arch.html#13-dag-initiates-docker-instance-to-be-run" coords="333,454,8" shape="circle">
+    <area  alt="Data Retrieved From S3 Bucket"  href="./mlops_big_picture/team_arch.html#14-data-retrieved-from-s3-bucket" coords="208,453,8" shape="circle">
+    <area  alt="Data is Preprocessed and Transformed"  href="./mlops_big_picture/team_arch.html#15-data-is-preprocessed-and-transformed" coords="323,354,9" shape="circle">
+    <area  alt="Features Stored"  href="./mlops_big_picture/team_arch.html#16-features-stored" coords="415,303,9" shape="circle">
+    <area  alt="Feature Store Fetch"  href="./mlops_big_picture/team_arch.html#17-feature-store-fetch" coords="464,364,11" shape="circle">
+    <area  alt="Model Created"  href="./mlops_big_picture/team_arch.html#18-model-created" coords="543,369,9" shape="circle">
+    <area  alt="Model Version Storing"  href="./mlops_big_picture/team_arch.html#19-model-version-storing" coords="465,303,9" shape="circle">
+    <area  alt="Model Monitor Pull"  href="./mlops_big_picture/team_arch.html#20-model-monitor-pull" coords="724,408,12" shape="circle">
+    <area  alt="Potential Retrigger"  href="./mlops_big_picture/team_arch.html#21-potential-retrigger" coords="680,401,11" shape="circle">
+    <area  alt="Industry Data"  href="./mlops_big_picture/team_arch.html#22-industry-data" coords="39,142,9" shape="circle">
 </map>
 
 

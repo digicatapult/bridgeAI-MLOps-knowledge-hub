@@ -568,13 +568,13 @@
 
     function toggleContentsPre_Store() {
         const contents8 = document.getElementById("myContentsPre_Store");
-        if (contents8.style.height === "2060px") {
+        if (contents8.style.height === "2300px") {
             contents8.style.height = "0px";
             contents8.style.opacity = "0";
             contents8.style.visibility = "hidden";
             localStorage.setItem("dropdownPre_StoreState", "closed");
         } else {
-            contents8.style.height = "2060px";
+            contents8.style.height = "2300px";
             contents8.style.opacity = "100";
             contents8.style.visibility = "visible";
             localStorage.setItem("dropdownPre_StoreState", "open");
@@ -586,7 +586,7 @@
         const contentsState = localStorage.getItem("dropdownPre_StoreState");
         
         if (contentsState === "open") {
-            contents8.style.height = "2060px";
+            contents8.style.height = "2300px";
             contents8.style.opacity = "100";
             contents8.style.visibility = "visible";
         } else {
