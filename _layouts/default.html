@@ -47,6 +47,48 @@
     right: 0;
     }
 
+    .popup {
+    position: relative;
+    display: inline-block;
+    }
+
+    .popup .popuptext {
+    display: none;
+    visibility: hidden;
+    /* opacity: 0; */
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 6px;
+    /* height: 0%; */
+    width: 160px;
+    position: absolute;
+    display: block;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    background-color: #555;
+    color: #fff;
+    }
+
+    .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: #555 transparent transparent transparent;
+    border-style: solid;
+    }
+
+    .popup .show {
+    visibility: visible;
+    transition:  0.5s ease;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    }
+
     .sidenav {
     height: 100%;
     width: 18%;
@@ -291,6 +333,13 @@
         </div>
 
 </div>
+
+<script>
+    function popup() {
+        var popup = document.getElementById("modelDevelopment");
+        popup.classList.toggle("show");
+    }
+</script>
 
 <script>
 

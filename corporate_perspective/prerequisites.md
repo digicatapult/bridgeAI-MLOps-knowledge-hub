@@ -393,9 +393,11 @@ Below are sets of comparisons for tools you can use for each component of your M
 <div id="myContainer" class="container">
   <a onclick="toggleContents_PDF_Embed()"><img src="https://www.svgrepo.com/show/305143/arrow-ios-forward.svg" width="15px" height="15px"> Horizon Scan</a>
   <div id="myContents_PDF_Embed" class="contents">
-    <embed src="../assets/horizon_scan.pdf" width="780" height="1100">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxWt7W4SBFvWG4oS91RtQ6-HVzMMNvw7b5IgqwShkeqbqFaZvBp6ElhCexbDv2cg/pubhtml?gid=2066554602&amp;single=true&amp;widget=true&amp;headers=false" width="780" height="1100"></iframe>
   </div>
 </div>
+
+<!-- <embed src="../assets/horizon_scan.pdf" width="780" height="1100"> -->
 
 ## Resources
 
