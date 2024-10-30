@@ -28,6 +28,22 @@ Aside from the research and implementation surrounding each component of our pip
 
 A [Deployment Service Life Cycle framework](./corporate_perspective/deployment_lifecycle.html){:target="_blank"} is also available for you to use as a guide for additional considerations in this context. This framework serves as a starting point for ensuring that organisations adequately gather information on their requirements (as well as use cases, current infrastructure requirements, and constraints) before assessing these and designing and implementing an AI/ML offering around them. It also acts as a reminder for points of review for the offering after it has been implemented. 
 
+## Getting Started with the Code Base
+
+In order to be familiar enough with the software the DC team has used to create this pipeline for you, links to our repositories have been listed below for you to familiarise yourself with each component of our architecture. Each repository comes with detailed instructions for set-up in the README file, and all repos have been modularised to make custom edits you may make easier to implement.
+
+1. The GitOps repository, which serves as the foundation of our architecture, can be found [here](https://github.com/digicatapult/bridgeAI-gitops-infra){:target="_blank"} with a detailed set of instructions for setup.
+
+2. [Data Ingestion repository](https://github.com/digicatapult/bridgeAI-regression-model-data-ingestion){:target="_blank"}
+
+3. [Model Training repository](https://github.com/digicatapult/bridgeAI-regression-model-training){:target="_blank"}
+
+4. [Preparation for Deployment repository](https://github.com/digicatapult/bridgeAI-model-baseimage){:target="_blank"}
+
+5. [Prediction Service repository](https://github.com/digicatapult/bridgeAI-prediction-service){:target="_blank"}
+
+6. [Model Monitoring repository](https://github.com/digicatapult/bridgeAI-drift-monitoring){:target="_blank"}
+
 ## Resources
 
 1. [MLOps.org](https://ml-ops.org/){:target="_blank"}
