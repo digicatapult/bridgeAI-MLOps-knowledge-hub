@@ -28,6 +28,14 @@ Aside from the research and implementation surrounding each component of our pip
 
 A [Deployment Service Life Cycle framework](./corporate_perspective/deployment_lifecycle.html){:target="_blank"} is also available for you to use as a guide for additional considerations in this context. This framework serves as a starting point for ensuring that organisations adequately gather information on their requirements (as well as use cases, current infrastructure requirements, and constraints) before assessing these and designing and implementing an AI/ML offering around them. It also acts as a reminder for points of review for the offering after it has been implemented. 
 
+## Getting Started
+
+<!-- In order to be familiar enough with the software the DC team has used to create this pipeline for you, links have been listed below for you to do some pre-requisite reading. -->
+
+<!-- links -->
+
+The GitOps repository, which serves as the foundation of our architecture, can be found [here](https://github.com/digicatapult/bridgeAI-gitops-infra){:target="_blank"} with a detailed set of instructions for setup.
+
 ## Resources
 
 1. [MLOps.org](https://ml-ops.org/){:target="_blank"}

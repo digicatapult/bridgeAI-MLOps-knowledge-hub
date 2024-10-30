@@ -67,7 +67,7 @@ On the other hand, to run Prefect the official [Helm chart](https://helm.sh/){:t
 
 <br>
 
-## 3. Team Implementation
+## 3. Implementation
 
 Each of the links below will direct you to one of our repos for each process, which comes with a `README` to direct you on how to set up each process:
 
