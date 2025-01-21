@@ -33,16 +33,18 @@ A [Deployment Service Life Cycle framework](./corporate_perspective/deployment_l
 In order to be familiar enough with the software the DC team has used to create this pipeline for you, links to our repositories have been listed below for you to familiarise yourself with each component of our architecture. Each repository comes with detailed instructions for set-up in the README file, and all repos have been modularised to make custom edits you may make easier to implement.
 
 1. The GitOps repository, which serves as the foundation of our architecture, can be found [here](https://github.com/digicatapult/bridgeAI-gitops-infra){:target="_blank"} with a detailed set of instructions for setup.
+   
+2. [Airflow DAGS Repository for pipeline orchestration](https://github.com/digicatapult/bridgeAI-regression-model-data-ingestion){:target="_blank"}
+   
+3. [Data Ingestion repository](https://github.com/digicatapult/bridgeAI-airflow-DAGs/tree/main){:target="_blank"}
+   
+4. [Model Training repository](https://github.com/digicatapult/bridgeAI-regression-model-training){:target="_blank"}
 
-2. [Data Ingestion repository](https://github.com/digicatapult/bridgeAI-regression-model-data-ingestion){:target="_blank"}
+5. [Preparation for Deployment repository](https://github.com/digicatapult/bridgeAI-model-baseimage){:target="_blank"}
 
-3. [Model Training repository](https://github.com/digicatapult/bridgeAI-regression-model-training){:target="_blank"}
+6. [Prediction Service repository](https://github.com/digicatapult/bridgeAI-prediction-service){:target="_blank"}
 
-4. [Preparation for Deployment repository](https://github.com/digicatapult/bridgeAI-model-baseimage){:target="_blank"}
-
-5. [Prediction Service repository](https://github.com/digicatapult/bridgeAI-prediction-service){:target="_blank"}
-
-6. [Model Monitoring repository](https://github.com/digicatapult/bridgeAI-drift-monitoring){:target="_blank"}
+7. [Model Monitoring repository](https://github.com/digicatapult/bridgeAI-drift-monitoring){:target="_blank"}
 
 ## Resources
 
