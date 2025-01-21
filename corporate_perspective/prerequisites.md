@@ -395,7 +395,7 @@ Below are sets of comparisons for tools you can use for each component of your M
   <div id="myContents_PDF_Embed" class="contents">
    <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxWt7W4SBFvWG4oS91RtQ6-HVzMMNvw7b5IgqwShkeqbqFaZvBp6ElhCexbDv2cg/pubhtml?gid=2066554602&amp;single=true&amp;widget=true&amp;headers=false" width="780" height="1100"></iframe>
    <iframe src="https://digicatapultorguk.sharepoint.com/sites/BridgeAI/_layouts/15/Doc.aspx?sourcedoc={0e99e5df-03ff-41bb-ac31-8420f7ede3db}&action=embedview&wdAllowInteractivity=False&ActiveCell='tools_comparison'!A1&Item='tools_comparison'!A1%3AT37&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True" width="780" height="1100" frameborder="0" scrolling="no"></iframe>-->
-    <iframe src="/assets/MLOps_tools_horizonscan_2025.htm" width="600" height="1100"></iframe>
+    <iframe src="./assets/MLOps_tools_horizonscan_2025.htm" width="780" height="1100"></iframe>
   </div>
 </div>
 
