@@ -34,10 +34,10 @@ In order to be familiar enough with the software the DC team has used to create 
 
 1. The GitOps repository, which serves as the foundation of our architecture, can be found [here](https://github.com/digicatapult/bridgeAI-gitops-infra){:target="_blank"} with a detailed set of instructions for setup.
    
-2. [Data Ingestion repository](https://github.com/digicatapult/bridgeAI-airflow-DAGs/tree/main){:target="_blank"}
+2. [Airflow DAGS Repository for pipeline orchestration](https://github.com/digicatapult/bridgeAI-regression-model-data-ingestion){:target="_blank"}
    
-3. [Airflow DAGS Repository for pipeline orchestration](https://github.com/digicatapult/bridgeAI-regression-model-data-ingestion){:target="_blank"}
-
+3. [Data Ingestion repository](https://github.com/digicatapult/bridgeAI-airflow-DAGs/tree/main){:target="_blank"}
+   
 4. [Model Training repository](https://github.com/digicatapult/bridgeAI-regression-model-training){:target="_blank"}
 
 5. [Preparation for Deployment repository](https://github.com/digicatapult/bridgeAI-model-baseimage){:target="_blank"}
